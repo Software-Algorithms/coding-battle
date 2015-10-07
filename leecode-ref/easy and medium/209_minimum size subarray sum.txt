@@ -1,0 +1,86 @@
+//window slide.
+public class Solution {
+    public int minSubArrayLen(int s, int[] nums) {
+        if(nums.length==0) return 0;
+        int sum = 0, head = 0, minL = nums.length+1;
+        for(int i=0;i<nums.length;i++){
+            sum += nums[i];
+            while(sum-nums[head]>=s){
+                sum -= nums[head++];
+            }
+            if(sum>=s) minL = Math.min(minL,i-head+1);
+        }
+        return (minL==nums.length+1)? 0 : minL;
+    } 
+}
+    
+
+
+// if in a for loop you need to make too many judgement, try to split the whole for loop as several
+// sections of for loop.
+//anyway, this solution is not so elegant. we don't need to keep the preHelperSum, we only need to use 
+//window slide technique--each time add a new nums[i], subtract from the front(not as the solution below to 
+//add from the rear), if cause new shorter subarray>=s, set the new length. The key idea is the same, in 
+//total we will only do O(n) subtractions.
+/*public class Solution {
+    public int minSubArrayLen(int s, int[] nums) {
+        int sum = 0, currLength = 0, preHelperSum = 0;
+        for(int i = 0;i<nums.length&&sum<s;i++){
+            if(nums[i]>=s) return 1;
+            sum+= nums[i];
+            currLength++;
+        }
+        if(sum<s&&currLength==nums.length) return 0; //since s is positive int, we can use this to include the empty int[] case
+        int j=0;
+        while(sum-nums[j]>=s){
+            currLength--;
+            sum -= nums[j];
+            j++;
+        }
+        preHelperSum = sum - nums[j] - nums[j+1];        
+        for(int i = j+currLength;i<nums.length;i++){
+            if(nums[i]>=s) return 1;
+            int newSum = nums[i];
+            newSum += preHelperSum;
+            if(newSum>=s){
+                while(newSum>=s){
+                    currLength--;
+                    if(newSum-nums[i-currLength+1]<s) break; //don't do the last minus.
+                    newSum -= nums[i-currLength+1];
+                }
+                preHelperSum = newSum - nums[i-currLength+1] - nums[i-currLength+2];
+                sum = newSum;
+            }
+            else{
+                preHelperSum = newSum - nums[i-currLength+2];
+            }
+        }
+        return (sum>=s)?currLength:0;
+    }
+}*/
+
+/*public class Solution {
+    public int minSubArrayLen(int s, int[] nums) {
+        int sum = 0;
+        int currLength = 0;
+        for(int i = 0;i<nums.length;i++){
+            if(nums[i]>=s) return 1;
+            if(sum<s){
+                sum+= nums[i];
+                currLength++;
+            }
+            if(sum>=s){ //don't write else{} here, cuz after currLength++ we need do compare sum with s in the same iteration.
+                int newSum = nums[i];
+                for(int j = 1;j<currLength-1;j++){
+                    newSum += nums[i-j];
+                    if(newSum>=s){
+                        currLength = j+1;
+                        sum = newSum;
+                        break;
+                    }
+                }
+            }
+        }
+        return (sum>=s)?currLength:0;
+    }
+}*/

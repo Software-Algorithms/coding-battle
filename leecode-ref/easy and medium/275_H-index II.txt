@@ -1,0 +1,17 @@
+public class Solution {
+    public int hIndex(int[] citations) {
+        int res = 0, a = 0, b = citations.length-1, n = citations.length;
+        while(a<=b) {
+            int mid = a + (b-a)/2;
+            if(n-mid >= citations[mid]) {
+                res = Math.max(res, citations[mid]);
+                a = mid + 1;
+            }
+            else {
+                res = Math.max(res, n-mid);
+                b = mid - 1;
+            }
+        }
+        return res;
+    }
+}

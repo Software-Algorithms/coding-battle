@@ -1,0 +1,91 @@
+class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode(int x) { val = x; }
+}
+
+class QueueNode{
+    TreeNode treenode;
+    int layer;
+    QueueNode next;
+    QueueNode(TreeNode tn, int x){
+        treenode = tn;
+        layer = x;
+    }
+}
+
+class TreeQueue {
+    QueueNode head;
+    QueueNode tail;
+    void enqueue(QueueNode qn){
+        if (head == null){
+            head = qn;
+            tail = qn;
+        }
+        else
+        {
+            tail.next = qn;
+            tail = qn;
+        }
+    }
+    QueueNode dequeue(){
+        if (head == null){
+            return null;
+        }
+        else
+        {
+            QueueNode first = head;
+            head = head.next;
+            return first;
+        }
+    }
+}
+
+ 
+class Solution {
+    public int maxDepth(TreeNode root) {
+        if (root == null){
+            return 0;
+            }
+        else
+            {
+                int depth = 1;
+                QueueNode node = new QueueNode(root,depth);
+                TreeQueue treequeue = new TreeQueue();
+                treequeue.enqueue(node);
+                while(treequeue.head != null){
+                    QueueNode qn = treequeue.dequeue();
+                    if (qn.treenode.left != null){
+                        QueueNode leftchi = new QueueNode(qn.treenode.left,qn.layer + 1);
+                        treequeue.enqueue(leftchi);
+                    }
+                    if (qn.treenode.right != null){
+                        QueueNode rightchi = new QueueNode(qn.treenode.right,qn.layer + 1);
+                        treequeue.enqueue(rightchi);
+                    }
+                    if (qn == treequeue.tail){
+                        depth = qn.layer;
+                    }
+                }
+                return depth;
+            }
+    }
+}
+
+public class maxdepth {
+
+    public static void main(String[] args) {
+        TreeNode testtree = new TreeNode(21);
+        testtree.left = new TreeNode(22);
+        testtree.right = new TreeNode(23);
+        testtree.left.left = new TreeNode(24);
+        testtree.left.left.right = new TreeNode(25);
+        Solution sol = new Solution();
+        int depth = sol.maxDepth(testtree);
+        System.out.println(depth);
+
+    }
+
+}
+

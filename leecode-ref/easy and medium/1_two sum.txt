@@ -1,0 +1,28 @@
+public class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] numsCopy = nums.clone();
+        Arrays.sort(numsCopy);
+        int[] res = new int[2];
+        int left = 0, right = numsCopy.length-1;
+        while(left<right){
+            if(numsCopy[left]+numsCopy[right]==target){
+                res[0] = numsCopy[left];
+                res[1] = numsCopy[right];
+                break;
+            }
+            else if(numsCopy[left]+numsCopy[right]>target) right--;
+            else left++;
+        }
+        boolean found1 = false, found2 = false;
+        for(int i=1;i<=nums.length;i++){
+            if(!found1&&nums[i-1]==res[0]) {res[0] = i; found1 = true;}
+            else if(!found2&&nums[i-1]==res[1]) {res[1] = i; found2 = true;}
+        }
+        if(res[0]>res[1]){
+            int tmp = res[1];
+            res[1] = res[0];
+            res[0] = tmp;
+        }
+        return res;
+    }
+}

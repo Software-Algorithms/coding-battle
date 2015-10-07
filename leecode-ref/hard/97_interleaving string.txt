@@ -1,0 +1,52 @@
+//O(n) space.
+public class Solution {
+    public boolean isInterleave(String s1, String s2, String s3) {
+        int len1 = s1.length(), len2 = s2.length(), len3 = s3.length();
+        if(len3!=len1+len2) return false;
+        boolean[] valid = new boolean[len2+1]; 
+        valid[0] = true;
+        for(int i = 0; i <= len1; i++) {
+            //i==0 case was initialized above.
+            if(i!=0) valid[0] = (valid[0] && s1.charAt(i-1)==s3.charAt(i-1))? true : false;
+            for(int j = 1; j <= len2; j++) {
+                if(i!=0&&s3.charAt(i+j-1)==s1.charAt(i-1)&&valid[j] || s3.charAt(i+j-1)==s2.charAt(j-1)&&valid[j-1]) valid[j] = true;
+                else valid[j] = false;
+            }
+        }
+        return valid[len2];
+    }
+}
+
+public class Solution {
+    public boolean isInterleave(String s1, String s2, String s3) {
+        int len1 = s1.length(), len2 = s2.length(), len3 = s3.length();
+        if(len3!=len1+len2) return false;
+        boolean[][] valid = new boolean[len1+1][len2+1]; // need to represent when s1 is empty or s2 is empty.
+        valid[0][0] = true;
+        for(int i = 1; i<= len1; i++) valid[i][0] = valid[i-1][0] && s1.charAt(i-1)==s3.charAt(i-1);
+        for(int j = 1; j<= len2; j++) valid[0][j] = valid[0][j-1] && s2.charAt(j-1)==s3.charAt(j-1);   
+        for(int i = 1; i <= len1; i++) {
+            for(int j = 1; j <= len2; j++) {
+                if(s3.charAt(i+j-1)==s1.charAt(i-1)&&valid[i-1][j] || s3.charAt(i+j-1)==s2.charAt(j-1)&&valid[i][j-1]) valid[i][j] = true;
+            }
+        }
+        return valid[len1][len2];
+    }
+}
+
+/*
+//bad idea to construct valid[i][j][k], at (i,j) we only care about i+j-1 for s3, shorter s3 substrings are meaningless.
+int len1 = s1.length(), len2 = s2.length(), len3 = s3.length();
+        boolean[][][] valid = new boolean[l1][l2][l3];
+        valid[0][0][0] = s1.charAt(0)==s3.charAt(0) || s2.charAt(0)==s3.charAt(0);
+        
+        
+        for(int i = 0; i < len1; i++) {
+            for(int j = 0; j < len2; j++) {
+                for(int k = 1; k <= i + j + 1; k++){
+                    if(i!=0&&s3.charAt(k)==s1.charAt(i)&&valid[i-1][j][k-1] || j!=0&&s3.charAt(k)==s2.charAt(j)&&valid[i][j-1][k-1])
+                        valid[i][j][k] = true;
+                }
+            }
+        }
+*/

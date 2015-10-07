@@ -1,0 +1,28 @@
+// time complexity would be O(n) in worst case and near O(lgn) in average.
+public class Solution {
+    public int findMin(int[] nums) {
+        return findMin_DQ(nums,0,nums.length-1);
+    }
+    public int findMin_DQ(int[] nums,int a, int b){
+        if(a==b)return nums[a];
+        else{
+            int half = (a+b)/2;
+            if(nums[half]>nums[half+1]) return nums[half+1];
+            else{
+                if(nums[half]>nums[b]) return findMin_DQ(nums,half+1,b);
+                else if(nums[half]==nums[b]) return findMin_DQ(nums,a,b-1); //when half equals tail, can't make decision in which half part
+                                                                            //the min is, so just strip the tail.
+                else return findMin_DQ(nums,a,half);
+            }
+        }
+    }
+}
+
+/*public class Solution{
+    public int findMin(int[] nums){
+        for(int i =0; i<nums.length-1;i++){
+            if(nums[i]>nums[i+1]) return nums[i+1];
+        }
+        return nums[0];
+    }
+}*/

@@ -1,0 +1,42 @@
+public class Solution {
+    public String multiply(String num1, String num2) {
+        List<Integer> res = new ArrayList<Integer>();
+        for(int i = 0;i<num1.length();i++){
+            int carrier = 0;
+            for(int j = 0;j<num2.length();j++){
+                int curr = Integer.parseInt(num1.substring(num1.length()-1-i,num1.length()-i))*Integer.parseInt(num2.substring(num2.length()-1-j,num2.length()-j));
+                carrier = curr/10;
+                curr %= 10;
+                if(i+j>res.size()-1){
+                    res.add(curr);
+                    if(carrier!=0) res.add(carrier);
+                }
+                else{
+                    res.set(i+j, res.get(i+j)+curr);
+                    if(carrier!=0&&(i+j)>res.size()-2) res.add(carrier);
+                    else if(i+j<=res.size()-2) res.set(i+j+1,res.get(i+j+1)+carrier);
+                }
+            }
+        }
+        int i = 0;
+        int carrier = 0;
+        while(i<res.size()){
+            int tmp = carrier;
+            carrier = (res.get(i)+carrier)/10; 
+            res.set(i,(res.get(i)+tmp)%10);
+            i++;
+        }
+        while(carrier!=0){
+            res.add(carrier%10);
+            carrier /= 10;
+        }
+        StringBuilder strbd = new StringBuilder();
+        while(!res.isEmpty()&&res.size()>1&&res.get(res.size()-1)==0) res.remove(res.size()-1); // trim 0s
+        while(!res.isEmpty()){
+            strbd.append(String.valueOf(res.get(res.size()-1)));
+            res.remove(res.size()-1);
+        }
+        return strbd.toString();
+        
+    }
+}

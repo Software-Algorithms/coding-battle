@@ -1,0 +1,12 @@
+public class Solution {
+    public int trailingZeroes(int n) {
+        int sum = 0;
+        int fives = 5;
+        while(fives<=n/5){ //if write as fives<=n, then when n is near Integer.Max_VALUE, will cause infinite loop.
+            sum += n/fives;
+            fives *=5;
+        }
+        sum += n/fives;
+        return sum;
+    }
+}

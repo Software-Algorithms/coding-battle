@@ -1,0 +1,56 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public int sumNumbers(TreeNode root) {
+        if(root==null) return 0;
+        else{
+            int curr = 0;
+            int[] sum = new int[1]; // at first I declare as int sum = 0; later found that sum will not be changed
+                                    // after excuting sumNumbers(root,curr,sum) function. we need to use reference
+                                    // to make sum's change kept during the recursions.
+                                    // or we can excute sumNumbers(root,curr),don't use int sum as parameter,it's ok too
+            sumNumbers(root,curr,sum);
+            return sum[0];
+        }
+    }
+    
+    public void sumNumbers(TreeNode root, int curr, int[] sum){
+        if(root.left==null&&root.right==null){
+            curr *= 10;
+            curr += root.val;
+            sum[0] += curr;
+            return;
+        }
+        curr *= 10;
+        curr += root.val;
+        if(root.left!=null) sumNumbers(root.left,curr,sum);
+        if(root.right!=null) sumNumbers(root.right,curr,sum);
+    }
+}
+
+
+//this solution is to solve when a path represent 1+2+3 not 123.
+public class Solution {
+    public int sumNumbers(TreeNode root) {
+        if(root==null) return 0;
+        else{
+            int sum = 0;
+            sum += root.val*leafChildren(root);
+            sum += (sumNumbers(root.left)+sumNumbers(root.right));
+            return sum;
+        }
+    }
+    
+    public int leafChildren(TreeNode root){
+        if(root==null) return 0;
+        else if(root.left==null&root.right==null) return 1;
+        else return leafChildren(root.left) + leafChildren(root.right);
+    }
+}

@@ -1,0 +1,28 @@
+public class Solution {
+    public int numIslands(char[][] grid) {
+        Set<String> visited = new HashSet<String>();
+        int sum = 0;
+        for(int i = 0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                if(grid[i][j]=='1'){
+                	String node = String.valueOf(i)+" "+String.valueOf(j); // don't forget the " ", otherwise "110" has multiple meanings
+                    if(visited.contains(node)) continue;
+                    generate(grid,i,j,visited);
+                    sum++;
+                }
+            }
+        }
+        return sum;
+    }
+    public void generate(char[][] grid, int x, int y, Set<String> visited){
+        String node = String.valueOf(x)+" "+String.valueOf(y);
+        if(x<0||x>=grid.length||y<0||y>=grid[0].length||grid[x][y]=='0'||visited.contains(node)) return;
+        else{
+            visited.add(node);
+            generate(grid,x+1,y,visited);
+            generate(grid,x-1,y,visited);
+            generate(grid,x,y+1,visited);
+            generate(grid,x,y-1,visited);
+        }
+    }
+}

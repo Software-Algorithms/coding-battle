@@ -1,0 +1,34 @@
+public class Solution {
+    public List<String> restoreIpAddresses(String s) {
+        List<String> res = new ArrayList<String>();
+        restoreIpAddresses(s,0,4,"",res);
+        return res;
+    }
+    public void restoreIpAddresses(String s, int start, int remainSeg, String curr, List<String> res){
+        if(s.length()-start-remainSeg*3>0||s.length()-start<remainSeg) return;
+        if(remainSeg==1){
+            if(Integer.parseInt(s.substring(start,start+1))==0&&start!=s.length()-1) return;
+            int lastSeg = Integer.parseInt(s.substring(start));
+            if(lastSeg<=255){
+                StringBuilder currbd = new StringBuilder(curr);
+                res.add(currbd.append(s.substring(start)).toString());
+            }
+        }
+        else{
+            if(Integer.parseInt(s.substring(start,start+1))==0){
+                restoreIpAddresses(s,start+1,remainSeg-1,curr+"0.",res);
+                return;
+            }
+            for(int i=start;i<start+3&&i<=s.length()-remainSeg;i++){
+                int seg = Integer.parseInt(s.substring(start,i+1));
+                if(seg<=255){
+                    StringBuilder currbd = new StringBuilder(curr);
+                    currbd.append(s.substring(start,i+1));
+                    currbd.append(".");
+                    restoreIpAddresses(s,i+1,remainSeg-1,currbd.toString(),res);
+                }
+            }
+        }
+    }
+    
+}

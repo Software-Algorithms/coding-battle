@@ -1,0 +1,82 @@
+class TrieNode {
+    char keyChar;
+    int storeWord;
+    List<TrieNode> children;
+    // Initialize your data structure here.
+    public TrieNode() {
+        children = new ArrayList<TrieNode>();
+    }
+    public TrieNode(char x) {
+        keyChar = x;
+        children = new ArrayList<TrieNode>();
+    }
+}
+
+public class Trie {
+    private TrieNode root;
+
+    public Trie() {
+        root = new TrieNode();
+    }
+
+    // Inserts a word into the trie.
+    public void insert(String word) {
+        TrieNode helper = root;
+        for(int i=0;i<word.length();i++){
+            int indicator = 0;
+            for(int j=0;j<helper.children.size();j++){
+                if(word.charAt(i)==helper.children.get(j).keyChar){
+                    helper = helper.children.get(j);
+                    indicator = 1;
+                    break;
+                }
+            }
+            if(indicator==0){
+                helper.children.add(new TrieNode(word.charAt(i)));
+                helper = helper.children.get(helper.children.size()-1);
+            }
+        }
+        helper.storeWord = 1;
+    }
+
+    // Returns if the word is in the trie.
+    public boolean search(String word) {
+        TrieNode helper = root;
+        for(int i=0;i<word.length();i++){
+            int indicator = 0;
+            for(int j=0;j<helper.children.size();j++){
+                if(word.charAt(i)==helper.children.get(j).keyChar){
+                    helper = helper.children.get(j);
+                    indicator = 1;
+                    break;
+                }
+            }
+            if(indicator==0) return false;
+        }
+        if(helper.storeWord==1)return true;
+        else return false;
+    }
+
+    // Returns if there is any word in the trie
+    // that starts with the given prefix.
+    public boolean startsWith(String prefix) {
+        TrieNode helper = root;
+        for(int i=0;i<prefix.length();i++){
+            int indicator = 0;
+            for(int j=0;j<helper.children.size();j++){
+                if(prefix.charAt(i)==helper.children.get(j).keyChar){
+                    helper = helper.children.get(j);
+                    indicator = 1;
+                    break;
+                }
+            }
+            if(indicator==0) return false;
+        }
+        return true;
+    }
+}
+
+// Your Trie object will be instantiated and called as such:
+// Trie trie = new Trie();
+// trie.insert("somestring");
+// trie.search("key");

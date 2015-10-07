@@ -1,0 +1,40 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    TreeNode curr; //need to declare curr here, cuz if use flatten(curr), curr only change in that function locally.
+                   //cuz when using object as parameter, the parameter is a copy of the reference, modifying the parameter doesn't
+                   //infuence the original variable. but for things like ArrayList, when we modify inside the function, although the
+                  //original reference won't change, the elements in it will change. cuz parameter is just copy of reference, not copy of
+                  //all the list.
+    public void flatten(TreeNode root) {
+        if(root==null) return;
+        else{
+            curr = root;
+            flatten2(root.left);
+            flatten2(root.right);
+            TreeNode head = root;
+            while(head!=null){
+                head.right = head.left;
+                head.left = null;
+                head = head.right;
+            }
+        }
+    }
+    public void flatten2(TreeNode root){
+        if(root==null) return;
+        else{
+            curr.left = root; //now we can't store root at curr.right, cuz we may need to visit curr,right later. And since we have already
+                              //visited curr.left, we can store root in it. at last we move all left to right and set left to null.
+            curr = root;
+            flatten2(root.left);
+            flatten2(root.right);
+        }
+    }
+}

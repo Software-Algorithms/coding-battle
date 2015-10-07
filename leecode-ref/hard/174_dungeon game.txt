@@ -1,0 +1,29 @@
+//should propagate from right bottom to left top.
+//to improve can use only previous line so space could be reduced to O(n).
+//tricky one if you just modify the input matrix you don't need extra space.
+public class Solution {
+    public int calculateMinimumHP(int[][] dungeon) {
+        int rows = dungeon.length, cols = dungeon[0].length;
+        int[][] intialHealth = new int[rows][cols];
+        intialHealth[rows-1][cols-1] = dungeon[rows-1][cols-1]<0?-dungeon[rows-1][cols-1]+1:1;
+        for(int i=rows-2;i>=0;i--) {
+            if(dungeon[i][cols-1]>=0)
+                intialHealth[i][cols-1] = intialHealth[i+1][cols-1]-dungeon[i][cols-1]>0?intialHealth[i+1][cols-1]-dungeon[i][cols-1]:1;
+            else intialHealth[i][cols-1] = -dungeon[i][cols-1] + intialHealth[i+1][cols-1];
+        }
+        for(int i=cols-2;i>=0;i--) {
+            if(dungeon[rows-1][i]>=0)
+                intialHealth[rows-1][i] = intialHealth[rows-1][i+1]-dungeon[rows-1][i]>0?intialHealth[rows-1][i+1]-dungeon[rows-1][i]:1;
+            else intialHealth[rows-1][i] = -dungeon[rows-1][i] + intialHealth[rows-1][i+1];
+        }
+        for(int i=rows-2;i>=0;i--){
+            for(int j=cols-2;j>=0;j--){
+                int min = intialHealth[i+1][j]<intialHealth[i][j+1]?intialHealth[i+1][j]:intialHealth[i][j+1];
+                if(dungeon[i][j]>=0) intialHealth[i][j] = min-dungeon[i][j]>0?min-dungeon[i][j]:1;
+                else intialHealth[i][j] = -dungeon[i][j] + min;
+            }
+        }
+        return intialHealth[0][0];
+    }
+}
+

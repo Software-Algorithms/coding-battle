@@ -1,0 +1,82 @@
+public class Solution {
+	List<List<Integer>> result = new ArrayList<List<Integer>>();
+	List<int[]> tempResult = new ArrayList<int[]>();
+    public List<List<Integer>> permute(int[] nums) {  
+        if(nums.length==1){
+            List<Integer> list = new ArrayList<Integer>();
+            list.add(nums[0]);
+            result.add(list);
+            return result;
+        }
+        else{
+        for(int i =0; i<nums.length;i++){
+        	int[] permutes = new int[nums.length];
+			int temp = nums[0];
+			nums[0] = nums[i];
+			nums[i] = temp;
+			int[] tempCopy = Arrays.copyOfRange(nums, 1, nums.length);    			
+			nums[i] = nums[0];
+			nums[0] = temp;
+			permutes[0] = nums[i];
+		    permute2(tempCopy, permutes,nums.length);
+		}
+        for(int[] i:tempResult){
+        	List<Integer> list = new ArrayList<Integer>();
+        	for(int j:i) list.add(j);
+        	result.add(list);
+        }        
+        return result;
+        }
+    }
+    public void permute2(int[] nums, int[] permutes, int oriLength){
+    	if(nums.length==1){
+    		int[] permutesCopy = permutes.clone();
+    		permutesCopy[oriLength-1] = nums[0];
+    		tempResult.add(permutesCopy);
+    	}
+    	else{
+    		for(int i =0; i<nums.length;i++){
+    			int[] permutesCopy = permutes.clone();
+    			int temp = nums[0];
+    			nums[0] = nums[i];
+    			nums[i] = temp;
+    			int[] tempCopy = Arrays.copyOfRange(nums, 1, nums.length);    			
+    			nums[i] = nums[0];
+    			nums[0] = temp;
+    			permutesCopy[oriLength-1-tempCopy.length] = nums[i];
+    		    permute2(tempCopy, permutesCopy,oriLength);
+    		}
+    	}
+    }
+}
+
+public static List<List> permute(int[] nums) { 
+    List<List> result=new ArrayList<List>(); 
+    Set store=new HashSet(); 
+    for(int i=0;i<nums.length;i++) store.add(nums[i]);
+    List<Integer> temp=new ArrayList<Integer>();
+    re(store,temp,result);
+    return result;
+}
+public static void re(Set<Integer> s,List<Integer> t,List<List<Integer>> result){
+    if(s.size()==1){
+        for (Iterator<Integer> it = s.iterator(); it.hasNext();) {
+            int m = it.next();
+            t.add(m);
+            List<Integer> x=new ArrayList<Integer>(t);
+            result.add(x);
+            t.remove(t.size()-1);
+        }
+
+        return;
+    }
+    Iterator<Integer> iter = s.iterator();
+    while (iter.hasNext()) {
+        int y=iter.next();
+        t.add(y);
+        Set<Integer> s_n=new HashSet<Integer>(s);
+        s_n.remove(y);
+        re(s_n,t,result);
+        t.remove(t.size()-1);
+    }
+}

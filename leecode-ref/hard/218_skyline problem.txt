@@ -1,0 +1,272 @@
+public class Solution {
+    public List<int[]> getSkyline(int[][] buildings) {
+        List<int[]> res = new ArrayList<int[]>();
+        TreeMap<Integer,Integer> map = new TreeMap<Integer,Integer>(); //key is ri, value is hi.
+        List<int[]> roundRes = new ArrayList<int[]>();
+        for(int i=0;i<buildings.length;i++){
+            int maxHeight = 0;
+            Integer tail = map.isEmpty()?null:map.lastKey();
+            while(tail!=null&&tail>=buildings[i][0]) {
+                if(map.get(tail)>maxHeight) maxHeight = map.get(tail);
+                tail = map.lowerKey(tail);
+            }
+            if(buildings[i][2]>maxHeight) { //current building's hi > all the buildings whose ri is on the right of curr's left, add curr li
+                if(!res.isEmpty()&&res.get(res.size()-1)[0]==buildings[i][0]&&res.get(res.size()-1)[1]<buildings[i][2]){
+                    //two buildings with same li, and latter one is higher. remove the key point add by pre building.
+                    res.remove(res.size()-1); 
+                }
+                int[] liToAdd = {buildings[i][0],buildings[i][2]};
+                roundRes.add(liToAdd);
+            }
+            while(tail!=null){ //tail is the largest ri smaller than buildings[i][0]
+                if(map.get(tail)>maxHeight){
+                    int[] riToAdd = {tail,maxHeight};
+                    roundRes.add(0,riToAdd);
+                    maxHeight = map.get(tail);
+                }
+                map.remove(tail);
+                tail = map.lowerKey(tail);
+            }
+            res.addAll(roundRes);
+            roundRes.clear();
+            if(!map.containsKey(buildings[i][1])||map.get(buildings[i][1])<buildings[i][2]){
+                map.put(buildings[i][1],buildings[i][2]);
+            }
+        }
+        int maxHeight = 0;
+        Integer tail = map.isEmpty()?null:map.lastKey();
+        while(tail!=null){ //tail is the largest ri smaller than buildings[i][0]
+            if(map.get(tail)>maxHeight){
+                int[] riToAdd = {tail,maxHeight};
+                roundRes.add(0,riToAdd);
+                maxHeight = map.get(tail);
+            }
+            map.remove(tail);
+            tail = map.lowerKey(tail);
+        }
+        res.addAll(roundRes);
+        return res;
+    }
+}
+
+//one elegant C++ solution
+struct Solution {
+    vector<pair<int, int>> getSkyline(vector<vector<int>>& buildings) {
+        vector<pair<int, int>> res;
+        int cur=0, cur_X, cur_H, len = buildings.size();
+        priority_queue<pair<int, int>> liveBlg;
+        while(cur<len || !liveBlg.empty()) {
+            if (liveBlg.empty() || cur<len && buildings[cur][0] <= liveBlg.top().second) {
+                //the new building's li is smaller than the ri of current highest live building
+                //just add the building to live heap. If its height is higher than current highest,
+                //it would be the new top of the heap, and would be add to res at the end of this
+                //iteration, otherwise res.back().second == cur_H and no new point would be added to res
+                cur_X = buildings[cur][0];
+                while(cur<len && buildings[cur][0] == cur_X) {
+                    liveBlg.push(make_pair(buildings[cur][2], buildings[cur][1]));
+                    cur++;
+                }
+            } else {
+                //the new building's li is larger than the ri of current highest live building
+                //deal with the building to be dead first. The live buildings whose ri is no larger than
+                //heap top's ri (including heap top itself) wouldn't have any influence to res, just pop 
+                //them. The skyline to be added to res should be {heap top's ri, the largest height smaller
+                //than heap top's hi from a live building whose ri is larger than heap top's ri}. 
+                cur_X = liveBlg.top().second;
+                while (liveBlg.size() && liveBlg.top().second <= cur_X)
+                    liveBlg.pop();
+            }
+            //each time a skyline point is added to res, its height must be the current highest in the
+            //live heap till now.The former higher building were already dead and removed out of live heap.
+            cur_H = liveBlg.empty() ? 0 : liveBlg.top().first;
+            if (res.empty() || (res.back().second != cur_H))
+                res.push_back(make_pair(cur_X, cur_H));
+        }
+        return res;
+    }
+};
+//The idea is to do line sweep and just process the buildings only at the start and end points.
+//The key is to use a priority queue to save all the buildings that are still "alive". 
+//The queue is sorted by its height and end time (the larger height first and if equal height,
+//the one with a bigger end time first). For each iteration, we first find the current process time,
+//which is either the next new building start time or the end time of the top entry of the live queue.
+//If the new building start time is larger than the top one end time, then process the one in the queue
+//first (pop them until it is empty or find the first one that ends after the new building); 
+//otherswise, if the new building starts before the top one ends, then process the new building
+//(just put them in the queue). After processing, output it to the resulting vector if the height changes.
+// Complexity is the worst case O(NlogN)
+
+
+//other's solution using priority queue
+//The idea is to sort all critical points first. Then keep track of an active set of buildings with a max 
+//priority queue. When it comes to the left edge of a building, add its height to the maxPQ. When it comes
+//to the right edge, remove the height. The add/remove operation for pq takes logN time, peek operation
+//is constant time. The overall time complexity should be O(n * log(n)). 
+//actually queue.remove takes O(n)
+
+class Pair implements Comparable<Pair> {
+    int index;
+    int height;
+    Pair(int i, int h) {
+        this.index = i;
+        this.height = h;
+    }
+
+    public int compareTo(Pair p) {
+        // if index is different, smaller index comes first
+        if (this.index != p.index) return this.index - p.index;
+        // if the right end and left start overlap, left start point comes first
+        if (p.height * this.height < 0) return this.height - p.height;
+        // overlap on the left edge, the bigger value comes first
+        if (this.height < 0 && p.height < 0) return Math.abs(p.height) - Math.abs(this.height);
+        // overlap on the right value, the smaller values comes first
+        return Math.abs(this.height) - Math.abs(p.height);
+    }
+
+}
+
+public class Solution {
+    public List<int[]> getSkyline(int[][] buildings) {
+        List<int[]> result = new LinkedList();
+        if (buildings == null || buildings.length == 0) return result;
+        int len = buildings.length;
+        Pair[] pairs = new Pair[2 * len];
+        for (int i = 0; i < len; i++) {
+            pairs[2 * i] = new Pair(buildings[i][0], -buildings[i][2]);
+            pairs[2 * i + 1] = new Pair(buildings[i][1], buildings[i][2]);
+        }
+        Arrays.sort(pairs);
+        int height = 0;
+        // Priority queue in java allows duplicates
+        PriorityQueue<Integer> maxPQ = new PriorityQueue<Integer>(len, Collections.reverseOrder());
+        for (Pair p: pairs) {
+            if (p.height < 0) maxPQ.add(-p.height);
+            else maxPQ.remove(p.height);
+            int newH = (maxPQ.peek() == null) ? 0 : maxPQ.peek();
+            if (newH != height) {
+                height = newH;
+                int[] re = new int[2];
+                re[0] = p.index;
+                re[1] = height;
+                result.add(re);
+            }
+        }
+        return result;
+    }
+}
+
+//divide-n-conquer solution
+public class Solution {
+    public List<int[]> getSkyline(int[][] buildings) {
+        if (buildings.length == 0)
+            return new LinkedList<int[]>();
+        return recurSkyline(buildings, 0, buildings.length - 1);
+    }
+
+    private LinkedList<int[]> recurSkyline(int[][] buildings, int p, int q) {
+        if (p < q) {
+            int mid = p + (q - p) / 2;
+            return merge(recurSkyline(buildings, p, mid),
+                    recurSkyline(buildings, mid + 1, q));
+        } else { //only one building, just add its left top and right bottom points.
+            LinkedList<int[]> rs = new LinkedList<int[]>();
+            rs.add(new int[] { buildings[p][0], buildings[p][2] });
+            rs.add(new int[] { buildings[p][1], 0 });
+            return rs;
+        }
+    }
+
+    private LinkedList<int[]> merge(LinkedList<int[]> l1, LinkedList<int[]> l2) {
+        //similar to merge sort.
+        LinkedList<int[]> rs = new LinkedList<int[]>();
+        int h1 = 0, h2 = 0; //represent the height of skyline added in previous step. Then each time we 
+        //tend to use h = max(h1,h2) to res, if now we choose x1, and h2 is max, when we try to add (x1,h2)
+        //to res, we would find h == rs.getLast()[1], and reject this redundant skyline point. 
+        //skyline is sorted by x coordinate, so adjacent points can't have the same height.
+
+        //more generally, a skyline points {x,h} means the height between this point and next skyline point
+        //is always h. So if x1 < x2, we will have x2_prePoint < x1 < x2_currPoint, so the h2 we kept would
+        //influence whether to add {x1,h} to res or not (h1>h2->add, otherwise not).
+        while (l1.size() > 0 && l2.size() > 0) {
+            int x = 0, h = 0;
+            if (l1.getFirst()[0] < l2.getFirst()[0]) {
+                x = l1.getFirst()[0];
+                h1 = l1.getFirst()[1];
+                h = Math.max(h1, h2);
+                l1.removeFirst();
+            } else if (l1.getFirst()[0] > l2.getFirst()[0]) {
+                x = l2.getFirst()[0];
+                h2 = l2.getFirst()[1];
+                h = Math.max(h1, h2);
+                l2.removeFirst();
+            } else {
+                x = l1.getFirst()[0];
+                h1 = l1.getFirst()[1];
+                h2 = l2.getFirst()[1];
+                h = Math.max(h1, h2);
+                l1.removeFirst();
+                l2.removeFirst();
+            }
+            if (rs.size() == 0 || h != rs.getLast()[1]) {
+                rs.add(new int[] { x, h });
+            }
+        }
+        rs.addAll(l1);
+        rs.addAll(l2);
+        return rs;
+    }
+}
+
+
+
+
+
+
+
+//at first tend to use TreeSet, so build this object, at last found it's better to use TreeMap
+//cuz it has unique key. 
+/*
+class Building implements Comparable<Building>{
+	int ri;
+	int li; //redudant val, useless for this problem.
+	int hi;
+	Building(int r, int l, int h){
+		ri = r;
+		li = l;
+		hi = h;
+	}
+	public int compareTo(Building x){
+		if(this.ri<x.ri) return -1;
+		else if(this.ri==x.ri) return 0;
+		else return 1;
+	}	
+}
+*/
+
+//misunderstanding
+/*
+public class Solution {
+    public List<int[]> getSkyline(int[][] buildings) {
+        List<int[]> res = new ArrayList<int[]>();
+        int rightMost = 0;
+        for(int i=0;i<buildings.length;i++) if(rightMost<buildings[i][1]) rightMost=buildings[i][1];
+        int[] outline = new int[rightMost+1];
+        for(int i=0;i<buildings.length;i++){
+            for(int j=buildings[i][0];j<=buildings[i][1];j++){
+                if(outline[j]<buildings[i][2]) outline[j]=buildings[i][2];
+            }
+        }
+        if(outline[0]!=0){
+            int[] keyPoint = {0,outline[0]};
+            res.add(keyPoint);
+        }
+        for(int i=1;i<=rightMost;i++){
+            if(outline[i]!=outline[i-1]){
+                int[] keyPoint = {i,outline[i]};
+                res.add(keyPoint);
+            }
+        }
+        return res;
+    }
+}
+*/

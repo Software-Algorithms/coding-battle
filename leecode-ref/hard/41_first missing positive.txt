@@ -1,0 +1,48 @@
+public class Solution {
+    public int firstMissingPositive(int[] nums) {
+        for(int i = 0; i < nums.length; i++) {
+            while(nums[i] > 0 && nums[i] - 1 < nums.length && nums[i] != nums[nums[i]-1]) {
+                int tmp = nums[nums[i]-1]; //the order matters!!! 
+                nums[nums[i]-1] = nums[i];
+                nums[i] = tmp;
+                //int tmp = nums[i];
+                //nums[i] = nums[nums[i]-1];
+                //nums[nums[i]-1] = tmp; //nums[i] was already changed!!!!!!!!
+            }
+        }
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i]!=i+1) return i+1;
+        }
+        return nums.length + 1;
+    }
+}
+
+
+public class Solution {
+    public int firstMissingPositive(int[] nums) {
+        int candiCount = 0, sum = 0, max = 0;
+        for(int num : nums) {
+            if(num <= 0) continue;
+            candiCount++;
+            sum -= num;
+            if(num > max) max = num;
+        }
+        sum += (max+1)*max/2;
+        int missingCount = max - candiCount;
+        while(missingCount > 0) {
+            int maxFristMissing = (missingCount%2==0) ? sum/missingCount - missingCount/2 + 1 : sum/missingCount - missingCount/2 ;
+            candiCount = 0;
+            sum = 0;
+            max = 0;
+            for(int num : nums) {
+                if(num <= 0 || num >= maxFristMissing) continue;
+                candiCount++;
+                sum -= num;
+                if(num > max) max = num;
+            }
+            sum += (max+1)*max/2;
+            missingCount = max - candiCount;
+        }
+        return max + 1; 
+    }
+}

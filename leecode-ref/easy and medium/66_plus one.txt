@@ -1,0 +1,26 @@
+public class Solution{
+    public int[] plusOne(int[] digits) {
+        if(digits.length==0) return new int[0];
+        else{
+        	digits[digits.length-1] += 1;
+        	int curr = digits.length-1;
+        	while(digits[curr]==10){
+        		if(curr>0) {
+        			digits[curr] = 0;
+        			digits[curr-1] += 1;
+        			curr--;
+        		}
+        		else{
+        			int[] result = new int[digits.length+1];
+        			result[0] = 1;
+        			for(int i = 1;i<result.length;i++) result[i] =0;
+        			return result;
+        		}
+        	}
+        	return digits;
+     	
+        }
+        
+        
+    }
+}

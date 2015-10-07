@@ -1,0 +1,259 @@
+//awesome idea to store isPalindrome[][] and makes compute all isPalindrome() to O(n^).
+public class Solution {
+    public int minCut(String s) {
+        if(s.length()==0) return 0;
+        int[] minCuts = new int[s.length()+1]; // minCuts[0] means empty str. minCuts[i] stands for substring(0,i)'s min cut.
+        boolean[][] isPalindrome = new boolean[s.length()][s.length()];
+        for(int i = 2; i<=s.length();i++){
+            int currMin = minCuts[i-1] + 1;
+            for(int j = i; j>=1; j--){ //order matters cuz we need to compute isPalindrome[][] gradually.
+                if((s.charAt(j-1)==s.charAt(i-1))&&((i-j<=2)||isPalindrome[j][i-2])){
+                    //i-j<2 also OK, but <= is faster with less comparison
+                    isPalindrome[j-1][i-1] = true;
+                    if(j==1) currMin = 0; //can't break, need full iteration to compute all isPalindrome[][] for later loops
+                    else currMin = currMin < minCuts[j-1] + 1 ? currMin : minCuts[j-1] + 1;
+                }
+            }
+            minCuts[i] = currMin;
+        }
+        return minCuts[minCuts.length-1];
+    }
+}
+
+public class Solution {
+    public int minCut(String s) {
+        if(s.length()==0) return 0;
+        int[] minCuts = new int[s.length()+1]; // minCuts[0] means empty str. minCuts[i] stands for substring(0,i)'s min cut.
+        for(int i = 0; i<minCuts.length;i++) minCuts[i] = i - 1; //need to initialize here. minCuts[0] = -1 avoid later treatment.
+        for(int i = 0; i<s.length();i++){ //initial from 0 or 1 doesn't matter.
+            for(int j = 0; i - j >= 0 && i + j <= s.length()-1 && s.charAt(i+j)==s.charAt(i-j); j++){
+                minCuts[i+j+1] = (minCuts[i-j] + 1 < minCuts[i+j+1])? minCuts[i-j] + 1 : minCuts[i+j+1];
+            }
+            for(int j = 0; i-j-1 >= 0 && i + j  <= s.length()-1 && s.charAt(i+j)==s.charAt(i-j-1); j++){
+                if(j==i) minCuts[i+j+1] = 0;
+                minCuts[i+j+1] = (minCuts[i-j-1] + 1 < minCuts[i+j+1])? minCuts[i-j-1] + 1 : minCuts[i+j+1];
+            }
+        }
+        return minCuts[minCuts.length-1];
+    }
+}
+
+//The Manancher-like solution scan the array from left to right (for i loop) and only check those sub-strings centered at s[i]; once a non-palindrome string is found, it will stop and move to i+1. Same as the DP solution, minCUTS[i] is used to save the minimum cuts for s[0:i-1]. For each i, we do two for loops (for j loop) to check if the substrings s[i-j .. i+j] (odd-length substring) and s[i-j-1.. i+j] (even-length substring) are palindrome. By increasing j from 0, we can find all the palindrome sub-strings centered at i and update minCUTS accordingly. Once we meet one non-palindrome sub-string, we stop for-j loop since we know there no further palindrome substring centered at i. This helps us avoid unnecessary palindrome substring checks, as we did in the DP algorithm. Therefore, this version is faster.
+
+//Manancher-like solution. Share some idea with 44_wildcard matching problem,
+in current iteration propagate values for later iteration.
+
+class Solution {
+public:
+    int minCut(string s) {
+        const int N = s.size();
+        if(N<=1) return 0;
+
+        int i, j, minCUTS[N+1];
+        for(i=0; i<=N; ++i) minCUTS[i] = i-1;
+
+        for(i=1;i<N;i++)
+        {
+            for(j=0;(i-j)>=0 && (i+j)<N && s[i-j]== s[i+j]; ++j) // odd-length substrings 
+                minCUTS[i+j+1] = min(minCUTS[i+j+1], 1 + minCUTS[i-j]);
+
+            for(j=0;(i-j-1)>=0 && (i+j)<N && s[i-j-1]== s[i+j]; ++j) // even-length substrings
+                minCUTS[i+j+1] = min(minCUTS[i+j+1], 1 + minCUTS[i-j-1]);
+        }
+        return minCUTS[N];
+    }
+};
+
+
+//still too time costy
+/*
+public class Solution {
+    public int minCut(String s) {
+        if(s.length()==0) return 0;
+        int[] minCuts = new int[s.length()+1]; // minCuts[0] means empty str.
+        int currLength = 1; //current length of longest palindrome ending at i.
+        for(int i = 2; i<=s.length();i++){
+            int currMin = minCuts[i-1] + 1;
+            int j = (i-currLength-1) > 0 ? i-currLength-1:1;
+            currLength = 1;
+            for(; j<i; j++){
+                if(j==1&&isPalindrome(s,j-1,i-1)){
+                    currMin = 0;
+                    currLength = i;
+                    break;
+                }
+                else if(isPalindrome(s,j-1,i-1)) { //if(minCuts[j-1]<minCuts[i-1]&&isPalindrome(s,j-1,i-1)) currLength fail to get updated.
+                    if(currLength < i-j + 1) currLength =  i - j + 1;
+                    //minCuts[j-1]<minCuts[i-1]&&
+                    currMin = currMin < minCuts[j-1] + 1 ? currMin : minCuts[j-1] + 1;
+                } 
+            }
+            minCuts[i] = currMin;
+        }
+        return minCuts[minCuts.length-1];
+    }
+    
+    public boolean isPalindrome(String s, int begin, int end){
+        if(begin<0) return false;
+        while(begin<end){
+        	if(s.charAt(begin++)!=s.charAt(end--)) return false;
+        }
+        return true;
+    }
+}
+*/
+
+//too time costy
+/*
+public class Solution {
+    public int minCut(String s) {
+        if(s.length()==0) return 0;
+        int[] minCuts = new int[s.length()+1]; // minCuts[0] means empty str.
+        minCuts[1] = 0;
+        for(int i = 2; i<=s.length();i++){
+            int currMin = minCuts[i-1] + 1;
+            List<Integer> toCheck = new ArrayList<Integer>();
+            toCheck.add(1);
+            for(int j = 2; j<i; j++){
+                if(minCuts[j-1]<minCuts[i-1]) toCheck.add(j);
+            }
+            for(int j : toCheck) {
+                if(isPalindrome(s,j-1,i-1)) {
+                    if(j==1) {
+                        currMin = 0;
+                        break;
+                    }
+                    currMin = currMin < minCuts[j-1] + 1 ? currMin : minCuts[j-1] + 1;
+                }
+            }
+            minCuts[i] = currMin;
+        }
+        return minCuts[minCuts.length-1];
+    }
+    
+    public boolean isPalindrome(String s, int begin, int end){
+        if(begin<0) return false;
+        while(begin<end){
+        	if(s.charAt(begin++)!=s.charAt(end--)) return false;
+        }
+        return true;
+    }
+}
+*/
+
+//the idea to first find the longest substring palindrome and then cut the remained parts are proved to be wrong.
+/*public class Solution {
+    public int minCut(String s) {
+        if(s.length()==0||s.length()==1) return 0;
+        int[] longest = longestPalindrome(s);
+        int left = longest[0], right = longest[1];
+        if(left==0&&right==s.length()-1) return 0;
+        int res = 0;
+        if(left>0) res++;
+        if(right<s.length()-1) res++;
+        res += minCut(s.substring(0,left)) + minCut(s.substring(right+1,s.length()));
+        return res;
+    }
+    
+    public int[] longestPalindrome(String s) {
+        int[] res = new int[2];
+        int currLength = 0;
+        for(int i=0;i<s.length();i++){
+            if(isPalindrome(s,i-currLength-1,i)){
+                res[0] = i-currLength-1;
+                res[1] = i;
+                currLength = currLength+2;
+                
+            }
+            else if(isPalindrome(s,i-currLength,i)){
+                res[0] = i-currLength;
+                res[1] = i;
+                currLength = currLength+1;
+            }
+        }
+        return res;
+    }
+    
+    public boolean isPalindrome(String s, int begin, int end){
+        if(begin<0) return false;
+        while(begin<end){
+        	if(s.charAt(begin++)!=s.charAt(end--)) return false;
+        }
+        return true;
+    }
+ 
+}
+*/
+
+/*
+public class Solution {
+    public int minCut(String s) {
+        int longestP = shortestPalindrome(s);
+        int rever = rever(s);
+        if(longestP==s.length()) return 0;
+        if(longestP > rever){
+            return 1 + minCut(s.substring(longestP,s.length()));
+        }
+        else return 1 + minCut(s.substring(0,s.length()-rever));
+        
+    }
+    
+     public int rever(String s) {
+            return shortestPalindrome(new StringBuilder(s).reverse().toString());
+     }
+     
+    
+    public int shortestPalindrome(String s) {
+        String p = new StringBuffer(s).reverse().toString();
+        char pp[] = p.toCharArray();
+        char ss[] = s.toCharArray();
+        int m = ss.length;
+        if(m==0) return 0;
+        // trying to find the greatest overlap of pp[] and ss[]
+        // using the buildLPS() method of KMP
+        int lps[] = buildLPS(ss);
+        int i=0;// points to pp[]
+        int len = 0; //points to ss[]
+
+        while(i<m) {
+            if (pp[i] == ss[len]) {
+                i++;
+                len++;
+
+            } else {
+                if (len == 0) {
+                    i++;
+                } else {
+                    len = lps[len-1];
+                }
+            }
+        }
+        return len;
+
+    }
+
+    int [] buildLPS(char ss[]) {
+        int m = ss.length;
+        int lps[] = new int[m];
+        int len = 0;
+        int i = 1;
+        lps[0] = 0;
+        while(i < m) {
+            if (ss[i] == ss[len]) {
+                len++;
+                lps[i] = len;
+                i++;
+            } else {
+                if (len == 0) {
+                    i++;
+                } else {
+                    len = lps[len-1];
+                }
+
+            }
+        }
+
+        return lps;
+    }
+}
+*/

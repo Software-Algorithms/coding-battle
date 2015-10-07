@@ -1,0 +1,104 @@
+public class Solution {
+    public boolean isNumber(String s) {
+        s = s.trim();
+        int len = s.length();
+        if(len==0) return false;
+        int i = 0, dotCount = 0, numCount = 0;
+        if(s.charAt(i)=='+' || s.charAt(i)=='-') i++;
+        while( i<len && (Character.isDigit(s.charAt(i)) || s.charAt(i)=='.')) {
+            if(s.charAt(i++)=='.') dotCount++;
+            else numCount++;
+        }
+        if(dotCount > 1 || numCount <= 0 ) return false;
+        if(i < len && s.charAt(i)=='e') { // can't i++ here, we need to eliminate e is the string tail case.
+            i++;
+            dotCount = 0;
+            numCount = 0;
+            if(i < len && (s.charAt(i)=='+' || s.charAt(i)=='-')) i++;
+            while( i<len && (Character.isDigit(s.charAt(i)) || s.charAt(i)=='.')) {
+                if(s.charAt(i++)=='.') dotCount++;
+                else numCount++;
+            }
+            if(dotCount > 0 || numCount <= 0 ) return false;
+        }
+        return i==len;
+    }
+}
+
+public class Solution {
+    public boolean isNumber(String s) {
+        s = s.trim();
+        if (s.length() == 0) return false;          
+        if (s.matches("[+-]?(([0-9]*\\.?[0-9]+)|([0-9]+\\.?[0-9]*))([eE][+-]?[0-9]+)?")) return true;
+        else return false;
+    }
+}
+
+
+public class Solution {
+    public boolean isNumber(String s) {
+        try {
+            Double.parseDouble(s);
+        }
+        catch(Exception e) {
+            return false;
+        }
+        if(s.charAt(s.length()-1)=='D' || s.charAt(s.length()-1)=='d' || s.charAt(s.length()-1)=='f' || s.charAt(s.length()-1)=='F') return false;
+        return true;
+    }
+}
+
+//https://leetcode.com/discuss/13691/c-my-thought-with-dfa
+class Solution {
+public:
+    bool isNumber(string str) {
+        int state=0, flag=0; // flag to judge the special case "."
+        while(str[0]==' ')  str.erase(0,1);//delete the  prefix whitespace 
+        while(str[str.length()-1]==' ') str.erase(str.length()-1, 1);//delete the suffix whitespace
+        for(int i=0; i<str.length(); i++){
+            if('0'<=str[i] && str[i]<='9'){
+                flag=1;
+                if(state<=2) state=2;
+                else state=(state<=5)?5:7;
+            }
+            else if('+'==str[i] || '-'==str[i]){
+                if(state==0 || state==3) state++;
+                else return false;
+            }
+            else if('.'==str[i]){
+                if(state<=2) state=6;
+                else return false;
+            }
+            else if('e'==str[i]){
+                if(flag&&(state==2 || state==6 || state==7)) state=3;
+                else return false;
+            }
+            else return false;
+        }
+        return (state==2 || state==5 || (flag&&state==6) || state==7);
+    }
+};
+
+class Solution {
+public:
+    bool isNumber(string s) {
+        //"1 1"is not valid, "0x11" is not valid, "." is not valid, "2e3.1" is not valid, "2e" is not valid,"1a" is not valid,"++1" is not valid
+        int n = s.size();
+        if(n == 0) return false;
+        int i = 0;
+        int count_num = 0,count_point = 0;
+        while(s[i] == ' ') i++;
+        if(s[i] == '+' || s[i] == '-') i++;
+        while(isdigit(s[i]) || s[i] == '.') s[i++] == '.'?count_point++:count_num++;
+        if(count_point > 1 || count_num < 1) return false;
+        if(s[i] == 'e'){
+            i++;
+            count_num = 0;count_point = 0;
+            if(s[i] == '+' || s[i] == '-') i++;
+            while(isdigit(s[i]) || s[i] == '.') s[i++] == '.'?count_point++:count_num++;
+            if(count_point > 0 || count_num < 1) return false;
+        }
+        while(s[i] == ' ') i++;
+        return i == n;
+    }
+};

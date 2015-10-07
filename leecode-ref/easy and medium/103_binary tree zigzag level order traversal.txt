@@ -1,0 +1,50 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+
+public class Solution {
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        if(root==null) return result;
+        else{
+        	Map<Integer,List<Integer>> tmpResult = new HashMap<Integer,List<Integer>>();
+            int depth = depth(root);
+            for(int i =1;i<=depth;i++) tmpResult.put(i, new ArrayList<Integer>());
+            levelOrderBottom(root,1,tmpResult);
+            for(int i =1;i<=depth;i++){
+                if(i%2==1) result.add(tmpResult.get(i));
+            	else{
+            	    reverseList(tmpResult.get(i));
+            	    result.add(tmpResult.get(i));
+            	}
+            }
+            return result;
+        }  
+    }
+    
+    public void levelOrderBottom(TreeNode tree, int lvl, Map<Integer,List<Integer>> tmpResult){
+        
+    	if(tree.left!=null) levelOrderBottom(tree.left,lvl+1,tmpResult);
+    	if(tree.right!=null) levelOrderBottom(tree.right,lvl+1,tmpResult);
+    	tmpResult.get(lvl).add(tree.val);
+    }
+    
+    public int depth(TreeNode root){
+    	if(root==null) return 0;
+    	else return 1+Math.max(depth(root.left),depth(root.right));
+    }
+    public void reverseList(List<Integer> list){
+        for(int i=0;i<=(list.size()-1)/2;i++){
+            int tmp = list.get(i);
+            list.set(i,list.get(list.size()-1-i));
+            list.set(list.size()-1-i,tmp);
+        }
+    }
+    
+}

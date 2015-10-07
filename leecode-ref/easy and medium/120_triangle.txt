@@ -1,0 +1,22 @@
+public class Solution {
+    public int minimumTotal(List<List<Integer>> triangle) {
+        if(triangle.size()==0) return 0;
+        else{
+            int n = triangle.size();
+            int[] pre = new int[n], curr = new int[n];
+            for(int i=0;i<n;i++){
+                curr[i] = triangle.get(n-1).get(i);
+                pre[i] = curr[i];
+            }
+            for(int i = n-2; i>=0; i--){
+                for(int j = 0;j<=i;j++){
+                    curr[j] = Math.min(pre[j],pre[j+1])+triangle.get(i).get(j);
+                }
+                int[] tmp = pre;
+                pre = curr;
+                if(i!=0) curr = tmp;
+            }
+            return curr[0];
+        }
+    }
+}

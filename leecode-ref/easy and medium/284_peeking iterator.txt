@@ -1,0 +1,41 @@
+// Java Iterator interface reference:
+// https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html
+class PeekingIterator implements Iterator<Integer> {
+
+    private Integer peekElement = null;
+    private Iterator<Integer> iter = null;
+    private boolean hasNext = true;
+    
+	public PeekingIterator(Iterator<Integer> iterator) {
+	    // initialize any member here.
+	    iter = iterator;
+	    if(iterator.hasNext()) {
+	        peekElement = iter.next();
+	    }
+	    else hasNext = false;
+	}
+
+    // Returns the next element in the iteration without advancing the iterator.
+	public Integer peek() {
+        return peekElement;
+	}
+
+	// hasNext() and next() should behave the same as in the Iterator interface.
+	// Override them if needed.
+	@Override
+	public Integer next() {
+	    if(!this.hasNext()) return null; //without this line still got AC, I just think it's a proper way.
+	    Integer tmp = peekElement;
+	    if(!iter.hasNext()) {
+	        peekElement = null;
+	        hasNext = false;
+	    }
+	    else peekElement = iter.next();
+	    return tmp;
+	}
+
+	@Override
+	public boolean hasNext() {
+	    return hasNext;
+	}
+}

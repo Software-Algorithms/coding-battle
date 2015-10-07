@@ -1,0 +1,83 @@
+package leecode;
+
+class Solution_maximumSubarray {
+    public int maxSubArray(int[] nums) {
+    	if (nums.length==0) return 0;
+    	else{
+    		return maxSubArray_DQ(nums,0,nums.length-1);
+    	}
+        
+    }
+    
+    public int maxSubArray_DP(int[] nums){
+    	if(nums.length==0)return Integer.MIN_VALUE;
+    	else{
+    		int sumIncludeEnd = 0;
+    		if(nums[0]>0) sumIncludeEnd = nums[0]; // be careful here we need to set sumIncludeEnd to the first element in array before
+                                                   // iteration started if the first element is larger than 0;
+    		int[] max = new int[nums.length];
+    		max[0] = nums[0];
+    		for(int i=1; i<nums.length;i++){
+    			max[i] = Math.max(max[i-1], nums[i]+sumIncludeEnd);
+    			sumIncludeEnd += nums[i];
+    			if(sumIncludeEnd<0)sumIncludeEnd=0; // when sumIncludeEnd<0, it makes no contribution to the max, discard all the sum before
+    		}
+    		return max[nums.length-1];
+    	}
+    }
+    
+    public int maxSubArray_DP_ConstantExtraSpace(int[] nums){
+    	if(nums.length==0)return Integer.MIN_VALUE;
+    	else{
+    		int sumIncludeEnd = 0;
+    		if(nums[0]>0) sumIncludeEnd = nums[0]; // be careful here we need to set sumIncludeEnd to the first element in array before
+                                                   // iteration started if the first element is larger than 0;
+    		int max = nums[0]; // when we don't need to find the actual subarray, we can just use a constant to track the max
+    		for(int i=1; i<nums.length;i++){
+    			max = Math.max(max, nums[i]+sumIncludeEnd);
+    			sumIncludeEnd += nums[i];
+    			if(sumIncludeEnd<0)sumIncludeEnd=0; // when sumIncludeEnd<0, it makes no contribution to the max, discard all the sum before
+    		}
+    		return max;
+    	}
+    }
+    
+    public int maxSubArray_DQ(int[] nums, int a, int b){
+    	if(a>b) return 0;
+    	else if(a==b) return nums[a];
+    	else{
+    		int half = (a+b)/2;
+    		int left = maxSubArray_DQ(nums,a,half);
+    		int right = maxSubArray_DQ(nums,half+1,b);
+    		int sum = nums[half]+nums[half+1];
+    		int max = sum;
+    		for(int i = half+2; i<= b;i++){
+    			sum += nums[i];
+    			if(sum>max) max = sum;
+    		}
+    		sum = max; // be careful here, we should reset sum to max when we change to another side
+    		for(int i = half-1; i>= a;i--){
+    			sum += nums[i];
+    			if(sum>max) max = sum;
+    		}
+    		
+    		max = Math.max(left,max);
+    		max = Math.max(max, right);
+    		return max;
+    	}
+    }
+}
+
+
+
+public class maximumSubarray {
+
+	public static void main(String[] args) {
+		Solution_maximumSubarray sol = new Solution_maximumSubarray();
+		int[] nums = {1,2,-1,-2,2,1,-2,1,4,-5,4};
+		int max = sol.maxSubArray_DP_ConstantExtraSpace(nums);
+		System.out.println(max);
+
+	}
+
+}

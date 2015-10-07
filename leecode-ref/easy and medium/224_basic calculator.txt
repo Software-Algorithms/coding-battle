@@ -1,0 +1,75 @@
+public class Solution {
+    public int calculate(String s) {
+        Stack<Integer> nums = new Stack<Integer>();
+        Stack<Character> opes = new Stack<Character>();
+        int tmpRes = 0, num = 0;
+        char ope = '+';
+        for(int i =0;i<s.length();i++){
+            if(s.charAt(i)==' ') continue;
+            if(s.charAt(i)=='('){
+                nums.push(tmpRes);
+                tmpRes = 0;
+                opes.push(ope);
+                ope = '+'; //need to reset operator
+            }
+            else if(s.charAt(i)==')'){
+                tmpRes = tmpRes + ((ope=='+')?num:-num); //first compute inside the ();
+                num = 0; //important so when meet +/- afterward, (1+3)-4, tmpRes-0 makes no difference.
+                int left = nums.pop(); //compute the result of inside parenthese between number before parenthese
+                char tmpOpe = opes.pop();
+                if(tmpOpe=='+') tmpRes = left + tmpRes;
+                else tmpRes = left - tmpRes;
+            }
+            else if(Character.isDigit(s.charAt(i))) num = num*10 + (int)(s.charAt(i)-'0');
+            else{
+                tmpRes = tmpRes + ((ope=='+')?num:-num); //compute result before this operator.
+                num = 0;
+                ope = (s.charAt(i)=='+')?'+':'-'; //update the last operator.
+            }
+        }
+        tmpRes = tmpRes + ((ope=='+')?num:-num);
+        return tmpRes;
+    }
+}
+
+
+/*public class Solution {
+    public int calculate(String s) {
+        char[] cha = s.trim().toCharArray();
+        return calculate(cha,0,cha.length-1);
+    }
+    public int calculate(char[] cha, int l, int r){
+        int leftRes = 0, rightRes = 0;
+        int leftLastOpe = 1;
+        int posOfLeftParen = l, posOfRightParen = r;
+        while(posOfLeftParen<=r){
+            if(cha[posOfLeftParen]!='(') {
+                if(cha[posOfLeftParen]=='+'||cha[posOfLeftParen]=='-') leftLastOpe = (cha[posOfLeftParen]=='+')?1:-1;
+                posOfLeftParen++;
+            }
+            else break;
+        }
+        if(posOfLeftParen>r) return calculatePM(cha,l,r); // no parentheses.
+        while(cha[posOfRightParen]!=')') posOfRightParen--;
+        int inParenthese = calculate(cha,posOfLeftParen+1,posOfRightParen-1);
+        return calculatePM(cha,l,posOfLeftParen-1)+ calculatePM(cha,posOfRightParen+1,r)+ ((leftLastOpe==1)?inParenthese:-inParenthese);
+    }
+    public int calculatePM(char[] cha, int begin, int end){
+        if(begin>end) return 0;
+        int res = 0, num = 0;
+        int ope = 1; // 1 means +, -1 means - for the previous operator
+        for(int i = begin;i<=end;i++){
+            if(cha[i]==' ') continue;
+            if(Character.isDigit(cha[i])){
+                num = 10*num + (int)(cha[i]-'0');
+            }
+            else{ //cha[l] is +-
+                res += (ope==1)?num:-num;
+                ope = (cha[i]=='+')?1:-1;
+                num = 0;
+            }
+        }
+        res += (ope==1)?num:-num;
+        return res;
+    }
+}*/

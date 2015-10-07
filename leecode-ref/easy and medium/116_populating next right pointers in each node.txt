@@ -1,0 +1,74 @@
+/**
+ * Definition for binary tree with next pointer.
+ * public class TreeLinkNode {
+ *     int val;
+ *     TreeLinkNode left, right, next;
+ *     TreeLinkNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public void connect(TreeLinkNode root) {
+    	if(root==null||root.left==null) return;
+    	connect(root.left);
+    	connect(root.right);
+    	TreeLinkNode left = root.left;
+    	TreeLinkNode right = root.right;
+    	while(left!=null){
+    	    left.next = right;
+    	    left = left.right;
+    	    right = right.left;
+    	}
+    }
+}
+
+ 
+/*
+class TreeLinkQueue {
+	TreeLinkNode head;
+	TreeLinkNode tail;
+    void enqueue(TreeLinkNode qn){
+        if (head == null){
+            head = qn;
+            tail = qn;
+        }
+        else
+        {
+            tail.next = qn;
+            tail = qn;
+        }
+    }
+    TreeLinkNode dequeue(){
+        if (head == null){
+            return null;
+        }
+        else
+        {
+        	TreeLinkNode first = head;
+            head = head.next;
+            return first;
+        }
+    }
+}
+public class Solution {
+    public void connect(TreeLinkNode root) {
+    	if(root!=null){
+    		TreeLinkQueue tlq = new TreeLinkQueue();
+    		tlq.enqueue(root);
+    		while(tlq.head!=null){
+    			TreeLinkNode tln = tlq.dequeue();
+    			if(tln.left!=null){
+    				tlq.enqueue(tln.left);
+    			}
+    			if(tln.right!=null){
+    				tlq.enqueue(tln.right);
+    			}    			
+    		}
+    		TreeLinkNode setNulls = root;
+    		while(setNulls!=null){
+    			setNulls.next = null;
+    			setNulls = setNulls.right;
+    		}
+    	}
+    }
+}
+*/

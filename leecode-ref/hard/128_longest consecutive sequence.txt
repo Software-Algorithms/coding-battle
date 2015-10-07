@@ -1,0 +1,106 @@
+//using hashset, amortized O(n)
+
+public class Solution {
+    public int longestConsecutive(int[] nums) {
+        int max = 0;
+
+        Set<Integer> set = new HashSet<Integer>();
+        for (int i = 0; i < nums.length; i++) {
+            set.add(nums[i]);
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            int count = 1;
+
+            // look left
+            int num = nums[i];
+            while (set.contains(--num)) {
+                count++;
+                set.remove(num);
+            }
+
+            // look right
+            num = nums[i];
+            while (set.contains(++num)) {
+                count++;
+                set.remove(num);
+            }
+
+            max = Math.max(max, count);
+        }
+
+        return max;
+    }
+}
+
+
+public class Solution {
+    public int longestConsecutive(int[] nums) {
+        Map<Integer,Integer> headTail = new HashMap<Integer,Integer>(); //(pos,length) length > 0 means rightward, = 0 means only itself.
+        int max = nums.length==0 ? 0 : 1;
+        for(int i = 0; i < nums.length; i++){
+            int val = nums[i], head = 0, tail = 0;
+            if(headTail.isEmpty()||(!headTail.containsKey(val)&&!headTail.containsKey(val-1)&&!headTail.containsKey(val+1))) headTail.put(val,0);
+            else if(headTail.containsKey(val)||headTail.containsKey(val-1)&&headTail.get(val-1)>0||headTail.containsKey(val+1)&&headTail.get(val+1)<0) continue;
+            else {
+                if(headTail.containsKey(val-1)&&headTail.containsKey(val+1)) {
+                    tail = val + 1 + headTail.get(val+1);
+                    head = val - 1 + headTail.get(val-1);
+                    headTail.remove(val-1);
+                    headTail.remove(val+1);
+                }
+                else if(headTail.containsKey(val-1)){
+                    head = val - 1 + headTail.get(val-1);
+                    tail = val;
+                    headTail.remove(val-1);
+                }
+                else if(headTail.containsKey(val+1)){
+                    tail = val + 1 + headTail.get(val+1);
+                    head = val;
+                    headTail.remove(val+1);
+                }
+                headTail.put(head,tail-head);
+                headTail.put(tail,head-tail);
+                if(tail-head + 1 > max) max = tail - head + 1;
+            }
+        }
+        return max;
+    }
+}
+
+
+public class Solution {
+    public int longestConsecutive(int[] nums) {
+        Map<Integer,Integer> headTail = new HashMap<Integer,Integer>(); //(pos,length) length > 0 means rightward, = 0 means only itself.
+        for(int i = 0; i < nums.length; i++){
+            int val = nums[i];
+            if(headTail.isEmpty()||(!headTail.containsKey(val)&&!headTail.containsKey(val-1)&&!headTail.containsKey(val+1))) headTail.put(val,0);
+            else if(headTail.containsKey(val-1)&&headTail.get(val-1)>0||headTail.containsKey(val+1)&&headTail.get(val+1)<0) continue;
+            else if(headTail.containsKey(val-1)&&headTail.containsKey(val+1)) {
+                int tail = val + 1 + headTail.get(val+1);
+                int head = val - 1 + headTail.get(val-1);
+                headTail.remove(val-1);
+                headTail.remove(val+1);
+                headTail.put(head,tail-head);
+                headTail.put(tail,head-tail);
+            }
+            else if(headTail.containsKey(val-1)){
+                int head = val - 1 + headTail.get(val-1);
+                headTail.remove(val-1);
+                headTail.put(head,val-head);
+                headTail.put(val,head-val);
+            }
+            else if(headTail.containsKey(val+1)){
+                int tail = val + 1 + headTail.get(val+1);
+                headTail.remove(val+1);
+                headTail.put(tail,val-tail);
+                headTail.put(val,tail-val);
+            }
+        }
+        int max = 0;
+        for(int i : headTail.keySet()){
+            if(headTail.get(i)+1>max) max = headTail.get(i)+1;
+        }
+        return max;
+    }
+}

@@ -1,0 +1,27 @@
+public class Solution {
+    public boolean isValid(String s) {
+        char[] chars = s.toCharArray();
+        Stack<Character> currChar = new Stack<Character>();
+        for(int i = 0;i<chars.length;i++){
+            switch(chars[i]){
+                case '(': case '[': case '{':
+                    currChar.push(chars[i]);
+                    break;
+                case ')':
+                    if(!currChar.empty()&&currChar.peek()=='(') currChar.pop();
+                    else return false;
+                    break;
+                case ']':
+                    if(!currChar.empty()&&currChar.peek()=='[') currChar.pop();
+                    else return false;
+                    break; 
+                case '}':
+                    if(!currChar.empty()&&currChar.peek()=='{') currChar.pop();
+                    else return false;
+                    break;    
+            }
+        }
+        if(currChar.empty()) return true;
+        else return false;
+    }
+}

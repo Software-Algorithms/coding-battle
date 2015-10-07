@@ -1,0 +1,100 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+ 
+public class Solution {
+    public List<TreeNode> generateTrees(int n) {
+        List<TreeNode> result = new ArrayList<TreeNode>();
+        result = generate(1,n);
+        return result;
+    }
+    public List<TreeNode> generate(int head, int tail){
+        List<TreeNode> tmpresult = new ArrayList<TreeNode>();
+        if(head>tail){
+            tmpresult.add(null);
+            return tmpresult;
+        }
+        else if(head==tail){
+            tmpresult.add(new TreeNode(head));
+            return tmpresult;
+        }
+        else{
+            
+            for(int i=head;i<=tail;i++){    
+                List<TreeNode> left = generate(head,i-1);
+                List<TreeNode> right = generate(i+1,tail);
+                for(TreeNode tnl:left){
+                    for(TreeNode tnr:right ){
+                        TreeNode newRoot = new TreeNode(i);
+                        newRoot.left = tnl;
+                        newRoot.right = tnr;
+                        tmpresult.add(newRoot);
+                    }   
+                }
+            }
+            return tmpresult;
+        }
+    }  
+} 
+
+//use code above for less lines 
+/*public class Solution{
+    public List<TreeNode> generateTrees(int n) {
+        List<TreeNode> result = new ArrayList<TreeNode>();
+        if(n<1){
+            result.add(null);
+            return result;
+        } 
+        else{
+            result = generate(1,n);
+            return result;
+        }    
+    }
+    public List<TreeNode> generate(int head, int tail){
+        List<TreeNode> tmpresult = new ArrayList<TreeNode>();
+        if(head>tail) return tmpresult;
+        else if(head==tail){
+            tmpresult.add(new TreeNode(head));
+            return tmpresult;
+        }
+        else{
+            
+            for(int i=head;i<=tail;i++){    
+                List<TreeNode> left = generate(head,i-1);
+                List<TreeNode> right = generate(i+1,tail);
+                if(left.size()!=0&right.size()==0){
+                    for(TreeNode tnl:left ){
+                        TreeNode newRoot = new TreeNode(i);
+                        newRoot.left = tnl;
+                        tmpresult.add(newRoot);
+                    }   
+                }
+                else if(left.size()==0&right.size()!=0){
+                    for(TreeNode tnr:right ){
+                        TreeNode newRoot = new TreeNode(i);
+                        newRoot.right = tnr;
+                        tmpresult.add(newRoot);
+                    }   
+                }
+                else{
+                    for(TreeNode tnl:left){
+                        for(TreeNode tnr:right ){
+                            TreeNode newRoot = new TreeNode(i);
+                            newRoot.left = tnl;
+                            newRoot.right = tnr;
+                            tmpresult.add(newRoot);
+                        }   
+                    }
+                }
+                
+            }
+            return tmpresult;
+        }
+    }  
+}*/

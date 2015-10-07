@@ -1,0 +1,47 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public int countNodes(TreeNode root) {
+        if(root==null) return 0;
+        int depthL = 0, depthR = 0;
+        TreeNode l = root, r = root;
+        while(l!=null){
+            depthL++;
+            l = l.left;
+        }
+        while(r!=null){
+            depthR++;
+            r = r.right;
+        }
+        if(depthL==depthR) return (1<<depthL)-1; //use 1<<depthL, using Math.pow() would cause time limit exceed
+        return biSearch(root,1,depthL,1<<(depthL-1-1));
+    }
+    public int biSearch(TreeNode root, int currDepth, int maxDepth, int checkpos){
+            TreeNode rchi = root.right, lchi = root.left;
+            int depthL = currDepth, depthR = currDepth; 
+            while(rchi!=null){
+                rchi = rchi.left;
+                depthR++;
+            }
+            while(lchi!=null){
+                depthL++;
+                lchi = lchi.right;
+            }
+            if(depthL>depthR){
+                return (1<<(depthL-1))-1+checkpos;
+            } 
+            else if(depthL==maxDepth){
+                return biSearch(root.right,currDepth+1,maxDepth,checkpos+(1<<(maxDepth-(currDepth+1)-1)));
+            }
+            else{
+                return biSearch(root.left,currDepth+1,maxDepth,checkpos-(1<<(maxDepth-(currDepth+1)-1)));
+            }
+    }
+}

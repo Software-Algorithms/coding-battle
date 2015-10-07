@@ -1,0 +1,30 @@
+public class Solution {
+    public int nthUglyNumber(int n) {
+	        Queue<Long> two = new LinkedList<Long>();
+	        Queue<Long> three = new LinkedList<Long>();
+	        Queue<Long> five = new LinkedList<Long>();
+	        two.add((long)1);
+	        for(int i=1;i<=n;i++){
+	            long a = (two.isEmpty())?Integer.MAX_VALUE:two.peek();
+	            long b = (three.isEmpty())?Integer.MAX_VALUE:three.peek();
+	            long c = (five.isEmpty())?Integer.MAX_VALUE:five.peek();
+	            if(i==n) return (int)((a<b)?(a<c?a:c):(b<c?b:c));
+	            if(a<b&&a<c){
+	            	two.poll();
+	                two.add(a*2);
+	                three.add(a*3);
+	                five.add(a*5);
+	            }
+	            else if(b<a&&b<c){
+	            	three.poll();
+	                three.add(b*3);
+	                five.add(b*5);
+	            }
+	            else if(c<a&&c<b) {
+	            	five.poll();
+	            	five.add(c*5);
+	            }
+	        }
+	        return 0;
+	    }
+}

@@ -1,0 +1,133 @@
+package leecode;
+
+import java.util.*;
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int x) { val = x; }
+}
+
+class StackNode{
+    TreeNode treenode;
+    StackNode next;
+    StackNode(TreeNode tn){
+        treenode = tn;
+    }
+}
+
+class TreeStack {
+	StackNode top;
+    void push(StackNode sn){
+        if (top == null){
+            top = sn;
+        }
+        else
+        {
+        	sn.next = top;
+            top = sn;
+        }
+    }
+    StackNode pop(){
+        if (top == null){
+            return null;
+        }
+        else
+        {
+        	StackNode first = top;
+            top = top.next;
+            return first;
+        }
+    }
+    StackNode gettop(){
+    	return top;
+    }
+}
+
+class SolutionInorder2 {
+    public static List<Integer> inorderTraversal(TreeNode root) {
+        if(root==null){
+        	List<Integer> list = new ArrayList<Integer>();
+        	return list;
+        }
+        else
+        {
+        	Map<TreeNode,String> map = new HashMap<TreeNode, String>();
+    	    List<Integer> list = new ArrayList<Integer>();
+            StackNode sn = new StackNode(root);
+            TreeStack ts = new TreeStack();
+            ts.push(sn);
+            while(ts.top!=null){
+            	TreeNode tempTN = ts.gettop().treenode;
+            	if((tempTN.left!=null)&&(map.get(tempTN.left)!="Checked")){
+            		StackNode tempSN = ts.pop();
+            		if(tempTN.right!=null){
+            			StackNode rightchi = new StackNode(tempTN.right);
+            			ts.push(rightchi);
+            		}
+            		ts.push(tempSN);
+            		StackNode leftchi = new StackNode(tempTN.left);
+            		ts.push(leftchi);            		
+            	}
+            	else if((tempTN.left!=null)&&(map.get(tempTN.left)=="Checked")){
+            		StackNode tempSN = ts.pop();
+            		list.add(tempSN.treenode.val);
+            		map.put(tempSN.treenode, "Checked");
+            	}
+            	else if(tempTN.left==null){
+            		StackNode tempSN = ts.pop();
+            		list.add(tempSN.treenode.val);
+            		map.put(tempSN.treenode, "Checked");
+            		if(tempTN.right!=null){
+            			StackNode rightchi = new StackNode(tempTN.right);
+            			ts.push(rightchi);
+            		}          		
+            	}            	       	
+            }
+        	return list;      
+        }                
+    }
+}
+
+class SolutionInorder1 {
+    public static List<Integer> inorderTraversal(TreeNode root) {
+        if(root==null){
+        	List<Integer> list = new ArrayList<Integer>();
+        	return list;
+        }
+        else
+        {
+    	    List<Integer> list = new ArrayList<Integer>();
+        	    if(root.left!=null){
+        	    	list.addAll(inorderTraversal(root.left));
+        	    }
+        	    list.add(root.val);
+        	    if(root.right!=null){
+        	    	list.addAll(inorderTraversal(root.right));
+        	    }
+        	    return list;
+        }                
+    }
+}
+
+public class inorderTraversal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		    TreeNode testtree = new TreeNode(21);
+	        testtree.left = new TreeNode(22);
+	        testtree.right = new TreeNode(23);
+	        testtree.left.left = new TreeNode(24);
+	        testtree.left.left.right = new TreeNode(25);
+	        testtree.right.left = new TreeNode(26);
+	        testtree.right.right = new TreeNode(27);
+	        List<Integer> list = new ArrayList<Integer>();
+	        list = SolutionInorder2.inorderTraversal(testtree);
+	        for(int i:list){
+	        System.out.println(i);
+	        }
+	}
+
+}
+

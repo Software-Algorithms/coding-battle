@@ -1,0 +1,22 @@
+public class Solution {
+    public int countDigitOne(int n) {
+        if(n<=0) return 0;
+        int preRound = 0, preAll = 0; //for example 42345, preround is 2345's num of 1 digits, preall is 9999's num of 1 digits.
+        int multiplier = 1, preNums = 1, pre = 1; // preNums is 10000, pre is 2345+1.
+        while(n>0){
+            int curr = n%10;
+            //curr*preAll is using 0 to curr-1 as most significant digit(MSD) to count
+            //preRound is using curr as MSD to count
+            //preNums is when curr>1, using 1 as MSD will add preNums 1.
+            //pre is when curr=1, using 1 as MSD could only add pre 1(the number counted should < n).
+            if(curr>1) preRound = curr*preAll + preRound + preNums;
+            else if(curr==1) preRound = curr*preAll + preRound + pre;
+            preAll = 10*preAll + preNums;
+            preNums *= 10;
+            pre += curr*multiplier;
+            multiplier *= 10;
+            n /=10;
+        }
+        return preRound;
+    }
+}

@@ -1,0 +1,27 @@
+public class Solution {
+    public List<Integer> grayCode(int n) {
+        List<Integer> list = new ArrayList<Integer>();
+        if(n==0){
+            list.add(0);
+            return list;
+        }
+        if(n==1){
+            list.add(0);
+            list.add(1);
+            return list;
+        }
+    	else{
+    		List<Integer> listPrevious = grayCode(n-1);
+    		int[] temp = new int[listPrevious.size()];
+    		int index = listPrevious.size()-1;
+    		for(int i :listPrevious){
+    			temp[index] = (int) (i + Math.pow(2, n-1));
+    			index--;
+    		}
+    		for(int j :temp){
+    			listPrevious.add(j);
+    		}
+    		return listPrevious;
+    	}
+    }
+}

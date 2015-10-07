@@ -1,0 +1,258 @@
+//O(1).
+class LRUCache {
+    int totalCap;
+    int currCap;
+    Map<Integer,CacheNode> map;
+    CacheNode lru, mru;
+    public LRUCache(int capacity) {
+        totalCap = capacity;
+        map = new HashMap<Integer,CacheNode>();
+    }
+    
+    public int get(int key) {
+        int val = map.containsKey(key) ? map.get(key).value : -1;
+        if(map.containsKey(key)) {
+            if(map.get(key)==mru) return val;
+            else if(map.get(key)==lru) {
+                lru = lru.newer;
+                lru.older = null;
+            }
+            else {
+                map.get(key).older.newer = map.get(key).newer;
+                map.get(key).newer.older = map.get(key).older;
+            }
+            mru.newer = map.get(key);
+            map.get(key).older = mru; //don't forget this!!!
+            mru = map.get(key);
+            mru.newer = null;
+        }
+        return val;
+    }
+    
+    public void set(int key, int value) {
+        if(map.containsKey(key)) {
+            map.get(key).value = value;
+            if(map.get(key)==mru) return;
+            else if(map.get(key)==lru) {
+                lru = lru.newer;
+                lru.older = null;
+            }
+            else {
+                map.get(key).older.newer = map.get(key).newer;
+                map.get(key).newer.older = map.get(key).older;
+            }
+            mru.newer = map.get(key);
+            map.get(key).older = mru;
+            mru = map.get(key);
+            mru.newer = null;
+        }
+        else {
+            CacheNode cNode = new CacheNode(key,value);
+            map.put(key,cNode);
+            if(currCap==totalCap) {
+                map.remove(lru.key);
+                if(lru==mru) { //capacity==1;
+                    lru = cNode;
+                    mru = cNode;
+                    return;
+                }
+                lru = lru.newer;
+                lru.older = null;               
+            }
+            else {
+                if(currCap++==0) { //this ++ covers both if case and not if case below.
+                    lru = cNode;
+                    mru = cNode;
+                    return;
+                }
+            }
+            mru.newer = cNode;
+            cNode.older = mru;
+            mru = cNode;
+            mru.newer = null;
+        }
+    }
+}
+
+//amazing java built-in data structure. //http://docs.oracle.com/javase/7/docs/api/java/util/LinkedHashMap.html
+import java.util.LinkedHashMap;
+public class LRUCache {
+
+    private Map<Integer, Integer> map;
+
+    public LRUCache(int capacity) {
+        map = new LinkedHashMap<Integer, Integer>(16, 0.75f, true) {
+            protected boolean removeEldestEntry(Map.Entry eldest) {
+                return size() > capacity;
+            }
+        };
+    }
+
+    public int get(int key) {
+        return map.getOrDefault(key, -1);
+    }
+
+    public void set(int key, int value) {
+        map.put(key,value);
+    }
+}
+
+public class LRUCache extends LinkedHashMap<Integer, Integer> {
+    private int capacity;
+    public LRUCache(int capacity) {
+        super(capacity, 0.75f, true);
+        this.capacity = capacity;
+    }
+    
+    public int get(int key) {
+        if (super.get(key) == null)
+            return -1;
+        return super.get(key);
+    }
+
+    public void set(int key, int value) {
+        super.put(key, value);
+    }
+
+    @Override
+    protected boolean removeEldestEntry(
+            java.util.Map.Entry<Integer, Integer> eldest) {
+        // TODO Auto-generated method stub
+        return size() > capacity;
+    }
+}
+
+class CacheNode {
+    int key;
+    int value;
+    CacheNode newer;
+    CacheNode older;
+    CacheNode(int k, int v) {
+        key = k;
+        value = v;
+    }
+}
+
+//TLE O(N)
+class LRUCache {
+    int totalCap;
+    int currCap;
+    Map<Integer,CacheNode> map;
+    LinkedList<CacheNode> cachePool;
+    public LRUCache(int capacity) {
+        totalCap = capacity;
+        map = new HashMap<Integer,CacheNode>();
+        cachePool = new LinkedList<CacheNode>();
+    }
+    
+    public int get(int key) {
+        int val = map.containsKey(key) ? map.get(key).value : -1;
+        if(map.containsKey(key)) {
+            cachePool.remove(map.get(key));
+            cachePool.add(map.get(key));
+        }
+        return val;
+    }
+    
+    public void set(int key, int value) {
+        if(map.containsKey(key)) {
+            map.get(key).value = value;
+            cachePool.remove(map.get(key));
+            cachePool.add(map.get(key));
+        }
+        else {
+            CacheNode cNode = new CacheNode(key,value);
+            map.put(key,cNode);
+            if(currCap==totalCap) {
+                map.remove(cachePool.removeFirst().key);
+            }
+            else currCap++;
+            cachePool.add(map.get(key));
+        }
+    }
+}
+
+class CacheNode {
+    int key;
+    int value;
+    CacheNode(int k, int v) {
+        key = k;
+        value = v;
+    }
+}
+
+
+//TLE O(lgN)
+import java.util.Date;
+class LRUCache {
+    int totalCap;
+    int currCap;
+    Map<Integer,CacheNode> map;
+    PriorityQueue<CacheNode> priQue;
+    public LRUCache(int capacity) {
+        totalCap = capacity;
+        map = new HashMap<Integer,CacheNode>();
+        priQue = new PriorityQueue<CacheNode>();
+    }
+    
+    public int get(int key) {
+        int val = map.containsKey(key) ? map.get(key).value : -1;
+        if(map.containsKey(key)) {
+            priQue.remove(map.get(key));
+            map.get(key).date = new Date();
+            try {
+                Thread.sleep(1);
+            } 
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            priQue.add(map.get(key));
+        }
+        return val;
+    }
+    
+    public void set(int key, int value) {
+        if(map.containsKey(key)) {
+            map.get(key).value = value;
+            priQue.remove(map.get(key));
+            map.get(key).date = new Date();
+            try {
+                Thread.sleep(1);
+            } 
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            priQue.add(map.get(key));
+        }
+        else {
+            CacheNode cNode = new CacheNode(key,value);
+            try {
+                Thread.sleep(1);
+            } 
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            map.put(key,cNode);
+            if(currCap==totalCap) {
+                map.remove(priQue.poll().key);
+            }
+            else currCap++;
+            priQue.add(cNode);
+        }
+    }
+}
+
+class CacheNode implements Comparable<CacheNode> {
+    int key;
+    int value;
+    Date date;
+    CacheNode(int k, int v) {
+        key = k;
+        value = v;
+        date = new Date();
+    }
+    @Override
+    public int compareTo(CacheNode x) {
+        return this.date.compareTo(x.date);
+    }
+}

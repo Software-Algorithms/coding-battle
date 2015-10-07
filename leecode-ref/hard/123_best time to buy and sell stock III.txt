@@ -1,0 +1,65 @@
+public class Solution {
+    public int maxProfit(int[] prices) {
+        int hold1 = Integer.MIN_VALUE, hold2 = Integer.MIN_VALUE;
+        int release1 = 0, release2 = 0;
+        for(int i:prices){                              // Assume we only have 0 money at first
+            release2 = Math.max(release2, hold2+i);     // The maximum if we've just sold 2nd stock so far.
+            hold2    = Math.max(hold2,    release1-i);  // The maximum if we've just buy  2nd stock so far.
+            release1 = Math.max(release1, hold1+i);     // The maximum if we've just sold 1nd stock so far.
+            hold1    = Math.max(hold1,    -i);          // The maximum if we've just buy  1st stock so far. 
+        }
+        return release2; ///Since release1 is initiated as 0, so release2 will always higher than release1.
+    }
+}
+
+//O(n) java solution using one forward and one backward buy stock I solution and merge up.
+/*
+public class Solution {
+    public int maxProfit(int[] prices) {
+        if(prices.length<=1) return 0;
+        int[] oneTran = new int[prices.length];
+        int preMin = prices[0];
+        for(int i= 1;i<prices.length;i++){
+            oneTran[i] = (oneTran[i-1]>prices[i]-preMin)?oneTran[i-1]:(prices[i]-preMin);
+            preMin = preMin<prices[i]?preMin:prices[i];
+        }
+        int[] oneTranBackward = new int[prices.length];
+        int preMax = prices[prices.length-1];
+        for(int i= prices.length-2;i>=0;i--){
+            oneTranBackward[i] = (oneTranBackward[i+1]>preMax-prices[i])?oneTranBackward[i+1]:preMax-prices[i];
+            preMax = preMax>prices[i]?preMax:prices[i];
+        }
+        int maxProfit = oneTran[oneTran.length-1];
+        for(int i=0;i<oneTran.length-1;i++){
+            if(maxProfit<oneTran[i]+oneTranBackward[i+1]) maxProfit = oneTran[i]+oneTranBackward[i+1];
+        }
+        return maxProfit;
+        
+    }
+}
+*/
+
+//O(n^2) time limit exceeded.
+/*
+public class Solution {
+    public int maxProfit(int[] prices) {
+        if(prices.length<=1) return 0;
+        int[] oneTran = new int[prices.length];
+        int preMin = prices[0];
+        for(int i= 1;i<prices.length;i++){
+            oneTran[i] = (oneTran[i-1]>prices[i]-preMin)?oneTran[i-1]:(prices[i]-preMin);
+            preMin = preMin<prices[i]?preMin:prices[i];
+        }
+        int maxProfit = 0;
+        for(int i=3;i<prices.length;i++){
+            for(int j=i-1;j>=0;j--){
+                if(j!=0) maxProfit = maxProfit>oneTran[i-1]+prices[i]-prices[j]?maxProfit:oneTran[i-1]+prices[i]-prices[j];
+                else maxProfit = maxProfit>prices[i]-prices[j]?maxProfit:prices[i]-prices[j];
+            }
+        }
+        return maxProfit;
+        
+    }
+}
+*/
+

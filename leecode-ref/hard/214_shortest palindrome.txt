@@ -1,0 +1,100 @@
+//KMP algorithm. Idea is to find the longest palindrome start from 0. To find this, we reverse the string s and build the lps[] for s. Now the problem becomes a pattern matching problem in which the reverseStr is the "long string" and s is the "needle". Specially now we don't try match the whole needle, but just match the longest prefix of needle when comes to the end of "long string".
+public class Solution {
+    public String shortestPalindrome(String s) {
+        if(s.length()==0) return s;
+        String reverseStr = new StringBuilder(s).reverse().toString();
+        int[] lps = new int[s.length()];
+        buildPattern(lps,s);
+        int i = 0, j = 0;
+        while(i<reverseStr.length()){
+            if(reverseStr.charAt(i)==s.charAt(j)){
+                i++;
+                j++;
+            }
+            else{
+                if(j==0) i++;
+                else j = lps[j-1];
+            }
+        }
+        return reverseStr.substring(0,reverseStr.length()-j) + s;
+    }
+    
+   public void buildPattern(int[] lps, String needle){
+        lps[0] = 0;
+        int i = 1, currLength = 0; //current length of longest prefix suffix
+        while(i<lps.length){
+            if(needle.charAt(i)==needle.charAt(currLength)){
+                currLength++;
+                lps[i] = currLength;
+                i++;
+            }
+            else{
+                if(currLength!=0) currLength = lps[currLength-1];
+                else{
+                    lps[i] = 0;
+                    i++;
+                }
+            }
+        }
+    }
+
+}
+
+public class Solution {
+    public String shortestPalindrome(String s) {
+        int j = 0;
+        for(int i=s.length()-1;i>=0;i--){
+            if(s.charAt(i)==s.charAt(j)) j++;
+        }
+        if(j==s.length()) return s;
+        String suffix = s.substring(j);
+        return new StringBuilder(suffix).reverse().toString() + shortestPalindrome(s.substring(0,j)) + suffix;
+    }
+}
+
+Hi I try to explain the elegant solution of @xcv58. Take "gxybakbkabbfmbnnnjjjyxqg" as example. After for loop j stops at j'==10 where charAt(10)=='b'. Then it reaches such a status: To make the final result be a valid palindrome, in the final result this 'b' at index j' neither could be the mid point nor could pair with any other 'b' in the string s. 
+Now we prove this by contradiction, in 1st case if charAt(j') is the mid point, then substring(0,2*j'+1) should be palindrome (otherwise the final result was not palindrome), and when substring(0,2*j'+1) is palindrome, using our for loop mentioned before, j would stops with index at least 2*j'+1, which is a contradiction. Similarly in 2nd case if charAt(j') could pair with some charAt(i) in the final result, then substring(0,j'+i+1) should be palindrome, if j'+i+1 already > s.length(), it's a contradiction(we can't add characters at backside); else when substring(0,j'+i+1) is palindrome, j would stops with index at least j'+i+1, which is a contradiction.
+Then we have the conclusion: to pair the charAt(j)=='b' in the final result, we must add new char 'b' from the front of s, and since they are paired, all chars on the right side of j should be paired by some newly added chars => We MUST add substring(j)'s reverse string in front of s => This is the shortest way to transform s to palindrome. Later we deal with substring(0,j) recursively.
+
+
+//other's solution finding the longest palindrome start from 0:
+//https://leetcode.com/discuss/52616/easy-c-manacher
+http://articles.leetcode.com/2011/11/longest-palindromic-substring-part-ii.html
+
+class Solution {
+public:
+    string shortestPalindrome(string s) {
+        string t = process(s);
+        int n = t.length(), center = 0, right = 0;
+        int* palin = new int[n];
+        for (int i = 1; i < n - 1; i++) {
+            int i_mirror = 2 * center - i;
+            palin[i] = (right > i) ? min(palin[i_mirror], right - i) : 0;
+            while (t[i + palin[i] + 1] == t[i - palin[i] - 1])
+                palin[i]++;
+            if (i + palin[i] > right) {
+                center = i;
+                right = i + palin[i];
+            }
+        }
+        int pos;
+        for (int i = n - 2; i; i--) {
+            if (i - palin[i] == 1) {
+                pos = palin[i];
+                break;
+            }
+        }
+        string tail = s.substr(pos); 
+        reverse(tail.begin(), tail.end());
+        return tail + s;
+    }
+private:
+    string process(string& s) {
+        int n = s.length();
+        string t(2 * n + 3, '#');
+        t[0] = '$'; t[2 * n + 2] = '%';
+        for (int i = 0; i < n; i++)
+            t[2 * (i + 1)] = s[i];
+        return t;
+    }
+};

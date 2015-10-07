@@ -1,0 +1,38 @@
+public class Solution {
+    public int myAtoi(String str) {
+        int sign = 1;
+        long res = 0;
+        boolean signFound = false;
+        boolean numFound = false;
+        for(int i=0;i<str.length();i++){
+            if(numFound){
+                if(Character.isDigit(str.charAt(i))) {
+                    res = res*10 + (str.charAt(i)-48);
+                    if(res>Integer.MAX_VALUE) return (sign>0)?Integer.MAX_VALUE:Integer.MIN_VALUE; 
+                }
+                else return sign*(int)res;
+            }
+            else if(!signFound){
+                if(Character.isDigit(str.charAt(i))){
+                    res = res*10 + (str.charAt(i)-48);
+                    if(res>Integer.MAX_VALUE) return Integer.MAX_VALUE;
+                    numFound = true;
+                }
+                else if(str.charAt(i)=='+'||str.charAt(i)=='-'){
+                    sign = (str.charAt(i)=='+')?1:-1;
+                    signFound = true;
+                }
+                else if(str.charAt(i)!=' ') return 0;
+            }
+            else{ //signFound&&!numFound
+                if(Character.isDigit(str.charAt(i))){
+                    res = res*10 + (str.charAt(i)-48);
+                    numFound = true;
+                }
+                else return 0; //after found sign, only digit is valid.
+            }
+        }
+        return (res==0)?0:sign*(int)res;
+        
+    }
+}

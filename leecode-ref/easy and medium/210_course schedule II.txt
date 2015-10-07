@@ -1,0 +1,42 @@
+public class Solution {
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
+        Map<Integer,Set<Integer>> prerequisitesMap = new HashMap<Integer,Set<Integer>>();
+        Map<Integer,Set<Integer>> reversePreMap = new HashMap<Integer,Set<Integer>>();
+        for(int i=0;i<prerequisites.length;i++){
+        	if(prerequisitesMap.containsKey(prerequisites[i][0])) prerequisitesMap.get(prerequisites[i][0]).add(prerequisites[i][1]);
+        	else{
+        		Set<Integer> pre = new HashSet<Integer>();
+        		pre.add(prerequisites[i][1]);
+        		prerequisitesMap.put(prerequisites[i][0], pre);
+        	}
+        	if(reversePreMap.containsKey(prerequisites[i][1])) reversePreMap.get(prerequisites[i][1]).add(prerequisites[i][0]);
+        	else{
+        		Set<Integer> reversePre = new HashSet<Integer>();
+        		reversePre.add(prerequisites[i][0]);
+        		reversePreMap.put(prerequisites[i][1], reversePre);
+        	}
+        }
+        
+        List<Integer> nopre = new ArrayList<Integer>();
+        for(int i=0;i<numCourses;i++) if(!prerequisitesMap.containsKey(i)) nopre.add(i);
+        int index = 0;
+        int[] res = new int[numCourses];
+        while(!nopre.isEmpty()){
+        	int curr = nopre.get(0);
+        	res[index] = curr;
+        	index++;
+        	if(reversePreMap.containsKey(curr)){
+        		for(int j:reversePreMap.get(curr)){
+        			prerequisitesMap.get(j).remove(curr);
+					if(prerequisitesMap.get(j).isEmpty()) {
+						prerequisitesMap.remove(j);
+						nopre.add(j);
+					}
+        		}
+        	}
+        	reversePreMap.remove(curr);
+			nopre.remove(0);
+        }
+        return (prerequisitesMap.isEmpty())?res:new int[0];
+    }
+}

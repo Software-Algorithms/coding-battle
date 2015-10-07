@@ -1,0 +1,88 @@
+class MinStack {
+    Stack<Integer> stack = new Stack<Integer>();
+    Stack<Integer> mins = new Stack<Integer>();
+    public void push(int x) {
+        if(mins.isEmpty()||x<=getMin()) mins.push(x);
+        stack.push(x);
+    }
+
+    public void pop() {
+        if(stack.peek()==getMin()) mins.pop(); //don't (stack.peek()==mins.peek()),cuz they are both Integer
+                                               //object and == with compare their reference.
+        stack.pop();
+    }
+
+    public int top() {
+        return stack.peek();
+    }
+
+    public int getMin() {
+        return mins.peek();
+    }
+}
+
+class MinStack {
+    StackNode top;
+    StackNode min;
+    public void push(int x) {
+        StackNode tmp = new StackNode(x);
+        if(top==null){
+            top = tmp;
+            min = tmp;
+        }
+        else{
+            tmp.next = top;
+            top = tmp;
+            if(x>min.val){
+                StackNode helper = min;
+                while(helper.precedor!=null&&helper.precedor.val<x){
+                	helper = helper.precedor;
+                }
+                tmp.precedor = helper.precedor;
+                if(helper.precedor!=null) helper.precedor.successor = tmp;
+                helper.precedor = tmp;
+                tmp.successor = helper;
+            }
+            else{
+                tmp.precedor = this.min;
+                this.min.successor = tmp;
+                this.min = tmp;
+            }
+            
+        }
+    }
+
+    public void pop() {
+        if(top==null) return;
+        StackNode tmp = top;
+        top = top.next;
+        if(tmp==min) {
+            min = min.precedor;
+            if(min!=null) min.successor = null; //add if(min!=null) in case there is only 1 element when pop.
+            //why got time limit exceeded without the line above??????????????
+        }
+        else{
+            if(tmp.precedor!=null){
+                tmp.precedor.successor = tmp.successor;
+            }
+            tmp.successor.precedor = tmp.precedor;
+        }
+        
+    }
+
+    public int top() {
+        return this.top.val;
+    }
+
+    public int getMin() {
+        return this.min.val;
+    }
+}
+
+class StackNode{
+    int val;
+    StackNode next;
+    StackNode precedor; //bigger than val
+    StackNode successor; //smaller than val. Use this extra space to reduce the time cost for pop() to O(1).
+    StackNode(int x){ val = x;}
+}

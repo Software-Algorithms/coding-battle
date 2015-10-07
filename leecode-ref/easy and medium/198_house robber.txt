@@ -1,0 +1,20 @@
+public class Solution {
+    public int rob(int[] nums) {
+        int sum = 0, pre = 0;
+        int indicator = 0;//0 means sum don't have ith element, 1 means sum has ith element.
+        for(int i = 0;i<nums.length;i++){
+            if(indicator==0){
+                pre = sum;
+                sum += nums[i];
+                indicator = 1;
+            }
+            else{
+                if(sum>pre+nums[i]) indicator = 1;
+                int tmp = sum;
+                sum = Math.max(sum,pre+nums[i]);
+                pre = tmp;
+            }
+        }
+        return sum;
+    }
+}

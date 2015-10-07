@@ -1,0 +1,31 @@
+public class Solution {
+    public String getPermutation(int n, int k) {
+        StringBuilder strbd = new StringBuilder();
+        List<String> list = new ArrayList<String>();
+        int devide = 1;
+        for(int i = 1;i<=n;i++) {
+            list.add(String.valueOf(i));
+            if(i!=n)devide *= i ;
+        }
+        for(int i = 1;i<=n;i++){
+            if(strbd.length()==n) break;
+            if(k%devide==0){
+                strbd.append(list.get(k/devide-1)); //append the num in the postion in list, not the postion num.
+                                                    //to get string from int, use String.valueOf(int);
+                list.remove(k/devide-1);
+                while(!list.isEmpty()){
+                    strbd.append(list.get(list.size()-1));
+                    list.remove(list.size()-1);
+                }
+                break;
+            }
+            else{
+                strbd.append(list.get(k/devide));
+                list.remove(k/devide);
+                k = k%devide;
+                devide /= n-i;
+            }
+        }
+        return strbd.toString();
+    }
+}

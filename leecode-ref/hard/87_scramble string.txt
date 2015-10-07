@@ -1,0 +1,52 @@
+public class Solution {
+    public boolean isScramble(String s1, String s2) {
+        int len = s1.length();
+        if(len!=s2.length()) return false;
+        if(len==0) return true;
+        boolean[][][] isScr = new boolean[len][len][len];
+        //current length == 1 // put it inside the dipper loop is even faster.
+        //for(int j = 0; j < len; j++) { 
+        //    for(int k = 0; k < len; k++) {
+        //        isScr[0][j][k] = s1.charAt(j)==s2.charAt(k);
+        //    }
+        //}
+        for(int i = 0; i < len; i++) { //length of current substring, 0 means length==1
+            for(int j = 0; j + i < len; j++) { //start point of current substring at s1.
+                for(int k = 0; k + i < len; k++) { //start point of current substring at s2.
+                    if(i==0) isScr[i][j][k] = s1.charAt(j)==s2.charAt(k);
+                    for(int m = 0; m < i; m++) {
+                        if(isScr[m][j][k] && isScr[i-(m+1)][j+m+1][k+m+1]) isScr[i][j][k] = true;
+                        else if(isScr[m][j][k+i-m] && isScr[i-(m+1)][j+m+1][k]) isScr[i][j][k] = true;
+                    }
+                }
+            }
+        }
+        return isScr[len-1][0][0];
+    }
+}
+
+
+
+
+public class Solution {
+    public boolean isScramble(String s1, String s2) {
+        int len= s1.length();
+        if(s2.length()!=len) return false;
+        if(s1.equals(s2)) return true;
+        Map<Character,Integer> checkPermutation = new HashMap<Character,Integer>();
+        for(int i = 0; i < len; i++) {
+            char a = s1.charAt(i), b = s2.charAt(i);
+            if(checkPermutation.containsKey(a)) checkPermutation.put(a,checkPermutation.get(a)+1);
+            else checkPermutation.put(a,1);
+            if(checkPermutation.containsKey(b)) checkPermutation.put(b,checkPermutation.get(b)-1);
+            else checkPermutation.put(b,-1);
+        }
+        for(char c : checkPermutation.keySet()) if(checkPermutation.get(c)!=0) return false;
+        
+        for(int i = 1; i < s1.length(); i++) {
+            if(isScramble(s1.substring(0,i),s2.substring(0,i))&&isScramble(s1.substring(i,len),s2.substring(i,len))) return true;
+            else if(isScramble(s1.substring(0,i),s2.substring(len-i,len))&&isScramble(s1.substring(i,len),s2.substring(0,len-i))) return true;
+        }
+        return false;
+    }
+}

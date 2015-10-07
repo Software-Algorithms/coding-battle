@@ -1,0 +1,148 @@
+// AC solution. cuz this solution traversal each "edge" once although there are nested loops.
+// other solutions below is O(n^2).
+public class Solution { 
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        Map<Integer,Set<Integer>> prerequisitesMap = new HashMap<Integer,Set<Integer>>();
+        Map<Integer,Set<Integer>> reversePreMap = new HashMap<Integer,Set<Integer>>();
+        for(int i=0;i<prerequisites.length;i++){
+            if(prerequisitesMap.containsKey(prerequisites[i][0])) prerequisitesMap.get(prerequisites[i][0]).add(prerequisites[i][1]);
+            else{
+                Set<Integer> pre = new HashSet<Integer>();
+                pre.add(prerequisites[i][1]);
+                prerequisitesMap.put(prerequisites[i][0], pre);
+            }
+            if(reversePreMap.containsKey(prerequisites[i][1])) reversePreMap.get(prerequisites[i][1]).add(prerequisites[i][0]);
+            else{
+                Set<Integer> reversePre = new HashSet<Integer>();
+                reversePre.add(prerequisites[i][0]);
+                reversePreMap.put(prerequisites[i][1], reversePre);
+            }
+        }
+        
+        List<Integer> nopre = new ArrayList<Integer>();
+        for(int i=0;i<numCourses;i++) if(!prerequisitesMap.containsKey(i)) nopre.add(i);
+        while(!nopre.isEmpty()){
+            int curr = nopre.get(0);
+            if(reversePreMap.containsKey(curr)){
+                for(int j:reversePreMap.get(curr)){
+                    prerequisitesMap.get(j).remove(curr);
+                    if(prerequisitesMap.get(j).isEmpty()) {
+                        prerequisitesMap.remove(j);
+                        nopre.add(j);
+                    }
+                }
+            }
+            reversePreMap.remove(curr);
+            nopre.remove(0);
+        }
+        return (prerequisitesMap.isEmpty())?true:false;
+    }
+}
+
+//use DFS to detect cycle
+public class Solution {
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        Graph graph = new Graph(numCourses);
+        for (int i = 0; i < prerequisites.length; i++) graph.addEdge(prerequisites[i][0], prerequisites[i][1]);
+        return !graph.isCyclic();
+    }
+    // ---------------------
+    //  Directed Graph
+    // ---------------------
+    class Graph {
+        int n;          // number of vertex
+        int[][] matrix; // adjacency matrix
+        Graph(int x) {
+            n = x;
+            matrix = new int[n][n];
+        }
+        void addEdge(int u, int v) {
+            matrix[u][v] = 1;
+        }
+        // check if there's a cycle in the graph
+        boolean isCyclic() {
+            boolean[] visited = new boolean[n];
+            boolean[] stack = new boolean[n];
+            for (int u = 0; u < n; u++)
+                if (dfs(u, visited, stack)) return true;
+            return false;
+        }
+        boolean dfs(int u, boolean[] visited, boolean[] stack) {
+            // mark it as visited
+            visited[u] = true;
+            stack[u] = true; //use the stack to keep track of the current "path"
+            // check all its neighbors
+            for (int v = 0; v < n; v++)
+                if (matrix[u][v] > 0)
+                    //if node reaccurs, has cycle. if node was visited, cycle would never start from it. 
+                    if (stack[v] == true || (visited[v] == false && dfs(v, visited, stack)))
+                    return true;
+            // remove the vertex from recursion stack
+            stack[u] = false; //if the node is proved not on any cycle, delete it from current "path"
+            return false;
+        }
+    }
+}
+
+// O(n^2)
+public class Solution {
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        Set<Integer> unscheduled = new HashSet<Integer>();
+        for(int i=1;i<=numCourses;i++) unscheduled.add(i);
+        Map<Integer,Set<Integer>> prerequisitesMap = new HashMap<Integer,Set<Integer>>();
+        for(int i=0;i<prerequisites.length;i++){
+        	if(prerequisitesMap.containsKey(prerequisites[i][0])) prerequisitesMap.get(prerequisites[i][0]).add(prerequisites[i][1]);
+        	else{
+        		Set<Integer> pre = new HashSet<Integer>();
+        		pre.add(prerequisites[i][1]);
+        		prerequisitesMap.put(prerequisites[i][0], pre);
+        	}
+        }      
+        while(!unscheduled.isEmpty()){
+        	boolean generateNew = false;
+        	for(int i:unscheduled){
+        		if(!prerequisitesMap.containsKey(i)){ //to avoid cocurrent modification to map.remove()
+        			unscheduled.remove(i);
+        			generateNew = true;
+        			Set<Integer> deleteMap = new HashSet<Integer>(); //to avoid cocurrent modification
+        			for(int j:prerequisitesMap.keySet()){ //if use such iteration, take care of cocurrent modification.
+        				if(prerequisitesMap.get(j).contains(i)){
+        					prerequisitesMap.get(j).remove(i);
+        					if(prerequisitesMap.get(j).isEmpty()) deleteMap.add(j); //to avoid cocurrent modification
+        				}
+        			}
+        			for(int j:deleteMap) prerequisitesMap.remove(j); //to avoid cocurrent modification
+        			break; //to avoid cocurrent modification
+        		}
+        	}
+        	if(!generateNew) return false;
+        }
+        return true;
+    }
+}
+
+class Solution_courseSchedule {
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        Set<Integer> scheduled = new HashSet<Integer>();
+        Set<Integer> deletedEdges = new HashSet<Integer>();
+        for(int i =0;i<numCourses;i++){
+            boolean generateNew = false;
+            for(int j=0;j<numCourses;j++){
+                if(scheduled.contains(i)) continue;
+                boolean hasPrerequisites = false;
+                for(int k=0;k<prerequisites.length;k++){
+                    if(deletedEdges.contains(k)) continue;
+                    if(prerequisites[k][0]==j) hasPrerequisites = true; break; 
+                }
+                if(hasPrerequisites) continue;
+                scheduled.add(j);
+                for(int k=0;k<prerequisites.length;k++){
+                    if(prerequisites[k][1]==j) deletedEdges.add(k);
+                }
+                generateNew = true;
+            }
+            if(!generateNew) return false;
+        }
+        return (scheduled.size()==numCourses)?true:false;
+    }
+}

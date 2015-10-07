@@ -1,0 +1,189 @@
+/**
+ * Definition for a point.
+ * class Point {
+ *     int x;
+ *     int y;
+ *     Point() { x = 0; y = 0; }
+ *     Point(int a, int b) { x = a; y = b; }
+ * }
+ */
+
+//other's elegant solution, find the max in one traversal.
+//idea is to use current point and a slope to represent a line.
+class Solution {
+public:
+    int maxPoints(vector<Point>& points) 
+    {
+        if(points.size()<=2) return points.size();
+        int res=0;
+        for(int i=0;i<points.size()-1;i++) {
+            int numVertical=1,local=1,duplicate=0;
+            unordered_map<double,int> map;
+            for(int j=i+1;j<points.size();j++) 
+                if(points[i].x==points[j].x) // special cases
+                    if(points[i].y==points[j].y) // duplicate 
+                        duplicate++;
+                    else // vertical
+                        numVertical++;
+                else {
+                    double slope=(points[i].y-points[j].y)*1.0/(points[i].x-points[j].x);
+                    map[slope]==0?map[slope]=2:map[slope]++;
+                    local=max(local,map[slope]);
+                }
+            local=max(local+duplicate,numVertical+duplicate);
+            res=max(res,local);
+        }
+        return res;
+    }
+};
+
+public class Solution { //version with duplicate.
+	public int maxPoints(Point[] points) {
+		Map<Line, Integer> map = new HashMap<Line, Integer>();
+		for (int i = 0; i < points.length; i++) {
+			for(int j = 0; j < i; j++){
+				if(points[i].x==points[j].x && points[i].y==points[j].y) continue;
+				Line newLine = null;
+				if(points[j].x == points[i].x) {
+					newLine = new Line(true, points[i].x);
+				}
+				else {
+					double slope = (double)(points[i].y-points[j].y)/(double)(points[i].x-points[j].x);
+					double intersect = (double)points[i].y - slope*points[i].x;
+					newLine = new Line(slope,intersect);
+				}
+				if(!map.containsKey(newLine)) map.put(newLine, 0);	
+			}
+		}
+		if(map.isEmpty()) return points.length;
+		int max = 0;
+		for (int i = 0; i < points.length; i++) {
+			for(Line line : map.keySet()){
+				if(line.isOnLine(points[i])) map.put(line,map.get(line) + 1);	
+			}
+		}		
+		for(Line line : map.keySet()){
+			if(map.get(line) > max) max = map.get(line);
+		}
+		return max;
+	}
+}
+ 
+/*
+public class Solution { //version with duplicate.
+	public int maxPoints(Point[] points) {
+		Map<Line, Set<Point>> map = new HashMap<Line, Set<Point>>();
+		for (int i = 0; i < points.length; i++) {
+			for(int j = 0; j < i; j++){
+				if(points[i].x==points[j].x && points[i].y==points[j].y) continue;
+				Line newLine = null;
+				if(points[j].x == points[i].x) {
+					newLine = new Line(true, points[i].x);
+				}
+				else {
+					double slope = (double)(points[i].y-points[j].y)/(double)(points[i].x-points[j].x);
+					double intersect = (double)points[i].y - slope*points[i].x;
+					newLine = new Line(slope,intersect);
+				}
+				if(map.containsKey(newLine)) {
+					if(!map.get(newLine).contains(points[i]))map.get(newLine).add(points[i]);
+					if(!map.get(newLine).contains(points[j]))map.get(newLine).add(points[j]);
+				}
+				else{
+					Set<Point> pointsOnLine = new HashSet<Point>();
+					pointsOnLine.add(points[i]);
+					pointsOnLine.add(points[j]);
+					map.put(newLine, pointsOnLine);
+				}				
+			}
+		}
+		if(map.isEmpty()) return points.length;
+		for (int i = 0; i < points.length; i++) { //without this block, may miss some points on some line
+		    //in code above, for points array [x,x,]
+			for(Line line : map.keySet()){
+				if(map.get(line).contains(points[i])) continue;
+				if(line.isOnLine(points[i])) map.get(line).add(points[i]);	
+			}
+		}
+		int max = 0;
+		for(Line line : map.keySet()){
+			if(map.get(line).size() > max) max = map.get(line).size();
+		}
+		return max;
+	}
+}
+*/
+
+class Line {
+	double slope;
+	double intersect;
+	boolean isVertical;
+	double x;
+	Line(double slo, double inter) {
+		slope = slo;
+		intersect = inter;
+	}
+	Line(boolean yes, double xCoor){
+		isVertical = yes;
+		x = xCoor;
+	}
+	public boolean isOnLine(Point point) {
+		double threshold = 0.00000000001;
+		if(isVertical) return  x == point.x;
+		else if(Math.abs(point.y-(slope*point.x+intersect))<=threshold) return true;
+		return false;
+	}
+	@Override
+	public boolean equals(Object objLine) {
+		if(objLine==null) return false;
+		if(this==objLine) return true;
+		if(objLine.getClass()==this.getClass()){
+			Line line = (Line) objLine;
+			if(isVertical) return (line.isVertical && line.x ==x) ;
+			double threshold = 0.00000000001;
+			return !line.isVertical && Math.abs(this.slope-line.slope)<=threshold && Math.abs(this.intersect-line.intersect)<=threshold;
+		}
+		return false;
+	}
+	@Override
+	public int hashCode(){ //hashCode must return int. String, Double ... all override hashCode itself.
+		if(isVertical) return ((Double)x).hashCode();
+		return ((Double)slope).hashCode()*((Double)intersect).hashCode();
+	}
+}
+
+class Solution_maxPointsOnALine { //version without duplicate.
+	public int maxPoints(Point[] points) {
+		if(points.length<=1) return points.length;
+		Map<Line, Set<Point>> map = new HashMap<Line, Set<Point>>();
+		Set<Point> sameLineSet = new HashSet<Point>();
+		for (int i = 0; i < points.length; i++) {
+			for(Line line : map.keySet()){
+				if(line.isOnLine(points[i])) map.get(line).add(points[i]);
+				sameLineSet.addAll(map.get(line));
+			}
+			for(int j = 0; j < i; j++){
+				if(sameLineSet.contains(points[j])) continue;
+				Set<Point> pointsOnLine = new HashSet<Point>();
+				pointsOnLine.add(points[i]);
+				pointsOnLine.add(points[j]);
+				if(points[j].x == points[i].x) {
+					Line newLine = new Line(true, points[i].x);
+					map.put(newLine, pointsOnLine);	
+				}
+				else {
+					double slope = (double)(points[i].y-points[j].y)/(double)(points[i].x-points[j].x);
+					double intersect = (double)points[i].y - slope*points[i].x;
+					Line newLine = new Line(slope,intersect);
+					map.put(newLine, pointsOnLine);	
+				}
+				sameLineSet.clear();
+			}
+		}
+		int max = 0;
+		for(Line line : map.keySet()){
+			if(map.get(line).size() > max) max = map.get(line).size();
+		}
+		return max;
+	}
+}

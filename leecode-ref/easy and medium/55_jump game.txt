@@ -1,0 +1,39 @@
+//time complexity O(n)
+public class Solution {
+    public boolean canJump(int[] nums) {
+        if(nums.length<=1) return true;
+        else{
+            int[] reachable = new int[nums.length];
+            reachable[0] = 1;
+            int currReachable = 0;
+            for(int i=0;i<nums.length;i++){
+                if(reachable[i]==1&&(nums[i]+i)>=nums.length-1) return true;
+                else if(reachable[i]==1&&(nums[i]+i)<nums.length-1){
+                    for(int j = currReachable;j<=nums[i]+i;j++) reachable[j] = 1;
+                    currReachable = nums[i]+i;
+                } 
+            }
+            return (reachable[reachable.length-1]==1);
+        }
+    }
+}
+
+//high time complexity using DP
+/*public class Solution {
+    public boolean canJump(int[] nums) {
+        if(nums.length<=1) return true;
+        else{
+            int[] reachable = new int[nums.length];
+            reachable[0] = 1;
+            for(int i=1;i<reachable.length;i++){
+                for(int j = i-1; j>=0 ;j--){
+                    if(reachable[j]==1&&(nums[j]+j)==i){
+                        reachable[i] = 1;
+                        break;
+                    }
+                }
+            }
+            return (reachable[reachable.length-1]==1);
+        }
+    }
+}*/

@@ -1,0 +1,19 @@
+public class Solution {
+    public boolean isHappy(int n) {
+        if(n==0) return false;
+        else{
+            Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+            while(n!=1){  // issue is when it's not happy, how to break;
+                int sum = 0;
+                while(n%10!=0||n/10!=0){   
+                    sum += (n%10)*(n%10);
+                    n = n/10;
+                }
+                n = sum;
+                if(map.containsKey(n)) return false;
+                map.put(n,1225);
+            }
+            return true;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+//idea: we only care about the part before nums[count]
+public class Solution {
+    public int removeElement(int[] nums, int val){
+        int count = 0;
+        for(int i =0; i<nums.length;i++){
+            if(nums[i]!=val){
+                count++;
+                nums[count-1] = nums[i]; //be careful: has count th elements not equal to val, its index is count-1
+            }
+        }
+        return count;
+    }
+}
+
+//by using this method, the nums in last section of the new array all equal to val.
+/*public class Solution {
+    public int removeElement(int[] nums, int val) {
+        int count = 0;
+        int curr = 0, tail = nums.length -1;
+        while(curr<=tail){   // values after tail are all val that have been counted
+            if(nums[curr]==val){        
+                while(nums[tail]==val && tail>curr){ //if the tail equals val, don't swap, just count it and move tail backward  
+                    count++;
+                    tail--;
+                }
+                if(tail==curr){ // if the tail meet curr, nothing need to do, just count the curr and return
+                    count++;
+                    return nums.length-count;
+                }
+                else{  // if tail doesn't meet curr and doesn't equal to val, swap them and count, move curr and tail, 
+                    nums[curr] = nums[tail];
+                    nums[tail] = val;
+                    count++;
+                    tail--;
+                    curr++;
+                }
+            }
+            else curr++; 
+        }
+        return nums.length-count;
+       
+    }
+}*/

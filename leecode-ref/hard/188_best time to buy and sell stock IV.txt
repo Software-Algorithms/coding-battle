@@ -1,0 +1,141 @@
+public class Solution {
+    public int maxProfit(int k, int[] prices) {
+        if(prices.length<2) return 0;
+        if(k>=prices.length/2){
+            int ans = 0;
+            for (int i=1; i<prices.length; ++i){
+                ans += Math.max(prices[i] - prices[i-1],0);
+            }
+            return ans;
+        }
+        //if(k>=prices.length/2) k = prices.length/2; //use code above, this line would cause time limit exceed.
+        int[][] hold = new int[2][k+1]; //just for easy to express.
+        int[][] release = new int[2][k+1];
+        int curr = 0, next = 1;
+        for(int i=0;i<=k;i++) hold[curr][i] = Integer.MIN_VALUE;
+        for(int i:prices){                              // Assume we only have 0 money at first
+            for(int j=1;j<=k;j++){
+                hold[next][j]    = (hold[curr][j]>release[curr][j-1]-i)?hold[curr][j]:release[curr][j-1]-i;  // The maximum if we've just buy  jth stock so far.
+                release[next][j] = (release[curr][j]>hold[curr][j]+i)?release[curr][j]:hold[curr][j]+i;     // The maximum if we've just sold jth stock so far.
+                //hold[1] corner case resolved by release[0] == 0;              
+            }
+            curr = (curr==0)?1:0;
+            next = (next==0)?1:0;
+        }
+        return release[curr][k]; ///Since release1 is initiated as 0, so release2 will always higher than release1.
+    }
+}
+
+
+/*
+public class Solution {
+    public int maxProfit(int k, int[] prices) {
+        if(prices.length<2) return 0;
+        if(k>=prices.length/2){
+            int ans = 0;
+            for (int i=1; i<prices.length; ++i){
+                ans += Math.max(prices[i] - prices[i-1],0);
+            }
+            return ans;
+        }
+        //if(k>=prices.length/2) k = prices.length/2; //use code above, this line would cause time limit exceed.
+        int[] hold = new int[k+1]; //just for easy to express.
+        int[] release = new int[k+1];
+        for(int i=0;i<=k;i++) hold[i] = Integer.MIN_VALUE;
+        for(int i:prices){                              // Assume we only have 0 money at first
+            for(int j=k;j>=1;j--){ //(int j=1;j<=k;j++) works as well.
+                release[j] = Math.max(release[j], hold[j]+i);     // The maximum if we've just sold jth stock so far.
+                hold[j]    = Math.max(hold[j],    release[j-1]-i);  // The maximum if we've just buy  jth stock so far.
+                //hold[1] corner case resolved by release[0] == 0;
+            }
+        }
+        return release[k]; ///Since release1 is initiated as 0, so release2 will always higher than release1.
+    }
+}
+//If use for(int j=k; j>0; --j) then each time we update rele[j] and hold[j], the values in max(rele[j],hold[j] + cur) was got from previous iteration. This makes sense and is very straightforward thinking for DP. The reason why for(int j=1; j<=k; ++j) works as well is that we could consider it as "buy and sell stock at the same day". Take this fomular hold[j] = max(hold[j],rele[j-1] - cur) as example, rele[j-1] would be got from the current iteration of day i, so there are two cases: 1st one is sell stock on day i and get rele[j-1], 2nd one is didn't sell stock on day i, rele[j-1] is same as the value in previous iteration day i-1. In case 2 it's no difference than the normal form, in case 1 we just consider rele[j-1]-cur as buy stock at day i and sell it right away, compare it with hold[j] and choose the bigger one.
+*/
+
+
+//solution which iterate k in outer loop, so compute max profit of 1, 2, 3...k-1 transcations at each day and finally got k transcations.
+
+//use dp[k][i+1] represents, The max profit of using [0,i] data and k transactions.
+
+dp[k][i+1] = max(dp[k-1][i+1], dp[k][i], max( dp[k-1][j] + prices[i] - prices[j] ))
+
+= max(dp[k-1][i+1], dp[k][i], prices[i] + max( dp[k-1][j] - prices[j] )) { 0 <= j < i }
+
+class Solution {
+    int maxProfit_all(vector<int> &prices) {
+        int n = prices.size();
+        int sum = 0;
+        for(int i = 1;i < n;i++){
+            if(prices[i] > prices[i-1]){
+                sum += prices[i] - prices[i-1];
+            }
+        }
+        return sum;
+    }
+    int maxProfit(int k, vector<int> &prices) {
+        int n = prices.size();
+        if(k >= n/2){
+            return maxProfit_all(prices);    
+        }
+        int dp[2][n+1];
+        memset(dp,0,sizeof(dp));
+        for(int t = 1; t <= k; t++){
+            int cur_max = 0x80000000;
+            dp[t%2][0] = 0;
+            for(int i = 0; i < n; i++){
+                dp[t%2][i+1] = max(dp[(t+1)%2][i+1],max(dp[t%2][i],prices[i] + cur_max));
+                cur_max = max(cur_max,dp[(t+1)%2][i] - prices[i]);
+            }
+        }
+        return dp[k%2][n];
+    }
+}
+
+//solution which iterate k in outer loop, so compute max profit of 1, 2, 3...k-1 transcations at each day and finally got k transcations.
+public class solution{
+    public int maxProfit(int k, int[] prices) {
+        int len = prices.length;
+        if (k >= len / 2) return quickSolve(prices);
+
+        int[][] t = new int[k + 1][len];
+        for (int i = 1; i <= k; i++) {
+            int tmpMax =  -prices[0];
+            for (int j = 1; j < len; j++) {
+                t[i][j] = Math.max(t[i][j - 1], prices[j] + tmpMax);
+                tmpMax =  Math.max(tmpMax, t[i - 1][j - 1] - prices[j]);
+            }
+        }
+        return t[k][len - 1];
+    }
+
+
+    private int quickSolve(int[] prices) {
+        int len = prices.length, profit = 0;
+        for (int i = 1; i < len; i++)
+            // as long as there is a price gap, we gain a profit.
+            if (prices[i] > prices[i - 1]) profit += prices[i] - prices[i - 1];
+        return profit;
+    }
+}
+
+//The idea is to rotate 2 DP int[] to save space. Also once the adjacent 2 times of Max Profit are same, we don't need calculate further DPs, even though K < prices.Length, as needs not check K's range at all.
+
+//Performance hurts a little bit when swapping the 2 arrays, from 170 ms(using a MN DP Array) to 368ms(using 2N Array), but considering space saving, it still deserves in peculiar system environments.
+
+public int MaxProfit(int k, int[] prices){
+    int[] lastDPResult = new int[prices.Length], newDPResult = new int[prices.Length], tmp;
+    int max = 0, lastMax = 0;
+    for (int i = 1; i <= k && prices.Length > 0; i++){
+        for (int j = 1, curMax = -prices[0]; j < prices.Length; j++){
+            newDPResult[j] = Math.Max( j == 1 ? 0 : newDPResult[j - 1], prices[j] + curMax);
+            curMax = Math.Max(curMax, lastDPResult[j - 1] - prices[j]);
+        }
+        tmp = lastDPResult; lastDPResult = newDPResult; newDPResult = tmp;
+        if (lastMax == (max = lastDPResult[prices.Length - 1])) break;
+        lastMax = max;
+    }
+    return max;
+}

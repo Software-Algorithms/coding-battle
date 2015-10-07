@@ -1,0 +1,33 @@
+public class Solution {
+    public String numberToWords(int num) {
+        String res = "";
+        int billi = num/1000000000;
+        if(billi>0) res += lessThanThousand(billi) + " Billion ";
+        num %= 1000000000;
+        int milli = num/1000000;
+        if(milli>0) res += lessThanThousand(milli) + " Million ";
+        num %= 1000000;
+        int thous = num/1000;
+        if(thous>0) res += lessThanThousand(thous) + " Thousand ";
+        num %= 1000;
+        if(num!=0 || res.length()==0) res += lessThanThousand(num);
+        res = res.trim();
+        return res;
+    }
+    
+    public String lessThanThousand(int num) {
+        String[] firstTwenty = {"Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"};
+        String[] decade = {"","","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"};
+        String res = "";
+        int hundr = num/100;
+        if(hundr!=0) res += firstTwenty[hundr] + " Hundred ";
+        num %= 100;
+        if(num < 20) res += (hundr!=0 && num==0) ? "" : firstTwenty[num]; 
+        else {
+            int dec = num/10, sgl = num%10;
+            res += decade[dec] + " " + ((sgl==0) ? "" : firstTwenty[sgl]);
+        }
+        res = res.trim();
+        return res;
+    }
+}

@@ -1,0 +1,47 @@
+package leecode;
+
+or we can simply use hashmap to count.
+class Solution_majorityElement {
+    public int majorityElement(int[] nums) {
+    	return solDivideConquer(nums,0,nums.length-1)[0];
+        
+    }
+    
+    public int[] solDivideConquer(int[] nums, int a, int b){
+    	int[] result = new int[2];
+    	if(a==b){    		
+    		result[0] = nums[a];
+    		result[1] = 1;
+    		return result;
+    	}
+    	else{
+    	    int half = (a + b)2;
+    	    int[] left = solDivideConquer(nums,a,half);
+    	    int[] right = solDivideConquer(nums,half+1,b);
+    	    for(int i = a; i=half; i++){
+    	    	if(right[0]==nums[i]) right[1]++;
+    	    }
+    	    for(int i = half+1; i=b; i++){
+    	    	if(left[0]==nums[i]) left[1]++;
+    	    }
+    	    if(left[1]right[1]){
+    	    	result[0] = left[0];
+        		result[1] = left[1];
+    	    }
+    	    else{
+    	    	result[0] = right[0];
+        		result[1] = right[1];
+    	    }
+    	    return result;
+    	}
+    }
+}
+
+public class majorityElement {
+
+	public static void main(String[] args) {
+		 TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,59 @@
+public class Solution {
+    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+    	if(nums.length<2||k<1||t<0) return false;
+    	ValuePosPair[] valPosArr = new ValuePosPair[nums.length];
+    	for(int i =0;i<nums.length;i++){
+    		valPosArr[i] = new ValuePosPair(nums[i],i); 
+    	}
+    	Arrays.sort(valPosArr);	
+    	for(int i=0;i<valPosArr.length;i++){
+    		for(int j=i+1;j<valPosArr.length&&((long)valPosArr[j].val-(long)valPosArr[i].val<=(long)t);j++){
+    			if(Math.abs(valPosArr[j].pos-valPosArr[i].pos)<=k) return true;	
+    		}
+    	}
+    	return false;
+    }  
+}
+class ValuePosPair implements Comparable<ValuePosPair>{
+	int val;
+	int pos;
+	ValuePosPair(int v, int p){
+		val = v;
+		pos = p;
+	}
+	public int compareTo(ValuePosPair x){
+		if(this.val<x.val) return -1;
+		else if(this.val==x.val) return 0;
+		else return 1;
+	}	
+}
+
+//other ways to implement:
+//1.build a BST of size k, search, insert and delete cost is logK
+//2.use treeSet.floor(x) return the first element less than or equals to x.
+//3.use TreeSet<Integer>, set.subSet(nums[i]-t, nums[i]+t).isEmpty() to check whether there are elements in such range.
+
+public class Solution {
+
+    public boolean containsNearbyAlmostDuplicate(final int[] nums, int kk, long t) {
+        if (nums.length < 2) return false;
+        if (kk == 0) return false;
+        TreeSet<Long> window = new TreeSet<Long>();
+
+        for(int i=0;i<nums.length;i++) {
+
+            // check dup, window size <= kk right now
+            if ( window.floor(nums[i] + t) !=null && window.floor(nums[i]+t) >= nums[i]-t ) return true;
+
+            window.add(new Long(nums[i]));
+
+
+            if (i >= kk) {
+                //remove one, the size has to be kk on the next fresh step
+                window.remove(new Long(nums[i-kk]));
+            }
+        }
+
+        return false;
+    }
+}

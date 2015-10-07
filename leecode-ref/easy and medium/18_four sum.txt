@@ -1,0 +1,45 @@
+public class Solution {
+    public List<List<Integer>> fourSum(int[] nums, int target) {
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        Arrays.sort(nums);
+        fourSum(nums,0,target,0,0,new ArrayList<Integer>(),res);
+        return res;
+        
+    }
+    public void fourSum(int[] source, int start, int target, int currSum, int currLength, List<Integer> curr, List<List<Integer>> result){
+        if(source.length-start+currLength<4) return;
+        if(currLength<2){
+    	    for(int i=start;i<source.length;i++){
+    	        if(i!=start&&source[i]==source[i-1]) continue;
+    	        //if(currSum+source[i]>target) return; //target could be negtive, add negtive num could make currSum smaller.
+    	        curr.add(source[i]);
+    	        fourSum(source,i+1,target,currSum+source[i],currLength+1,curr,result);
+    	        curr.remove(curr.size()-1);
+    	    }
+    	}
+    	else if(currLength==2){
+    	    int tail = source.length-1;
+    	    int begin = start;
+    	    int sum = 0;
+    	    while(start<tail){
+    	        if(start!=begin&&source[start]==source[start-1]) {
+                    start++;
+                    continue;
+                }
+                if(tail!=source.length-1&&source[tail]==source[tail+1]){
+                    tail--;
+                    continue;
+                }
+    	        sum = source[start] + source[tail];
+    	        if(sum==target-currSum){
+    	            List<Integer> tmp = new ArrayList<Integer>(curr);
+    	            tmp.add(source[start++]);
+    	            tmp.add(source[tail--]);
+    	            result.add(tmp);
+    	        }
+    	        else if(sum>target-currSum) tail--;
+    	        else start++;
+    	    }
+    	}
+    }    
+}

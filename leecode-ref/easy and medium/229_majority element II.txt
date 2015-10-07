@@ -1,0 +1,30 @@
+public class Solution {
+    public List<Integer> majorityElement(int[] nums) {
+        List<Integer> res = new ArrayList<Integer>();
+        //if(nums.length==0) return res; //doesn't matter.
+        int candicate1 = 0, candicate2 = 0;
+        int count1 = 0, count2 = 0;
+        for(int i:nums){
+            if(i==candicate1) count1++;
+            else if(i==candicate2) count2++;
+            else if(count1==0) {candicate1 = i;count1++;}
+            else if(count2==0) {candicate2 = i;count2++;}
+            else {count1--;count2--;}
+        }
+        count1 = 0;
+        count2 = 0;
+        for(int i:nums){
+            if(i==candicate1) count1++;
+            if(i==candicate2) count2++;
+        }
+        if(count1>nums.length/3) res.add(candicate1);
+        if(count2>nums.length/3&&candicate2!=candicate1) res.add(candicate2);
+        return res;
+    }
+}
+
+Great algorithm, but need some more explanation on the confusing word 2 "majorities". They are not necessarily be the 2 most frequent elements after the 1st round. Here is why the poster's 2 "majorities" algorithm really works: 
+consider 3 cases:
+1. there are no elements that appears more than n/3 times, then whatever the algorithm got from 1st round wound be rejected in the second round.
+2. there are only one elements that appears more than n/3 times, after 1st round one of the candicate must be that appears more than n/3 times(<2n/3 other elements could only pair out for <n/3 times), the other candicate is not necessarily be the second most frequent but it would be rejected in 2 round.
+3. there are two elments appears more than n/3 times, candicates would contain both of them. (<n/3 other elements couldn't pair out any of the majorities.)

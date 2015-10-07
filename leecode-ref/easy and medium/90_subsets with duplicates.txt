@@ -1,0 +1,69 @@
+class Solution_subsetsII_iteration {
+    public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        List<List<Integer>> preRoundNew = new ArrayList<List<Integer>>();
+        result.add(new ArrayList<Integer>());
+        Arrays.sort(nums);
+        for(int i = 0;i<nums.length;i++){
+            if(i==0){
+                List<Integer> firstElement = new ArrayList<Integer>();
+                firstElement.add(nums[i]);
+                result.add(firstElement);
+                if(nums.length>1&&nums[0]==nums[1]) preRoundNew.add(new ArrayList<Integer>(firstElement));
+            }
+            else if(nums[i]==nums[i-1]){
+                List<List<Integer>> roundResult = new ArrayList<List<Integer>>();
+                for(List<Integer> list:preRoundNew){
+                    List<Integer> tmp = new ArrayList<Integer>(list);
+                    tmp.add(nums[i]);
+                    list.add(nums[i]); //
+                    roundResult.add(tmp);
+                }
+                result.addAll(roundResult);
+            }
+            else{
+                List<List<Integer>> roundResult = new ArrayList<List<Integer>>();
+                for(List<Integer> list:result){
+                    List<Integer> tmp = new ArrayList<Integer>(list);
+                    tmp.add(nums[i]);
+                    roundResult.add(tmp);
+                }
+                result.addAll(roundResult);
+                if(i<nums.length-1&&nums[i]==nums[i+1]){
+                    preRoundNew.clear();
+                    for(List<Integer> list:roundResult){
+                        preRoundNew.add(new ArrayList<Integer>(list));
+                    }
+                }
+            } 
+        }
+        return result;
+    }   
+}
+
+
+
+
+class Solution {
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        List<Integer> subsets = new ArrayList<Integer>();
+        res.add(new ArrayList());
+        Arrays.sort(nums);
+        doSubsets(nums,res,subsets,0);
+        return res;
+    }
+
+    private void doSubsets(int[] nums, List res, List subsets, int start){
+        for(int i=start; i<nums.length; i++){
+            if(i!= start && nums[i] == nums[i-1]) 
+                continue; //to ensure the next two lines don't add duplicate subsets to result.
+            subsets.add(nums[i]);  
+            res.add(new ArrayList(subsets)); //add ith element in subsets and add this subsets into result
+                                             //that's why for "666" in the iteration we need to skip all the 
+                                             //duplicates except for the begining of duplicates. 
+            doSubsets(nums,res,subsets,i+1);
+            subsets.remove(subsets.size()-1); //each iteration keep the subsets unchanged for next iteration
+        }
+    }
+}

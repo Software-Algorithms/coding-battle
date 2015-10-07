@@ -1,0 +1,72 @@
+public class Solution {
+    public int calculate(String s) {
+        s = deleteSpaceAndReplace(s);
+        String[] plus = s.split("\\+"); //error when split("+") or split("*")
+        int res = 0;
+        for(String subPlus:plus){
+            res += computeMD(subPlus);
+        }
+        return res;
+        
+    }
+    public String deleteSpaceAndReplace(String s){
+        StringBuilder strbd = new StringBuilder();
+        for(int i = 0; i<s.length();i++){
+            if(s.charAt(i)==' ') continue;
+            if(s.charAt(i)=='-') strbd.append('+');
+            if(s.charAt(i)=='/') strbd.append('*');
+            strbd.append(s.charAt(i));
+        }
+        return strbd.toString();
+    }
+    public int computeMD(String s){
+        if(s.charAt(0)=='-') return -computeMD(s.substring(1,s.length()));
+        String[] multi = s.split("\\*");
+        int res = 1;
+        for(String mul:multi){
+            if(mul.charAt(0)!='/') res *= Integer.parseInt(mul);
+            else res /= Integer.parseInt(mul.substring(1,mul.length()));
+        }
+        return res;
+    }
+    
+}
+
+public int calculate(String s) {
+    if (s == null) return 0;
+
+    int left = 0, num = 0, opt = 0, res = 0;
+    int sign = 1;
+    char c;
+    for (int i = 0; i < s.length(); i++) {
+        c = s.charAt(i);
+        if (c == ' ') continue;
+        if (Character.isDigit(c)) {         // if c is digit, add up the number
+            num = 10 * num + (int)(c - '0');
+        } else {                            // c is +-*/
+            if (opt == 1) num = left * num;     // if operator was */, do the calculation
+            if (opt == -1) num = left / num;
+            opt = 0;    // clear the operator
+
+            if (c == '+' || c == '-') {         // c is +-, so result can be updated
+                res += sign * num;
+                sign = c == '+' ? 1 : -1;       // update the last sign
+            } else if (c == '*' || c == '/') {
+                left = num;                     // update the number to the left of * or /
+                opt = c == '*' ? 1 : -1;        // 1 -> *, -1 -> /
+            }
+
+            num = 0;    // just see an operator, have to clear the number
+        }
+    }
+
+    // for the last number
+    if (opt == 1)           // * n at the end
+        res += sign * left * num;
+    else if (opt == -1)     // / n at the end
+        res += sign * left / num;
+    else                    // +- n at the end
+        res += sign * num;
+
+    return res;
+}

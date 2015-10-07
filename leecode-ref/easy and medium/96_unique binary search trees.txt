@@ -1,0 +1,29 @@
+package leecode;
+
+class Solution_uniqueBinaryTree {
+    public static int numTrees(int n) {
+        if(n==0){
+            return 1;
+        }
+        else{
+            int[] count = new int [n+1];
+            count[0] = 1;
+            for(int i = 1;i<=n;i++){
+            	count[i] = 0;
+            	for(int j = 1; j<=i; j++){
+            		count[i] += count[j-1]*count[i-j];
+            	}             
+            }
+            return count[n];
+        } 
+    }
+}
+
+public class uniqueBinaryTree {
+
+	public static void main(String[] args) {
+		System.out.println(Solution.numTrees(3));
+
+	}
+
+}

@@ -1,0 +1,83 @@
+public class Solution {
+    public String fractionToDecimal(int numerator, int denominator) {
+        long numer = (long)numerator;
+        long denom = (long)denominator;
+        return fractionToDecimal(numer,denom);
+    }   
+    public String fractionToDecimal(long numerator, long denominator) {
+        if(numerator==0) return "0";
+        if(numerator<0&&denominator<0) return fractionToDecimal(-numerator, -denominator);
+        else if(numerator<0) return "-"+fractionToDecimal(-numerator, denominator);
+        else if(denominator<0) return "-"+fractionToDecimal(numerator, -denominator);
+        long intPart = numerator/denominator;
+        numerator %= denominator;
+        if(numerator==0) return String.valueOf(intPart);
+        List<String> deciPart = new ArrayList<String>();
+        Map<Integer,Integer> remainIndex = new HashMap<Integer,Integer>();
+        int count = 0;
+        while(numerator!=0){
+            if(remainIndex.containsKey((int)numerator)) break;
+            remainIndex.put((int)numerator,count);
+            count++;
+            StringBuilder strbd = new StringBuilder();
+            while(numerator*10<denominator){
+                strbd.append('0');
+                numerator *= 10;
+            }
+            strbd.append(String.valueOf(numerator*10/denominator));
+            deciPart.add(strbd.toString());
+            numerator = numerator*10%denominator;
+        }
+        StringBuilder strRes = new StringBuilder();
+        strRes.append(String.valueOf(intPart)+".");
+        if(numerator!=0){
+            StringBuilder nonRecur = new StringBuilder();
+            StringBuilder recur = new StringBuilder();
+            for(int i=0;i<remainIndex.get((int)numerator);i++){
+                nonRecur.append(deciPart.get(i));
+            }
+            for(int i=remainIndex.get((int)numerator);i<deciPart.size();i++){
+                recur.append(deciPart.get(i));
+            }
+            int i=0,j=0;
+            for(i=nonRecur.length()-1,j=recur.length()-1;i>=0&&j>=0;i--,j--){
+                if(nonRecur.charAt(i)!=recur.charAt(j)) break;
+            }
+            nonRecur.insert(i+1, '(');
+            recur.delete(j+1, recur.length());
+            recur.append(')');
+            strRes.append(nonRecur);
+            strRes.append(recur); 
+        }
+        else{
+            for(int i=0;i<deciPart.size();i++){
+                strRes.append(deciPart.get(i));
+            }
+        }
+        return strRes.toString();   
+    }
+}
+
+//elegant way to handle sign and append ().
+public String fractionToDecimal(int numerator, int denominator) {
+    StringBuilder result = new StringBuilder();
+    String sign = (numerator < 0 == denominator < 0 || numerator == 0) ? "" : "-";
+    long num = Math.abs((long) numerator);
+    long den = Math.abs((long) denominator);
+    result.append(sign);
+    result.append(num / den);
+    long remainder = num % den;
+    if (remainder == 0)
+        return result.toString();
+    result.append(".");
+    HashMap<Long, Integer> hashMap = new HashMap<Long, Integer>();
+    while (!hashMap.containsKey(remainder)) {
+        hashMap.put(remainder, result.length());
+        result.append(10 * remainder / den);
+        remainder = 10 * remainder % den;
+    }
+    int index = hashMap.get(remainder);
+    result.insert(index, "(");
+    result.append(")");
+    return result.toString().replace("(0)", "");
+}

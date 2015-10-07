@@ -1,0 +1,34 @@
+public class Solution {
+    public int findKthLargest(int[] nums, int k) {
+        int left = 0, right = nums.length - 1;
+        while(left<=right){
+            if(left==right) return nums[left]; //when left and right meet, it must be the kth largest element
+            int inL = left, inR = right;
+            int splitVal = nums[left];
+            while(inL<=inR){
+                while(inL<=inR&&nums[inL]>=splitVal) inL++;
+                while(inL<=inR&&nums[inR]<splitVal) inR--;
+                if(inL<inR){
+                    int tmp = nums[inL];
+                    nums[inL++] = nums[inR];
+                    nums[inR--] = tmp;
+                }
+            }
+            nums[left] = nums[inR];
+            nums[inR] = splitVal;
+            if(inR==k-1) return nums[inR];
+            else if(inR>k-1) right = inR-1; //the part before split val has the kth largest num. -1 to avoid infinite loop
+                                            //when inR never move to left
+            else left = inR + 1; // +1 to pick a new split value
+        }
+        return 0;
+    }
+}
+
+/*
+public class Solution {
+    public int findKthLargest(int[] nums, int k) {
+        Arrays.sort(nums);
+        return nums[nums.length-k];
+    }
+}*/

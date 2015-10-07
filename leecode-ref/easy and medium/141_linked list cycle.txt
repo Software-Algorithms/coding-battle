@@ -1,0 +1,38 @@
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        if(head==null){
+            return false;
+        }
+        else{
+        ListNode one = head;
+        ListNode two = head;
+        while((two!=null)&&(two.next!=null)){  // if dont check two!=null, will suffer null.next exception.
+            one = one.next;
+            two = two.next.next;
+            if(one == two){
+                return true;
+            }
+        }
+        return false;
+        }
+    }
+}
+
+public boolean hasCycle(ListNode head) {
+
+    if (head == null) {
+        return false;
+    }
+
+    java.util.Set<ListNode> set = new java.util.HashSet<ListNode>();
+
+    while (head.next != null) {
+        if (set.add(head.next)) {
+            head = head.next;
+        } else {
+            return true;
+        }
+    }
+
+    return false;
+}

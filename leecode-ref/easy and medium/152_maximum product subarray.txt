@@ -1,0 +1,83 @@
+public class Solution {
+    public int maxProduct(int[] nums) {
+        int curr = Integer.MIN_VALUE, negMin = 0, posMax = 0; //negMin, posMax = 0 means such min max don't exist.
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]==0){
+                curr = (curr>0)?curr:0; //using Math.max(curr,0) would cause time limit exceed. WTF!!!!!!!!!!!
+                negMin = 0;
+                posMax = 0;
+                continue;
+            }
+            else if(nums[i]>0){
+                if(posMax==0){
+                    curr = (curr>nums[i])?curr:nums[i];
+                    posMax = nums[i];
+                    negMin *= nums[i];
+                }
+                else if(posMax>0){
+                    curr = (curr>nums[i]*posMax)?curr:nums[i]*posMax;
+                    posMax *= nums[i];
+                    negMin *= nums[i];
+                }
+            }
+            else{
+                if(negMin==0){
+                    curr = (curr>nums[i])?curr:nums[i];
+                    negMin = (posMax==0)?nums[i]:nums[i]*posMax;
+                    posMax = 0;
+                }
+                else if(negMin<0){
+                    curr = (curr>nums[i]*negMin)?curr:nums[i]*negMin;
+                    int tmp = posMax;
+                    posMax = negMin*nums[i];
+                    negMin = (tmp==0)?nums[i]:nums[i]*tmp;
+                }
+            }
+        }
+        return curr;
+    }
+}
+
+/*public class Solution {
+    public int maxProduct(int[] nums) {
+        if(nums.length == 0)
+            return 0;
+        int maxIndex = 0;
+        int[] max = new int[nums.length];
+        int[] min = new int[nums.length];
+        max[0] = nums[0];
+        min[0] = nums[0];
+        for(int i = 1; i < nums.length; i++) {
+            int a = nums[i];
+            int b = nums[i] * max[i - 1];
+            int c = nums[i] * min[i - 1];
+            max[i] = a > b ? (a > c ? a : c) : (b > c ? b : c); //way to choose max from 3 num
+            min[i] = a < b ? (a < c ? a : c) : (b < c ? b : c);
+            if(max[i] > max[maxIndex])
+                maxIndex = i;
+        }
+        return max[maxIndex];
+    }
+}*/
+
+
+
+/*public class Solution {
+    public int maxProduct(int[] nums) {
+        if(nums.length==0) return 0;
+        int curr = nums[0], currPos = 0;
+        for(int i=1;i<nums.length;i++){
+            int tmp = nums[i];
+            int tmpMax = tmp;
+            for(int j=i-1;j>currPos;j--){
+                tmp *= nums[j];
+                tmpMax = Math.max(tmp,tmpMax);
+            }
+            if(tmpMax>=curr||tmp*curr>=curr){
+                curr = Math.max(tmpMax,tmp*curr);
+                currPos = i;
+            }
+        }
+        return curr;
+    }
+}*/

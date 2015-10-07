@@ -1,0 +1,37 @@
+public class Solution {
+    List<List<Integer>> result = new ArrayList<List<Integer>>();
+    public List<List<Integer>> combine(int n, int k) {
+        if(n==0||k==0||n<k) return result;
+        else{
+            List<Integer> nums = new ArrayList<Integer>();
+            for(int i=1;i<=n;i++) nums.add(i);
+            List<Integer> oneCombination = new ArrayList<Integer>();
+            combine(nums, oneCombination,k);
+            return result;
+        }               
+    }
+    
+    public void combine(List<Integer> nums, List<Integer> curr, int k){
+        if(curr.size()==k-1){
+            for(int i:nums){
+                List<Integer> tmp = new ArrayList<Integer>(curr); // need to new a copy cuz we will add it to result
+                tmp.add(i);
+                result.add(tmp);                
+            }
+            return;
+        }
+        else{
+            for(int i:nums){
+                List<Integer> newnums = new ArrayList<Integer>(nums);
+                //unlike permutaion, it's combination, so when we choose i as start, then only choose nums>i as selection set.
+                //cuz nums<i have already been generated. So just remove all nums<=i in new nums set.
+                for(int j=1;j<=i;j++) newnums.remove((Integer) j);//differentiate arraylist.remove(int index) and arraylist.remove(Object n)
+                                                                  //better using HashSet
+                curr.add(i);
+                combine(newnums,curr,k);
+                curr.remove(curr.size()-1); //since each time we didn't change curr finally, so we don't need to 
+                                            //new a copy of curr                
+            }
+        }
+    }
+}

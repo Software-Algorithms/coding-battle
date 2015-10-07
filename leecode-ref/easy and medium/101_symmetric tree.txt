@@ -1,0 +1,117 @@
+package leecode;
+
+class QueueTreeNode {
+    TreeNode treeNode;
+    QueueTreeNode next;
+    QueueTreeNode(TreeNode tn){
+        treeNode = tn;
+    }
+}
+
+class QueueTree {
+    QueueTreeNode head;
+    QueueTreeNode tail;
+    public void enqueue(TreeNode tn){
+        if(head==null){
+            QueueTreeNode qtn = new QueueTreeNode(tn);
+            head = qtn;
+            tail = qtn;
+        }
+        else{
+            QueueTreeNode qtn = new QueueTreeNode(tn);
+            tail.next = qtn;
+            tail = qtn;
+        }
+    }
+    public TreeNode dequeue(){
+        if(head==null) return null;
+        else{
+            TreeNode tn = head.treeNode;
+            head = head.next;
+            return tn;
+        }
+    }
+}
+
+
+class Solution_symmetricTree_iteration {
+    public boolean isSymmetric(TreeNode root) {
+        if(root==null||(root.left==null&&root.right==null)) return true;
+        else if((root.left!=null&&root.right==null)||(root.left==null&&root.right!=null)) return false;
+        else{
+            QueueTree first = new QueueTree();
+            QueueTree second = new QueueTree();
+            first.enqueue(root.left);
+            second.enqueue(root.right);
+            while(first.head!=null&&second.head!=null){
+                TreeNode tnFirst = first.dequeue();
+                TreeNode tnSecond = second.dequeue();
+                if(tnFirst.val!=tnSecond.val) return false;
+                else{
+                    if(tnFirst.left!=null){
+                        if(tnSecond.right!=null){
+                            first.enqueue(tnFirst.left);
+                            second.enqueue(tnSecond.right);
+                        }
+                        else return false;
+                    }
+                    else if(tnFirst.left==null&&tnSecond.right!=null) return false;
+                    
+                    if(tnFirst.right!=null){
+                        if(tnSecond.left!=null){
+                            first.enqueue(tnFirst.right);
+                            second.enqueue(tnSecond.left);
+                        }
+                        else return false;
+                    }
+                    else if(tnFirst.right==null&&tnSecond.left!=null) return false;                                     
+                }                           
+            }
+            return true;        
+        }   
+    }
+}
+
+class Solution_symmetricTree_recursion {
+    public boolean isSymmetric(TreeNode root) {
+        if(root==null) return true;
+        else return isSameTree(root.left,invertTree(root.right));
+    }
+    
+    public TreeNode invertTree(TreeNode root) {
+        if(root==null){
+            return root;
+        }
+        else{
+            TreeNode invertLeft = invertTree(root.left);
+            TreeNode invertRight = invertTree(root.right);
+            root.left = invertRight;
+            root.right = invertLeft;
+            return root;
+        }
+        
+    }
+    
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        if ((p==null)&&(q==null)){
+            return true;
+        }
+        else if((p==null)||(q==null)||(p.val != q.val)){
+            return false;
+        }
+        else{
+            return isSameTree(p.left,q.left)&&isSameTree(p.right,q.right);
+        }
+    }
+}
+
+public class symmetricTree {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Solution_symmetricTree_iteration sol = new Solution_symmetricTree_iteration();
+        TreeNode tn = new TreeNode(1);
+        System.out.println(sol.isSymmetric(tn));
+    }
+
+}
