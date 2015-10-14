@@ -1,0 +1,152 @@
+//iteration version. https://leetcode.com/discuss/51865/my-4ms-dp-solution-another-recursive-version-also-given-72ms
+class Solution_regularExpressionMatching_iteration {
+    public boolean isMatch(String s, String p) {
+        int sLen = s.length(), pLen = p.length(), i = 0, j = 0;
+        boolean[][] match = new boolean[sLen+1][pLen+1]; //match[i][j] indicate s(0,i-1) matches p(0,j-1).
+        for(j=2, match[0][0]= true ;j<=pLen;j++){ //match p with empty string
+            match[0][j] = p.charAt(j-1)=='*' && match[0][j-2];
+        }
+        for(i=1;i<=sLen;i++){ 
+            for(j=1;j<=pLen;j++){ //match[i][0] are all false except match[0][0].
+                if(p.charAt(j-1)=='*'){
+                    //j=1 =>false; match[i][j-2] => '*' was used to cancel its precede,
+                    //(p.charAt(j-2)=='.'||p.charAt(j-2)==s.charAt(i-1)) is a must.
+                    //match[i-1][j-1] => '*' was used to represent one preceding char.
+                    //match[i-1][j] => '*' was used to represent two preceding chars.
+                    match[i][j] = (j>1)&&(match[i][j-2]||match[i][j-1]||((match[i-1][j-1]||match[i-1][j])&&(p.charAt(j-2)=='.'||p.charAt(j-2)==s.charAt(i-1))));
+                }
+                else{
+                    match[i][j] = (p.charAt(j-1)=='.'||p.charAt(j-1)==s.charAt(i-1))&&match[i-1][j-1];
+                }
+            }
+        }
+        return match[sLen][pLen];  
+    }
+}
+
+//recursive version, while I record some sub recursion result using a matrix. Beats 80% of java submissions.
+public class Solution {
+    public boolean isMatch(String s, String p) {
+        return matching(s,0,p,0,new int[s.length()+1][p.length()]);//record[s.length()][] represent s is already matched by partial p.      
+    }
+    
+    public boolean matching(String s, int beginS, String p, int beginP, int[][] record){
+        if(beginP==p.length()) return beginS==s.length()?true:false;
+        if(record[beginS][beginP]!=0) return record[beginS][beginP]==1?true:false;      
+        else if(beginS==s.length()){ //s is already matched, check whether remaining p could be null string;
+            int checkSum = 0;
+            for(int i = beginP;i<p.length();i++){
+                if(p.charAt(i)=='*') checkSum--;
+                else checkSum++;
+            }
+            record[beginS][beginP] = checkSum==0?1:-1;
+            return checkSum==0?true:false;
+        }
+        else{ //normal case, do the matching.
+            if(p.charAt(beginP)=='*'){
+                record[beginS][beginP] = -1;
+                return false;
+            }
+            else{
+                if(beginP!=p.length()-1 && p.charAt(beginP+1)=='*'){
+                    int index = beginS-1;
+                    while(index<s.length()&&(index==beginS-1||p.charAt(beginP)=='.'||p.charAt(beginP)==s.charAt(index))){
+                        if(matching(s,index+1,p,beginP+2,record)){
+                            record[beginS][beginP] = 1;
+                            return true;
+                        }
+                        index++;
+                    }
+                    record[beginS][beginP] = -1;
+                    return false;
+                }
+                else{ //beginP is at a single char.
+                    if(p.charAt(beginP)=='.'||p.charAt(beginP)==s.charAt(beginS)) {
+                        record[beginS][beginP] = matching(s,beginS+1,p,beginP+1,record)?1:-1;
+                        return record[beginS][beginP]==1?true:false;    
+                    }
+                    else{
+                        record[beginS][beginP] = -1;
+                        return false;
+                    }
+                }               
+            }   
+        }
+    }
+}
+
+//A little shorter recursive version. Only beats 50% of java submissions.
+//c++ don't deal with array index overflow, so it can omit if(beginS==s.length()) case.
+public class Solution {
+    public boolean isMatch(String s, String p) {
+        return matching(s,0,p,0);   
+    }
+    
+    public boolean matching(String s, int beginS, String p, int beginP){
+        if(beginP==p.length()) return beginS==s.length();
+        else if(beginS==s.length()){ //s is already matched, check whether remaining p could be null string;
+            int checkSum = 0;
+            for(int i = beginP;i<p.length();i++){
+                if(p.charAt(i)=='*') checkSum--;
+                else checkSum++;
+            }
+            return checkSum==0;
+        }
+        else{ //normal case, do the matching.
+            if(beginP!=p.length()-1 && p.charAt(beginP+1)=='*'){
+                int index = beginS-1;
+                while(index<s.length()&&(index==beginS-1||p.charAt(beginP)=='.'||p.charAt(beginP)==s.charAt(index))){
+                    if(matching(s,++index,p,beginP+2)) return true;
+                }
+            }
+            else if(p.charAt(beginP)=='.'||p.charAt(beginP)==s.charAt(beginS)) { //beginP is at a single char.
+                return matching(s,beginS+1,p,beginP+1); 
+            }
+            return false;
+        }
+    }
+}
+
+//recursive version. Only beats 50% of java submissions.
+public class Solution {
+    public boolean isMatch(String s, String p) {
+        return matching(s,0,p,0);   
+    }
+    
+    public boolean matching(String s, int beginS, String p, int beginP){
+        if(beginP==p.length()) return beginS==s.length()?true:false;
+        else if(beginS==s.length()){ //s is already matched, check whether remaining p could be null string;
+            int checkSum = 0;
+            for(int i = beginP;i<p.length();i++){
+                if(p.charAt(i)=='*') checkSum--;
+                else checkSum++;
+            }
+            return checkSum==0?true:false;
+        }
+        else{ //normal case, do the matching.
+            if(p.charAt(beginP)=='*'){
+                return false;
+            }
+            else{
+                if(beginP!=p.length()-1 && p.charAt(beginP+1)=='*'){
+                    int index = beginS-1;
+                    while(index<s.length()&&(index==beginS-1||p.charAt(beginP)=='.'||p.charAt(beginP)==s.charAt(index))){
+                        if(matching(s,index+1,p,beginP+2)){
+                            return true;
+                        }
+                        index++;
+                    }
+                    return false;
+                }
+                else{ //beginP is at a single char.
+                    if(p.charAt(beginP)=='.'||p.charAt(beginP)==s.charAt(beginS)) {
+                        return matching(s,beginS+1,p,beginP+1)?true:false;  
+                    }
+                    else{
+                        return false;
+                    }
+                }               
+            }   
+        }
+    }
+}

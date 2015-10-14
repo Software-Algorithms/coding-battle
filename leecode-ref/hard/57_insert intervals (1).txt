@@ -1,0 +1,64 @@
+public class Solution {
+    public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
+        for(int i = 0; i < intervals.size(); i++) {
+            if(i==0 && newInterval.end < intervals.get(0).start) { //new is at the begin of array
+                intervals.add(i, newInterval);
+                break;
+            }
+            else if(newInterval.start>intervals.get(i).end && (i == intervals.size()-1 || newInterval.end<intervals.get(i+1).start)) {
+                intervals.add(i+1, newInterval); //new is at the gap or end of array
+                break;
+            }
+            else if(newInterval.start>=intervals.get(i).start && newInterval.end<=intervals.get(i).end) break; //new is inside one interval
+            else {
+                if(newInterval.start>intervals.get(i).end) continue;
+                if(newInterval.start < intervals.get(i).start) intervals.get(i).start = newInterval.start; 
+                if(newInterval.end > intervals.get(i).end) intervals.get(i).end = newInterval.end;
+                int j = i + 1;
+                while(j < intervals.size() && intervals.get(i).end >= intervals.get(j).start) { //merge interval
+                    if(intervals.get(i).end < intervals.get(j).end) intervals.get(i).end = intervals.get(j).end;
+                    intervals.remove(j);
+                }
+                break;
+            }
+        }
+        if(intervals.isEmpty()) intervals.add(newInterval);
+        return intervals;
+    }
+}
+
+//other's solution using iterator.
+The idea is to look at each interval in the list. If it intersects with newInterval then merge it to newInterval and delete it. In the end add newInterval back to its corresponding place.
+
+public class Solution {
+    public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
+        ListIterator<Interval> i = intervals.listIterator();
+        Interval in;
+        while (i.hasNext()) {
+            in = i.next();
+            if (newInterval.end < in.start) {
+                i.previous();
+                break;
+            }
+            if (in.start <= newInterval.end && newInterval.start <= in.end) {
+                newInterval.start = Math.min(newInterval.start, in.start);
+                newInterval.end = Math.max(newInterval.end, in.end);
+                i.previous();
+                i.remove();
+            }
+        }
+        i.add(newInterval);
+        return intervals;
+    }
+}
+
+public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
+    int i=0;
+    while(i<intervals.size() && intervals.get(i).end<newInterval.start) i++;
+    while(i<intervals.size() && intervals.get(i).start<=newInterval.end){
+        newInterval = new Interval(Math.min(intervals.get(i).start, newInterval.start), Math.max(intervals.get(i).end, newInterval.end));
+        intervals.remove(i);
+    }
+    intervals.add(i,newInterval);
+    return intervals;
+}

@@ -1,0 +1,103 @@
+//Time is O(n), space is O(1).
+public class Solution {
+    public int candy(int[] ratings) {
+        return helper(ratings,0);
+    }
+    
+    public int helper(int[] ratings, int begin) {
+        if(begin>=ratings.length) return 0;
+        else if(begin==ratings.length-1) return 1;
+        else if(ratings[begin]==ratings[begin+1]) return 1 + helper(ratings,begin+1);
+        else{
+            int i = begin+1;
+            while(i<ratings.length-1){
+                if(ratings[i]>ratings[i-1]&&ratings[i+1]>ratings[i]||ratings[i]<ratings[i-1]&&ratings[i+1]<ratings[i]||ratings[i]>ratings[i-1]&&ratings[i]>ratings[i+1]) i++; //these are cases where we can't make the break.
+                else break;
+            }
+            if(i!=ratings.length-1&&ratings[i]<ratings[i-1]&&ratings[i]<ratings[i+1]){ //break point is valley is a special case.
+                return simpleCaseCal(ratings,begin,i) -1 + helper(ratings,i); //add the valley twice, so minus one.
+            }
+            else return simpleCaseCal(ratings,begin,i) + helper(ratings,i+1);
+        }
+        
+    }
+    
+    public int simpleCaseCal (int[] ratings, int begin, int end){ //only calculate 3 cases ^ and / and \.
+        if(begin>end) return 0; //actually invalid.
+        if(begin==end) return 1;
+        if(ratings[begin]<ratings[begin+1]&&ratings[end]<ratings[end-1]){ // first ascending then descending line
+            int left = 0, right = 0;
+            while(ratings[begin]<ratings[1+begin]){
+                left++;
+                begin++;
+            } 
+            while(ratings[end]<ratings[end-1]){
+                right++;
+                end--;
+            } 
+            int peak = Math.max(left,right) + 1;
+            return (left+1)*left/2 + (right+1)*right/2 + peak;
+            
+        }
+        else return (end-begin+2)*(end-begin+1)/2;  //just ascending or descending line.
+    }
+}
+
+//if use O(n) space, can do it in 2 traversal, one to deal with all ascending and the other deals with all descending.
+class Solution {
+public:
+    int candy(vector<int>& ratings) {
+        int len = ratings.size(), res = 0, i;
+        if(len>0)
+        {
+            vector<int> number(len,0); // to save the number of candies for child[0:N-1]
+            number[0] = 1; 
+// forward scan to calculate how many candies needed for child i to make sure it has more candies than its left neighbor if it has a higher rate, otherwise, give one candy to it
+            for(i=1; i<len;++i) number[i] = ratings[i]>ratings[i-1]?number[i-1]+1:1;
+
+// backward scan to calculate to make sure child i has more candies than its right neighbor if it has a higher rate, pick the bigger one from forward and backward scans as the final number for child i
+            for(i=len-2, res = number[len-1]; i>=0;--i)
+            {
+                if( (ratings[i]>ratings[i+1]) && number[i]<(number[i+1]+1) ) number[i] = number[i+1]+1;
+                res += number[i];
+            }
+        }
+        return res;
+    }
+};
+
+//O(1) space, record the position of peak and when met valley, add them back to peak.
+https://leetcode.com/discuss/43581/solutions-given-explanation-time-with-space-other-with-space
+class Solution {
+    public:
+        int candy(vector<int>& ratings) {
+            const int len = ratings.size();
+            if(len<=1) return len;
+
+            int i, pPos, res=1, peak=1; // peak: # candies given to the i-1 child
+            bool neg_peak = false; // flag to indicate if it is a local dip
+            for(i=1; i<len;i++)
+            {
+                if(ratings[i] >= ratings[i-1]) 
+                {   // it is increasing
+                    if(neg_peak) 
+                    {  // it is a local dip, we need to make sure i-1 has one candy
+                        res -= (peak-1) * (i-pPos - (peak>0));
+                        peak = 1;
+                        neg_peak = false;
+                    }
+                   // update child i candy number, if equal, set to 1
+                    peak = (ratings[i] == ratings[i-1])? 1:++peak;
+                    res += peak;
+                }
+                else
+                { // decreasing, just give one less candy, if it is the starting point of a decrease, update pPos
+                    if(!neg_peak) {pPos = i-1; neg_peak = true;}
+                    res += --peak;
+                }
+            }
+// don't forget to update res, if the last one is a local dip
+            return !neg_peak? res : res - (peak-1) * (i-pPos - (peak>0));
+
+        }
+    };

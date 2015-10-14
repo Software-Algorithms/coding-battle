@@ -1,0 +1,130 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+
+//since postorder is left->right->root, we could implement a revised preorder root->right->left
+//and just reverse the traversal.
+public class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        LinkedList<Integer> result = new LinkedList<Integer>();
+        if(root == null) return result;
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        stack.push(root);
+        while(!stack.isEmpty()){
+            root = stack.pop();
+            result.addFirst(root.val);
+            if(root.left != null){
+                stack.push(root.left);
+            }
+            if(root.right != null){
+                stack.push(root.right);
+            }
+        }
+        return result;
+    }
+}
+
+//two stacks solution
+public class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<Integer>();
+        if (root == null) return res;
+        Stack<TreeNode> s1 = new Stack<TreeNode>();
+        Stack<TreeNode> s2 = new Stack<TreeNode>();
+        s1.push(root);
+        while (!s1.isEmpty()) {
+            TreeNode node = s1.pop();
+            s2.push(node);
+            if (node.left != null) s1.push(node.left);
+            if (node.right != null) s1.push(node.right);
+        }
+        while (!s2.isEmpty()) res.add(s2.pop().val);
+        return res;
+    }   
+}
+
+//take the advantage of postorder. if we record a node, then the previous node we recorded must be its
+//left child or right child if it has children.
+public class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<Integer>();
+        if(root==null) return res;
+        Stack<TreeNode> ts = new Stack<TreeNode>();
+        TreeNode pre = root;
+        ts.push(root);
+        while(!ts.isEmpty()){
+            TreeNode curr = ts.peek();
+            if(curr.left!=null&&curr.left!=pre&&curr.right!=pre) ts.push(curr.left);
+            else if(curr.right!=null&&curr.right!=pre) ts.push(curr.right);
+            else{
+                res.add(curr.val);
+                pre = ts.pop();
+            }   
+        }
+        return res;
+    }
+}
+
+public class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        if(root==null) return new ArrayList<Integer>();
+        else{
+        	Map<TreeNode,String> map = new HashMap<TreeNode, String>();
+    	    List<Integer> list = new ArrayList<Integer>();
+            Stack<TreeNode> ts = new Stack<TreeNode>();
+            ts.push(root);
+            while(!ts.isEmpty()){
+            	TreeNode tempTN = ts.pop();
+            	if((tempTN.left!=null)&&(map.get(tempTN.left)!="Checked")){
+            		ts.push(tempTN); //this, right, left. push order.
+            		if(tempTN.right!=null){
+            			ts.push(tempTN.right);
+            		}
+            		ts.push(tempTN.left);            		
+            	}
+            	else if((tempTN.left!=null)&&(map.get(tempTN.left)=="Checked")){ //if left check, right also checked.
+            		list.add(tempTN.val);
+            		map.put(tempTN, "Checked");
+            	}
+            	else if(tempTN.left==null){
+            		if(tempTN.right!=null&&(map.get(tempTN.right)!="Checked")){
+            			ts.push(tempTN); //this, right, left. push order.
+                		ts.push(tempTN.right);
+            		} 
+            		/*else if(tempTN.right!=null&&(map.get(tempTN.right)=="Checked")){
+            			list.add(tempTN.val);
+                		map.put(tempTN, "Checked");
+            		}*/
+            		else{
+            			list.add(tempTN.val);
+                		map.put(tempTN, "Checked");
+            		}            		         		
+            	}            	       	
+            }
+        	return list;      
+        } 
+    }
+}
+
+/*
+public class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<Integer>();
+        postorderTraversal(root,res);
+        return res;
+    }
+    
+    public void postorderTraversal(TreeNode root, List<Integer> res){
+        if(root==null) return;
+        postorderTraversal(root.left,res);
+        postorderTraversal(root.right,res);
+        res.add(root.val);
+    }
+}
+*/

@@ -1,0 +1,45 @@
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public ListNode mergeKLists(ListNode[] lists) {
+        int k = lists.length;
+        Queue<NodePosPair> queue = new PriorityQueue<NodePosPair>();
+        for(int i=0;i<k;i++){
+            if(lists[i]==null) continue;
+            NodePosPair nPP = new NodePosPair(lists[i],i);
+            queue.add(nPP);
+            lists[i] = lists[i].next;
+        }
+        ListNode fakeHead = new ListNode(0);
+        ListNode helper = fakeHead;
+        while(!queue.isEmpty()){
+            int index = queue.peek().pos;
+            helper.next = queue.poll().node;
+            helper = helper.next;
+            if(lists[index]!=null){
+                NodePosPair nPP = new NodePosPair(lists[index],index);
+                queue.add(nPP);
+                lists[index] = lists[index].next;
+            }
+        }
+        return fakeHead.next;
+    }
+}
+
+class NodePosPair implements Comparable<NodePosPair>{
+	ListNode node;
+	int pos;
+	NodePosPair(ListNode n, int p) { node = n; pos = p;}
+	public int compareTo(NodePosPair x){
+	    if(this.node==null||x.node==null) return 0;
+		if(this.node.val<x.node.val) return -1;
+		else if(this.node.val==x.node.val) return 0;
+		else return 1;
+	}	
+}

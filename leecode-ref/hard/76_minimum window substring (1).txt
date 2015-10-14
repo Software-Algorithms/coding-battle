@@ -1,0 +1,29 @@
+public class Solution {
+    public String minWindow(String s, String t) {
+        Map<Character,Integer> dict = new HashMap<Character,Integer>();
+        for(int i = 0; i < t.length(); i++) dict.put(t.charAt(i), dict.containsKey(t.charAt(i)) ? dict.get(t.charAt(i))+1 : 1);
+        Map<Character,Integer> window = new HashMap<Character,Integer>();
+        int[] minWindow = new int[2]; //minWindow[0] left index, minWindow[1] right index (exclusive) //index of min window.
+        minWindow[1] = s.length();
+        int begin = 0, end = 0; //index of current window
+        int count = 0, num = t.length();
+        for(int i = 0; i < s.length(); i++) {
+            if(!dict.containsKey(s.charAt(i))) continue;
+            if(!window.containsKey(s.charAt(i))||window.get(s.charAt(i))<dict.get(s.charAt(i))) count++; 
+            if(window.containsKey(s.charAt(i))) window.put(s.charAt(i),window.get(s.charAt(i))+1);
+            else window.put(s.charAt(i),1);
+            end = i + 1;
+            while(!window.containsKey(s.charAt(begin))||window.get(s.charAt(begin))>dict.get(s.charAt(begin))) {
+                if(window.containsKey(s.charAt(begin))) window.put(s.charAt(begin),window.get(s.charAt(begin))-1);
+                begin++;
+            }
+            if(count==num && end-begin<minWindow[1]-minWindow[0]) {
+                minWindow[0] = begin;
+                minWindow[1] = end;
+            }
+        }
+        if(count<num) return "";
+        else return s.substring(minWindow[0],minWindow[1]);
+    }
+}
+
