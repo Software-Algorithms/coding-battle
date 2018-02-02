@@ -201,6 +201,6 @@
 |  197  |  | [Cpp]() | O(n) | O(n) | Easy |  |
 |  198  |  | [Cpp]() | O(n) | O(n) | Easy |  |
 |  199  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-| 200  |  | [Cpp]() | O(n) | O(n) | Medium |  |
+|  200  |  | [Cpp]() | O(n) | O(n) | Medium |  |
 
 
