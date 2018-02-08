@@ -52,56 +52,56 @@
 |  48  | Rotate Image | [Cpp](./cpp/048-RotateImage.cpp) | O(n) | O(n) | Medium |  |
 |  49  | Group Anagrams | [Cpp](./cpp/049-GroupAnagrams.cpp) | O(n) | O(n) | Medium |  |
 |  50  | Pow(x, n) | [Cpp](./cpp/050-Pow.cpp) | O(n) | O(n) | Medium |  |
-|  51  |  | [Cpp]() | O(n) | O(n) | Hard |  |
-|  52  |  | [Cpp]() | O(n) | O(n) | Hard |  |
-|  53  |  | [Cpp]() | O(n) | O(n) | Easy |  |
-|  54  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  55  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  56  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  57  |  | [Cpp]() | O(n) | O(n) | Hard |  |
-|  58  |  | [Cpp]() | O(n) | O(n) | Easy |  |
-|  59  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  60  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  61  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  62  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  63  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  64  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  65  |  | [Cpp]() | O(n) | O(n) | Hard |  |
-|  66  |  | [Cpp]() | O(n) | O(n) | Easy |  |
-|  67  |  | [Cpp]() | O(n) | O(n) | Easy |  |
-|  68  |  | [Cpp]() | O(n) | O(n) | Hard |  |
-|  69  |  | [Cpp]() | O(n) | O(n) | Easy |  |
-|  70  |  | [Cpp]() | O(n) | O(n) | Easy |  |
-|  71  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  72  |  | [Cpp]() | O(n) | O(n) | Hard |  |
-|  73  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  74  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  75  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  76  |  | [Cpp]() | O(n) | O(n) | Hard |  |
-|  77  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  78  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  79  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  80  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  81  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  82  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  83  |  | [Cpp]() | O(n) | O(n) | Easy |  |
-|  84  |  | [Cpp]() | O(n) | O(n) | Hard |  |
-|  85  |  | [Cpp]() | O(n) | O(n) | Hard |  |
-|  86  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  87  |  | [Cpp]() | O(n) | O(n) | Hard |  |
-|  88  |  | [Cpp]() | O(n) | O(n) | Easy |  |
-|  89  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  90  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  91  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  92  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  93  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  94  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  95  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  96  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  97  |  | [Cpp]() | O(n) | O(n) | Hard |  |
-|  98  |  | [Cpp]() | O(n) | O(n) | Medium |  |
-|  99  |  | [Cpp]() | O(n) | O(n) | Hard |  |
-|  100  |  | [Cpp]() | O(n) | O(n) | Easy |  |
+|  51  | N-Queens | [Cpp](./cpp/051-NQueens.cpp) | O(n) | O(n) | Hard |  |
+|  52  | N-Queens II | [Cpp](./cpp/052-NQueensII.cpp) | O(n) | O(n) | Hard |  |
+|  53  | Maximum Subarray | [Cpp](./cpp/053-MaximumSubarray.cpp) | O(n) | O(n) | Easy |  |
+|  54  | Spiral Matrix | [Cpp](./cpp/054-SpiralMatrix.cpp) | O(n) | O(n) | Medium |  |
+|  55  | Jump Game | [Cpp](./cpp/055-JumpGame.cpp) | O(n) | O(n) | Medium |  |
+|  56  | Merge Intervals | [Cpp](./cpp/056-MergeIntervals.cpp) | O(n) | O(n) | Medium |  |
+|  57  | Insert Interval | [Cpp](./cpp/057-InsertInterval.cpp) | O(n) | O(n) | Hard |  |
+|  58  | Length of Last Word | [Cpp](./cpp/058-LengthOfLastWord.cpp) | O(n) | O(n) | Easy |  |
+|  59  | Spiral Matrix II | [Cpp](./cpp/059-SpiralMatrixII.cpp) | O(n) | O(n) | Medium |  |
+|  60  | Permutation Sequence | [Cpp](./cpp/060-PermutationSequence.cpp) | O(n) | O(n) | Medium |  |
+|  61  | Rotate List | [Cpp](./cpp/061-RotateList.cpp) | O(n) | O(n) | Medium |  |
+|  62  | Unique Paths | [Cpp](./cpp/062-UniquePaths.cpp) | O(n) | O(n) | Medium |  |
+|  63  | Unique Paths II | [Cpp](./cpp/063-UniquePathsII.cpp) | O(n) | O(n) | Medium |  |
+|  64  | Minimum Path Sum | [Cpp](./cpp/064-MinimumPathSum.cpp) | O(n) | O(n) | Medium |  |
+|  65  | Valid Number | [Cpp](./cpp/065-ValidNumber.cpp) | O(n) | O(n) | Hard |  |
+|  66  | Plus One | [Cpp](./cpp/066-PlusOne.cpp) | O(n) | O(n) | Easy |  |
+|  67  | Add Binary | [Cpp](./cpp/067-AddBinary.cpp) | O(n) | O(n) | Easy |  |
+|  68  | Text Justification | [Cpp](./cpp/068-TextJustification.cpp) | O(n) | O(n) | Hard |  |
+|  69  | Sqrt(x) | [Cpp](./cpp/069-Sqrt.cpp) | O(n) | O(n) | Easy |  |
+|  70  | Climbing Stairs | [Cpp](./cpp/070-ClimbingStairs.cpp) | O(n) | O(n) | Easy |  |
+|  71  | Simplify Path | [Cpp](./cpp/071-SimplifyPath.cpp) | O(n) | O(n) | Medium |  |
+|  72  | Edit Distance | [Cpp](./cpp/072-EditDistance.cpp) | O(n) | O(n) | Hard |  |
+|  73  | Set Matrix Zeroes | [Cpp](./cpp/073-SetMatrixZeros.cpp) | O(n) | O(n) | Medium |  |
+|  74  | Search a 2D Matrix | [Cpp](./cpp/074-Searcha2DMatrix.cpp) | O(n) | O(n) | Medium |  |
+|  75  | Sort Colors | [Cpp](./cpp/075-SortColors.cpp) | O(n) | O(n) | Medium |  |
+|  76  | Minimum Window Substring | [Cpp](./cpp/076-MinimumWindowSubstring.cpp) | O(n) | O(n) | Hard |  |
+|  77  | Combinations | [Cpp](./cpp/077-Combinations.cpp) | O(n) | O(n) | Medium |  |
+|  78  | Subsets | [Cpp](./cpp/078-Subsets.cpp) | O(n) | O(n) | Medium |  |
+|  79  | Word Search | [Cpp](./cpp/079-WordSearch.cpp) | O(n) | O(n) | Medium |  |
+|  80  | Remove Duplicates from Sorted Array II | [Cpp](./cpp/080-RemoveDuplicatesFromSortedArrayII.cpp) | O(n) | O(n) | Medium |  |
+|  81  | Search in Rotated Sorted Array II | [Cpp](./cpp/081-SearchInRotatedSortedArrayII.cpp) | O(n) | O(n) | Medium |  |
+|  82  | Remove Duplicates from Sorted List II | [Cpp](./cpp/082-RemoveDuplicatesFromSortedListII.cpp) | O(n) | O(n) | Medium |  |
+|  83  | Remove Duplicates from Sorted List | [Cpp](./cpp/083-RemoveDuplicatesFromSortedList.cpp) | O(n) | O(n) | Easy |  |
+|  84  | Largest Rectangle in Histogram | [Cpp](./cpp/084-LargestRectangleInHistogram.cpp) | O(n) | O(n) | Hard |  |
+|  85  | Maximal Rectangle | [Cpp](./cpp/085-MaximalRectangle.cpp) | O(n) | O(n) | Hard |  |
+|  86  | Partition List | [Cpp](./cpp/086-PartitionList.cpp) | O(n) | O(n) | Medium |  |
+|  87  | Scramble String | [Cpp](./cpp/087-ScrambleString.cpp) | O(n) | O(n) | Hard |  |
+|  88  | Merge Sorted Array | [Cpp](./cpp/088-MergeSortedArray.cpp) | O(n) | O(n) | Easy |  |
+|  89  | Gray Code | [Cpp](./cpp/089-GrayCode.cpp) | O(n) | O(n) | Medium |  |
+|  90  | Subsets II | [Cpp](./cpp/090-SubsetsII.cpp) | O(n) | O(n) | Medium |  |
+|  91  | Decode Ways | [Cpp](./cpp/091-DecodeWays.cpp) | O(n) | O(n) | Medium |  |
+|  92  | Reverse Linked List II | [Cpp](./cpp/092-ReverseLinkedListII.cpp) | O(n) | O(n) | Medium |  |
+|  93  | Restore IP Addresses | [Cpp](./cpp/093-RestoreIPAddresses.cpp) | O(n) | O(n) | Medium |  |
+|  94  | Binary Tree Inorder Traversal | [Cpp](./cpp/094-BinaryTreeInorderTravesal.cpp) | O(n) | O(n) | Medium |  |
+|  95  | Unique Binary Search Trees II | [Cpp](./cpp/095-UniqueBInarySearchTreesII.cpp) | O(n) | O(n) | Medium |  |
+|  96  | Unique Binary Search Trees | [Cpp](./cpp/096-UniqueBinarySearchTrees.cpp) | O(n) | O(n) | Medium |  |
+|  97  | Interleaving String | [Cpp](./cpp/097-INterleavingString.cpp) | O(n) | O(n) | Hard |  |
+|  98  | Validate Binary Search Tree | [Cpp](./cpp/098-ValidateBinarySearchTree.cpp) | O(n) | O(n) | Medium |  |
+|  99  | Recover Binary Search Tree | [Cpp](./cpp/099-RecoverBinarySearchTree.cpp) | O(n) | O(n) | Hard |  |
+|  100  | Same Tree | [Cpp](./cpp/100-SameTree.cpp) | O(n) | O(n) | Easy |  |
 |  101  |  | [Cpp]() | O(n) | O(n) | Easy |  |
 |  102  |  | [Cpp]() | O(n) | O(n) | Medium |  |
 |  103  |  | [Cpp]() | O(n) | O(n) | Medium |  |
