@@ -1,3 +1,10 @@
+/*
+ * DFS
+ *
+ * 利用它本身的性质来做，即左<根<右
+ *
+ */
+
 /**
  * Definition for a binary tree node.
  * struct TreeNode {

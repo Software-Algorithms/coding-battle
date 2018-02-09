@@ -1,3 +1,9 @@
+/*
+ * Binary Search
+ *
+ * Time: O(lgn)
+ *
+ */
 class Solution {
 public:
     bool search(vector<int>& nums, int target) {

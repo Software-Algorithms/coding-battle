@@ -1,3 +1,13 @@
+/*
+ * Backtracking
+ *
+ * Time: T(n) = n*T(n-1) + O(n^2) ~ O(n!)
+ * Space: O(n)
+ *
+ * Go row by row, and in each position, we need to check if the column, the 45° diagonal
+ * and the 135° diagonal had a queen before.
+ *
+ */
 class Solution {
 public:
     int totalNQueens(int n) {

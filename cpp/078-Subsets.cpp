@@ -1,3 +1,9 @@
+/*
+ * Backtracking
+ *
+ * Time: O(n*2^n)  Space: O(2^n)
+ *
+ */
 class Solution {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
@@ -15,5 +21,27 @@ public:
             findSubsets(nums, i+1, sol, allSets);
             sol.pop_back();
         }
+    }
+};
+
+
+/*
+ * Bit Manipulation
+ *
+ */
+class Solution {
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
+        int n = nums.size();
+        int nSubsets = pow(2, n);
+
+        vector<vector<int>> res(nSubsets, vector<int>());
+        for(int i = 0; i < n; i++) { // for each element in the input array
+            for(int j = 0; j < nSubsets; j++) { // for each subset
+                if((j>>i)&1) res[j].push_back(nums[i]);
+            }
+        }
+
+        return res;
     }
 };

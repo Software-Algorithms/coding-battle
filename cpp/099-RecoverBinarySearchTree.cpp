@@ -1,3 +1,10 @@
+/*
+ * DFS
+ *
+ * Space: O(n) ?
+ *
+ */
+
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -9,30 +16,32 @@
  */
 class Solution {
 public:
-    TreeNode* firstElement;;
-    TreeNode* secondElement;;
-    TreeNode* prevElement = new TreeNode(INT_MIN);
+    TreeNode* first;
+    TreeNode* second;
+    TreeNode* prev;
     void recoverTree(TreeNode* root) {
+        prev = NULL;
+        first = NULL;
+        second = NULL;
         // In order traversal to find the two elements
         traverse(root);
         // Swap the values of the two nodes
-        int temp = firstElement->val;
-        firstElement->val = secondElement->val;
-        secondElement->val = temp;
+        if (first && second) swap(first->val, second->val);
     }
-    
+
     void traverse(TreeNode* root) {
         if (!root) return;
         traverse(root->left);
-        
+
         // MAIN BODY
-        if (!firstElement && prevElement->val >= root->val) {
-            firstElement = prevElement;
+        if (!prev) prev = root;
+        else {
+            if (prev->val > root->val) {
+                if (!first) first = prev;
+                second = root;
+            }
+            prev = root;
         }
-        if (firstElement && prevElement->val >= root->val) {
-            secondElement = root;
-        }        
-        prevElement = root;
         // End of MAIN BODY
 
         traverse(root->right);        

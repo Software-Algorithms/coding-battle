@@ -1,3 +1,9 @@
+/*
+ * Backtracking
+ *
+ * Time: O(n^2)
+ *
+ */
 class Solution {
 public:
     vector<vector<int>> combine(int n, int k) {
@@ -17,6 +23,5 @@ public:
             helper(allSol, sol, i+1, k, n);
             sol.pop_back();
         }
-        return;        
     }
 };
