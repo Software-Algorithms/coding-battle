@@ -1,3 +1,7 @@
+/*
+ * Stack + Design
+ *
+ */
 class MinStack {
 private:
     stack<int> s1;

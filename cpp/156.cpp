@@ -1,24 +1,39 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
+/*
+ * Tree
+ *
+ * Solution 1: Recursion
  */
 class Solution {
 public:
     TreeNode* upsideDownBinaryTree(TreeNode* root) {
-        if(root == null || root.left == null) {
-            return root;
-        }
+        if (!root || !root->left) return root;
+        TreeNode *l = root->left, *r = root->right;
+        TreeNode *res = upsideDownBinaryTree(l);
+        l->left = r;
+        l->right = root;
+        root->left = NULL;
+        root->right = NULL;
+        return res;       
+    }
 
-        TreeNode newRoot = upsideDownBinaryTree(root.left);
-        root.left.left = root.right;   // node 2 left children
-        root.left.right = root;         // node 2 right children
-        root.left = null;
-        root.right = null;
-        return newRoot;        
+
+/*
+ * Tree
+ *
+ * Solution 2: Iteration
+ */
+class Solution {
+public:
+    TreeNode *upsideDownBinaryTree(TreeNode *root) {
+        TreeNode *cur = root, *pre = NULL, *next = NULL, *tmp = NULL;
+        while (cur) {
+            next = cur->left;
+            cur->left = tmp;
+            tmp = cur->right;
+            cur->right = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
     }
 };

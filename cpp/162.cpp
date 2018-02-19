@@ -1,3 +1,9 @@
+/*
+ * Binary Search
+ *
+ * O(lgn)
+ *
+ */
 class Solution {
 public:
     int findPeakElement(vector<int>& nums) {

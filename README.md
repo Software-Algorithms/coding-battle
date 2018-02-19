@@ -32,7 +32,7 @@
 |  78  | Subsets | [Cpp](./cpp/078-Subsets.cpp) | O(?) | O(?) | Medium |  |
 |  136  | Single Number | [Cpp](./cpp/136-SingleNumber.cpp) | O(?) | O(?) | Easy |  |
 |  137  | Single Number II | [Cpp](./cpp/137-SingleNumberII.cpp) | O(?) | O(?) | Medium |  |
-|  169  | Majority Element | [Cpp](./cpp/169.cpp) | O(?) | O(?) | Easy |  |
+|  169  | Majority Element | [Cpp](./cpp/169.cpp) | O(n^2) | O(?) | Easy |  |
 |  187  | Repeated DNA Sequences | [Cpp](./cpp/187.cpp) | O(?) | O(?) | Medium |  |
 |  190  | Reverse Bits | [Cpp](./cpp/190.cpp) | O(?) | O(?) | Easy |  |
 |  191  | Number of 1 Bits | [Cpp](./cpp/191.cpp) | O(?) | O(?) | Easy |  |
@@ -159,7 +159,7 @@
 |  142  | Linked List Cycle II | [Cpp](./cpp/142-LinkedListCycleII.cpp) | O(?) | O(?) | Medium |  |
 |  143  | Reorder List  | [Cpp](./cpp/143-ReorderList.cpp) | O(?) | O(?) | Medium |  |
 |  147  | Insertion Sort List | [Cpp](./cpp/147-InsertionSortList.cpp) | O(?) | O(?) | Medium |  |
-| 160 |  |  |  |  |  |  |  |
+|  160  | Intersection of Two Linked Lists | [Cpp](./cpp/160.cpp) | O(?) | O(?) | Easy |  |
 
 ### Stack
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -174,8 +174,8 @@
 |  144  | Binary Tree Preorder Traversal | [Cpp](./cpp/144-BinaryTreePreorderTraversal.cpp) | O(?) | O(?) | Medium |  |
 |  145  | Binary Tree Postorder Traversal  | [Cpp](./cpp/145-BinaryTreePostorderTraversal.cpp) | O(?) | O(?) | Hard |  |
 |  150  | Evaluate Reverse Polish Notation | [Cpp](./cpp/150-EvaluateReversePolishNotation.cpp) | O(?) | O(?) | Medium |  |
-| 155 |  |  |  |  |  |  |  |
-| 173 |  |  |  |  |  |  |  |
+|  155  | Min Stack | [Cpp](./cpp/155.cpp) | O(?) | O(?) | Easy |  |
+|  173  | Binary Search Tree Iterator | [Cpp](./cpp/173.cpp) | O(?) | O(?) | Medium |  |
 
 ### Queue
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -214,9 +214,9 @@
 |  129  | Sum Root to Leaf Numbers  | [Cpp](./cpp/129-SumRoottoLeafNumbers.cpp) | O(?) | O(?) | Medium |  |
 |  144  | Binary Tree Preorder Traversal | [Cpp](./cpp/144-BinaryTreePreorderTraversal.cpp) | O(?) | O(?) | Medium |  |
 |  145  | Binary Tree Postorder Traversal  | [Cpp](./cpp/145-BinaryTreePostorderTraversal.cpp) | O(?) | O(?) | Hard |  |
-| 156 |  |  |  |  |  |  |  |
-| 173 |  |  |  |  |  |  |  |
-| 199 |  |  |  |  |  |  |  |
+|  156  | Binary Tree Upside Down | [Cpp](./cpp/156.cpp) | O(?) | O(?) | Medium |  |
+|  173  | Binary Search Tree Iterator | [Cpp](./cpp/173.cpp) | O(?) | O(?) | Medium |  |
+|  199  | Binary Tree Right Side View | [Cpp](./cpp/199.cpp) | O(?) | O(?) | Medium |  |
 
 ### Hash Table
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -233,10 +233,10 @@
 |  94  | Binary Tree Inorder Traversal | [Cpp](./cpp/094-BinaryTreeInorderTravesal.cpp) | O(?) | O(?) | Medium |  |
 |  136  | Single Number | [Cpp](./cpp/136-SingleNumber.cpp) | O(?) | O(?) | Easy |  |
 |  149  | Max Points on a Line | [Cpp](./cpp/149-MaxPointsonaLine.cpp) | O(?) | O(?) | Hard |  |
-| 159 |  |  |  |  |  |  |  |
-| 166 |  |  |  |  |  |  |  |
-| 170 |  |  |  |  |  |  |  |
-| 187 |  |  |  |  |  |  |  |
+|  159  | Longest Substring with At Most Two Distinct Characters | [Cpp](./cpp/159.cpp) | O(?) | O(?) | Hard |  |
+|  166  | Fraction to Recurring Decimal | [Cpp](./cpp/166.cpp) | O(?) | O(?) | Medium |  |
+|  170  | Two Sum III - Data structure design | [Cpp](./cpp/170.cpp) | O(?) | O(?) | Easy |  |
+|  187  | Repeated DNA Sequences | [Cpp](./cpp/187.cpp) | O(?) | O(?) | Medium |  |
 
 ### Math
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -256,10 +256,10 @@
 |  67  | Add Binary | [Cpp](./cpp/067-AddBinary.cpp) | O(?) | O(?) | Easy |  |
 |  69  | Sqrt(x) | [Cpp](./cpp/069-Sqrt.cpp) | O(?) | O(?) | Easy |  |
 |  149  | Max Points on a Line | [Cpp](./cpp/149-MaxPointsonaLine.cpp) | O(?) | O(?) | Hard |  |
-| 166 |  |  |  |  |  |  |  |
-| 168 |  |  |  |  |  |  |  |
-| 171 |  |  |  |  |  |  |  |
-| 172 |  |  |  |  |  |  |  |
+|  166  | Fraction to Recurring Decimal | [Cpp](./cpp/166.cpp) | O(?) | O(?) | Medium |  |
+|  168  | Excel Sheet Column Title | [Cpp](./cpp/168.cpp) | O(?) | O(?) | Easy |  |
+|  171  | Excel Sheet Column Number  | [Cpp](./cpp/171.cpp) | O(?) | O(?) | Easy |  |
+|  172  | Factorial Trailing Zeroes | [Cpp](./cpp/172.cpp) | O(?) | O(?) | Easy |  |
 
 ### Sort
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -269,8 +269,8 @@
 |  75  | Sort Colors | [Cpp](./cpp/075-SortColors.cpp) | O(?) | O(?) | Medium |  |
 |  147  | Insertion Sort List | [Cpp](./cpp/147-InsertionSortList.cpp) | O(?) | O(?) | Medium |  |
 |  148  | Sort List | [Cpp](./cpp/148-SortList.cpp) | O(?) | O(?) | Medium |  |
-| 164 |  |  |  |  |  |  |  |
-| 179 |  |  |  |  |  |  |  |
+|  164  | Maximum Gap | [Cpp](./cpp/164.cpp) | O(?) | O(?) | Hard |  |
+|  179  | Largest Number | [Cpp](./cpp/179.cpp) | O(?) | O(?) | Medium |  |
 
 ### Two Pointers
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -294,8 +294,8 @@
 |  125  | Valid Palindrome | [Cpp](./cpp/125-ValidPalindrome.cpp) | O(?) | O(?) | Easy |  |
 |  141  | Linked List Cycle | [Cpp](./cpp/141-LinkedListCycle.cpp) | O(?) | O(?) | Easy |  |
 |  142  | Linked List Cycle II | [Cpp](./cpp/142-LinkedListCycleII.cpp) | O(?) | O(?) | Medium |  |
-| 159 |  |  |  |  |  |  |  |
-| 167 |  |  |  |  |  |  |  |
+|  159  | Longest Substring with At Most Two Distinct Characters | [Cpp](./cpp/159.cpp) | O(?) | O(?) | Hard |  |
+|  167  | Two Sum II - Input array is sorted | [Cpp](./cpp/167.cpp) | O(?) | O(?) | Easy |  |
 
 ### Recursion
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -313,11 +313,11 @@
 |  69  | Sqrt(x) | [Cpp](./cpp/069-Sqrt.cpp) | O(?) | O(?) | Easy |  |
 |  74  | Search a 2D Matrix | [Cpp](./cpp/074-Searcha2DMatrix.cpp) | O(?) | O(?) | Medium |  |
 |  81  | Search in Rotated Sorted Array II | [Cpp](./cpp/081-SearchInRotatedSortedArrayII.cpp) | O(?) | O(?) | Medium |  |
-| 153 |  |  |  |  |  |  |  |
-| 154 |  |  |  |  |  |  |  |
-| 162 |  |  |  |  |  |  |  |
-| 167 |  |  |  |  |  |  |  |
-| 174 |  |  |  |  |  |  |  |
+|  153  | Find Minimum in Rotated Sorted Array | [Cpp](./cpp/153.cpp) | O(?) | O(?) | Medium |  |
+|  154  | Find Minimum in Rotated Sorted Array II | [Cpp](./cpp/154.cpp) | O(?) | O(?) | Hard |  |
+|  162  | Find Peak Element | [Cpp](./cpp/162.cpp) | O(?) | O(?) | Medium |  |
+|  167  | Two Sum II - Input array is sorted | [Cpp](./cpp/167.cpp) | O(?) | O(?) | Easy |  |
+|  174  | Dungeon Game | [Cpp](./cpp/174.cpp) | O(?) | O(?) | Hard |  |
 
 ### Binary Search Tree
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -335,8 +335,8 @@
 |  127  | Word Ladder | [Cpp](./cpp/127-WordLadder.cpp) | O(?) | O(?) | Medium |  |
 |  130  | Surrounded Regions | [Cpp](./cpp/130-SurroundedRegions.cpp) | O(?) | O(?) | Medium |  |
 |  133  | Clone Graph | [Cpp](./cpp/133-CloneGraph.cpp) | O(?) | O(?) | Medium |  |
-| 199 |  |  |  |  |  |  |  |
-| 200 |  |  |  |  |  |  |  |
+|  199  | Binary Tree Right Side View | [Cpp](./cpp/199.cpp) | O(?) | O(?) | Medium |  |
+|  200  | Number of Islands | [Cpp](./cpp/200.cpp) | O(?) | O(?) | Medium |  |
 
 ### Depth-First Search
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -361,7 +361,7 @@
 |  129  | Sum Root to Leaf Numbers  | [Cpp](./cpp/129-SumRoottoLeafNumbers.cpp) | O(?) | O(?) | Medium |  |
 |  130  | Surrounded Regions | [Cpp](./cpp/130-SurroundedRegions.cpp) | O(?) | O(?) | Medium |  |
 |  133  | Clone Graph | [Cpp](./cpp/133-CloneGraph.cpp) | O(?) | O(?) | Medium |  |
-| 199 |  |  |  |  |  |  |  |
+|  199  | Binary Tree Right Side View | [Cpp](./cpp/199.cpp) | O(?) | O(?) | Medium |  |
 
 ### Backtracking
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -412,10 +412,10 @@
 |  132  | Palindrome Partitioning II | [Cpp](./cpp/132-PalindromePartitioningII.cpp) | O(?) | O(?) | Hard |  |
 |  139  | Word Break | [Cpp](./cpp/139-WordBreak.cpp) | O(?) | O(?) | Medium |  |
 |  140  | Word Break II | [Cpp](./cpp/140-WordBreakII.cpp) | O(?) | O(?) | Hard |  |
-| 152 |  |  |  |  |  |  |  |
-| 174 |  |  |  |  |  |  |  |
-| 188 |  |  |  |  |  |  |  |
-| 198 |  |  |  |  |  |  |  |
+|  152  | Maximum Product Subarray | [Cpp](./cpp/152.cpp) | O(?) | O(?) | Medium |  |
+|  174  | Dungeon Game | [Cpp](./cpp/174.cpp) | O(?) | O(?) | Hard |  |
+|  188  | Best Time to Buy and Sell Stock IV | [Cpp](./cpp/188.cpp) | O(?) | O(?) | Hard |  |
+|  198  | House Robber | [Cpp](./cpp/198.cpp) | O(?) | O(?) | Easy |  |
 
 ### Greedy
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -440,8 +440,8 @@
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
 |-----| --------------- | --------------- | --------------- | --------------- | ------------- |--------------|------|
 |  146  | LRU Cache | [Cpp](./cpp/146-LRUCache.cpp) | O(?) | O(?) | Hard |  |
-| 155 |  |  |  |  |  |  |  |
-| 170 |  |  |  |  |  |  |  |
-| 173 |  |  |  |  |  |  |  |
+|  155  | Min Stack | [Cpp](./cpp/155.cpp) | O(?) | O(?) | Easy |  |
+|  170  | Two Sum III - Data structure design | [Cpp](./cpp/170.cpp) | O(?) | O(?) | Easy |  |
+|  173  | Binary Search Tree Iterator | [Cpp](./cpp/173.cpp) | O(?) | O(?) | Medium |  |
 
 

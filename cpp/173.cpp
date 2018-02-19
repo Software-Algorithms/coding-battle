@@ -1,13 +1,9 @@
-/**
- * Definition for binary tree
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
+/*
+ * Stack + Design
+ *
  */
 class BSTIterator {
+private:
     stack<TreeNode*> st;
     
     void find_left(TreeNode *root) {
