@@ -32,10 +32,10 @@
 |  78  | Subsets | [Cpp](./cpp/078-Subsets.cpp) | O(?) | O(?) | Medium |  |
 |  136  | Single Number | [Cpp](./cpp/136-SingleNumber.cpp) | O(?) | O(?) | Easy |  |
 |  137  | Single Number II | [Cpp](./cpp/137-SingleNumberII.cpp) | O(?) | O(?) | Medium |  |
-| 169 |  |  |  |  |  |  |  |
-| 187 |  |  |  |  |  |  |  |
-| 190 |  |  |  |  |  |  |  |
-| 191 |  |  |  |  |  |  |  |
+|  169  | Majority Element | [Cpp](./cpp/169.cpp) | O(?) | O(?) | Easy |  |
+|  187  | Repeated DNA Sequences | [Cpp](./cpp/187.cpp) | O(?) | O(?) | Medium |  |
+|  190  | Reverse Bits | [Cpp](./cpp/190.cpp) | O(?) | O(?) | Easy |  |
+|  191  | Number of 1 Bits | [Cpp](./cpp/191.cpp) | O(?) | O(?) | Easy |  |
 
 ### Array
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -89,13 +89,13 @@
 |  123  | Best Time to Buy and Sell Stock III | [Cpp](./cpp/123-BestTimetoBuyandSellStockIII.cpp) | O(?) | O(?) | Hard |  |
 |  126  | Word Ladder II | [Cpp](./cpp/126-WordLadderII.cpp) | O(?) | O(?) | Hard |  |
 |  128  | Longest Consecutive Sequence | [Cpp](./cpp/128-LongestConsecutiveSequence.cpp) | O(?) | O(?) | Hard |  |
-| 152 |  |  |  |  |  |  |  |
-| 153 |  |  |  |  |  |  |  |
-| 162 |  |  |  |  |  |  |  |
-| 163 |  |  |  |  |  |  |  |
-| 167 |  |  |  |  |  |  |  |
-| 169 |  |  |  |  |  |  |  |
-| 189 |  |  |  |  |  |  |  |
+|  152  | Maximum Product Subarray | [Cpp](./cpp/152.cpp) | O(?) | O(?) | Medium |  |
+|  153  | Find Minimum in Rotated Sorted Array | [Cpp](./cpp/153.cpp) | O(?) | O(?) | Medium |  |
+|  162  | Find Peak Element | [Cpp](./cpp/162.cpp) | O(?) | O(?) | Medium |  |
+|  163  | Missing Ranges | [Cpp](./cpp/163.cpp) | O(?) | O(?) | Medium |  |
+|  167  | Two Sum II - Input array is sorted | [Cpp](./cpp/167.cpp) | O(?) | O(?) | Easy |  |
+|  169  | Majority Element | [Cpp](./cpp/169.cpp) | O(?) | O(?) | Easy |  |
+|  189  | Rotate Array | [Cpp](./cpp/189.cpp) | O(?) | O(?) | Easy |  |
 
 ### String
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
