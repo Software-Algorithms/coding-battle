@@ -416,6 +416,7 @@
 |  174  | Dungeon Game | [Cpp](./cpp/174.cpp) | O(?) | O(?) | Hard |  |
 |  188  | Best Time to Buy and Sell Stock IV | [Cpp](./cpp/188.cpp) | O(?) | O(?) | Hard |  |
 |  198  | House Robber | [Cpp](./cpp/198.cpp) | O(?) | O(?) | Easy |  |
+|  494  | Target Sum | [Cpp](./cpp/494.cpp) | O(?) | O(?) | Medium |  |
 
 ### Greedy
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
