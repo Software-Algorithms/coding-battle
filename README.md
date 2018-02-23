@@ -416,6 +416,14 @@
 |  174  | Dungeon Game | [Cpp](./cpp/174.cpp) | O(?) | O(?) | Hard |  |
 |  188  | Best Time to Buy and Sell Stock IV | [Cpp](./cpp/188.cpp) | O(?) | O(?) | Hard |  |
 |  198  | House Robber | [Cpp](./cpp/198.cpp) | O(?) | O(?) | Easy |  |
+|  213  | House Robber II | [Cpp](./cpp/213.cpp) | O(?) | O(?) | Medium |  |
+|  221  | Maximal Square | [Cpp](./cpp/221.cpp) | O(?) | O(?) | Medium |  |
+|  256  | Paint House | [Cpp](./cpp/256.cpp) | O(?) | O(?) | Easy |  |
+|  264  | Ugly Number II | [Cpp](./cpp/264.cpp) | O(?) | O(?) | Medium |  |
+|  265  | Paint House II | [Cpp](./cpp/265.cpp) | O(?) | O(?) | Hard |  |
+|  276  | Paint Fence | [Cpp](./cpp/276.cpp) | O(?) | O(?) | Easy |  |
+|  279  | Perfect Squares | [Cpp](./cpp/279.cpp) | O(?) | O(?) | Medium |  |
+|  300  | Longest Increasing Subsequence | [Cpp](./cpp/300.cpp) | O(?) | O(?) | Medium |  |
 |  494  | Target Sum | [Cpp](./cpp/494.cpp) | O(?) | O(?) | Medium |  |
 
 ### Greedy
