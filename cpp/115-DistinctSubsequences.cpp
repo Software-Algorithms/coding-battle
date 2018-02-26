@@ -1,3 +1,8 @@
+/**
+ * DP
+ *
+ * O(n^2)  O(n^2)
+ */
 class Solution {
 public:
     int numDistinct(string s, string t) {
