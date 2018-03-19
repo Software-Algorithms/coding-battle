@@ -36,6 +36,13 @@
 |  187  | Repeated DNA Sequences | [Cpp](./cpp/187.cpp) | O(?) | O(?) | Medium |  |
 |  190  | Reverse Bits | [Cpp](./cpp/190.cpp) | O(?) | O(?) | Easy |  |
 |  191  | Number of 1 Bits | [Cpp](./cpp/191.cpp) | O(?) | O(?) | Easy |  |
+|  201  | Bitwise AND of Numbers Range | [Cpp](./cpp/201.cpp) | O(?) | O(?) | Medium |  |
+|  231  | Power of Two | [Cpp](./cpp/231.cpp) | O(?) | O(?) | Easy |  |
+|  260  | Single Number III | [Cpp](./cpp/260.cpp) | O(?) | O(?) | Medium |  |
+|  268  | Missing Number | [Cpp](./cpp/268.cpp) | O(?) | O(?) | Easy |  |
+|  318  | Maximum Product of Word Lengths | [Cpp](./cpp/318.cpp) | O(?) | O(?) | Medium |  |
+|  338  | Counting Bits | [Cpp](./cpp/338.cpp) | O(?) | O(?) | Medium |  |
+|  389  | Find the Difference | [Cpp](./cpp/389.cpp) | O(?) | O(?) | Easy |  |
 
 ### Array
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -176,6 +183,11 @@
 |  150  | Evaluate Reverse Polish Notation | [Cpp](./cpp/150-EvaluateReversePolishNotation.cpp) | O(?) | O(?) | Medium |  |
 |  155  | Min Stack | [Cpp](./cpp/155.cpp) | O(?) | O(?) | Easy |  |
 |  173  | Binary Search Tree Iterator | [Cpp](./cpp/173.cpp) | O(?) | O(?) | Medium |  |
+|  224  | Basic Calculator | [Cpp](./cpp/224.cpp) | O(?) | O(?) | Medium |  |
+|  225  | Implement Stack using Queues | [Cpp](./cpp/225.cpp) | O(?) | O(?) | Medium |  |
+|  232  | Implement Queue using Stacks | [Cpp](./cpp/232.cpp) | O(?) | O(?) | Medium |  |
+|  255  | Verify Preorder Sequence in Binary Search Tree | [Cpp](./cpp/255.cpp) | O(?) | O(?) | Medium |  |
+|  272  | Closest Binary Search Tree Value II | [Cpp](./cpp/272.cpp) | O(?) | O(?) | Medium |  |
 
 ### Queue
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -185,6 +197,8 @@
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
 |-----| --------------- | --------------- | --------------- | --------------- | ------------- |--------------|------|
 |  23  | Merge k Sorted Lists | [Cpp](./cpp/023-MergeKSortedLists.cpp) | O(?) | O(?) | Hard |  |
+|  264  | Ugly Number II | [Cpp](./cpp/264.cpp) | O(?) | O(?) | Medium |  |
+|  295  | Find Median from Data Stream | [Cpp](./cpp/295.cpp) | O(?) | O(?) | Hard |  |
 
 ### Tree
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -217,6 +231,19 @@
 |  156  | Binary Tree Upside Down | [Cpp](./cpp/156.cpp) | O(?) | O(?) | Medium |  |
 |  173  | Binary Search Tree Iterator | [Cpp](./cpp/173.cpp) | O(?) | O(?) | Medium |  |
 |  199  | Binary Tree Right Side View | [Cpp](./cpp/199.cpp) | O(?) | O(?) | Medium |  |
+|  222  | Count Complete Tree Nodes | [Cpp](./cpp/222.cpp) | O(?) | O(?) | Medium |  |
+|  226  | Invert Binary Tree | [Cpp](./cpp/226.cpp) | O(?) | O(?) | Easy |  |
+|  230  | Kth Smallest Element in a BST | [Cpp](./cpp/230.cpp) | O(?) | O(?) | Medium |  |
+|  235  | Lowest Common Ancestor of a Binary Search Tree | [Cpp](./cpp/235.cpp) | O(?) | O(?) | Easy |  |
+|  236  | Lowest Common Ancestor of a Binary Tree | [Cpp](./cpp/236.cpp) | O(?) | O(?) | Medium |  |
+|  250  | Count Univalue Subtrees | [Cpp](./cpp/250.cpp) | O(?) | O(?) | Medium |  |
+|  255  | Verify Preorder Sequence in Binary Search Tree | [Cpp](./cpp/255.cpp) | O(?) | O(?) | Medium |  |
+|  257  | Binary Tree Paths | [Cpp](./cpp/257.cpp) | O(?) | O(?) | Easy |  |
+|  270  | Closest Binary Search Tree Value | [Cpp](./cpp/270.cpp) | O(?) | O(?) | Easy |  |
+|  272  | Closest Binary Search Tree Value II | [Cpp](./cpp/272.cpp) | O(?) | O(?) | Hard |  |
+|  285  | Inorder Successor in BST | [Cpp](./cpp/285.cpp) | O(?) | O(?) | Medium |  |
+|  297  | Serialize and Deserialize Binary Tree | [Cpp](./cpp/297.cpp) | O(?) | O(?) | Hard |  |
+|  298  | Binary Tree Longest Consecutive Sequence | [Cpp](./cpp/298.cpp) | O(?) | O(?) | Medium |  |
 
 ### Hash Table
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -237,6 +264,20 @@
 |  166  | Fraction to Recurring Decimal | [Cpp](./cpp/166.cpp) | O(?) | O(?) | Medium |  |
 |  170  | Two Sum III - Data structure design | [Cpp](./cpp/170.cpp) | O(?) | O(?) | Easy |  |
 |  187  | Repeated DNA Sequences | [Cpp](./cpp/187.cpp) | O(?) | O(?) | Medium |  |
+|  202  | Happy Number | [Cpp](./cpp/202.cpp) | O(?) | O(?) | Easy |  |
+|  204  | Count Primes | [Cpp](./cpp/204.cpp) | O(?) | O(?) | Easy |  |
+|  205  | Isomorphic Strings | [Cpp](./cpp/205.cpp) | O(?) | O(?) | Easy |  |
+|  217  | Contains Duplicate | [Cpp](./cpp/217.cpp) | O(?) | O(?) | Easy |  |
+|  219  | Contains Duplicate II | [Cpp](./cpp/219.cpp) | O(?) | O(?) | Easy |  |
+|  242  | Valid Anagram | [Cpp](./cpp/242.cpp) | O(?) | O(?) | Easy |  |
+|  244  | Shortest Word Distance II | [Cpp](./cpp/244.cpp) | O(?) | O(?) | Medium |  |
+|  246  | Strobogrammatic Number | [Cpp](./cpp/246.cpp) | O(?) | O(?) | Easy |  |
+|  249  | Group Shifted Strings | [Cpp](./cpp/249.cpp) | O(?) | O(?) | Medium |  |
+|  266  | Palindrome Permutation | [Cpp](./cpp/266.cpp) | O(?) | O(?) | Easy |  |
+|  274  | H-Index | [Cpp](./cpp/274.cpp) | O(?) | O(?) | Medium |  |
+|  288  | Unique Word Abbreviation | [Cpp](./cpp/288.cpp) | O(?) | O(?) | Medium |  |
+|  290  | Word Pattern | [Cpp](./cpp/290.cpp) | O(?) | O(?) | Easy |  |
+|  299  | Bulls and Cows | [Cpp](./cpp/299.cpp) | O(?) | O(?) | Medium |  |
 
 ### Math
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -259,7 +300,23 @@
 |  166  | Fraction to Recurring Decimal | [Cpp](./cpp/166.cpp) | O(?) | O(?) | Medium |  |
 |  168  | Excel Sheet Column Title | [Cpp](./cpp/168.cpp) | O(?) | O(?) | Easy |  |
 |  171  | Excel Sheet Column Number  | [Cpp](./cpp/171.cpp) | O(?) | O(?) | Easy |  |
-|  172  | Factorial Trailing Zeroes | [Cpp](./cpp/172.cpp) | O(?) | O(?) | Easy |  |
+|  172  | Factorial Trailing Zeroes  | [Cpp](./cpp/172.cpp) | O(?) | O(?) | Easy |  |
+|  202  | Happy Number | [Cpp](./cpp/202.cpp) | O(?) | O(?) | Easy |  |
+|  204  | Count Primes | [Cpp](./cpp/204.cpp) | O(?) | O(?) | Easy |  |
+|  223  | Rectangle Area | [Cpp](./cpp/223.cpp) | O(?) | O(?) | Medium |  |
+|  224  | Basic Calculator | [Cpp](./cpp/224.cpp) | O(?) | O(?) | Hard |  |
+|  231  | Power of Two | [Cpp](./cpp/231.cpp) | O(?) | O(?) | Easy |  |
+|  233  | Number of Digit One | [Cpp](./cpp/233.cpp) | O(?) | O(?) | Hard |  |
+|  246  | Strobogrammatic Number | [Cpp](./cpp/246.cpp) | O(?) | O(?) | Easy |  |
+|  247  | Strobogrammatic Number II | [Cpp](./cpp/247.cpp) | O(?) | O(?) | Medium |  |
+|  248  | Strobogrammatic Number III | [Cpp](./cpp/248.cpp) | O(?) | O(?) | Hard |  |
+|  258  | Add Digits | [Cpp](./cpp/258.cpp) | O(?) | O(?) | Easy |  |
+|  263  | Ugly Number | [Cpp](./cpp/263.cpp) | O(?) | O(?) | Easy |  |
+|  264  | Ugly Number II | [Cpp](./cpp/264.cpp) | O(?) | O(?) | Medium |  |
+|  268  | Missing Number | [Cpp](./cpp/268.cpp) | O(?) | O(?) | Easy |  |
+|  273  | Integer to English Words | [Cpp](./cpp/273.cpp) | O(?) | O(?) | Hard |  |
+|  279  | Perfect Squares | [Cpp](./cpp/279.cpp) | O(?) | O(?) | Medium |  |
+|  296  | Best Meeting Point | [Cpp](./cpp/296.cpp) | O(?) | O(?) | Hard |  |
 
 ### Sort
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -271,6 +328,12 @@
 |  148  | Sort List | [Cpp](./cpp/148-SortList.cpp) | O(?) | O(?) | Medium |  |
 |  164  | Maximum Gap | [Cpp](./cpp/164.cpp) | O(?) | O(?) | Hard |  |
 |  179  | Largest Number | [Cpp](./cpp/179.cpp) | O(?) | O(?) | Medium |  |
+|  242  | Valid Anagram | [Cpp](./cpp/242.cpp) | O(?) | O(?) | Medium |  |
+|  252  | Meeting Rooms | [Cpp](./cpp/252.cpp) | O(?) | O(?) | Medium |  |
+|  253  | Meeting Rooms II | [Cpp](./cpp/253.cpp) | O(?) | O(?) | Medium |  |
+|  274  | H-Index | [Cpp](./cpp/274.cpp) | O(?) | O(?) | Medium |  |
+|  280  | Wiggle Sort | [Cpp](./cpp/280.cpp) | O(?) | O(?) | Medium |  |
+|  296  | Best Meeting Point | [Cpp](./cpp/296.cpp) | O(?) | O(?) | Medium |  |
 
 ### Two Pointers
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -296,6 +359,11 @@
 |  142  | Linked List Cycle II | [Cpp](./cpp/142-LinkedListCycleII.cpp) | O(?) | O(?) | Medium |  |
 |  159  | Longest Substring with At Most Two Distinct Characters | [Cpp](./cpp/159.cpp) | O(?) | O(?) | Hard |  |
 |  167  | Two Sum II - Input array is sorted | [Cpp](./cpp/167.cpp) | O(?) | O(?) | Easy |  |
+|  209  | Minimum Size Subarray Sum | [Cpp](./cpp/209.cpp) | O(?) | O(?) | Medium |  |
+|  234  | Palindrome Linked List | [Cpp](./cpp/234.cpp) | O(?) | O(?) | Easy |  |
+|  259  | 3Sum Smaller | [Cpp](./cpp/259.cpp) | O(?) | O(?) | Medium |  |
+|  283  | Move Zeroes | [Cpp](./cpp/283.cpp) | O(?) | O(?) | Easy |  |
+|  287  | Find the Duplicate Number | [Cpp](./cpp/287.cpp) | O(?) | O(?) | Medium |  |
 
 ### Recursion
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -362,6 +430,11 @@
 |  130  | Surrounded Regions | [Cpp](./cpp/130-SurroundedRegions.cpp) | O(?) | O(?) | Medium |  |
 |  133  | Clone Graph | [Cpp](./cpp/133-CloneGraph.cpp) | O(?) | O(?) | Medium |  |
 |  199  | Binary Tree Right Side View | [Cpp](./cpp/199.cpp) | O(?) | O(?) | Medium |  |
+|  200  | Number of Islands | [Cpp](./cpp/200.cpp) | O(?) | O(?) | Medium |  |
+|  207  | Course Schedule | [Cpp](./cpp/207.cpp) | O(?) | O(?) | Medium |  |
+|  210  | Course Schedule II | [Cpp](./cpp/210.cpp) | O(?) | O(?) | Medium |  |
+|  257  | Binary Tree Paths | [Cpp](./cpp/257.cpp) | O(?) | O(?) | Easy |  |
+|  261  | Graph Valid Tree | [Cpp](./cpp/261.cpp) | O(?) | O(?) | Medium |  |
 
 ### Backtracking
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -386,6 +459,13 @@
 |  126  | Word Ladder II | [Cpp](./cpp/126-WordLadderII.cpp) | O(?) | O(?) | Hard |  |
 |  131  | Palindrome Partitioning | [Cpp](./cpp/131-PalindromePartitioning.cpp) | O(?) | O(?) | Medium |  |
 |  140  | Word Break II | [Cpp](./cpp/140-WordBreakII.cpp) | O(?) | O(?) | Hard |  |
+|  211  | Add and Search Word - Data structure design | [Cpp](./cpp/211.cpp) | O(?) | O(?) | Medium |  |
+|  212  | Word Search II | [Cpp](./cpp/212.cpp) | O(?) | O(?) | Hard |  |
+|  216  | Combination Sum III | [Cpp](./cpp/216.cpp) | O(?) | O(?) | Medium |  |
+|  254  | Factor Combinations | [Cpp](./cpp/254.cpp) | O(?) | O(?) | Medium |  |
+|  267  | Palindrome Permutation II | [Cpp](./cpp/267.cpp) | O(?) | O(?) | Medium |  |
+|  291  | Word Pattern II | [Cpp](./cpp/291.cpp) | O(?) | O(?) | Hard |  |
+|  294  | Flip Game II | [Cpp](./cpp/294.cpp) | O(?) | O(?) | Medium |  |
 
 ### Dynamic Programming
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -452,5 +532,14 @@
 |  155  | Min Stack | [Cpp](./cpp/155.cpp) | O(?) | O(?) | Easy |  |
 |  170  | Two Sum III - Data structure design | [Cpp](./cpp/170.cpp) | O(?) | O(?) | Easy |  |
 |  173  | Binary Search Tree Iterator | [Cpp](./cpp/173.cpp) | O(?) | O(?) | Medium |  |
-
-
+|  208  | Implement Trie (Prefix Tree) | [Cpp](./cpp/208.cpp) | O(?) | O(?) | Medium |  |
+|  211  | Add and Search Word - Data structure design | [Cpp](./cpp/211.cpp) | O(?) | O(?) | Medium |  |
+|  225  | Implement Stack using Queues | [Cpp](./cpp/225.cpp) | O(?) | O(?) | Easy |  |
+|  232  | Implement Queue using Stacks | [Cpp](./cpp/232.cpp) | O(?) | O(?) | Easy |  |
+|  244  | Shortest Word Distance II | [Cpp](./cpp/244.cpp) | O(?) | O(?) | Medium |  |
+|  251  | Flatten 2D Vector | [Cpp](./cpp/251.cpp) | O(?) | O(?) | Medium |  |
+|  281  | Zigzag Iterator | [Cpp](./cpp/281.cpp) | O(?) | O(?) | Medium |  |
+|  284  | Peeking Iterator | [Cpp](./cpp/284.cpp) | O(?) | O(?) | Medium |  |
+|  288  | Unique Word Abbreviation | [Cpp](./cpp/288.cpp) | O(?) | O(?) | Medium |  |
+|  295  | Find Median from Data Stream | [Cpp](./cpp/295.cpp) | O(?) | O(?) | Hard |  |
+|  297  | Serialize and Deserialize Binary Tree | [Cpp](./cpp/297.cpp) | O(?) | O(?) | Hard |  |
