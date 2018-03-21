@@ -405,6 +405,8 @@
 |  133  | Clone Graph | [Cpp](./cpp/133-CloneGraph.cpp) | O(?) | O(?) | Medium |  |
 |  199  | Binary Tree Right Side View | [Cpp](./cpp/199.cpp) | O(?) | O(?) | Medium |  |
 |  200  | Number of Islands | [Cpp](./cpp/200.cpp) | O(?) | O(?) | Medium |  |
+|  261  | Graph Valid Tree | [Cpp](./cpp/261.cpp) | O(?) | O(?) | Medium |  |
+|  279  | Perfect Squares | [Cpp](./cpp/279.cpp) | O(?) | O(?) | Medium |  |
 
 ### Depth-First Search
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
@@ -520,6 +522,10 @@
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
 |-----| --------------- | --------------- | --------------- | --------------- | ------------- |--------------|------|
 |  133  | Clone Graph | [Cpp](./cpp/133-CloneGraph.cpp) | O(?) | O(?) | Medium |  |
+|  207  | Course Schedule | [Cpp](./cpp/207.cpp) | O(?) | O(?) | Medium |  |
+|  210  | Course Schedule II | [Cpp](./cpp/210.cpp) | O(?) | O(?) | Medium |  |
+|  261  | Graph Valid Tree | [Cpp](./cpp/261.cpp) | O(?) | O(?) | Medium |  |
+|  269  | Alien Dictionary | [Cpp](./cpp/269.cpp) | O(?) | O(?) | Hard |  |
 
 ### Geometry
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
