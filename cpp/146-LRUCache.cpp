@@ -1,40 +1,36 @@
-class LRUCache {
+class LRUCache{
 public:
-    LRUCache(int capacity) : _capacity(capacity) {}
-    
-    int get(int key) {
-        auto it = cache.find(key);
-        if (it == cache.end()) return -1;
-        touch(it);
-        return it->second.first;
+    LRUCache(int capacity) {
+        cap = capacity;
     }
     
-    void set(int key, int value) {
-        auto it = cache.find(key);
-        if (it != cache.end()) touch(it);
-        else {
-			if (cache.size() == _capacity) {
-				cache.erase(used.back());
-				used.pop_back();
-			}
-            used.push_front(key);
+    int get(int key) {
+        auto it = m.find(key);
+        if (it == m.end()) return -1;
+        l.splice(l.begin(), l, it->second);
+        return it->second->second;
+    }
+    
+    void put(int key, int value) {
+        auto it = m.find(key);
+        if (it != m.end()) l.erase(it->second);
+        l.push_front(make_pair(key, value));
+        m[key] = l.begin();
+        if (m.size() > cap) {
+            int k = l.rbegin()->first;
+            l.pop_back();
+            m.erase(k);
         }
-        cache[key] = { value, used.begin() };
     }
     
 private:
-    typedef list<int> LI;
-    typedef pair<int, LI::iterator> PII;
-    typedef unordered_map<int, PII> HIPII;
-    
-    void touch(HIPII::iterator it) {
-        int key = it->first;
-        used.erase(it->second.second);
-        used.push_front(key);
-        it->second.second = used.begin();
-    }
-    
-    HIPII cache;
-    LI used;
-    int _capacity;
+    int cap;
+    list<pair<int, int>> l;
+    unordered_map<int, list<pair<int, int>>::iterator> m;
 };
+
+// Conclusion:
+// list- List containers are implemented as doubly-linked lists;
+//       Doubly linked lists can store each of the elements they
+//       contain in different and unrelated storage locations.
+// list::splice - Transfer elements from list to list.
