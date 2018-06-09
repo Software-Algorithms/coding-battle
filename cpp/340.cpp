@@ -1,3 +1,7 @@
+/*
+ * Hash Table, Two Pointers, String
+ *
+ */
 class Solution {
 public:
     int lengthOfLongestSubstringKDistinct(string s, int k) {
