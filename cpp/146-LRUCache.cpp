@@ -1,3 +1,7 @@
+/*
+ * Design
+ *
+ */
 class LRUCache{
 public:
     LRUCache(int capacity) {
