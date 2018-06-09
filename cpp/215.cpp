@@ -63,3 +63,8 @@ public:
         return minheap.top();
     }
 };
+// Conclusion:
+// Priority queue - Priority queues are a type of container adaptors,
+// specifically designed such that its first element is always the 
+// greatest of the elements it contains, according to some strict weak
+// ordering criterion.
