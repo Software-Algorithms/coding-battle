@@ -32,6 +32,18 @@ public:
         return r;
     }
 };
+// Conclusion:
+// This method is an incomplete implementation of Quick Sort Algorithm.
+// We must be very familiar with the idea of Quick Sort process especially
+// the Partition Algorithm inside.
+// Quick Sort is a typical Divide and Conquer Algorithm. For an array, it
+// is divided several subarray until sorted by the partition function.
+// The partition function is to transfer one specified element (could be
+// the 1st one, last one or even a random one), to its ordered position.
+// If the array is small enough for instance there are only two. It would be
+// sorted after one partition operation.
+// For this problem we only want the Kth (1 based) element is right ordered.
+// So the sorting can be ended here.
 
 
 /**
