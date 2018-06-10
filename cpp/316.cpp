@@ -53,6 +53,37 @@ public:
     }
 };
 
+
+// version 3:
+class Solution {
+public:
+    string removeDuplicateLetters(string s) {
+        string res = "";
+        
+        // construct hash and used
+        int count[256] = {0};
+        int used[256] = {0};
+        
+        for(char c : s) {
+            count[c]++;
+        }
+        
+        // scan s and update res
+        for(char c : s) {
+            count[c]--;
+            if(used[c]) continue; // the same letter appears behind in s would not beat this in order
+            while(!res.empty() && c < res.back() && count[res.back()]) {
+                used[res.back()] = 0;
+                res.pop_back();
+            }
+            res += c;
+            used[c] = 1;
+        }
+        
+        return res;
+    }
+};
+
 // Conclusion:
 // 首先题意先理解：这道题让我们移除重复字母，使得每个字符只能出现一次，而且结果要按字母顺序排，前提是不能打乱其原本的相对位置。
 // 1) 建立一个哈希表来统计每个字母出现的次数，还需要一个visited数字来纪录每个字母是否被访问过。
