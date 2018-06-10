@@ -68,5 +68,11 @@ public:
 // （1）如果当前结果最后字母是仅存的，那么必然留在结果中。
 // （2）如果当前字母值小于结果中最后的字母，那么也无须判定，直接加之于结果之后就是符合题意的。
 // （3）只有前面两个条件均不满足，才要从结果中弹出最后一个字母，这就类似于stack的操作，不过是由string实现的。
+//
+// Time complexity: O(n), n is the number of chars in string.
+// Space complexity: O(n) worst case.
+//
+// Reference:
+// https://leetcode.com/problems/remove-duplicate-letters/discuss/76762/Java-O(n)-solution-using-stack-with-detail-explanation
 
 
