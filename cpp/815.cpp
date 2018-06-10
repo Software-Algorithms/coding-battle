@@ -40,5 +40,8 @@ public:
         return -1;
     }
 };
-
+// Conclusion:
+// From S to T:
+// S as a stop can via multiple routes, i.e. S could an element of several routes[i].
+// S --> every routes that pass S --> every stop in the route: check if T here, yes return or no --> routes
 
