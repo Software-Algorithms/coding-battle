@@ -71,5 +71,45 @@ public:
     }
 };
 
+// version 2:
+class Solution {  
+public:  
+    bool hasPath(vector<vector<int>>& maze, vector<int>& start, vector<int>& destination) {  
+        set<vector<int>> visited;  
+        return DFS(maze, start, destination, visited);  
+    }  
+private:  
+    bool DFS(vector<vector<int>> &maze, vector<int> &start, vector<int> &destination, set<vector<int>> &visited) {  
+        if(start == destination) {  
+            return true;  
+        }  
+        if(visited.find(start) != visited.end()) {      // already visited  
+            return false;  
+        }  
+        visited.insert(start);  
+        vector<vector<int>> dirs = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};  
+        for(int i = 0; i < 4; ++i) {  
+            vector<int> res = go2End(maze, start, dirs[i]);  
+            if(res == destination || DFS(maze, res, destination, visited)) {  
+                return true;  
+            }  
+        }  
+        return false;  
+    }  
+    vector<int> go2End(vector<vector<int>> &maze, vector<int> start, vector<int> &dir) {  
+        vector<int> new_start = {start[0] + dir[0], start[1] + dir[1]};  
+        int row_num = maze.size(), col_num = maze[0].size();  
+        if(new_start[0] < 0 || new_start[0] >= row_num || new_start[1] < 0 || new_start[1] >= col_num ||  
+           maze[new_start[0]][new_start[1]] == 1) {  
+            return start;  
+        }  
+        return go2End(maze, new_start, dir);  
+    }  
+};
+
 // Conclusion:
 //
+// Reference:
+// 2nd version: https://blog.csdn.net/magicbean2/article/details/78706612
+
+
