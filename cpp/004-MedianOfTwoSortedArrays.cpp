@@ -54,6 +54,7 @@ public:
 /*
  * Solution 2, version 2:
  *
+ * Binary Search
  */
 class Solution {
 public:
@@ -100,4 +101,6 @@ public:
 // Reference:
 // https://youtu.be/LPFhl65R7ww
 // https://github.com/mission-peace/interview/blob/master/src/com/interview/binarysearch/MedianOfTwoSortedArrayOfDifferentLength.java
-
+// Conclusion:
+// When computin partitionY, we use "(m+n+1)/2" instead of "(m+n)/2" because we intend to make the first half
+// bigger than the second half when the combined length is odd.
