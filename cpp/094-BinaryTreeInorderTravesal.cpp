@@ -1,10 +1,8 @@
 /*
- * Binary Tree
+ * Binary Tree, Recursion
  *
- * Inorder Travesal
  *
  */
-
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -29,3 +27,29 @@ public:
         if (root->right) inorder(root->right, res);
     }
 };
+
+
+/*
+ * Binary Tree, Iteration
+ *
+ */
+class Solution {
+public:
+    vector<int> inorderTraversal(TreeNode *root) {
+        vector<int> res;
+        stack<TreeNode*> s;
+        TreeNode *p = root;
+        while (p || !s.empty()) {
+            while (p) {
+                s.push(p);
+                p = p->left;
+            }
+            p = s.top();
+            s.pop();
+            res.push_back(p->val);
+            p = p->right;
+        }
+        return res;
+    }
+};
+
