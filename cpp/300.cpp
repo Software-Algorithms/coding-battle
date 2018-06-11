@@ -1,5 +1,6 @@
 /**
  * DP
+ *
  */
 class Solution {
 public:
@@ -18,3 +19,9 @@ public:
         return res;
     }
 };
+
+// Conclusion:
+// LIS - A very typical DP problem.
+
+
+
