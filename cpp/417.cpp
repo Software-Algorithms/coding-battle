@@ -36,7 +36,8 @@ private:
 };
 
 // Conclusion:
-//
+// Graph Traversal using Depth First Search.
+// There can be a loop in graph so we must maintain a visited flag for every vertex
 
 
 
