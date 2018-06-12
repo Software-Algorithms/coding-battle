@@ -32,6 +32,12 @@ public:
 };
 
 // Conclusion:
+// 为了解决这种陆地之间会合并的情况，最好能够将每个陆地都标记出其属于哪个岛屿，这样就会方便我们统计岛屿个数。
+// 这种群组类问题，很适合使用联合查找 Union Find 来做，又叫并查集 Disjoint Set，LeetCode中使用这种解法
+// 的题目还不少呢，比如Friend Circles，Graph Valid Tree，Redundant Connection II 等等。
 //
 // Reference:
 // http://www.cnblogs.com/grandyang/p/5190419.html
+
+
+
