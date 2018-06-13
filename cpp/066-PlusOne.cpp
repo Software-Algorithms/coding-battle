@@ -1,3 +1,7 @@
+/*
+ * String, Math
+ *
+ */
 class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
@@ -13,3 +17,7 @@ public:
         return newdigits;
     }
 };
+
+// Conclusion:
+// Simulate math operation. Start from lower digit.
+
