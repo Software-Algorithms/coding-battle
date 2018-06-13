@@ -38,6 +38,12 @@ public:
 //
 // Reference:
 // http://www.cnblogs.com/grandyang/p/5190419.html
+//
+// Union Find
+// A union-find algorithm is an algorithm that performs two useful operations on such a data structure:
+// Find: Determine which subset a particular element is in. This can be used for determining if two ele
+//       ments are in the same subset.
+// Union: Join two subsets into a single subset.
 
 
 
