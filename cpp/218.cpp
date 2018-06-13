@@ -66,8 +66,13 @@ public:
 // 就让左节点在前。
 //
 // priority_queue
+// Defaultly a max heap.
+// Can find the max value, insert value in O(1) time.
+// Cannot remove element in O(1) time but in O(n) time.
 //
-//
+// Reference:
+// About the whole idea, the explaination cannot be more clear in this youtube 
+// video: https://youtu.be/GSBLe8cKu0sa
 
 // version 2: multiset (simpliest)
 class Solution {
