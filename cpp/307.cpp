@@ -47,6 +47,9 @@ private:
 // Reference:
 // http://www.cnblogs.com/grandyang/p/4985506.html
 // https://zh.wikipedia.org/wiki/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84
+//
+// x&-x --> lowbit ?
+// 
 
 
 
