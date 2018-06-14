@@ -42,6 +42,7 @@ public:
             } else {
                 m[height.h]++; // label a positive value to remind delete operation
                 while(!q.empty() && m[q.top()] > 0) { // m[q.top()] > 0 means q.top() needs to be deleted
+                    m[q.top()]--;
                     q.pop();
                 }
             }
