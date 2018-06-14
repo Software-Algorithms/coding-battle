@@ -6,51 +6,59 @@
 
 // version 1: priority_queue
 class Solution {
-private:
-    enum NODE_TYPE {LEFT, RIGHT};
-    struct node {
-        int x, y;
-        NODE_TYPE type;
-        node(int _x, int _y, NODE_TYPE _type) : x(_x), y(_y), type(_type) {}
+public:
+    enum point_type {START, END};
+    
+    struct buildingPoint {
+        int x;
+        int h;
+        point_type type;
+        buildingPoint(int _x, int _h, point_type _type) : x(_x), h(_h), type(_type) {};
     };
     
-public:
     vector<pair<int, int>> getSkyline(vector<vector<int>>& buildings) {
-        vector<node> height;
-        for (auto &b : buildings) {
-            height.push_back(node(b[0], b[2], LEFT));
-            height.push_back(node(b[1], b[2], RIGHT));
+        vector<pair<int, int>> res;
+        vector<buildingPoint> heights;
+        for(auto building : buildings) {
+            heights.push_back(buildingPoint(building[0], building[2], START));
+            heights.push_back(buildingPoint(building[1], building[2], END));
         }
-        sort(height.begin(), height.end(), [](const node &a, const node &b) {
-            if (a.x != b.x) return a.x < b.x;
-            else if (a.type == LEFT && b.type == LEFT) return a.y > b.y;
-            else if (a.type == RIGHT && b.type == RIGHT) return a.y < b.y;
-            else return a.type == LEFT;
+        
+        sort(heights.begin(), heights.end(), [](const buildingPoint& a, const buildingPoint& b) {
+            if(a.x == b.x) {
+                if(a.type == START && b.type == START) return a.h > b.h;
+                else if (a.type == END && b.type == END) return a.h < b.h;
+                else return a.type == START;
+            } else {
+                return a.x < b.x;
+            }
         });
         
-        priority_queue<int> heap;
-        unordered_map<int, int> mp;
-        heap.push(0);
-        vector<pair<int, int>> res;
-        int pre = 0, cur = 0;
-        for (auto &h : height) {
-            if (h.type == LEFT) {
-                heap.push(h.y);
+        q.push(0); // virtual max height
+        int pre = 0, cur = 0; // pre max height
+        for(auto height : heights) {
+            if(height.type == START) {
+                q.push(height.h);
             } else {
-                ++mp[h.y];
-                while (!heap.empty() && mp[heap.top()] > 0) {
-                    --mp[heap.top()];
-                    heap.pop();
+                m[height.h]++; // label a positive value to remind delete operation
+                while(!q.empty() && m[q.top()] > 0) { // m[q.top()] > 0 means q.top() needs to be deleted
+                    q.pop();
                 }
-            }   
-            cur = heap.top();
-            if (cur != pre) {
-                res.push_back({h.x, cur});
+            }
+            
+            cur = q.top();
+            if(cur != pre) { // turning point
+                res.push_back({height.x, cur});
                 pre = cur;
             }
         }
+        
         return res;
     }
+    
+private:
+    priority_queue<int> q; // maintain the max height
+    unordered_map<int, int> m; // height --> frequency
 };
 
 // Conclusion:
@@ -104,9 +112,10 @@ public:
 // Use multiset as heap.
 //
 // multiset
+// Implemented as a Binary Search Tree (BST).
+// O(1) time insert, find and delete.
+// priority_queue + unordered_map = multiset
 //
-//
-
 // Reference:
 // http://www.cnblogs.com/grandyang/p/4534586.html
 // http://www.cnblogs.com/easonliu/p/4531020.html
