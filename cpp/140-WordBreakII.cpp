@@ -1,31 +1,49 @@
+/*
+ * DP + Backtracking
+ *
+ */
 class Solution {
 public:
     vector<string> wordBreak(string s, vector<string>& wordDict) {
-        if(memo.count(s)) return memo[s]; //take from memory
+        if(memo.count(s)) return memo[s];
         
-        vector<string> result;
-        if(find(wordDict.begin(), wordDict.end(), s) != wordDict.end()) { //a whole string is a word
-            result.push_back(s);
+        vector<string> res;
+        
+        if(find(wordDict.begin(), wordDict.end(), s) != wordDict.end()) {
+            res.push_back(s);
         }
-        for(int i = 1; i < s.size(); ++i) {
+        
+        for(int i = 1; i < s.size(); i++) {
             string left = s.substr(0, i);
             if(find(wordDict.begin(), wordDict.end(), left) != wordDict.end()) {
                 string right = s.substr(i);
-                vector<string> combined = combine(left, wordBreak(right, wordDict));
-                result.insert(result.end(), combined.begin(), combined.end());
+                vector<string> list = concatenate(left, wordBreak(right, wordDict));
+                res.insert(res.end(), list.begin(), list.end());
             }
         }
-        memo[s] = result; //memorize
-        return result;        
+        
+        memo[s] = res;
+        return res;
     }
     
 private:
     unordered_map<string, vector<string>> memo;
-
-    vector<string> combine(string word, vector<string> list) {
-        for(int i = 0; i < list.size(); ++i) {
-            list[i] = word + " " + list[i];
+    
+    vector<string> concatenate(string word, vector<string> strs) {
+        for(int i = 0; i < strs.size(); i++) {
+            strs[i] = word + " " + strs[i];
         }
-        return list;
+        return strs;
     }
 };
+
+// Conclusion:
+//
+// search in a vector:
+// pos = find(arr.begin(), arr.end(), entry); // return type is "size_t" which can be converted to "int"
+//
+// concatenate two vectors:
+// arr1.insert(arr1.end(), arr2.begin(), arr2.end())
+
+
+
