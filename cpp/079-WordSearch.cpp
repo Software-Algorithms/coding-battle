@@ -1,3 +1,7 @@
+/*
+ * DFS
+ *
+ */
 class Solution {
 public:
     bool exist(vector<vector<char>>& board, string word) {
@@ -26,3 +30,11 @@ public:
         return false;
     }
 };
+
+// Conclusion:
+// How to distinguish dfs and backtracking?
+//
+//
+
+
+
