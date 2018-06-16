@@ -1,5 +1,5 @@
 /*
- * String, Design
+ * String, Design, Two Pointers
  *
  */
 
@@ -32,6 +32,9 @@ public:
         return decoded;
     }
 };
+// Conclusion:
+// Two Pointers
+// start --> i
 
 // version 2:
 class Codec {
@@ -61,8 +64,12 @@ public:
         return decoded;
     }
 };
-
 // Conlcusion:
+// Two Pointers
+// pos --> slashPos
+//
+// Reference:
+// https://www.youtube.com/watch?v=-4Xq98GX7GQ
 
 
 
