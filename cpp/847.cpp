@@ -39,8 +39,11 @@ public:
 
 // Conclusion:
 // The State in "pair" format has two keys: head and cover;
-// head means the position it is now at;
-// cover means the positions it's already pass.
+// head means the current node or position it is now at;
+// cover means the visited nodes or the positions it's already pass.
+// Because n is small enough here, we can use a 32-bit integer to represent
+// the visited nodes instead of a Hash Table. The digit of the integer is the
+// the node number.
 //
 // Reference:
 // Huahua: https://youtu.be/Vo3OEN2xgwk
