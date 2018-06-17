@@ -1,62 +1,61 @@
 /**
- * Design, Trie
+ * Trie, Design
+ *
  */
-class TrieNode
-{
+class TrieNode {
 public:
     TrieNode *next[26];
-    bool is_word;
+    bool is_end;
 
     // Initialize your data structure here.
-    TrieNode(bool b = false)
-    {
+    TrieNode(bool b = false) {
         memset(next, 0, sizeof(next));
-        is_word = b;
+        is_end = b;
     }
 };
 
-class Trie
-{
-    TrieNode *root;
+class Trie {
 public:
-    Trie()
-    {
+    /** Initialize your data structure here. */
+    Trie() {
         root = new TrieNode();
     }
-
-    // Inserts a word into the trie.
-    void insert(string s)
-    {
+    
+    /** Inserts a word into the trie. */
+    void insert(string word) {
         TrieNode *p = root;
-        for(int i = 0; i < s.size(); ++ i)
-        {
-            if(p -> next[s[i] - 'a'] == NULL)
-                p -> next[s[i] - 'a'] = new TrieNode();
-            p = p -> next[s[i] - 'a'];
+        for(int i = 0; i < word.size(); ++i) {
+            if(p->next[word[i] - 'a'] == NULL)
+                p->next[word[i] - 'a'] = new TrieNode();
+            p = p->next[word[i] - 'a'];
         }
-        p -> is_word = true;
+        p->is_end = true;
     }
-
-    // Returns if the word is in the trie.
-    bool search(string key)
-    {
-        TrieNode *p = find(key);
-        return p != NULL && p -> is_word;
+    
+    /** Returns if the word is in the trie. */
+    bool search(string word) {
+        TrieNode *p = root;
+        for(int i = 0; i < word.size() && p != NULL; ++i) {
+            p = p->next[word[i] - 'a'];
+        }
+        return p != NULL && p->is_end;        
     }
-
-    // Returns if there is any word in the trie
-    // that starts with the given prefix.
-    bool startsWith(string prefix)
-    {
-        return find(prefix) != NULL;
+    
+    /** Returns if there is any word in the trie that starts with the given prefix. */
+    bool startsWith(string prefix) {
+        TrieNode *p = root;
+        for(int i = 0; i < prefix.size() && p != NULL; ++i) {
+            p = p->next[prefix[i] - 'a'];
+        }
+        return p != NULL;
     }
 
 private:
-    TrieNode* find(string key)
-    {
-        TrieNode *p = root;
-        for(int i = 0; i < key.size() && p != NULL; ++ i)
-            p = p -> next[key[i] - 'a'];
-        return p;
-    }
+    TrieNode *root;
 };
+
+// Conclusion:
+// You understand Trie, you solve it.
+
+
+
