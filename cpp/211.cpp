@@ -63,6 +63,9 @@ private:
 // Fill block of memory
 // Sets the first num bytes of the block of memory pointed by ptr to the specified value (interpreted as an unsigned char).
 //
+// Reference:
+// Grandyang: http://www.cnblogs.com/grandyang/p/4507286.html
+// There is a follow-up in the 1st comment.
 
 
 
