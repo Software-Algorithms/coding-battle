@@ -1,5 +1,5 @@
 /*
- * Hash Table
+ * Two Pointers (Sliding Window), Hash Table
  *
  */
 class Solution {
@@ -18,3 +18,12 @@ public:
         return res;        
     }
 };
+
+// Conlusion:
+// 
+// Reference:
+// Grandyang: http://www.cnblogs.com/grandyang/p/5185561.html
+//            http://www.cnblogs.com/grandyang/p/5351347.html
+
+
+
