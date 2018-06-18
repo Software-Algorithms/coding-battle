@@ -52,7 +52,7 @@ class Solution {
 public:
     int numSimilarGroups(vector<string>& A) {
         for (int i = 0; i < A.size(); i++) {
-            father[A[i]] = A[i];
+            father[A[i]] = A[i]; // For some reason, this is necessary to keep the currrent entry as the root!
             for (int j = 0; j < i; j++) {
                 if (isSimilar(A[i], A[j]) && father[A[j]] != A[i]) {
                     string x = find(A[j]);
