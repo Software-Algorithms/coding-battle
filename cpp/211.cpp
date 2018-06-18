@@ -1,3 +1,7 @@
+/*
+ * Trie
+ *
+ */
 class TrieNode {
 public:
     bool isKey;
@@ -52,7 +56,10 @@ private:
     }
 };
 
-// Your WordDictionary object will be instantiated and called as such:
-// WordDictionary wordDictionary;
-// wordDictionary.addWord("word");
-// wordDictionary.search("pattern");
+// Conclusion:
+//
+//
+//
+
+
+
