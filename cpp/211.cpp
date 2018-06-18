@@ -58,7 +58,10 @@ private:
 
 // Conclusion:
 //
-//
+// memset
+// void * memset ( void * ptr, int value, size_t num );
+// Fill block of memory
+// Sets the first num bytes of the block of memory pointed by ptr to the specified value (interpreted as an unsigned char).
 //
 
 
