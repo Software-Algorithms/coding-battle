@@ -84,57 +84,77 @@ private:
 };
 
 // version 2:
+struct TrieNode {
+    TrieNode *child[26];
+    string str;
+    TrieNode() : str("") {
+        for (auto &a : child) a = NULL;
+    }
+};
+
+struct Trie {
+    TrieNode *root;
+    
+    Trie() {
+        root = new TrieNode();
+    }
+    
+    ~Trie() {
+        delete root;
+    }
+    
+    void insert(string word) {
+        TrieNode *p = root;
+        for(int i = 0; i < word.length(); i++) {
+            int id = word[i] - 'a';
+            if(!p->child[id]) p->child[id] = new TrieNode();
+            p = p->child[id];
+        }
+        p->str = word;
+    }
+};
+
 class Solution {
 public:
-    struct TrieNode {
-        TrieNode *child[26];
-        string str;
-        TrieNode() : str("") {
-            for (auto &a : child) a = NULL;
+    vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
+        if(board.empty() || board[0].empty() || words.empty()) return {};
+        
+        Trie t;
+        for(int i = 0; i < words.size(); i++) {
+            t.insert(words[i]);
         }
-    };
-    struct Trie {
-        TrieNode *root;
-        Trie() : root(new TrieNode()) {}
-        void insert(string s) {
-            TrieNode *p = root;
-            for (auto &a : s) {
-                int i = a - 'a';
-                if (!p->child[i]) p->child[i] = new TrieNode();
-                p = p->child[i];
-            }
-            p->str = s;
-        }
-    };
-    vector<string> findWords(vector<vector<char> >& board, vector<string>& words) {
+        
         vector<string> res;
-        if (words.empty() || board.empty() || board[0].empty()) return res;
-        vector<vector<bool> > visit(board.size(), vector<bool>(board[0].size(), false));
-        Trie T;
-        for (auto &a : words) T.insert(a);
-        for (int i = 0; i < board.size(); ++i) {
-            for (int j = 0; j < board[i].size(); ++j) {
-                if (T.root->child[board[i][j] - 'a']) {
-                    search(board, T.root->child[board[i][j] - 'a'], i, j, visit, res);
+        int m = board.size(), n = board[0].size();
+        vector<vector<bool>> visited(m, vector<bool>(n, false));
+        
+        for(int i = 0; i < m; i++) {
+            for(int j = 0; j < n; j++) {
+                if(t.root->child[board[i][j]-'a']) {
+                    search(board, t.root->child[board[i][j]-'a'], i, j, visited, res);
                 }
             }
         }
+        
         return res;
     }
-    void search(vector<vector<char> > &board, TrieNode *p, int i, int j, vector<vector<bool> > &visit, vector<string> &res) { 
-        if (!p->str.empty()) {
-            res.push_back(p->str);
-            p->str.clear();
+
+private:
+    void search(vector<vector<char>>& board, TrieNode *node, int i, int j, vector<vector<bool>>& visited, vector<string>& res) {
+        if(node->str != "") {
+            res.push_back(node->str);
+            node->str.clear();
         }
-        int d[][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-        visit[i][j] = true;
-        for (auto &a : d) {
-            int nx = a[0] + i, ny = a[1] + j;
-            if (nx >= 0 && nx < board.size() && ny >= 0 && ny < board[0].size() && !visit[nx][ny] && p->child[board[nx][ny] - 'a']) {
-                search(board, p->child[board[nx][ny] - 'a'], nx, ny, visit, res);
-            }
+        
+        vector<vector<int>> dirs({{-1, 0}, {1, 0}, {0, -1}, {0, 1}});
+        int m = board.size(), n = board[0].size();
+        visited[i][j] = true;
+        for(int k = 0; k < 4; k++) {
+            int x = i + dirs[k][0], y = j + dirs[k][1];
+            if(x < 0 || x >= m || y < 0 || y >= n || !node->child[board[x][y]-'a'] || visited[x][y]) continue;
+            search(board, node->child[board[x][y]-'a'], x, y, visited, res);
         }
-        visit[i][j] = false;
+        visited[i][j] = false;
     }
 };
 
