@@ -87,6 +87,44 @@ private:
     }
 };
 
+// version 3:
+class Solution {
+public:
+    int numSimilarGroups(vector<string>& A) {
+        for (int i = 0; i < A.size(); i++) {
+            father[A[i]] = A[i];
+            for (int j = 0; j < i; j++) {
+                if (isSimilar(A[i], A[j]) && father[A[j]] != A[i]) {
+                    string x = find(A[j]);
+                    father[x] = A[i];
+                }
+            }
+        }
+        
+        int res = 0;
+        for(auto it = father.begin(); it != father.end(); it++) {
+            if(it->first == it->second) res++;
+        }
+        return res;       
+    }
+    
+private:
+    unordered_map<string, string> father;
+    
+    bool isSimilar(string &a, string &b) {
+        int n = a.size(), diff = 0;
+        for (int i = 0; i < n; i++) {
+            if (a[i] != b[i]) diff++;
+        }
+        return diff <= 2;
+    }
+    
+    string find(string s) {
+        if(father[s] == s) return s;
+        return father[s] = find(father[s]);
+    }
+};
+
 // Reference:
 // Leetcode discuss: https://leetcode.com/problems/similar-string-groups/discuss/132375/C++-Union-Find-solution
 // Leetcode article: https://leetcode.com/articles/similar-string-groups/
