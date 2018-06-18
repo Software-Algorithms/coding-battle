@@ -5,27 +5,31 @@
  */
 class Solution {
 public:
-    int countComponents(int n, vector<pair<int, int> >& edges) {
+    int countComponents(int n, vector<pair<int, int>>& edges) {
         int res = 0;
-        vector<vector<int> > g(n);
-        vector<bool> v(n, false);
-        for (auto a : edges) {
-            g[a.first].push_back(a.second);
-            g[a.second].push_back(a.first);
+        vector<vector<int>> vertices(n); // v --> all other vertices that connected to v
+        vector<bool> visited(n, false);
+        
+        for(auto &v : edges) {
+            vertices[v.first].push_back(v.second);
+            vertices[v.second].push_back(v.first);
         }
-        for (int i = 0; i < n; ++i) {
-            if (!v[i]) {
-                ++res;
-                dfs(g, v, i);
+        
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
+                res++;
+                dfs(vertices, visited, i);
             }
         }
+        
         return res;
     }
-    void dfs(vector<vector<int> > &g, vector<bool> &v, int i) {
-        if (v[i]) return;
-        v[i] = true;
-        for (int j = 0; j < g[i].size(); ++j) {
-            dfs(g, v, g[i][j]);
+    
+    void dfs(vector<vector<int> > &vertices, vector<bool> &visited, int i) {
+        if(visited[i]) return;
+        visited[i] = true;
+        for(int j = 0; j < vertices[i].size(); ++j) {
+            dfs(vertices, visited, vertices[i][j]);
         }
     }
 };
