@@ -4,6 +4,34 @@
  */
 class MedianFinder {
 public:
+
+    // Adds a number into the data structure.
+    void addNum(int num) {
+        small.push(num);
+        large.push(-small.top());
+        small.pop();
+        if (small.size() < large.size()) {
+            small.push(-large.top());
+            large.pop();
+        }
+    }
+
+    // Returns the median of current data stream
+    double findMedian() {
+        return small.size() > large.size() ? small.top() : 0.5 *(small.top() - large.top());
+    }
+
+private:
+    priority_queue<long> small, large;
+};
+
+
+/*
+ * Heap (multi_set: binary search tree), Design
+ *
+ */
+class MedianFinder {
+public:
     /** initialize your data structure here. */
     MedianFinder() {
         
@@ -26,12 +54,6 @@ public:
 private:
     multiset<int> small, large;
 };
-
-
-/*
- * Heap (multi_set: binary search tree), Design
- *
- */
  
 // Conclusion:
 // Maintain a maxheap and a min heap. The median is only related to the top of the two heaps.
