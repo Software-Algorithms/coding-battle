@@ -2,6 +2,8 @@
  * Union Find
  *
  */
+
+// version 1:
 class Solution {
 public:
     vector<int> numIslands2(int m, int n, vector<pair<int, int>>& positions) {
@@ -28,6 +30,46 @@ public:
     }
     int findRoot(vector<int>& roots, int id) {
         return (id == roots[id]) ? id : findRoot(roots, roots[id]);
+    }
+};
+
+// version 2:
+class Solution {
+public:
+    vector<int> numIslands2(int m, int n, vector<pair<int, int>>& positions) {
+        vector<int> res;
+        int cnt = 0;
+        
+        roots.resize(m*n);
+        for(int i = 0; i < m*n; i++) roots[i] = -1;
+        
+        vector<vector<int>> dirs({{-1, 0}, {1, 0}, {0, -1}, {0, 1}});
+        
+        for(auto a : positions) {
+            int id = n * a.first + a.second;
+            cnt++;
+            roots[id] = id;
+            for(auto dir : dirs) {
+                int x = a.first + dir[0], y = a.second + dir[1], cur_id = x * n + y;
+                if(x < 0 || x >= m || y < 0 || y >= n || roots[cur_id] == -1) continue;
+                int p = findRoot(cur_id), q = findRoot(id);
+                if(p != q) {
+                    roots[p] = q;
+                    cnt--;
+                }
+            }
+            res.push_back(cnt);
+        }
+        
+        return res;
+    }
+
+private:
+    vector<int> roots; // label the islane
+    
+    int findRoot(int id) {
+        if(roots[id] == id) return id;
+        return roots[id] = findRoot(roots[id]);
     }
 };
 
