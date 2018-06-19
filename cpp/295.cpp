@@ -52,7 +52,7 @@ public:
     }
     
 private:
-    multiset<int> small, large;
+    multiset<int, greater<int>> small, large;
 };
  
 // Conclusion:
