@@ -78,6 +78,8 @@ private:
 // 这种群组类问题，很适合使用联合查找 Union Find 来做，又叫并查集 Disjoint Set，LeetCode中使用这种解法
 // 的题目还不少呢，比如Friend Circles，Graph Valid Tree，Redundant Connection II 等等。
 //
+// 当标记一个新的陆地，首先岛屿数自增1，再去检查四周相邻的四个cell，如果是陆地且不连通，则连通，同时岛屿数自减1。
+//
 // Reference:
 // http://www.cnblogs.com/grandyang/p/5190419.html
 //
