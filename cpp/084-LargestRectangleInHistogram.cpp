@@ -2,6 +2,8 @@
  * Monotonous Stack
  *
  */
+
+// version 1: using vector as stack
 class Solution {
 public:
     int largestRectangleArea(vector<int>& heights) {
@@ -22,6 +24,30 @@ public:
         }
         
         return ret;        
+    }
+};
+
+// version 2: using stack itself (more general)
+class Solution {
+public:
+    int largestRectangleArea(vector<int>& heights) {
+        if(heights.empty()) return 0;
+        
+        int res = 0;
+        stack<int> st; // store the index of ascending heights
+        heights.push_back(0); // important; convenient for the last entry
+        
+        for(int i = 0; i < heights.size(); i++) {
+            while(!st.empty() && heights[st.top()] >= heights[i]) {
+                int idx = st.top();
+                st.pop();
+                int width = st.empty() ? i : i-st.top()-1; // how to determin the width?
+                res = max(res, width * heights[idx]);
+            }
+            st.push(i);
+        }
+        
+        return res;
     }
 };
 
