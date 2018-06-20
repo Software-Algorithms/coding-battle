@@ -1,53 +1,36 @@
+/*
+ * Stack
+ *
+ */
 class Solution {
 public:
     int maximalRectangle(vector<vector<char>>& matrix) {
-        if(matrix.empty()) return 0;
-        
-        const int m = matrix.size();
-        const int n = matrix[0].size();
-        
-        int height[n], left[n], right[n];
-        fill_n(height, n, 0);
-        fill_n(left, n, 0);
-        fill_n(right, n, n-1);
-        
-        int maxArea = 0;
-        for(int i = 0; i < m; i++) {
-            int cur_left = 0, cur_right = n-1;
-            // (1) update height[i]
-            for(int j = 0; j < n; j++) {
-                if(matrix[i][j] == '1') {
-                    height[j]++;
-                } else {
-                    height[j] = 0;
+        if (matrix.empty() || matrix[0].empty()) return 0;
+        int res = 0, m = matrix.size(), n = matrix[0].size();
+        vector<int> height(n + 1, 0);
+        for (int i = 0; i < m; ++i) {
+            stack<int> s;
+            for (int j = 0; j < n + 1; ++j) {
+                if (j < n) {
+                    height[j] = matrix[i][j] == '1' ? height[j] + 1 : 0;
                 }
-            }
-            
-            // (2) update left[i]
-            for(int j = 0; j < n; j++) {
-                if(matrix[i][j] == '1') {
-                    left[j] = max(left[j],cur_left);
-                } else {
-                    left[j] = 0; // go back to left most
-                    cur_left = j+1;
-                }                
-            }            
-            
-            // (3) update right[i]
-             for(int j = n-1; j >= 0; j--) {
-                if(matrix[i][j] == '1') {
-                    right[j] = min(right[j],cur_right);
-                } else {
-                    right[j] = n-1; // go back to right most
-                    cur_right = j-1;
-                }                 
-            }           
-            // update maxArea
-            for(int j = 0; j < n; j++) {
-                maxArea = max(maxArea, (right[j]-left[j]+1)*height[j] );
+                while (!s.empty() && height[s.top()] >= height[j]) {
+                    int cur = s.top(); s.pop();
+                    res = max(res, height[cur] * (s.empty() ? j : (j - s.top() - 1)));
+                }
+                s.push(j);
             }
         }
-        
-        return maxArea;
+        return res;
     }
 };
+
+// Conclusion:
+// 用到 Largest Rectangle in Histogram 直方图中最大的矩形 中的思想。
+//
+// Reference:
+// Grandyang: http://www.cnblogs.com/grandyang/p/4322667.html
+
+
+
+
