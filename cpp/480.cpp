@@ -2,6 +2,8 @@
  * Heap (priortity_queue / multiset)
  *
  */
+
+// version 1:
 class Solution {
 public:
     vector<double> medianSlidingWindow(vector<int>& nums, int k) {
@@ -32,6 +34,35 @@ public:
                 else res.push_back(((double)*small.rbegin() + *large.begin()) / 2);
             }
         }
+        return res;
+    }
+};
+
+// version 2:
+class Solution {
+public:
+    vector<double> medianSlidingWindow(vector<int>& nums, int k) {
+        vector<double> res;
+        multiset<double, greater<double>> small, large;
+        
+        for(int i = 0; i < nums.size(); i++) {
+            if(small.size() + large.size() < k) {
+                small.insert(nums[i]);
+                large.insert(-*small.begin());
+                small.erase(small.begin());
+                if(small.size() < large.size()) {
+                    small.insert(-*large.begin());
+                    large.erase(large.begin());
+                }
+            }
+            if(small.size() + large.size() == k) {
+                if(k % 2 == 1) res.push_back(*small.begin());
+                else res.push_back((*small.begin() - *large.begin())/2);
+                if(small.count(nums[i-k+1])) small.erase(small.find(nums[i-k+1]));
+                else large.erase(large.find(-nums[i-k+1]));
+            }
+        }
+        
         return res;
     }
 };
