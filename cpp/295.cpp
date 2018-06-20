@@ -38,21 +38,22 @@ public:
     }
     
     void addNum(int num) {
-        small.insert(num);
-        large.insert(-*small.begin());
-        small.erase(small.begin());
-        if(small.size() < large.size()) {
-            small.insert(-*large.begin());
-            large.erase(large.begin());
+        large.insert(num);
+        small.insert(-*large.begin());
+        large.erase(large.begin());
+        
+        if(small.size() > large.size()) {
+            large.insert(-*small.begin());
+            small.erase(small.begin());
         }
     }
     
     double findMedian() {
-        return small.size() > large.size() ? *small.begin() : 0.5 * (*small.begin() - *large.begin());
+        return small.size() < large.size() ? *large.begin() : 0.5 * (*large.begin() - *small.begin());
     }
     
 private:
-    multiset<int, greater<int>> small, large;
+    multiset<int> small, large;
 };
  
 // Conclusion:
