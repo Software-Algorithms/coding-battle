@@ -4,9 +4,14 @@
  */
 
 // version 1: use one stack
-class Queue {
+class MyQueue {
 public:
-    // Push element x to the back of queue.
+    /** Initialize your data structure here. */
+    MyQueue() {
+        
+    }
+    
+    /** Push element x to the back of queue. */
     void push(int x) {
         stack<int> tmp;
         while (!s.empty()) {
@@ -17,24 +22,26 @@ public:
         while (!tmp.empty()) {
             s.push(tmp.top());
             tmp.pop();
-        }
+        }        
     }
-
-    // Removes the element from in front of queue.
-    void pop(void) {
+    
+    /** Removes the element from in front of queue and returns that element. */
+    int pop() {
+        int tmp = s.top();
         s.pop();
+        return tmp;        
     }
-
-    // Get the front element.
-    int peek(void) {
-        return s.top();
+    
+    /** Get the front element. */
+    int peek() {
+        return s.top();        
     }
-
-    // Return whether the queue is empty.
-    bool empty(void) {
-        return s.empty();
+    
+    /** Returns whether the queue is empty. */
+    bool empty() {
+        return s.empty();        
     }
-
+    
 private:
     stack<int> s;
 };
