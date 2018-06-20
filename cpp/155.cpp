@@ -1,40 +1,35 @@
 /*
- * Stack + Design
+ * Stack, Design
  *
  */
 class MinStack {
-private:
-    stack<int> s1;
-    stack<int> s2; 
 public:
     /** initialize your data structure here. */
     MinStack() {
+        
     }
     
     void push(int x) {
-	    s1.push(x);
-	    if (s2.empty() || x <= getMin())  s2.push(x);        
+        st.push(x);
+        if(min_st.empty() || x <= min_st.top()) min_st.push(x);
     }
     
     void pop() {
-	    if (s1.top() == getMin())  s2.pop();
-	    s1.pop();        
+        if(st.top() == min_st.top()) min_st.pop();
+        st.pop();
     }
     
     int top() {
-	    return s1.top();        
+        return st.top();
     }
     
     int getMin() {
-	    return s2.top();        
+        return min_st.top();
     }
+    
+private:
+    stack<int> st, min_st;
 };
 
-/**
- * Your MinStack object will be instantiated and called as such:
- * MinStack obj = new MinStack();
- * obj.push(x);
- * obj.pop();
- * int param_3 = obj.top();
- * int param_4 = obj.getMin();
- */
+// Conclusion:
+// stack
