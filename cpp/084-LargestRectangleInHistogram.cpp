@@ -1,5 +1,5 @@
 /*
- * Stack
+ * Monotonous Stack
  *
  */
 class Solution {
@@ -24,3 +24,12 @@ public:
         return ret;        
     }
 };
+
+// Conclusion:
+// 
+// 什么时候需要用单调栈（Monotonous Stack）？
+// 找每个元素左边或者右边第一个比它自身小/大的元素用单调栈来维护.
+
+
+
+ 
