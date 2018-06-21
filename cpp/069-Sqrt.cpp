@@ -1,6 +1,6 @@
 /*
+ * Solution 1:
  * Binary Search
- *
  * Time: O(lgn)
  *
  */
@@ -23,6 +23,7 @@ public:
 
 
 /*
+ * Solution 2:
  * Newton's method
  *
  */
@@ -36,3 +37,10 @@ public:
         return res;
      }
 };
+
+//
+//
+
+
+
+
