@@ -1,6 +1,5 @@
 /*
  * Binary Search
- *
  * O(lgn)
  *
  */
@@ -19,3 +18,7 @@ public:
         return r;
     }
 };
+
+// Conclusion:
+// How to choose between mid and mid+1(or mid-1) ?
+//
