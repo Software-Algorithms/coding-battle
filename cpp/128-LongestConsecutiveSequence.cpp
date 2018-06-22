@@ -1,5 +1,5 @@
 /*
- * Array, Two Pointers (?)
+ * Array, DP
  *
  */
 class Solution {
