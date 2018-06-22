@@ -1,3 +1,7 @@
+/*
+ * Array, Two Pointers (?)
+ *
+ */
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
@@ -29,3 +33,10 @@ public:
         return maxLen;        
     }
 };
+
+// Conclusion:
+//
+
+
+
+
