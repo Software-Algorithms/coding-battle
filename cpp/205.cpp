@@ -31,7 +31,7 @@ public:
         char map_t[128] = {0};
         int len = s.size();
         for (int i = 0; i < len; ++i) {
-            if (map_s[s[i]]!=map_t[t[i]]) return false;
+            if (map_s[s[i]] != map_t[t[i]]) return false;
             map_s[s[i]] = i+1;
             map_t[t[i]] = i+1;
         }
@@ -40,9 +40,7 @@ public:
 };
 
 // Conclusion:
-// 
-// Reference:
-//
+// in "map_s[s[i]] = i+1;", i+1 is used as a label.
 
 
 
