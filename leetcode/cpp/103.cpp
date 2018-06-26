@@ -1,11 +1,6 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
+/*
+ * BFS, Binary Tree
+ *
  */
 class Solution {
 public:
@@ -38,3 +33,13 @@ public:
         return result;        
     }
 };
+
+// Conclusion:
+// 这里用了两个小的trick让代码变得elegant
+// 1) 用一个标志位来提示该行的存储是从左至右或者相反；
+// 2) level初始化的时候先准备好数据空间，那么只要确定序号就可以存储。
+
+
+
+
+
