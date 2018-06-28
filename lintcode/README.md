@@ -8,26 +8,26 @@ lintcode battle
 |  Title          |  Solution       | Difficulty    | Note     | 
 | --------------- | --------------- | ------------- | -------- |
 | **Subarray Sum** |  |  |  |
-| Lintcode 138. Subarray Sum |  | Easy |  |
+| Lintcode 138. Subarray Sum | [cpp](./cpp/138.cpp) | Easy | Hash Table |
 | **Quick Sort / Quick Select / Partition** |  |  |  |
 | Lintcode 5. Kth Largest Element | [cpp](../leetcode/cpp/215.cpp) | Medium | leetcode |
 | *Wiggle Sort* |  |  |  |
-| Lintcode 508. Wiggle Sort | [cpp](./cpp/508.cpp) | Medium |  |
-| Lintcode 507. Wiggle Sort II | [cpp](./cpp/507.cpp) | Medium |  |
+| Lintcode 508. Wiggle Sort | [cpp](../leetcode/cpp/280.cpp) | Medium | leetcode, ***TODO*** |
+| Lintcode 507. Wiggle Sort II | [cpp](../leetcode/cpp/324.cpp) | Medium | leetcode, ***TODO*** |
 | *Other* |  |  |  |
-| Lintcode 399. Nuts & Bolts Problem |  | Medium |  |
+| Lintcode 399. Nuts & Bolts Problem |  | Medium | ***TODO*** |
 | *Topological Sort* |  |  |  |
-| Lintcode 127. Topological Sorting | [cpp](./cpp/127.cpp) | Medium | 拓扑排序 (todo) |
-| Lintcode 615. Course Schedule |  | Medium | TODO |
-| Lintcode 605. Sequence Reconstruction |  | Medium | TODO |
+| Lintcode 127. Topological Sorting | [cpp](./cpp/127.cpp) | Medium |  |
+| Lintcode 615. Course Schedule | [cpp](../leetcode/cpp/207.cpp) | Medium |  |
+| Lintcode 605. Sequence Reconstruction | [cpp](../leetcode/cpp/444.cpp) | Medium | ***TODO*** |
 | Lintcode 431. Connected Component in Undirected Graph | [cpp](../leetcode/cpp/323.cpp) | Medium | Union Find + DFS, leetcode, xcode mock |
-| Lintcode 120. Word Ladder |  | Medium | TODO |
+| Lintcode 120. Word Ladder | [cpp](../leetcode/cpp/127.cpp) | Medium | leetcode, ***TODO*** |
 | **Intervals** |  |  |  |
-| Lintcode 920. Meeting Rooms |  | Easy |  |
-| Lintcode 919. Meeting Rooms II |  | Medium |  |
-| Lintcode 1065. My Calendar |  | Medium |  |
-| Lintcode 1064. My Calendar II |  | Medium |  |
-| Lintcode 1063. My Calendar III |  | Hard |  |
+| Lintcode 920. Meeting Rooms | [cpp](../leetcode/cpp/252.cpp) | Easy | leetcode |
+| Lintcode 919. Meeting Rooms II | [cpp](../leetcode/cpp/253.cpp) | Medium | leetcode |
+| Lintcode 1065. My Calendar | [cpp](../leetcode/cpp/729.cpp) | Medium | leetcode |
+| Lintcode 1064. My Calendar II | [cpp](../leetcode/cpp/731.cpp) | Medium | leetcode |
+| Lintcode 1063. My Calendar III | [cpp](../leetcode/cpp/732.cpp) | Hard | leetcode, ***TODO*** |
 | **Sweep Line** |  |  |  |
 | Lintcode 391. Number of Airplane in the sky | [cpp](./cpp/391.cpp) | Medium | leetcode, Amazon |
 | Lintcode 131. The Skyline Problem | [cpp](./cpp/131.cpp) | Super | leetcode |
@@ -43,7 +43,7 @@ lintcode battle
 | Lintcode 386. Longest Substring with At Most K Distinct Characters | [cpp](../leetcode/cpp/340.cpp) | Medium | leetcode |
 | **Slow and Fast Pointers** |  |  |  |
 | Lintcode 174. Remove Nth Node From End of List | [cpp](../leetcode/cpp/019.cpp) | Easy | leetcode medium |
-| Lintcode 228. Middle of Linked List | [cpp](./cpp/228.cpp) | Naive | ***TODO*** |
+| Lintcode 228. Middle of Linked List | [cpp](./cpp/228.cpp) | Naive |  |
 | Lintcode 102. Linked List Cycle | [cpp](../leetcode/cpp/141.cpp) | Medium | leetcode easy |
 | Lintcode 103. Linked List Cycle II | [cpp](../leetcode/cpp/142.cpp) | Hard | leetcode medium |
 
@@ -57,7 +57,7 @@ lintcode battle
 | Lintcode 591. Connecting Graph III | [cpp](./cpp/591.cpp) | Medium | design, union find implementation |
 | Lintcode 433. Number of Islands | [cpp]() | Easy | union find / bfs / dfs, leetcode medium |
 | Lintcode 434. Number of Islands II | [cpp](../leetcode/cpp/305.cpp) | Hard | leetcode hard |
-| Lintcode 178. Graph Valid Tree | [cpp](../leetcode/cpp/261.cpp) | Medium | leetcode, ***TODO*** |
+| Lintcode 178. Graph Valid Tree | [cpp](../leetcode/cpp/261.cpp) | Medium | leetcode, ***TODO: UnionFind*** |
 | Lintcode 477. Surrounded Regions | [cpp](../leetcode/cpp/130.cpp) | Medium | leetcode, ***TODO*** |
 | **xcode mock** |  |  |  |
 | Leetcode 323. Number of Connected Components in an Undirected Graph | [cpp](../leetcode/cpp/323.cpp) | Medium | Union Find + DFS, leetcode, xcode mock |
@@ -108,16 +108,16 @@ lintcode battle
 
 |  Title          |  Solution       | Difficulty    | Note     | 
 | --------------- | --------------- | ------------- | -------- |
-| Lintcode 75. Find Peak Element | [cpp](./075.cpp) | Medium |  |
-| Lintcode 390. Find Peak Element | [cpp](./390.cpp) | Hard |  |
+| Lintcode 75. Find Peak Element | [cpp](./162.cpp) | Medium | leetcode |
+| Lintcode 390. Find Peak Element II | [cpp](./390.cpp) | Hard | ***TODO*** |
 | Lintcode 141. Sqrt(x) | [cpp](../leetcode/cpp/69.cpp) | Easy | leetcode |
-| Lintcode 586. Sqrt(x) II | [cpp](./cpp/586.cpp) | Medium |  |
+| Lintcode 586. Sqrt(x) II | [cpp](./cpp/586.cpp) | Medium | ***TODO*** |
 | Lintcode 74. First Bad Version | [cpp](../leetcode/cpp/278.cpp) | Medium | leetcode |
 | Lintcode 183. Wood Cut | [cpp](./cpp/183.cpp) | Hard | ***TODO*** |
 | Lintcode 633. Find the Duplicate Number | [cpp](./cpp/633.cpp) | Medium | ***TODO*** |
 | Lintcode 437. Copy Books | [cpp](./cpp/437.cpp) | Hard | ***TODO*** |
-| Lintcode 868. Maximum Average Subarray I |  | Easy | Google |
-| Lintcode 617. Maximum Average Subarray II |  | Medium | Google |
+| Lintcode 868. Maximum Average Subarray I | [cpp](./cpp/643.cpp) | Easy | leetcode, Google, ***TODO*** |
+| Lintcode 617. Maximum Average Subarray II | [cpp](./cpp/644.cpp) | Medium | leetcode, Google, ***TODO*** |
 
 
 ### Deque
@@ -141,14 +141,14 @@ lintcode battle
 | Lintcode 137. Clone Graph | [cpp](../leetcode/cpp/133.cpp) | Medium | Recursion --> BFS, leetcode, TODO |
 | Lintcode 618. Search Graph Nodes | [cpp](./cpp/618.cpp) | Medium |  |
 | *Topological Sort* |  |  |  |
-| Lintcode 127. Topological Sorting | [cpp](./cpp/127.cpp) | Medium | 拓扑排序, TODO |
-| Lintcode 615. Course Schedule | [cpp](./cpp/207.cpp) | Medium | leetcode medium |
-| Lintcode 616. Course Schedule II | [cpp](./cpp/210.cpp) | Medium |  |
+| Lintcode 127. Topological Sorting | [cpp](./cpp/127.cpp) | Medium |  |
+| Lintcode 615. Course Schedule | [cpp](./cpp/207.cpp) | Medium | leetcode |
+| Lintcode 616. Course Schedule II | [cpp](./cpp/210.cpp) | Medium | ***TODO*** |
 | Lintcode 696. Course Schedule III | [cpp](./cpp/630.cpp) | Hard | ***TODO*** |
 | Lintcode 605. Sequence Reconstruction |  | Medium | ***TODO*** |
 | Lintcode 431. Connected Component in Undirected Graph |  | Medium | ***TODO*** |
-| Lintcode 120. Word Ladder |  | Medium |  |
-| Lintcode 121. Word Ladder II |  | Hard |  |
+| Lintcode 120. Word Ladder | [cpp](../leetcode/cpp/127.cpp) | Medium | ***TODO*** |
+| Lintcode 121. Word Ladder II | [cpp](../leetcode/cpp/126.cpp) | Hard | ***TODO*** |
 | **BFS in Matrix** |  |  |  |
 | Lintcode 433. Number of Islands | [cpp](../leetcode/cpp/200.cpp) | Easy | leetcode medium |
 | Lintcode 598. Zombie in Matrix | [cpp](./cpp/598.cpp) | Medium |  |
@@ -224,10 +224,10 @@ lintcode battle
 
 |  Title          |  Solution       | Difficulty    | Note     | 
 | --------------- | --------------- | ------------- | -------- |
-| Lintcode 201. Segment Tree Build |  | Medium |  | 
-| Lintcode 439. Segment Tree Build II |  | Medium |  | 
-| Lintcode 202. Segment Tree Query |  | Medium |  | 
-| Lintcode 247. Segment Tree Query II |  | Medium |  | 
+| Lintcode 201. Segment Tree Build | [cpp](./cpp/201.cpp) | Medium |  | 
+| Lintcode 439. Segment Tree Build II | [cpp](./cpp/439.cpp) | Medium |  | 
+| Lintcode 202. Segment Tree Query | [cpp](./cpp/202.cpp) | Medium |  | 
+| Lintcode 247. Segment Tree Query II | [cpp](./cpp/247.cpp) | Medium |  | 
 | **Optional** |  |  |  |
 | Lintcoe 840. Range Sum Query - Mutable | [cpp](../leetcode/307.cpp) | Medium | leetcode | 
 | Lintcoe 817. Range Sum Query 2D - Mutable | [cpp](../leetcode/308.cpp) | Medium | leetcode | 

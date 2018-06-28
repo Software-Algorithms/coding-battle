@@ -1,5 +1,5 @@
 /*
- *
+ * Array, Sort
  *
  */
 class Solution {
@@ -19,7 +19,7 @@ public:
 
 
 /*
- *
+ * Array, Sort, Quick Select
  *
  */
 class Solution {
