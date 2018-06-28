@@ -67,8 +67,43 @@ public:
     }
 };
 
+// version 3: in lintcode
+class Solution {
+public:
+    /**
+     * @param nums: A list of integers
+     * @param k: An integer
+     * @return: The median of the element inside the window at each moving
+     */
+    vector<int> medianSlidingWindow(vector<int> &nums, int k) {
+        // write your code here
+        vector<int> res;
+        multiset<int, greater<int>> small, large;
+        for (int i = 0; i < nums.size(); ++i) {
+            if (i >= k) { // delete
+                if (small.count(nums[i - k])) small.erase(small.find(nums[i - k]));
+                else large.erase(large.find(-nums[i - k]));
+            }
+            // insert
+            small.insert(nums[i]);
+            large.insert(-*small.begin());
+            small.erase(small.begin());
+            if (small.size() < large.size()) {
+                small.insert(-*large.begin());
+                large.erase(large.begin());
+            }
+            if (i >= (k - 1)) {
+                res.push_back(*small.begin());
+            }
+        }
+        return res;
+    }
+};
+
 // Conlcusion:
 // 把插入新值和删除元素分开。
+// use multiset as priority_queue
+
 
 
 

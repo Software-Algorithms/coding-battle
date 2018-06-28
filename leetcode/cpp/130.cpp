@@ -1,3 +1,19 @@
+/*
+ * Union Find
+ *
+ */
+
+
+// Conclusion:
+//
+
+
+
+
+/*
+ * BFS
+ *
+ */
 class Solution {
 public:
     void solve(vector<vector<char>>& board) {
@@ -26,7 +42,8 @@ public:
 				if(board[i][j]=='1')
 					board[i][j]='O';
     }
-    
+
+private:
 	void check(vector<vector<char> >&vec,int i,int j,int row,int col){
 		if(vec[i][j]=='O'){
 			vec[i][j]='1';
@@ -41,3 +58,10 @@ public:
 		}        
     }
 };
+
+// Conclusion:
+//
+
+
+
+

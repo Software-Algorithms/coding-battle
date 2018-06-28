@@ -56,7 +56,7 @@ public:
     }
 };
 
-// version 2.5: lintcode version:
+// version 3: in lintcode
 class Solution {
 public:
     /**

@@ -1,5 +1,5 @@
 /*
- * Two Pointers (Fast and slow pointers)
+ * Two Pointers (Slow and Fast Pointers)
  *
  */
 class Solution {
@@ -16,6 +16,7 @@ public:
 };
 
 // Conclusion:
+// fast is two times faster
 
 
 

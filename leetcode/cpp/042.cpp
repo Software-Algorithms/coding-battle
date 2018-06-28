@@ -1,6 +1,6 @@
 /*
  * Solution 1:
- * DP
+ * DP + Two Pointers
  * Two rounds.
  */
 class Solution {
@@ -25,7 +25,7 @@ public:
 
 /*
  * Solution 2:
- * DP + Two PointerS
+ * DP + Two Pointers
  * ONE PASS
  *
  */
@@ -84,7 +84,6 @@ public:
 // 雨水。此时我们栈里至少有一个高度，如果只有一个的话，那么不能形成坑，我们直接跳过，如果多余一个的话，那么此时
 // 把栈顶元素取出来当作坑，新的栈顶元素就是左边界，当前高度是右边界，只要取二者较小的，减去坑的高度，长度就是右
 // 边界坐标减去左边界坐标再减1，二者相乘就是盛水量啦。
-
 
 
 

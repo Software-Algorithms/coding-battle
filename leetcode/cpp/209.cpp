@@ -39,7 +39,7 @@ public:
 
 // Conclusion:
 // Can use a generic template to solve this kind of problems.
-//
+
 
 
 

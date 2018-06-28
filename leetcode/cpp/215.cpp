@@ -1,7 +1,6 @@
-/**
- * Divide and Conquer
- *
- * Partition in Quick Sort
+/*
+ * Divide and Conquer, Partition / Quick Select
+ * 
  */
 class Solution {
 public:
@@ -32,6 +31,7 @@ public:
         return r;
     }
 };
+
 // Conclusion:
 // This method is an incomplete implementation of Quick Sort Algorithm.
 // We must be very familiar with the idea of Quick Sort process especially
@@ -46,7 +46,7 @@ public:
 // So the sorting can be ended here.
 
 
-/**
+/*
  * Heap / Priority Queue
  *
  */
@@ -63,8 +63,13 @@ public:
         return minheap.top();
     }
 };
+
 // Conclusion:
 // Priority queue - Priority queues are a type of container adaptors,
 // specifically designed such that its first element is always the 
 // greatest of the elements it contains, according to some strict weak
 // ordering criterion.
+
+
+
+

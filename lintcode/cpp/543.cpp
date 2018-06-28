@@ -1,4 +1,4 @@
-// LintCode 543. Kth Largest in N Arrays
+// Lintcode 543. Kth Largest in N Arrays
 // Problem description: https://www.lintcode.com/problem/kth-largest-in-n-arrays/description
 // Problem solution: 
 

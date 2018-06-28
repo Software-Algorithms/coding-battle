@@ -1,5 +1,6 @@
-// problem description: http://www.lintcode.com/problem/connecting-graph/
-// problem solution: https://www.jiuzhang.com/solutions/connecting-graph/#tag-highlight-lang-cpp
+// 589. Connecting Graph
+// Problem description: http://www.lintcode.com/problem/connecting-graph/
+// Problem solution: https://www.jiuzhang.com/solutions/connecting-graph
 
 /*
  * Union Find, Design
@@ -50,7 +51,8 @@ private:
 };
 
 // Conclusion:
-//
+// Union Find Concept.
+
 
 
 

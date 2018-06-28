@@ -1,10 +1,6 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
+/*
+ * Two Pointers (Fast and Slow Pointers)
+ *
  */
 class Solution {
 public:
@@ -30,3 +26,11 @@ public:
         return dummy->next;
     }
 };
+
+// Conclusion:
+// 1. dummy node
+// 2. slow --> fast
+
+
+
+

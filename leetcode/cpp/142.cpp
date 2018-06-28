@@ -1,5 +1,5 @@
 /*
- * Two Pointers (Fast and slow pointers)
+ * Two Pointers (Slow and Fast Pointers)
  *
  */
 class Solution {
@@ -53,13 +53,7 @@ public:
 //
 // There is also a good explanation in Youtube:
 // https://youtu.be/-YiQZi3mLq0
-//
-//
     
     
     
     
-
-
-
-

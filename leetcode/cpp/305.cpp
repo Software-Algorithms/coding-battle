@@ -28,6 +28,8 @@ public:
         }
         return res;
     }
+
+private:    
     int findRoot(vector<int>& roots, int id) {
         return (id == roots[id]) ? id : findRoot(roots, roots[id]);
     }
@@ -88,6 +90,11 @@ private:
 // Find: Determine which subset a particular element is in. This can be used for determining if two ele
 //       ments are in the same subset.
 // Union: Join two subsets into a single subset.
+//
+// Lintcode link:
+// http://www.lintcode.com/zh-cn/problem/number-of-islands-ii/
+// http://www.jiuzhang.com/solutions/number-of-islands-ii/
+
 
 
 
