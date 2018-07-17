@@ -53,3 +53,21 @@
 |  657  |  | [Cpp](./cpp/) | Easy |  |
 |  760  |  | [Cpp](./cpp/) | Easy |  |
 
+## Google Complete List
+
+| Title | Solution | Difficulty | Note |
+| ----- | -------- | ---------- | ---- |
+| **String** |  |  |  |
+| 293. Flip Game | [cpp](./cpp/293.cpp) | Easy | String, one pass |
+| 551. Student Attendance Record I |  | Easy | **TODO** |
+| **Graph, BFS / DFS** |  |  |  |
+| 489. Robot Room Cleaner | [cpp](./cpp/489.cpp) | Hard | DFS, Design, **TODO** |
+| 854. K-Similar Strings | [cpp](./cpp/854.cpp) | Hard | BFS, **TODO** |
+| **Dynamic Programming** |  |  |  |
+| 552. Student Attendance Record II | [cpp](./cpp/552.cpp) | Hard | DP, **TODO** |
+| 727. Minimum Window Subsequence | [cpp](./cpp/727.cpp) | Hard | 匹配类DP, **TODO** |
+
+
+
+
+

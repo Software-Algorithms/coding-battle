@@ -470,43 +470,43 @@
 |  294  | Flip Game II | [Cpp](./cpp/294.cpp) | O(?) | O(?) | Medium |  |
 
 ### Dynamic Programming
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
-|-----| --------------- | --------------- | --------------- | --------------- | ------------- |--------------|------|
-|  10  | Regular Expression Matching | [Cpp](./cpp/010-RegularExpressionMatching.cpp) | O(?) | O(?) | Hard |  |
-|  32  | Longest Valid Parentheses | [Cpp](./cpp/032-LongestValidParentheses.cpp) | O(?) | O(?) | Hard |  |
-|  44  | Wildcard Matching | [Cpp](./cpp/044-WildcardMatching.cpp) | O(?) | O(?) | Hard |  |
-|  53  | Maximum Subarray | [Cpp](./cpp/053-MaximumSubarray.cpp) | O(?) | O(?) | Easy |  |
-|  62  | Unique Paths | [Cpp](./cpp/062-UniquePaths.cpp) | O(?) | O(?) | Medium |  |
-|  63  | Unique Paths II | [Cpp](./cpp/063-UniquePathsII.cpp) | O(?) | O(?) | Medium |  |
-|  64  | Minimum Path Sum | [Cpp](./cpp/064-MinimumPathSum.cpp) | O(?) | O(?) | Medium |  |
-|  70  | Climbing Stairs | [Cpp](./cpp/070-ClimbingStairs.cpp) | O(?) | O(?) | Easy |  |
-|  72  | Edit Distance | [Cpp](./cpp/072-EditDistance.cpp) | O(?) | O(?) | Hard |  |
-|  85  | Maximal Rectangle | [Cpp](./cpp/085-MaximalRectangle.cpp) | O(?) | O(?) | Hard |  |
-|  87  | Scramble String | [Cpp](./cpp/087-ScrambleString.cpp) | O(?) | O(?) | Hard |  |
-|  91  | Decode Ways | [Cpp](./cpp/091-DecodeWays.cpp) | O(?) | O(?) | Medium |  |
-|  95  | Unique Binary Search Trees II | [Cpp](./cpp/095-UniqueBInarySearchTreesII.cpp) | O(?) | O(?) | Medium |  |
-|  96  | Unique Binary Search Trees | [Cpp](./cpp/096-UniqueBinarySearchTrees.cpp) | O(?) | O(?) | Medium |  |
-|  97  | Interleaving String | [Cpp](./cpp/097-INterleavingString.cpp) | O(?) | O(?) | Hard |  |
-|  115  | Distinct Subsequences | [Cpp](./cpp/115-DistinctSubsequences.cpp) | O(?) | O(?) | Hard |  |
-|  120  | Triangle | [Cpp](./cpp/120-Triangle.cpp) | O(?) | O(?) | Medium |  |
-|  121  | Best Time to Buy and Sell Stock  | [Cpp](./cpp/121-BestTimetoBuyandSellStock.cpp) | O(?) | O(?) | Easy |  |
-|  123  | Best Time to Buy and Sell Stock III | [Cpp](./cpp/123-BestTimetoBuyandSellStockIII.cpp) | O(?) | O(?) | Hard |  |
-|  132  | Palindrome Partitioning II | [Cpp](./cpp/132-PalindromePartitioningII.cpp) | O(?) | O(?) | Hard |  |
-|  139  | Word Break | [Cpp](./cpp/139-WordBreak.cpp) | O(?) | O(?) | Medium |  |
-|  140  | Word Break II | [Cpp](./cpp/140-WordBreakII.cpp) | O(?) | O(?) | Hard |  |
-|  152  | Maximum Product Subarray | [Cpp](./cpp/152.cpp) | O(?) | O(?) | Medium |  |
-|  174  | Dungeon Game | [Cpp](./cpp/174.cpp) | O(?) | O(?) | Hard |  |
-|  188  | Best Time to Buy and Sell Stock IV | [Cpp](./cpp/188.cpp) | O(?) | O(?) | Hard |  |
-|  198  | House Robber | [Cpp](./cpp/198.cpp) | O(?) | O(?) | Easy |  |
-|  213  | House Robber II | [Cpp](./cpp/213.cpp) | O(?) | O(?) | Medium |  |
-|  221  | Maximal Square | [Cpp](./cpp/221.cpp) | O(?) | O(?) | Medium |  |
-|  256  | Paint House | [Cpp](./cpp/256.cpp) | O(?) | O(?) | Easy |  |
-|  264  | Ugly Number II | [Cpp](./cpp/264.cpp) | O(?) | O(?) | Medium |  |
-|  265  | Paint House II | [Cpp](./cpp/265.cpp) | O(?) | O(?) | Hard |  |
-|  276  | Paint Fence | [Cpp](./cpp/276.cpp) | O(?) | O(?) | Easy |  |
-|  279  | Perfect Squares | [Cpp](./cpp/279.cpp) | O(?) | O(?) | Medium |  |
-|  300  | Longest Increasing Subsequence | [Cpp](./cpp/300.cpp) | O(?) | O(?) | Medium |  |
-|  494  | Target Sum | [Cpp](./cpp/494.cpp) | O(?) | O(?) | Medium |  |
+| Title | Solution | Difficulty | Note | 
+|-------| -------- | ---------- | ---- |
+|  10. Regular Expression Matching | [Cpp](./cpp/010.cpp) | Hard |  |
+|  32. Longest Valid Parentheses | [Cpp](./cpp/032.cpp) | Hard |  |
+|  44. Wildcard Matching | [Cpp](./cpp/044.cpp) | Hard |  |
+|  53. Maximum Subarray | [Cpp](./cpp/053.cpp) | Easy |  |
+|  62. Unique Paths | [Cpp](./cpp/062.cpp) | Medium |  |
+|  63. Unique Paths II | [Cpp](./cpp/063.cpp) | Medium |  |
+|  64. Minimum Path Sum | [Cpp](./cpp/064.cpp) | Medium |  |
+|  70. Climbing Stairs | [Cpp](./cpp/070.cpp) | Easy |  |
+|  72. Edit Distance | [Cpp](./cpp/072.cpp) | Hard |  |
+|  85. Maximal Rectangle | [Cpp](./cpp/085.cpp) | Hard |  |
+|  87. Scramble String | [Cpp](./cpp/087.cpp) | Hard |  |
+|  91. Decode Ways | [Cpp](./cpp/091.cpp) | Medium |  |
+|  95. Unique Binary Search Trees II | [Cpp](./cpp/095.cpp) | Medium |  |
+|  96. Unique Binary Search Trees | [Cpp](./cpp/096.cpp) | Medium |  |
+|  97. Interleaving String | [Cpp](./cpp/097.cpp) | Hard |  |
+|  115. Distinct Subsequences | [Cpp](./cpp/115.cpp) | Hard |  |
+|  120. Triangle | [Cpp](./cpp/120.cpp) | Medium |  |
+|  121. Best Time to Buy and Sell Stock  | [Cpp](./cpp/121.cpp) | Easy |  |
+|  123. Best Time to Buy and Sell Stock III | [Cpp](./cpp/123.cpp) | Hard |  |
+|  132. Palindrome Partitioning II | [Cpp](./cpp/132.cpp) | Hard |  |
+|  139. Word Break | [Cpp](./cpp/139.cpp) | Medium |  |
+|  140. Word Break II | [Cpp](./cpp/140.cpp) | Hard |  |
+|  152. Maximum Product Subarray | [Cpp](./cpp/152.cpp) | Medium |  |
+|  174. Dungeon Game | [Cpp](./cpp/174.cpp) | Hard |  |
+|  188. Best Time to Buy and Sell Stock IV | [Cpp](./cpp/188.cpp) | Hard |  |
+|  198. House Robber | [Cpp](./cpp/198.cpp) | Easy |  |
+|  213. House Robber II | [Cpp](./cpp/213.cpp) | Medium |  |
+|  221. Maximal Square | [Cpp](./cpp/221.cpp) | Medium |  |
+|  256. Paint House | [Cpp](./cpp/256.cpp) | Easy |  |
+|  264. Ugly Number II | [Cpp](./cpp/264.cpp) | Medium |  |
+|  265. Paint House II | [Cpp](./cpp/265.cpp) | Hard |  |
+|  276. Paint Fence | [Cpp](./cpp/276.cpp) | Easy |  |
+|  279. Perfect Squares | [Cpp](./cpp/279.cpp) | Medium |  |
+|  300. Longest Increasing Subsequence | [Cpp](./cpp/300.cpp) | Medium |  |
+|  494. Target Sum | [Cpp](./cpp/494.cpp) | Medium |  |
 
 ### Greedy
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
