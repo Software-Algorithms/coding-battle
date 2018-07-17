@@ -1,3 +1,8 @@
+/*
+ * Array
+ *
+ */
+
 class Solution {
 public:
     int firstMissingPositive(vector<int>& nums) {
@@ -16,3 +21,11 @@ public:
         return n+1;
     }
 };
+
+// Conclusion:
+// This one is interesting!
+
+
+
+
+
