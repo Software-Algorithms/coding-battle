@@ -1,3 +1,8 @@
+/*
+ * Hash Table
+ *
+ */
+
 class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
@@ -16,3 +21,9 @@ public:
         return res;         
     }
 };
+
+// Conclusion:
+
+
+
+

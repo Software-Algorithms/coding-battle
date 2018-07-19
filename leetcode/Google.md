@@ -60,6 +60,12 @@
 | **String** |  |  |  |
 | 293. Flip Game | [cpp](./cpp/293.cpp) | Easy | String, one pass |
 | 551. Student Attendance Record I |  | Easy | **TODO** |
+| **Hash Table** |  |  |  |
+| 49. Group Anagrams | [cpp](./cpp/249.cpp) | Medium |  |
+| 249. Group Shifted Strings | [cpp](./cpp/249.cpp) | Medium |  |
+| 438. Find All Anagrams in a String | [cpp](./cpp/438.cpp) | Easy |  |
+| **Union Find** |  |  |  |
+|  |  |  |  |
 | **Graph, BFS / DFS** |  |  |  |
 | 489. Robot Room Cleaner | [cpp](./cpp/489.cpp) | Hard | DFS, Design, **TODO** |
 | 854. K-Similar Strings | [cpp](./cpp/854.cpp) | Hard | BFS, **TODO** |
