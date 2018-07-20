@@ -1,5 +1,5 @@
 /*
- * Array, DP
+ * Array, DP (?)
  *
  */
 class Solution {
@@ -36,7 +36,9 @@ public:
 
 // Conclusion:
 //
-
+// Reference:
+// Leetcode Discuss: https://leetcode.com/problems/longest-consecutive-sequence/discuss/140851/easy-to-understand-C++-beat-98.6-using-only-unordered_set
+// Grandyang: http://www.cnblogs.com/grandyang/p/4276225.html
 
 
 
