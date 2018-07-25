@@ -507,6 +507,42 @@
 |  279. Perfect Squares | [Cpp](./cpp/279.cpp) | Medium |  |
 |  300. Longest Increasing Subsequence | [Cpp](./cpp/300.cpp) | Medium |  |
 |  494. Target Sum | [Cpp](./cpp/494.cpp) | Medium |  |
+| **滚动数组** |  |  |  |
+| *一维滚动数组* |  |  |  |
+| Lintcode 392. House Robber | [cpp](../leetcode/cpp/198.cpp) | Medium | leetcode |
+| Lintcode 213. House Robber II | [cpp](../leetcode/cpp/213.cpp) | Medium | leetcode |
+| Lintcode 337. House Robber III (todo) | [cpp](../leetcode/cpp/337.cpp) | Medium | leetcode |
+| Lintcode 111. Climbing Stairs | [cpp](../leetcode/cpp/070.cpp) | Easy | leetcode |
+| *二维滚动数组DP* |  |  |  |
+| Lintocde 436. Maximal Square | [cpp](../leetcode/cpp221) | Medium | leetcode |
+| * Lintcode 631. Maximal Square II (todo) | [cpp](../leetcode/cpp/x.cpp) | Medium | leetcode |
+| Lintcode 114. Unique Paths | [cpp](./cpp/062.cpp) | Easy | leetcode |
+| Lintcode 63. Unique Paths II | [cpp](../leetcode/cpp063.cpp) | Easy | leetcode |
+| Lintcode 110. Minimum Path Sum | [cpp](../leetcode/cpp64.cpp) | Easy | leetcode |
+| Lintcode 119. Edit Distance | [cpp](../leetcode/cpp072.cpp) | Medium | leetcode hard |
+| **记忆化搜索** |  |  |  |
+| Lintcode 76. Longest Increasing Subsequence | [cpp](../leetcode/cpp/300.cpp) | Medium | leetcode, LIS, TODO |
+| Lintcode 398. Longest Increasing Continuous subsequence II | [cpp](./cpp/398.cpp) | Hard |  |
+| **博弈类DP** |  |  |  |
+| Lintcode 394. Coins in a Line | [cpp](./cpp/394.cpp) | Medium | 博弈类DP |
+| Lintcode 395. Coins in a Line II | [cpp](./cpp/395.cpp) | Medium | 博弈类DP |
+| Lintcode 396. Coins in a Line III | [cpp](./cpp/396.cpp) | Hard | 博弈类DP |
+| **区间型 DP** |  |  |  |
+| Lintcode 476. Stone Game | [cpp](./cpp/476.cpp) | Medium |  | 
+| Lintcode 168. Burst Ballons | [cpp](../leetcode/cpp/312.cpp) | Hard |  | 
+| Lintcode 430. Scramble String | [cpp](../leetcode/cpp/087.cpp) | Hard |  | 
+| **匹配类动规** | [cpp](./cpp/87.cpp) |  |  | 
+| Lintcode 77. Longest Common Subsequence | [cpp](./cpp/077.cpp) | Medium |  | 
+| Lintcode 119. Edit Distance | [cpp](../leetcode/cpp/087.cpp) | Medium | leetcode | 
+| Lintcode 623. K Edit Distance | [cpp](./cpp/623.cpp) | Hard |  | 
+| Lintcode 118. Distinct Subsequences | [cpp](../leetcode/cpp/115.cpp) | Medium | leetcode | 
+| Linttcode 29. Interleaving String | [cpp](../leetcode/cpp/097.cpp) | Medium | leetcode | 
+| **Backpack DP** |  |  |  |
+| Lintcode 92. BackPack I | [cpp](./cpp/092.cpp) | Medium |  | 
+| Lintcode 125. Backpack II | [cpp](./cpp/125.cpp) | Medium |  |
+| Lintcode 562. Backpack IV | [cpp](./cpp/562.cpp) | Medium |  |
+| Lintcode 89. k Sum | [cpp](./cpp/089.cpp) | Hard |  | 
+| Lintcode 91. Minimum Adjustment Cost | [cpp](./cpp/091.cpp) | Medium |  | 
 
 ### Greedy
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note | 
