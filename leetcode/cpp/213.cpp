@@ -1,4 +1,4 @@
-/**
+/*
  * DP
  *
  */
@@ -21,8 +21,16 @@ private:
     }
 };
 
-// Conclusion:
-//
+/*****
+Conclusion:
+
+Idea:
+把环切开，就变成I的问题。所有条件都一样，只不过首尾视作相邻。所有分成两个子问题：[0 -> n-2]  和 [1 - > n-1] 
+Function: dp[i] = max(dp[i-1], dp[i-2] + nums[i])
+
+Reference:
+...
+*****/
 
 
 

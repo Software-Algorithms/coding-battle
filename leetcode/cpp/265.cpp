@@ -35,3 +35,11 @@ public:
         return costs[n - 1][min1];        
     }
 };
+
+/*****
+Conclusion:
+总体思路和I类似，有一个优化是用一个min1和min2代替一个原始维度的数组去记录最小值和次最小值。
+
+Reference:
+九章算法动态规划班第三课。
+*****/

@@ -20,9 +20,21 @@ public:
     }
 };
 
-// Conclusion:
-// DP Equation: dp[i] = max(dp[i], dp[j] + 1)
-// Time: O(n^2)
+/*****
+Conclusion:
+
+Idea:
+DP:
+- State: dp[i]: 截至当前的子序列的最多值；
+- Function: dp[i] = max(dp[i], dp[j] + 1)；
+- Result: max(dp[i])
+
+Time: O(n^2)
+
+Reference:
+Jiuzhang DP Lesson 3.
+*****/
+
 
 
 

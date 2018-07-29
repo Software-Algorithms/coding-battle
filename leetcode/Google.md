@@ -70,8 +70,13 @@
 | 489. Robot Room Cleaner | [cpp](./cpp/489.cpp) | Hard | DFS, Design, **TODO** |
 | 854. K-Similar Strings | [cpp](./cpp/854.cpp) | Hard | BFS, **TODO** |
 | **Dynamic Programming** |  |  |  |
+| 64. Minimum Path Sum | [cpp](./cpp/064.cpp) | Medium | 序列型DP |
+| 91. Decode Ways | [cpp](./cpp/091.cpp) | Medium | 划分型DP |
+| 256. Paint House | [cpp](./cpp/256.cpp)| Easy | 􏱿􏲀􏱾􏱿􏲀􏱾序列型DP |
 | 312. Burst Balloons | [cpp](./cpp/312.cpp) | Hard | 区间类DP |
+| 361. Bomb Enemy | [cpp](./cpp/361.cpp) | Medium | 坐标型DP |
 | 552. Student Attendance Record II | [cpp](./cpp/552.cpp) | Hard | DP, **TODO** |
+| 674. Longest Continuous Increasing Subsequence | [cpp](./cpp/552.cpp) | Easy | 序列型DP |
 | 727. Minimum Window Subsequence | [cpp](./cpp/727.cpp) | Hard | 匹配类DP, **TODO** |
 
 
