@@ -1,3 +1,7 @@
+/*
+ * DFS
+ *
+ */
 class Solution {
 public:
     vector<vector<string>> partition(string s) {
@@ -30,3 +34,12 @@ public:
         return true;        
     }
 };
+
+/*****
+Reference:
+Grandyang.
+*****/
+
+
+
+
