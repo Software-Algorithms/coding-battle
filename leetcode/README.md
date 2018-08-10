@@ -540,11 +540,11 @@
 | Linttcode 29. Interleaving String | [cpp](../leetcode/cpp/097.cpp) | Medium | | 
 | **背包型** |  |  | **TODO** |
 | *BackPack I II III IV V VI VII VIII IX* ||||
-| LintCode 92. BackPack I | [cpp](../lintcode/cpp/092.cpp) | Medium |  | 
-| LintCode 125. Backpack II | [cpp](../lintcode/cpp/125.cpp) | Medium |  |
+| LintCode 92. BackPack I | [cpp](../lintcode/cpp/092.cpp) | Medium | 两个版本都要熟练。需要review。 | 
+| LintCode 125. Backpack II | [cpp](../lintcode/cpp/125.cpp) | Medium | 基本款，要绝对熟练。需要review。 |
 | LintCode 440. Backpack III | [cpp](../lintcode/cpp/440.cpp) | Medium |  |
 | LintCode 562. Backpack IV | [cpp](../lintcode/cpp/562.cpp) | Medium |  |
-| LintCode 563. Backpack V | [cpp](../lintcode/cpp/563.cpp) | Medium |  |
+| <span style="color:purple">LintCode 563. Backpack V</span> | [cpp](../lintcode/cpp/563.cpp) | Medium | 需要review |
 | LintCode 564. Backpack VI / Combination Sum IV  | [cpp](../lintcode/cpp/564.cpp) | Medium |  |
 | LintCode 798. Backpack VII | [cpp](../lintcode/cpp/798.cpp) | Medium |  |
 | LintCode 799. Backpack VIII | [cpp](../lintcode/cpp/799.cpp) | Medium |  |
