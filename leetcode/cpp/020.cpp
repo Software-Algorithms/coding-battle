@@ -1,3 +1,7 @@
+/*
+ * string, stack
+ *
+ */
 class Solution {
 public:
     bool isValid(string s) {
@@ -16,3 +20,10 @@ public:
         return false;
     }
 };
+
+
+/*****
+Conclusion:
+左括号压入，右括号找配对。
+*****/
+

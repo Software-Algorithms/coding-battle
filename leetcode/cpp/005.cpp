@@ -1,3 +1,7 @@
+/*
+ * String
+ *
+ */
 class Solution {
 public:
     string longestPalindrome(string s) {
@@ -21,3 +25,9 @@ public:
         return s.substr(start, maxlen);        
     }
 };
+
+
+/*****
+注意可以运用剪枝除去不必要运算。
+*****/
+

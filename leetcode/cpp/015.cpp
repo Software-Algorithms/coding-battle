@@ -1,3 +1,7 @@
+/*
+ * Two Pointers
+ *
+ */
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
@@ -31,3 +35,8 @@ public:
         return res;        
     }
 };
+
+
+/*****
+Tricky的地方是解决重复的录入。
+*****/

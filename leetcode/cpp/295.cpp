@@ -13,30 +13,22 @@ public:
         small.push(num);
         large.push(-small.top());
         small.pop();
-        if(large.size() > small.size()) {
+        if(small.size() < large.size()) {
             small.push(-large.top());
             large.pop();
         }
     }
     
     double findMedian() {
-        if(small.size() > large.size()) {
-            return small.top();
-        } else {
-            return ( small.top() - large.top() ) / 2;
+        if(small.size() == large.size()) {
+            return (small.top() - large.top()) / 2.0;
         }
+        return small.top();
     }
     
 private:
-    priority_queue<double> small, large; // descending order, top is largest
+    priority_queue<double> small, large;
 };
-
-/**
- * Your MedianFinder object will be instantiated and called as such:
- * MedianFinder obj = new MedianFinder();
- * obj.addNum(num);
- * double param_2 = obj.findMedian();
- */
 
 
 /*
@@ -69,23 +61,30 @@ private:
     multiset<int> small, large;
 };
  
-// Conclusion:
-// Maintain a maxheap and a min heap. The median is only related to the top of the two heaps.
-//
-// Implement Heap with priority queue or multiset.
-// priority_queue<T>
-//
-// multiset<T>
-// Multisets are typically implemented as binary search trees.
-// Difference with set<T>: Set and multiset containers sort their elements automatically according
-//                         to a certain sorting criterion. The difference between the two is that 
-//                         multisets allow duplicates, whereas sets do not.
-//                         To use a set or multiset, you must include the header file <set>
-// If a special sorting criterion is not passed, the default criterion less is used. The function
-// object less sorts the elements by comparing them with operator <.
-//
-// Reference:
-// Grandyang: http://www.cnblogs.com/grandyang/p/4896673.html
+/*****
+Conclusion:
+A min/max problem ofen refers to heap for solution.
+
+Idea:
+Maintain a maxheap and a min heap. The median is only related to the top of the two heaps.
+
+Take-away:
+> Implement Heap with priority queue or multiset.
+> priority_queue<T>
+
+> multiset<T>
+Multisets are typically implemented as binary search trees.
+Difference with set<T>: Set and multiset containers sort their elements automatically according
+                        to a certain sorting criterion. The difference between the two is that 
+                        multisets allow duplicates, whereas sets do not.
+                        To use a set or multiset, you must include the header file <set>
+If a special sorting criterion is not passed, the default criterion less is used. The function
+object less sorts the elements by comparing them with operator <.
+
+Reference:
+Grandyang: http://www.cnblogs.com/grandyang/p/4896673.html
+*****/
+
 
 
 

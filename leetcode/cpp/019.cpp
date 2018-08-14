@@ -1,7 +1,9 @@
 /*
- * Two Pointers (Fast and Slow Pointers)
+ * Two Pointers (Left and Right Pointers)
  *
  */
+
+// version 1:
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
@@ -27,9 +29,29 @@ public:
     }
 };
 
-// Conclusion:
-// 1. dummy node
-// 2. slow --> fast
+// version 2:
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode *left = head, *right = head;
+        while(right && n--) {
+            right = right->next;
+        }
+        if(!right) return head->next;
+        while(right->next) {
+            left = left->next;
+            right = right->next;
+        }
+        left->next = left->next->next;
+        return head;
+    }
+};
+
+/*****
+Conclusion:
+1. dummy node
+2. left --> right
+*****/
 
 
 

@@ -15,8 +15,10 @@ public:
     }
 };
 
-// Conclusion:
-// fast is two times faster
+/*****
+Conclusion:
+fast is two times faster
+*****/
 
 
 

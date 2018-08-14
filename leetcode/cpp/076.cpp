@@ -80,13 +80,17 @@ public:
     }
 };
 
-// Conclusion:
-// hash在这里维护了一个window，右边界移动，次数减1，左边界移动，次数加1，表示需要与目标字符串匹配的个次数变化；
-// 比如刚开始，window是空的，代表着与目标字符串ABC有（A：1，B：1，C：1）的差距，匹配到一个目标字符，对应+1。
-// 同时维护它的起始点和长度，一旦符合条件（count == 0）就更新答案。
-//
-// Reference:
-// Laioffer: https://youtu.be/9qFR2WQGqkU (very clearly explained)
+/*****
+Conclusion:
+hash在这里维护了一个window，右边界移动，次数减1，左边界移动，次数加1，表示需要与目标字符串匹配的个次数变化；
+比如刚开始，window是空的，代表着与目标字符串ABC有（A：1，B：1，C：1）的差距，匹配到一个目标字符，对应+1。
+同时维护它的起始点和长度，一旦符合条件（count == 0）就更新答案。
+
+Note: All non-zero values will be converted to true, and zero values to false.
+
+Reference:
+Laioffer: https://youtu.be/9qFR2WQGqkU (very clearly explained)
+*****/
 
 
 

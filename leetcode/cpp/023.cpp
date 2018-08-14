@@ -1,10 +1,6 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
+/*
+ * Linked List
+ *
  */
 class Solution {
 public:
@@ -42,3 +38,15 @@ public:
         return dummy->next;
     }
 };
+
+
+
+
+/*
+ * Listked List, Heap
+ * recommended! 
+ */
+
+
+
+
