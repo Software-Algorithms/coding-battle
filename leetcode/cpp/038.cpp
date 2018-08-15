@@ -1,3 +1,7 @@
+/*
+ * DP
+ *
+ */
 class Solution {
 public:
     string countAndSay(int n) {
@@ -19,3 +23,12 @@ public:
         return res;
     }
 };
+
+/*****
+思路（Idea）:
+DP
+可以用recursion，也可以直接iteration。下次实现下后者。
+
+参考（Reference）:
+洗刷刷：http://bangbingsyb.blogspot.com/2014/11/leetcode-count-and-say.html
+*****/

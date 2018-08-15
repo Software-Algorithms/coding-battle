@@ -56,22 +56,22 @@
 |  26  | Remove Duplicates from Sorted Array | [cpp](./cpp/026-RemoveDuplicatesFromSortedArray.cpp) | O(?) | O(?) | Easy |  |
 |  27  | Remove Element | [cpp](./cpp/027-RemoveElement.cpp) | O(?) | O(?) | Easy |  |
 | :camel: | 31. Next Permutation | [cpp](./cpp/031.cpp) | Medium |  |
-| :camel: | 33. Search in Rotated Sorted Array | [cpp](./cpp/033.cpp) | Medium |  |
+| :star: | 33. Search in Rotated Sorted Array | [cpp](./cpp/033.cpp) | Medium |  |
 |  34  | Search for a Range | [cpp](./cpp/034-SearchForARange.cpp) | O(?) | O(?) | Medium |  |
 |  35  | Search Insert Position | [cpp](./cpp/035-SearchInsertPosition.cpp) | O(?) | O(?) | Easy |  |
-|  39  | Combination Sum | [cpp](./cpp/039-CombinationSum.cpp) | O(?) | O(?) | Medium |  |
+| :star::star: | 39. Combination Sum | [cpp](./cpp/039.cpp) | Medium | backtracking模板题 |
 |  40  | Combination Sum II | [cpp](./cpp/040-CombinationSumII.cpp) | O(?) | O(?) | Medium |  |
-|  41  | First Missing Positive | [cpp](./cpp/041-FirstMissingPositive.cpp) | O(?) | O(?) | Hard |  |
+| :star::star: | 41. First Missing Positive | [cpp](./cpp/041.cpp) | Hard |  |
 |  42  | Trapping Rain Water | [cpp](./cpp/042-TrappingRainWater.cpp) | O(?) | O(?) | Hard |  |
 |  45  | Jump Game II | [cpp](./cpp/045-JumpGameII.cpp) | O(?) | O(?) | Hard |  |
 |  48  | Rotate Image | [cpp](./cpp/048-RotateImage.cpp) | O(?) | O(?) | Medium |  |
-|  53  | Maximum Subarray | [cpp](./cpp/053-MaximumSubarray.cpp) | O(?) | O(?) | Easy |  |
-|  54  | Spiral Matrix | [cpp](./cpp/054-SpiralMatrix.cpp) | O(?) | O(?) | Medium |  |
-|  55  | Jump Game | [cpp](./cpp/055-JumpGame.cpp) | O(?) | O(?) | Medium |  |
-|  56  | Merge Intervals | [cpp](./cpp/056-MergeIntervals.cpp) | O(?) | O(?) | Medium |  |
+| :star: | 53. Maximum Subarray | [cpp](./cpp/053.cpp) | Easy | Kadane's Algorithm |
+| :star: | 54. Spiral Matrix | [cpp](./cpp/054.cpp) | Medium |  |
+| :star: | 55. Jump Game | [cpp](./cpp/055.cpp) | Medium |  |
+| :star: | 56. Merge Intervals | [cpp](./cpp/056.cpp) | Medium |  |
 |  57  | Insert Interval | [cpp](./cpp/057-InsertInterval.cpp) | O(?) | O(?) | Hard |  |
 |  59  | Spiral Matrix II | [cpp](./cpp/059-SpiralMatrixII.cpp) | O(?) | O(?) | Medium |  |
-|  62  | Unique Paths | [cpp](./cpp/062-UniquePaths.cpp) | O(?) | O(?) | Medium |  |
+| :star::star: | 62. Unique Paths | [cpp](./cpp/062.cpp) | Medium | 坐标型DP |
 |  63  | Unique Paths II | [cpp](./cpp/063-UniquePathsII.cpp) | O(?) | O(?) | Medium |  |
 |  64  | Minimum Path Sum | [cpp](./cpp/064-MinimumPathSum.cpp) | O(?) | O(?) | Medium |  |
 |  66  | Plus One | [cpp](./cpp/066-PlusOne.cpp) | O(?) | O(?) | Easy |  |
@@ -82,7 +82,7 @@
 |  79  | Word Search | [cpp](./cpp/079-WordSearch.cpp) | O(?) | O(?) | Medium |  |
 |  80  | Remove Duplicates from Sorted Array II | [cpp](./cpp/080-RemoveDuplicatesFromSortedArrayII.cpp) | O(?) | O(?) | Medium |  |
 |  81  | Search in Rotated Sorted Array II | [cpp](./cpp/081-SearchInRotatedSortedArrayII.cpp) | O(?) | O(?) | Medium |  |
-|  84  | Largest Rectangle in Histogram | [cpp](./cpp/084-LargestRectangleInHistogram.cpp) | O(?) | O(?) | Hard |  |
+| :camel: | 84. Largest Rectangle in Histogram | [cpp](./cpp/084.cpp) | Hard |  |
 |  85  | Maximal Rectangle | [cpp](./cpp/085-MaximalRectangle.cpp) | O(?) | O(?) | Hard |  |
 |  88  | Merge Sorted Array | [cpp](./cpp/088-MergeSortedArray.cpp) | O(?) | O(?) | Easy |  |
 |  90  | Subsets II | [cpp](./cpp/090-SubsetsII.cpp) | O(?) | O(?) | Medium |  |
@@ -121,16 +121,16 @@
 |  28  | Implement strStr() | [cpp](./cpp/028-ImplementstrStr.cpp) | O(?) | O(?) | Easy |  |
 |  30  | Substring with Concatenation of All Words | [cpp](./cpp/030-SubstringWithConcatenationofAllWords.cpp) | O(?) | O(?) | Hard |  |
 |  32  | Longest Valid Parentheses | [cpp](./cpp/032-LongestValidParentheses.cpp) | O(?) | O(?) | Hard |  |
-|  | 38. Count and Say | [cpp](./cpp/038.cpp) | Easy |  |
-|  43  | Multiply Strings | [cpp](./cpp/043-MultiplyStrings.cpp) | O(?) | O(?) | Medium |  |
+| :star: | 38. Count and Say | [cpp](./cpp/038.cpp) | Easy | DP |
+| :camel: | 43. Multiply Strings | [cpp](./cpp/043.cpp) | Medium |  |
 |  44  | Wildcard Matching | [cpp](./cpp/044-WildcardMatching.cpp) | O(?) | O(?) | Hard |  |
-|  49  | Group Anagrams | [cpp](./cpp/049-GroupAnagrams.cpp) | O(?) | O(?) | Medium |  |
+| :star::star: | 49. Group Anagrams | [cpp](./cpp/049.cpp) | Medium | Hash Table |
 |  58  | Length of Last Word | [cpp](./cpp/058-LengthOfLastWord.cpp) | O(?) | O(?) | Easy |  |
 |  65  | Valid Number | [cpp](./cpp/065-ValidNumber.cpp) | O(?) | O(?) | Hard |  |
 |  67  | Add Binary | [cpp](./cpp/067-AddBinary.cpp) | O(?) | O(?) | Easy |  |
 |  68  | Text Justification | [cpp](./cpp/068-TextJustification.cpp) | O(?) | O(?) | Hard |  |
 |  71  | Simplify Path | [cpp](./cpp/071-SimplifyPath.cpp) | O(?) | O(?) | Medium |  |
-|  72  | Edit Distance | [cpp](./cpp/072-EditDistance.cpp) | O(?) | O(?) | Hard |  |
+| :camel: | 72. Edit Distance | [cpp](./cpp/072.cpp) | Hard | 匹配型DP |
 | :star: | 76. Minimum Window Substring | [cpp](./cpp/076.cpp) | Hard | Two Pointers / Sliding Window + Hash Table, 套路题 |
 |  87  | Scramble String | [cpp](./cpp/087-ScrambleString.cpp) | O(?) | O(?) | Hard |  |
 |  91  | Decode Ways | [cpp](./cpp/091-DecodeWays.cpp) | O(?) | O(?) | Medium |  |
@@ -176,7 +176,7 @@
 | 678. Valid Parenthesis String | [cpp](./cpp/678.cpp) | Medium | string + stack |
 |  42. Trapping Rain Water | [cpp](./cpp/042.cpp) | Hard |  |
 |  71  | Simplify Path | [cpp](./cpp/071-SimplifyPath.cpp) | O(?) | O(?) | Medium |  |
-|  84  | Largest Rectangle in Histogram | [cpp](./cpp/084-LargestRectangleInHistogram.cpp) | O(?) | O(?) | Hard |  |
+| :camel: | 84. Largest Rectangle in Histogram | [cpp](./cpp/084.cpp) | Hard |  |
 |  85  | Maximal Rectangle | [cpp](./cpp/085-MaximalRectangle.cpp) | O(?) | O(?) | Hard |  |
 |  94  | Binary Tree Inorder Traversal | [cpp](./cpp/094-BinaryTreeInorderTravesal.cpp) | O(?) | O(?) | Medium |  |
 |  103  | Binary Tree Zigzag Level Order Traversal | [cpp](./cpp/103-BinaryTreeZigzagLevelOrderTraversal.cpp) | O(?) | O(?) | Medium |  |
@@ -256,7 +256,7 @@
 |  30  | Substring with Concatenation of All Words | [cpp](./cpp/030-SubstringWithConcatenationofAllWords.cpp) | O(?) | O(?) | Hard |  |
 |  36  | Valid Sudoku | [cpp](./cpp/036-ValidSudoku.cpp) | O(?) | O(?) | Medium |  |
 |  37  | Sudoku Solver | [cpp](./cpp/037-SudokuSolver.cpp) | O(?) | O(?) | Hard |  |
-|  49  | Group Anagrams | [cpp](./cpp/049-GroupAnagrams.cpp) | O(?) | O(?) | Medium |  |
+| :star: | 49. Group Anagrams | [cpp](./cpp/049.cpp) | Medium | Hash Table |
 | :star: | 76. Minimum Window Substring | [cpp](./cpp/076.cpp) | Hard | Two Pointers / Sliding Window + Hash Table, 套路题 |
 |  85  | Maximal Rectangle | [cpp](./cpp/085-MaximalRectangle.cpp) | O(?) | O(?) | Hard |  |
 |  94  | Binary Tree Inorder Traversal | [cpp](./cpp/094-BinaryTreeInorderTravesal.cpp) | O(?) | O(?) | Medium |  |
@@ -291,7 +291,7 @@
 |  12  | Integer to Roman | [cpp](./cpp/012-IntegerToRoman.cpp) | O(?) | O(?) | Medium |  |
 |  13  | Roman to Integer | [cpp](./cpp/013-RomanToInteger.cpp) | O(?) | O(?) | Easy |  |
 | :star: | 29. Divide Two Integers | [cpp](./cpp/029.cpp) | Medium |  |
-|  43  | Multiply Strings | [cpp](./cpp/043-MultiplyStrings.cpp) | O(?) | O(?) | Medium |  |
+| :camel: | 43. Multiply Strings | [cpp](./cpp/043.cpp) | Medium |  |
 |  50  | Pow(x, n) | [cpp](./cpp/050-Pow.cpp) | O(?) | O(?) | Medium |  |
 |  60  | Permutation Sequence | [cpp](./cpp/060-PermutationSequence.cpp) | O(?) | O(?) | Medium |  |
 |  65  | Valid Number | [cpp](./cpp/065-ValidNumber.cpp) | O(?) | O(?) | Hard |  |
@@ -323,7 +323,7 @@
 ### Sort
 | Proficiency | Title | Solution | Difficulty | Tag | Note | 
 |-------------| ----- | -------- | ---------- | --- | ---- |
-|  56  | Merge Intervals | [cpp](./cpp/056-MergeIntervals.cpp) | O(?) | O(?) | Medium |  |
+| :star: | 56. Merge Intervals | [cpp](./cpp/056.cpp) | Medium |  |
 |  57  | Insert Interval | [cpp](./cpp/057-InsertInterval.cpp) | O(?) | O(?) | Hard |  |
 |  75  | Sort Colors | [cpp](./cpp/075-SortColors.cpp) | O(?) | O(?) | Medium |  |
 |  147  | Insertion Sort List | [cpp](./cpp/147-InsertionSortList.cpp) | O(?) | O(?) | Medium |  |
@@ -376,7 +376,7 @@
 |-------------| ----- | -------- | ---------- | --- | ---- |
 | :camel: | 4. Median of Two Sorted Arrays | [cpp](./cpp/004.cpp) | Hard |  |
 | :star: | 29. Divide Two Integers | [cpp](./cpp/029.cpp) | Medium |  |
-| :camel: | 33. Search in Rotated Sorted Array | [cpp](./cpp/033.cpp) | Medium |  |
+| :star: | 33. Search in Rotated Sorted Array | [cpp](./cpp/033.cpp) | Medium |  |
 |  34  | Search for a Range | [cpp](./cpp/034-SearchForARange.cpp) | O(?) | O(?) | Medium |  |
 |  35  | Search Insert Position | [cpp](./cpp/035-SearchInsertPosition.cpp) | O(?) | O(?) | Easy |  |
 |  50  | Pow(x, n) | [cpp](./cpp/050-Pow.cpp) | O(?) | O(?) | Medium |  |
@@ -447,7 +447,7 @@
 | :star: | 17. Letter Combinations of a Phone Number :thumbsup: | [cpp](./cpp/017.cpp) | Medium | backtracking模板题 |
 | :star: | 22. Generate Parentheses :thumbsup: | [cpp](./cpp/022.cpp) | Medium | 理解不够 |
 |  37  | Sudoku Solver | [cpp](./cpp/037-SudokuSolver.cpp) | O(?) | O(?) | Hard |  |
-|  39  | Combination Sum | [cpp](./cpp/039-CombinationSum.cpp) | O(?) | O(?) | Medium |  |
+| :star::star: | 39. Combination Sum :thumbsup: | [cpp](./cpp/039.cpp) | Medium | backtracking模板题 |
 |  40  | Combination Sum II | [cpp](./cpp/040-CombinationSumII.cpp) | O(?) | O(?) | Medium |  |
 |  44  | Wildcard Matching | [cpp](./cpp/044-WildcardMatching.cpp) | O(?) | O(?) | Hard |  |
 |  46  | Permutations | [cpp](./cpp/046-Permutations.cpp) | O(?) | O(?) | Medium |  |
@@ -477,7 +477,7 @@
 |  10. Regular Expression Matching | [cpp](./cpp/010.cpp) | Hard |  |
 |  32. Longest Valid Parentheses | [cpp](./cpp/032.cpp) | Hard |  |
 |  44. Wildcard Matching | [cpp](./cpp/044.cpp) | Hard |  |
-|  53. Maximum Subarray | [cpp](./cpp/053.cpp) | Easy |  |
+| :star: | 53. Maximum Subarray | [cpp](./cpp/053.cpp) | Easy | Kadane's Algorithm |
 |  64. Minimum Path Sum | [cpp](./cpp/064.cpp) | Medium |  |
 |  85. Maximal Rectangle | [cpp](./cpp/085.cpp) | Hard |  |
 |  87. Scramble String | [cpp](./cpp/087.cpp) | Hard |  |
@@ -501,7 +501,7 @@
 | 494. Target Sum | [cpp](./cpp/494.cpp) | Medium |  |
 | **滚动数组** |  |  |  |
 | **一维滚动数组** |  |  |  |
-| Lintcode 111. Climbing Stairs | [cpp](../leetcode/cpp/070.cpp) | Easy | leetcode |
+| :star::star: | 70. Climbing Stairs | [cpp](./cpp/070.cpp) | Easy |  |
 | **二维滚动数组** |  |  |  |
 | *Maximal Square I II* |  |  |  |
 | 221. Maximal Square | [cpp](./cpp/221.cpp) | Medium |  |
@@ -517,7 +517,7 @@
 | 213. House Robber II | [cpp](../leetcode/cpp/213.cpp) | Medium | 序列型 + 状态型 |
 | 337. House Robber III | [cpp](../leetcode/cpp/337.cpp) | Medium | DFS |
 | **坐标型** |  |  |  |
-|  62. Unique Paths | [cpp](./cpp/062.cpp) | Easy | 二维滚动数组 |
+| :star::star: | 62. Unique Paths | [cpp](./cpp/062.cpp) | Easy | 二维滚动数组 |
 |  63. Unique Paths II | [cpp](../leetcode/cpp063.cpp) | Easy | 二维滚动数组 |
 |  64. Minimum Path Sum | [cpp](../leetcode/cpp64.cpp) | Easy | 二维滚动数组 |
 | **划分型** |  |  |  |
@@ -534,7 +534,7 @@
 | Lintcode 430. Scramble String | [cpp](../leetcode/cpp/087.cpp) | Hard |  | 
 | **匹配型** | [cpp](./cpp/87.cpp) |  |  | 
 | Lintcode 77. Longest Common Subsequence | [cpp](./cpp/077.cpp) | Medium |  | 
-|  87. Edit Distance | [cpp](./cpp/087.cpp) | Medium |  | 
+| :camel: | 72. Edit Distance | [cpp](./cpp/072.cpp) | Hard |  | 
 | Lintcode 623. K Edit Distance | [cpp](./cpp/623.cpp) | Hard |  | 
 | Lintcode 118. Distinct Subsequences | [cpp](../leetcode/cpp/115.cpp) | Medium | | 
 | Linttcode 29. Interleaving String | [cpp](../leetcode/cpp/097.cpp) | Medium | | 

@@ -15,12 +15,13 @@ public:
     }
 };
 
-// Idea:
-// Typical DP:
-// Initialization: 第一行和第一列都只有1种走法；
-// Transition: 从左边和上边过来
-//             dp[i][j] = dp[i-1][j] + dp[i][j-1]
+/*****
+Conclusion:
+Typical DP.
 
-
-
+Idea:
+Initialization: 第一行和第一列都只有1种走法；
+Transition:	从左边和上边过来
+           	dp[i][j] = dp[i-1][j] + dp[i][j-1]
+*****/
 

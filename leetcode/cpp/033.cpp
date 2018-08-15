@@ -1,8 +1,6 @@
 /*
  * Binary Search
  *
- * Time: O(lgn)
- *
  */
 class Solution {
 public:
@@ -29,3 +27,10 @@ public:
         return -1;         
     }
 };
+
+
+/*****
+小结（Conclusion）：
+画图，分情况讨论。
+*****/
+

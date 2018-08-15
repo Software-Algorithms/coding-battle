@@ -30,15 +30,16 @@ public:
     }
 };
 
-// Conclusion:
-// This is a very typical DP problem. Must be very familiar.
-//
-// DP Equation:
-// dp[i][j] =  / dp[i - 1][j - 1]                                             if word1[i - 1] == word2[j - 1]
-//             \ min(dp[i - 1][j - 1], min(dp[i - 1][j], dp[i][j - 1])) + 1   else
-//
-// Reference:
-// http://www.cnblogs.com/grandyang/p/4344107.html
+/*****
+Conclusion:
+This is a very typical DP problem. Must be very familiar.
 
+Idea:
+DP Equation:
+dp[i][j] =  / dp[i - 1][j - 1]                                             if word1[i - 1] == word2[j - 1]
+            \ min(dp[i - 1][j - 1], min(dp[i - 1][j], dp[i][j - 1])) + 1   else
 
+Reference:
+http://www.cnblogs.com/grandyang/p/4344107.html
+*****/
 

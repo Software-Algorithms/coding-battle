@@ -13,3 +13,10 @@ public:
         return true;
     }
 };
+
+
+/*****
+Conclusion:
+line10 and line11的顺序让我一开始稍微弄混了。
+*****/
+
