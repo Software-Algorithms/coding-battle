@@ -27,8 +27,8 @@
 * [Design](https://github.com/xpharry/Leetcode#design)
 
 ### Bit Manipulation
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 |  | 78. Subsets | [cpp](./cpp/078.cpp) | Medium |  |
 |  | 136. Single Number | [cpp](./cpp/136.cpp) | Easy |  |
 |  | 137. Single Number II | [cpp](./cpp/137.cpp) | Medium |  |
@@ -45,8 +45,8 @@
 |  | 389. Find the Difference | [cpp](./cpp/389.cpp) | Easy |  |
 
 ### Array
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 | :star::star: | 1. Two Sum | [cpp](./cpp/001.cpp) | Easy |  |
 | :camel: | 4. Median of Two Sorted Arrays | [cpp](./cpp/004.cpp) | Hard |  |
 | :camel: | 11. Container With Most Water | [cpp](./cpp/011.cpp) | Medium |  |
@@ -105,8 +105,8 @@
 |  189  | Rotate Array | [cpp](./cpp/189.cpp) | O(?) | O(?) | Easy |  |
 
 ### String
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 | :star::star: | 3. Longest Substring Without Repeating Characters :thumbsup: | [cpp](./cpp/003.cpp) | Medium | Two Pointers / Sliding Window + Hash Table, 套路题 |
 | :star: | 5. Longest Palindromic Substring | [cpp](./cpp/005.cpp) | Medium |  |
 |  6  | ZigZag Conversion | [cpp](./cpp/006-ZigZagConversion.cpp) | O(?) | O(?) | Medium |  |
@@ -147,8 +147,8 @@
 | 186 |  |  |  |  |  |  |  |
 
 ### Linked List
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 | :star: | 2. Add Two Numbers | [cpp](./cpp/002.cpp) | Medium |  |
 | :star: | 19. Remove Nth Node From End of List | [cpp](./cpp/019.cpp) | Medium | Two Pointers / Sliding Window |
 | :star::star: | 21. Merge Two Sorted Lists | [cpp](./cpp/021.cpp) | Easy |  |
@@ -169,8 +169,8 @@
 |  160. Intersection of Two Linked Lists | [cpp](./cpp/160.cpp) | Easy |  |
 
 ### Stack
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 |**string + stack: 经典括号问题**||||
 | :star: | 20. Valid Parentheses | [cpp](./cpp/020.cpp) | Easy | string + stack |
 | 678. Valid Parenthesis String | [cpp](./cpp/678.cpp) | Medium | string + stack |
@@ -192,19 +192,19 @@
 |  272  | Closest Binary Search Tree Value II | [cpp](./cpp/272.cpp) | O(?) | O(?) | Medium |  |
 
 ### Queue
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 
 ### Heap
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 | :camel: | 23. Merge k Sorted Lists | [cpp](./cpp/023.cpp) | Hard | max heap |
 |  264  | Ugly Number II | [cpp](./cpp/264.cpp) | O(?) | O(?) | Medium |  |
 | :star: | 295. Find Median from Data Stream | [cpp](./cpp/295.cpp) | Hard | min/max heap |
 
 ### Tree
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 |  94  | Binary Tree Inorder Traversal | [cpp](./cpp/094-BinaryTreeInorderTravesal.cpp) | O(?) | O(?) | Medium |  |
 |  95  | Unique Binary Search Trees II | [cpp](./cpp/095-UniqueBInarySearchTreesII.cpp) | O(?) | O(?) | Medium |  |
 |  96  | Unique Binary Search Trees | [cpp](./cpp/096-UniqueBinarySearchTrees.cpp) | O(?) | O(?) | Medium |  |
@@ -248,8 +248,8 @@
 |  298  | Binary Tree Longest Consecutive Sequence | [cpp](./cpp/298.cpp) | O(?) | O(?) | Medium |  |
 
 ### Hash Table
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 | :star::star: | 1. Two Sum | [cpp](./cpp/001.cpp) | Easy |  |
 | :star::star: | 3. Longest Substring Without Repeating Characters | [cpp](./cpp/003.cpp) | Medium | Two Pointers / Sliding Window + Hash Table, 套路题 |
 |  18  | 4Sum | [cpp](./cpp/018-4Sum.cpp) | O(?) | O(?) | Medium |  |
@@ -282,8 +282,8 @@
 |  299  | Bulls and Cows | [cpp](./cpp/299.cpp) | O(?) | O(?) | Medium |  |
 
 ### Math
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 | :star: | 2. Add Two Numbers | [cpp](./cpp/002.cpp) | Medium |  |
 |  7  | Reverse Integer | [cpp](./cpp/007-ReverseInteger.cpp) | O(?) | O(?) | Easy |  |
 |  8  | String to Integer (atoi) | [cpp](./cpp/008-StringToInteger.cpp) | O(?) | O(?) | Medium |  |
@@ -321,8 +321,8 @@
 |  296  | Best Meeting Point | [cpp](./cpp/296.cpp) | O(?) | O(?) | Hard |  |
 
 ### Sort
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 | :star: | 56. Merge Intervals | [cpp](./cpp/056.cpp) | Medium |  |
 |  57  | Insert Interval | [cpp](./cpp/057-InsertInterval.cpp) | O(?) | O(?) | Hard |  |
 |  75  | Sort Colors | [cpp](./cpp/075-SortColors.cpp) | O(?) | O(?) | Medium |  |
@@ -338,8 +338,8 @@
 |  296  | Best Meeting Point | [cpp](./cpp/296.cpp) | O(?) | O(?) | Medium |  |
 
 ### Two Pointers
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 | :star::star: | 3. Longest Substring Without Repeating Characters | [cpp](./cpp/003.cpp) | Medium | Two Pointers / Sliding Window + Hash Table, 套路题 |
 | :camel: | 11. Container With Most Water | [cpp](./cpp/011.cpp) | Medium |  |
 | :star: | 15. 3Sum | [cpp](./cpp/015.cpp) | Medium |  |
@@ -368,12 +368,12 @@
 |  287  | Find the Duplicate Number | [cpp](./cpp/287.cpp) | O(?) | O(?) | Medium |  |
 
 ### Recursion
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 
 ### Binary Search
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 | :camel: | 4. Median of Two Sorted Arrays | [cpp](./cpp/004.cpp) | Hard |  |
 | :star: | 29. Divide Two Integers | [cpp](./cpp/029.cpp) | Medium |  |
 | :star: | 33. Search in Rotated Sorted Array | [cpp](./cpp/033.cpp) | Medium |  |
@@ -390,12 +390,12 @@
 |  174  | Dungeon Game | [cpp](./cpp/174.cpp) | O(?) | O(?) | Hard |  |
 
 ### Binary Search Tree
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 
 ### Breadth-First Search
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 |  101  | Symmetric Tree | [cpp](./cpp/101-SymmetricTree.cpp) | O(?) | O(?) | Easy |  |
 |  102  | Binary Tree Level Order Traversal | [cpp](./cpp/102-BinaryTreeLevelOrderTraversal.cpp) | O(?) | O(?) | Medium |  |
 |  103  | Binary Tree Zigzag Level Order Traversal | [cpp](./cpp/103-BinaryTreeZigzagLevelOrderTraversal.cpp) | O(?) | O(?) | Medium |  |
@@ -411,8 +411,8 @@
 |  279  | Perfect Squares | [cpp](./cpp/279.cpp) | O(?) | O(?) | Medium |  |
 
 ### Depth-First Search
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 |  98  | Validate Binary Search Tree | [cpp](./cpp/098-ValidateBinarySearchTree.cpp) | O(?) | O(?) | Medium |  |
 |  99  | Recover Binary Search Tree | [cpp](./cpp/099-RecoverBinarySearchTree.cpp) | O(?) | O(?) | Hard |  |
 |  100  | Same Tree | [cpp](./cpp/100-SameTree.cpp) | O(?) | O(?) | Easy |  |
@@ -441,8 +441,8 @@
 |  261  | Graph Valid Tree | [cpp](./cpp/261.cpp) | O(?) | O(?) | Medium |  |
 
 ### Backtracking
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 |  | 10. Regular Expression Matching | [cpp](./cpp/010-RegularExpressionMatching.cpp) | Hard |  |
 | :star: | 17. Letter Combinations of a Phone Number :thumbsup: | [cpp](./cpp/017.cpp) | Medium | backtracking模板题 |
 | :star: | 22. Generate Parentheses :thumbsup: | [cpp](./cpp/022.cpp) | Medium | 理解不够 |
@@ -472,8 +472,8 @@
 |  294  | Flip Game II | [cpp](./cpp/294.cpp) | O(?) | O(?) | Medium |  |
 
 ### Dynamic Programming
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 |  10. Regular Expression Matching | [cpp](./cpp/010.cpp) | Hard |  |
 |  32. Longest Valid Parentheses | [cpp](./cpp/032.cpp) | Hard |  |
 |  44. Wildcard Matching | [cpp](./cpp/044.cpp) | Hard |  |
@@ -557,8 +557,8 @@
 | Lintcode 398. Longest Increasing Continuous subsequence II | [cpp](./cpp/398.cpp) | Hard |  |
 
 ### Greedy
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 |  44. Wildcard Matching | [cpp](./cpp/044-WildcardMatching.cpp) | Hard |  |
 |  45. Jump Game II | [cpp](./cpp/045-JumpGameII.cpp) | Hard |  |
 |  55. Jump Game | [cpp](./cpp/055-JumpGame.cpp) | Medium |  |
@@ -567,8 +567,8 @@
 |  135. Candy | [cpp](./cpp/135-Candy.cpp) | Hard |  |
 
 ### Graph
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 |  133  | Clone Graph | [cpp](./cpp/133-CloneGraph.cpp) | O(?) | O(?) | Medium |  |
 |  207  | Course Schedule | [cpp](./cpp/207.cpp) | O(?) | O(?) | Medium |  |
 |  210  | Course Schedule II | [cpp](./cpp/210.cpp) | O(?) | O(?) | Medium |  |
@@ -576,12 +576,12 @@
 |  269  | Alien Dictionary | [cpp](./cpp/269.cpp) | O(?) | O(?) | Hard |  |
 
 ### Geometry
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 
 ### Design
-| Proficiency | Title | Solution | Difficulty | Tag | Note | 
-|-------------| ----- | -------- | ---------- | --- | ---- |
+| Proficiency | Title | Solution | Difficulty | Note | 
+|-------------| ----- | -------- | ---------- | ---- |
 |  146  | LRU Cache | [cpp](./cpp/146-LRUCache.cpp) | O(?) | O(?) | Hard |  |
 |  155  | Min Stack | [cpp](./cpp/155.cpp) | O(?) | O(?) | Easy |  |
 |  170  | Two Sum III - Data structure design | [cpp](./cpp/170.cpp) | O(?) | O(?) | Easy |  |
