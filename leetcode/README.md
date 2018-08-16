@@ -84,7 +84,7 @@
 |  81  | Search in Rotated Sorted Array II | [cpp](./cpp/081-SearchInRotatedSortedArrayII.cpp) | O(?) | O(?) | Medium |  |
 | :camel: | 84. Largest Rectangle in Histogram | [cpp](./cpp/084.cpp) | Hard |  |
 |  85  | Maximal Rectangle | [cpp](./cpp/085-MaximalRectangle.cpp) | O(?) | O(?) | Hard |  |
-|  88  | Merge Sorted Array | [cpp](./cpp/088-MergeSortedArray.cpp) | O(?) | O(?) | Easy |  |
+| :star::star: | 88. Merge Sorted Array | [cpp](./cpp/088.cpp) | Easy |  |
 |  90  | Subsets II | [cpp](./cpp/090-SubsetsII.cpp) | O(?) | O(?) | Medium |  |
 |  105  | Construct Binary Tree from Preorder and Inorder Traversal | [cpp](./cpp/105-ConstructBinaryTreefromPreorderandInorderTraversal.cpp) | O(?) | O(?) | Medium |  |
 |  106  | Construct Binary Tree from Inorder and Postorder Traversal | [cpp](./cpp/106-ConstructBinaryTreefromInorderandPostorderTraversa.cpp) | O(?) | O(?) | Medium |  |
@@ -133,7 +133,7 @@
 | :camel: | 72. Edit Distance | [cpp](./cpp/072.cpp) | Hard | 匹配型DP |
 | :star: | 76. Minimum Window Substring | [cpp](./cpp/076.cpp) | Hard | Two Pointers / Sliding Window + Hash Table, 套路题 |
 |  87  | Scramble String | [cpp](./cpp/087-ScrambleString.cpp) | O(?) | O(?) | Hard |  |
-|  91  | Decode Ways | [cpp](./cpp/091-DecodeWays.cpp) | O(?) | O(?) | Medium |  |
+| :camel: | 91. Decode Ways | [cpp](./cpp/091.cpp) | Medium | DP |
 |  93  | Restore IP Addresses | [cpp](./cpp/093-RestoreIPAddresses.cpp) | O(?) | O(?) | Medium |  |
 |  97  | Interleaving String | [cpp](./cpp/097-INterleavingString.cpp) | O(?) | O(?) | Hard |  |
 |  115  | Distinct Subsequences | [cpp](./cpp/115-DistinctSubsequences.cpp) | O(?) | O(?) | Hard |  |
@@ -178,7 +178,7 @@
 |  71  | Simplify Path | [cpp](./cpp/071-SimplifyPath.cpp) | O(?) | O(?) | Medium |  |
 | :camel: | 84. Largest Rectangle in Histogram | [cpp](./cpp/084.cpp) | Hard |  |
 |  85  | Maximal Rectangle | [cpp](./cpp/085-MaximalRectangle.cpp) | O(?) | O(?) | Hard |  |
-|  94  | Binary Tree Inorder Traversal | [cpp](./cpp/094-BinaryTreeInorderTravesal.cpp) | O(?) | O(?) | Medium |  |
+| :star: | 94. Binary Tree Inorder Traversal | [cpp](./cpp/094.cpp) | Medium | recursion和iteration两种都要掌握 |
 |  103  | Binary Tree Zigzag Level Order Traversal | [cpp](./cpp/103-BinaryTreeZigzagLevelOrderTraversal.cpp) | O(?) | O(?) | Medium |  |
 |  144  | Binary Tree Preorder Traversal | [cpp](./cpp/144-BinaryTreePreorderTraversal.cpp) | O(?) | O(?) | Medium |  |
 |  145  | Binary Tree Postorder Traversal  | [cpp](./cpp/145-BinaryTreePostorderTraversal.cpp) | O(?) | O(?) | Hard |  |
@@ -205,14 +205,14 @@
 ### Tree
 | Proficiency | Title | Solution | Difficulty | Note | 
 |-------------| ----- | -------- | ---------- | ---- |
-|  94  | Binary Tree Inorder Traversal | [cpp](./cpp/094-BinaryTreeInorderTravesal.cpp) | O(?) | O(?) | Medium |  |
+| :star: | 94. Binary Tree Inorder Traversal | [cpp](./cpp/094.cpp) | Medium | recursion和iteration两种都要掌握 |
 |  95  | Unique Binary Search Trees II | [cpp](./cpp/095-UniqueBInarySearchTreesII.cpp) | O(?) | O(?) | Medium |  |
 |  96  | Unique Binary Search Trees | [cpp](./cpp/096-UniqueBinarySearchTrees.cpp) | O(?) | O(?) | Medium |  |
 |  98  | Validate Binary Search Tree | [cpp](./cpp/098-ValidateBinarySearchTree.cpp) | O(?) | O(?) | Medium |  |
 |  99  | Recover Binary Search Tree | [cpp](./cpp/099-RecoverBinarySearchTree.cpp) | O(?) | O(?) | Hard |  |
 |  100  | Same Tree | [cpp](./cpp/100-SameTree.cpp) | O(?) | O(?) | Easy |  |
 |  101  | Symmetric Tree | [cpp](./cpp/101-SymmetricTree.cpp) | O(?) | O(?) | Easy |  |
-|  102  | Binary Tree Level Order Traversal | [cpp](./cpp/102-BinaryTreeLevelOrderTraversal.cpp) | O(?) | O(?) | Medium |  |
+| :star::star: | 102. Binary Tree Level Order Traversal | [cpp](./cpp/102.cpp) | Medium |  |
 |  103  | Binary Tree Zigzag Level Order Traversal | [cpp](./cpp/103-BinaryTreeZigzagLevelOrderTraversal.cpp) | O(?) | O(?) | Medium |  |
 |  104  | Maximum Depth of Binary Tree | [cpp](./cpp/104-MaximumDepthofBinaryTree.cpp) | O(?) | O(?) | Easy |  |
 |  105  | Construct Binary Tree from Preorder and Inorder Traversal | [cpp](./cpp/105-ConstructBinaryTreefromPreorderandInorderTraversal.cpp) | O(?) | O(?) | Medium |  |
@@ -355,7 +355,7 @@
 | :star: | 76. Minimum Window Substring | [cpp](./cpp/076.cpp) | Hard | Two Pointers / Sliding Window + Hash Table, 套路题 |
 |  80  | Remove Duplicates from Sorted Array II | [cpp](./cpp/080-RemoveDuplicatesFromSortedArrayII.cpp) | O(?) | O(?) | Medium |  |
 |  86  | Partition List | [cpp](./cpp/086-PartitionList.cpp) | O(?) | O(?) | Medium |  |
-|  88  | Merge Sorted Array | [cpp](./cpp/088-MergeSortedArray.cpp) | O(?) | O(?) | Easy |  |
+| :star::star: | 88. Merge Sorted Array | [cpp](./cpp/088.cpp) | Easy |  |
 |  125  | Valid Palindrome | [cpp](./cpp/125-ValidPalindrome.cpp) | O(?) | O(?) | Easy |  |
 |  141  | Linked List Cycle | [cpp](./cpp/141-LinkedListCycle.cpp) | O(?) | O(?) | Easy |  |
 |  142  | Linked List Cycle II | [cpp](./cpp/142-LinkedListCycleII.cpp) | O(?) | O(?) | Medium |  |
@@ -397,7 +397,7 @@
 | Proficiency | Title | Solution | Difficulty | Note | 
 |-------------| ----- | -------- | ---------- | ---- |
 |  101  | Symmetric Tree | [cpp](./cpp/101-SymmetricTree.cpp) | O(?) | O(?) | Easy |  |
-|  102  | Binary Tree Level Order Traversal | [cpp](./cpp/102-BinaryTreeLevelOrderTraversal.cpp) | O(?) | O(?) | Medium |  |
+| :star::star: | 102. Binary Tree Level Order Traversal | [cpp](./cpp/102.cpp) | Medium |  |
 |  103  | Binary Tree Zigzag Level Order Traversal | [cpp](./cpp/103-BinaryTreeZigzagLevelOrderTraversal.cpp) | O(?) | O(?) | Medium |  |
 |  107  | Binary Tree Level Order Traversal II | [cpp](./cpp/107-BinaryTreeLevelOrderTraversal_II.cpp) | O(?) | O(?) | Easy |  |
 |  111  | Minimum Depth of Binary Tree | [cpp](./cpp/111-MinimumDepthofBinaryTree.cpp) | O(?) | O(?) | Easy |  |
@@ -481,7 +481,7 @@
 |  64. Minimum Path Sum | [cpp](./cpp/064.cpp) | Medium |  |
 |  85. Maximal Rectangle | [cpp](./cpp/085.cpp) | Hard |  |
 |  87. Scramble String | [cpp](./cpp/087.cpp) | Hard |  |
-|  91. Decode Ways | [cpp](./cpp/091.cpp) | Medium |  |
+| :camel: | 91. Decode Ways | [cpp](./cpp/091.cpp) | Medium |  |
 |  95. Unique Binary Search Trees II | [cpp](./cpp/095.cpp) | Medium |  |
 |  96. Unique Binary Search Trees | [cpp](./cpp/096.cpp) | Medium |  |
 |  97. Interleaving String | [cpp](./cpp/097.cpp) | Hard |  |

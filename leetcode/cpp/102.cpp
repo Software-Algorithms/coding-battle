@@ -1,5 +1,5 @@
 /*
- * BFS, Binary Tree
+ * Binary Tree, BFS
  *
  */
 class Solution {
@@ -28,9 +28,8 @@ public:
     }
 };
 
-// Conclusion:
-// Typical.
-
-
-
+/*****
+Conclusion:
+Very typical BFS use.
+*****/
 
