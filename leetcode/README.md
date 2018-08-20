@@ -86,16 +86,16 @@
 |  85  | Maximal Rectangle | [cpp](./cpp/085-MaximalRectangle.cpp) | O(?) | O(?) | Hard |  |
 | :star::star: | 88. Merge Sorted Array | [cpp](./cpp/088.cpp) | Easy |  |
 |  90  | Subsets II | [cpp](./cpp/090-SubsetsII.cpp) | O(?) | O(?) | Medium |  |
-|  105  | Construct Binary Tree from Preorder and Inorder Traversal | [cpp](./cpp/105-ConstructBinaryTreefromPreorderandInorderTraversal.cpp) | O(?) | O(?) | Medium |  |
+| :camel: | 105. Construct Binary Tree from Preorder and Inorder Traversal | [cpp](./cpp/105.cpp) | Medium |  |
 |  106  | Construct Binary Tree from Inorder and Postorder Traversal | [cpp](./cpp/106-ConstructBinaryTreefromInorderandPostorderTraversa.cpp) | O(?) | O(?) | Medium |  |
 |  118  | Pascal's Triangle | [cpp](./cpp/118-PascalsTriangle.cpp) | O(?) | O(?) | Easy |  |
 |  119  | Pascal's Triangle II | [cpp](./cpp/119-PascalsTriangleII.cpp) | O(?) | O(?) | Easy |  |
 |  120  | Triangle | [cpp](./cpp/120-Triangle.cpp) | O(?) | O(?) | Medium |  |
-|  121  | Best Time to Buy and Sell Stock  | [cpp](./cpp/121-BestTimetoBuyandSellStock.cpp) | O(?) | O(?) | Easy |  |
-|  122  | Best Time to Buy and Sell Stock II | [cpp](./cpp/122-BestTimetoBuyandSellStockII.cpp) | O(?) | O(?) | Easy |  |
-|  123  | Best Time to Buy and Sell Stock III | [cpp](./cpp/123-BestTimetoBuyandSellStockIII.cpp) | O(?) | O(?) | Hard |  |
+| :star::star: | 121. Best Time to Buy and Sell Stock | [cpp](./cpp/121.cpp) | Easy | DP |
+| :star::star: | 122. Best Time to Buy and Sell Stock II | [cpp](./cpp/122.cpp) | Easy |  |
+|  123  | Best Time to Buy and Sell Stock III | [cpp](./cpp/123.cpp) | Hard |  |
 |  126  | Word Ladder II | [cpp](./cpp/126-WordLadderII.cpp) | O(?) | O(?) | Hard |  |
-|  128  | Longest Consecutive Sequence | [cpp](./cpp/128-LongestConsecutiveSequence.cpp) | O(?) | O(?) | Hard |  |
+| :star: | 128. Longest Consecutive Sequence | [cpp](./cpp/128.cpp) | Hard | DP, std::set |
 |  152  | Maximum Product Subarray | [cpp](./cpp/152.cpp) | O(?) | O(?) | Medium |  |
 |  153  | Find Minimum in Rotated Sorted Array | [cpp](./cpp/153.cpp) | O(?) | O(?) | Medium |  |
 |  162  | Find Peak Element | [cpp](./cpp/162.cpp) | O(?) | O(?) | Medium |  |
@@ -179,7 +179,7 @@
 | :camel: | 84. Largest Rectangle in Histogram | [cpp](./cpp/084.cpp) | Hard |  |
 |  85  | Maximal Rectangle | [cpp](./cpp/085-MaximalRectangle.cpp) | O(?) | O(?) | Hard |  |
 | :star: | 94. Binary Tree Inorder Traversal | [cpp](./cpp/094.cpp) | Medium | recursion和iteration两种都要掌握 |
-|  103  | Binary Tree Zigzag Level Order Traversal | [cpp](./cpp/103-BinaryTreeZigzagLevelOrderTraversal.cpp) | O(?) | O(?) | Medium |  |
+| :camel: | 103. Binary Tree Zigzag Level Order Traversal | [cpp](./cpp/103.cpp) | Medium |  |
 |  144  | Binary Tree Preorder Traversal | [cpp](./cpp/144-BinaryTreePreorderTraversal.cpp) | O(?) | O(?) | Medium |  |
 |  145  | Binary Tree Postorder Traversal  | [cpp](./cpp/145-BinaryTreePostorderTraversal.cpp) | O(?) | O(?) | Hard |  |
 |  150  | Evaluate Reverse Polish Notation | [cpp](./cpp/150-EvaluateReversePolishNotation.cpp) | O(?) | O(?) | Medium |  |
@@ -213,20 +213,20 @@
 |  100  | Same Tree | [cpp](./cpp/100-SameTree.cpp) | O(?) | O(?) | Easy |  |
 |  101  | Symmetric Tree | [cpp](./cpp/101-SymmetricTree.cpp) | O(?) | O(?) | Easy |  |
 | :star::star: | 102. Binary Tree Level Order Traversal | [cpp](./cpp/102.cpp) | Medium |  |
-|  103  | Binary Tree Zigzag Level Order Traversal | [cpp](./cpp/103-BinaryTreeZigzagLevelOrderTraversal.cpp) | O(?) | O(?) | Medium |  |
-|  104  | Maximum Depth of Binary Tree | [cpp](./cpp/104-MaximumDepthofBinaryTree.cpp) | O(?) | O(?) | Easy |  |
-|  105  | Construct Binary Tree from Preorder and Inorder Traversal | [cpp](./cpp/105-ConstructBinaryTreefromPreorderandInorderTraversal.cpp) | O(?) | O(?) | Medium |  |
-|  106  | Construct Binary Tree from Inorder and Postorder Traversal | [cpp](./cpp/106-ConstructBinaryTreefromInorderandPostorderTraversa.cpp) | O(?) | O(?) | Medium |  |
-|  107  | Binary Tree Level Order Traversal II | [cpp](./cpp/107-BinaryTreeLevelOrderTraversal_II.cpp) | O(?) | O(?) | Easy |  |
-|  108  | Convert Sorted Array to Binary Search Tree | [cpp](./cpp/108-ConvertSortedArraytoBinarySearchTree.cpp) | O(?) | O(?) | Easy |  |
-|  110  | Balanced Binary Tree | [cpp](./cpp/110-BalancedBinaryTree.cpp) | O(?) | O(?) | Easy |  |
-|  111  | Minimum Depth of Binary Tree | [cpp](./cpp/111-MinimumDepthofBinaryTree.cpp) | O(?) | O(?) | Easy |  |
+| :star::star: | 103. Binary Tree Zigzag Level Order Traversal | [cpp](./cpp/103.cpp) | Medium |  |
+| :star: | 104. Maximum Depth of Binary Tree | [cpp](./cpp/104.cpp) | Easy | iteration的方法是用BFS |
+| :camel: | 105. Construct Binary Tree from Preorder and Inorder Traversal | [cpp](./cpp/105.cpp) | Medium |  |
+|  106  | Construct Binary Tree from Inorder and Postorder Traversal | [cpp](./cpp/106.cpp) | Medium |  |
+|  107  | Binary Tree Level Order Traversal II | [cpp](./cpp/107.cpp) | Easy |  |
+| :star: | 108. Convert Sorted Array to Binary Search Tree | [cpp](./cpp/108.cpp) | Easy |  |
+|  110  | Balanced Binary Tree | [cpp](./cpp/110.cpp) | Easy |  |
+|  111  | Minimum Depth of Binary Tree | [cpp](./cpp/111.cpp) | Easy |  |
 |  112  | Path Sum | [cpp](./cpp/112-PathSum.cpp) | O(?) | O(?) | Easy |  |
 |  113  | Path Sum II | [cpp](./cpp/113-PathSumII.cpp) | O(?) | O(?) | Medium |  |
 |  114  | Flatten Binary Tree to Linked List | [cpp](./cpp/114-FlattenBinaryTreetoLinkedList.cpp) | O(?) | O(?) | Medium |  |
 |  116  | Populating Next Right Pointers in Each Node | [cpp](./cpp/116-PopulatingNextRightPointersinEachNode.cpp) | O(?) | O(?) | Medium |  |
 |  117  | Populating Next Right Pointers in Each Node II | [cpp](./cpp/117-PopulatingNextRightPointersinEachNodeII.cpp) | O(?) | O(?) | Medium |  |
-|  124  | Binary Tree Maximum Path Sum | [cpp](./cpp/124-BinaryTreeMaximumPathSum.cpp) | O(?) | O(?) | Hard |  |
+| :star: | 124. Binary Tree Maximum Path Sum | [cpp](./cpp/124.cpp) | Hard |  |
 |  129  | Sum Root to Leaf Numbers  | [cpp](./cpp/129-SumRoottoLeafNumbers.cpp) | O(?) | O(?) | Medium |  |
 |  144  | Binary Tree Preorder Traversal | [cpp](./cpp/144-BinaryTreePreorderTraversal.cpp) | O(?) | O(?) | Medium |  |
 |  145  | Binary Tree Postorder Traversal  | [cpp](./cpp/145-BinaryTreePostorderTraversal.cpp) | O(?) | O(?) | Hard |  |
@@ -398,7 +398,8 @@
 |-------------| ----- | -------- | ---------- | ---- |
 |  101  | Symmetric Tree | [cpp](./cpp/101-SymmetricTree.cpp) | O(?) | O(?) | Easy |  |
 | :star::star: | 102. Binary Tree Level Order Traversal | [cpp](./cpp/102.cpp) | Medium |  |
-|  103  | Binary Tree Zigzag Level Order Traversal | [cpp](./cpp/103-BinaryTreeZigzagLevelOrderTraversal.cpp) | O(?) | O(?) | Medium |  |
+| :star::star: | 103. Binary Tree Zigzag Level Order Traversal | [cpp](./cpp/103.cpp) | Medium |  |
+| :star: | 104. Maximum Depth of Binary Tree | [cpp](./cpp/104.cpp) | Easy | iteration的方法是用BFS，dfs的方法还没做过 |
 |  107  | Binary Tree Level Order Traversal II | [cpp](./cpp/107-BinaryTreeLevelOrderTraversal_II.cpp) | O(?) | O(?) | Easy |  |
 |  111  | Minimum Depth of Binary Tree | [cpp](./cpp/111-MinimumDepthofBinaryTree.cpp) | O(?) | O(?) | Easy |  |
 |  126  | Word Ladder II | [cpp](./cpp/126-WordLadderII.cpp) | O(?) | O(?) | Hard |  |
@@ -417,10 +418,10 @@
 |  99  | Recover Binary Search Tree | [cpp](./cpp/099-RecoverBinarySearchTree.cpp) | O(?) | O(?) | Hard |  |
 |  100  | Same Tree | [cpp](./cpp/100-SameTree.cpp) | O(?) | O(?) | Easy |  |
 |  101  | Symmetric Tree | [cpp](./cpp/101-SymmetricTree.cpp) | O(?) | O(?) | Easy |  |
-|  104  | Maximum Depth of Binary Tree | [cpp](./cpp/104-MaximumDepthofBinaryTree.cpp) | O(?) | O(?) | Easy |  |
-|  105  | Construct Binary Tree from Preorder and Inorder Traversal | [cpp](./cpp/105-ConstructBinaryTreefromPreorderandInorderTraversal.cpp) | O(?) | O(?) | Medium |  |
+| :star: | 104. Maximum Depth of Binary Tree | [cpp](./cpp/104.cpp) | Easy | iteration的方法是用BFS，dfs的方法还没做过 |
+| :camel: | 105. Construct Binary Tree from Preorder and Inorder Traversal | [cpp](./cpp/105.cpp) | Medium |  |
 |  106  | Construct Binary Tree from Inorder and Postorder Traversal | [cpp](./cpp/106-ConstructBinaryTreefromInorderandPostorderTraversa.cpp) | O(?) | O(?) | Medium |  |
-|  108  | Convert Sorted Array to Binary Search Tree | [cpp](./cpp/108-ConvertSortedArraytoBinarySearchTree.cpp) | O(?) | O(?) | Easy |  |
+| :star: | 108. Convert Sorted Array to Binary Search Tree | [cpp](./cpp/108.cpp) | Easy |  |
 |  109  | Convert Sorted List to Binary Search Tree | [cpp](./cpp/109-ConvertSortedListtoBinarySearchTree.cpp) | O(?) | O(?) | Medium |  |
 |  110  | Balanced Binary Tree | [cpp](./cpp/110-BalancedBinaryTree.cpp) | O(?) | O(?) | Easy |  |
 |  111  | Minimum Depth of Binary Tree | [cpp](./cpp/111-MinimumDepthofBinaryTree.cpp) | O(?) | O(?) | Easy |  |
@@ -429,7 +430,7 @@
 |  114  | Flatten Binary Tree to Linked List | [cpp](./cpp/114-FlattenBinaryTreetoLinkedList.cpp) | O(?) | O(?) | Medium |  |
 |  116  | Populating Next Right Pointers in Each Node | [cpp](./cpp/116-PopulatingNextRightPointersinEachNode.cpp) | O(?) | O(?) | Medium |  |
 |  117  | Populating Next Right Pointers in Each Node II | [cpp](./cpp/117-PopulatingNextRightPointersinEachNodeII.cpp) | O(?) | O(?) | Medium |  |
-|  124  | Binary Tree Maximum Path Sum | [cpp](./cpp/124-BinaryTreeMaximumPathSum.cpp) | O(?) | O(?) | Hard |  |
+| :star: | 124. Binary Tree Maximum Path Sum | [cpp](./cpp/124.cpp) | Hard |  |
 |  129  | Sum Root to Leaf Numbers  | [cpp](./cpp/129-SumRoottoLeafNumbers.cpp) | O(?) | O(?) | Medium |  |
 |  130  | Surrounded Regions | [cpp](./cpp/130-SurroundedRegions.cpp) | O(?) | O(?) | Medium |  |
 |  133  | Clone Graph | [cpp](./cpp/133-CloneGraph.cpp) | O(?) | O(?) | Medium |  |
@@ -487,6 +488,7 @@
 |  97. Interleaving String | [cpp](./cpp/097.cpp) | Hard |  |
 | 115. Distinct Subsequences | [cpp](./cpp/115.cpp) | Hard |  |
 | 120. Triangle | [cpp](./cpp/120.cpp) | Medium |  |
+| :star: | 128. Longest Consecutive Sequence | [cpp](./cpp/128.cpp) | Hard | DP, std::set |
 | **Word Break** |  |  |  |
 | 139. Word Break | [cpp](./cpp/139.cpp) | Medium |  |
 | 140. Word Break II | [cpp](./cpp/140.cpp) | Hard |  |
@@ -507,11 +509,11 @@
 | 221. Maximal Square | [cpp](./cpp/221.cpp) | Medium |  |
 | Lintcode 631. Maximal Square II (todo) | [cpp](../lintcode/cpp/631.cpp) | Medium | |
 | **序列型** |  |  |  |
-| *Best Time to Buy and Sell Stock I II III IV* |  |  |  |
-| 121. Best Time to Buy and Sell Stock  | [cpp](./cpp/121.cpp) | Easy | 􏰑􏰁􏰏􏴝􏱿􏲀􏳗􏱬􏰏􏳣􏱴􏰑􏰁􏰏􏴝􏱿􏲀􏳗􏱬􏰏􏳣􏱴􏰏一维，有状态+序列型 |
-| 122. Best Time to Buy and Sell Stock II | [cpp](./cpp/122.cpp) | Easy | 不是DP，而是Greedy。出于对照，放在这里。 |
-| 123. Best Time to Buy and Sell Stock III | [cpp](./cpp/123.cpp) | Hard | 二维滚动数组，状态+序列型 |
-| 188. Best Time to Buy and Sell Stock IV | [cpp](./cpp/188.cpp) | Hard | 二维滚动数组，状态+序列型， 122 & 123 |
+| | *Best Time to Buy and Sell Stock I II III IV* |  |  |  |
+| :star::star: | 121. Best Time to Buy and Sell Stock  | [cpp](./cpp/121.cpp) | Easy | 􏰑􏰁􏰏􏴝􏱿􏲀􏳗􏱬􏰏􏳣􏱴􏰑􏰁􏰏􏴝􏱿􏲀􏳗􏱬􏰏􏳣􏱴􏰏一维，有状态+序列型 |
+| :star::star: | 122. Best Time to Buy and Sell Stock II | [cpp](./cpp/122.cpp) | Easy | 不是DP，而是Greedy。出于对照，放在这里。 |
+|  | 123. Best Time to Buy and Sell Stock III | [cpp](./cpp/123.cpp) | Hard | 二维滚动数组，状态+序列型 |
+|  | 188. Best Time to Buy and Sell Stock IV | [cpp](./cpp/188.cpp) | Hard | 二维滚动数组，状态+序列型， 122 & 123 |
 | *House Robber I II III* |  |  |  |
 | 198. House Robber | [cpp](../leetcode/cpp/198.cpp) | Medium | 序列型 + 状态型 |
 | 213. House Robber II | [cpp](../leetcode/cpp/213.cpp) | Medium | 序列型 + 状态型 |
@@ -562,7 +564,7 @@
 |  44. Wildcard Matching | [cpp](./cpp/044-WildcardMatching.cpp) | Hard |  |
 |  45. Jump Game II | [cpp](./cpp/045-JumpGameII.cpp) | Hard |  |
 |  55. Jump Game | [cpp](./cpp/055-JumpGame.cpp) | Medium |  |
-|  122. Best Time to Buy and Sell Stock II | [cpp](./cpp/122-BestTimetoBuyandSellStockII.cpp) | Easy |  |
+| :star::star: | 122. Best Time to Buy and Sell Stock II | [cpp](./cpp/122.cpp) | Easy |  |
 |  134. Gas Station | [cpp](./cpp/134-GasStation.cpp) | Medium |  |
 |  135. Candy | [cpp](./cpp/135-Candy.cpp) | Hard |  |
 
