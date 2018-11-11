@@ -479,7 +479,11 @@
 | |  32. Longest Valid Parentheses | [cpp](./cpp/032.cpp) | Hard |  |
 | |  44. Wildcard Matching | [cpp](./cpp/044.cpp) | Hard |  |
 | :star: | 53. Maximum Subarray | [cpp](./cpp/053.cpp) | Easy | Kadane's Algorithm |
+| :star::star: | 62. Unique Paths | [cpp](./cpp/062.cpp) | Easy | 二维滚动数组 |
+| |  63. Unique Paths II | [cpp](./cpp063.cpp) | Easy | 二维滚动数组 |
 | |  64. Minimum Path Sum | [cpp](./cpp/064.cpp) | Medium |  |
+| :star::star: | 70. Climbing Stairs | [cpp](./cpp/070.cpp) | Easy |  |
+| :camel: | 72. Edit Distance | [cpp](./cpp/072.cpp) | Hard |  |
 | |  85. Maximal Rectangle | [cpp](./cpp/085.cpp) | Hard |  |
 | |  87. Scramble String | [cpp](./cpp/087.cpp) | Hard |  |
 | :camel: | 91. Decode Ways | [cpp](./cpp/091.cpp) | Medium |  |
@@ -488,75 +492,27 @@
 | |  97. Interleaving String | [cpp](./cpp/097.cpp) | Hard |  |
 | | 115. Distinct Subsequences | [cpp](./cpp/115.cpp) | Hard |  |
 | | 120. Triangle | [cpp](./cpp/120.cpp) | Medium |  |
+| :star::star: | 121. Best Time to Buy and Sell Stock  | [cpp](./cpp/121.cpp) | Easy | 一维，有状态+序列型 |
+|  | 123. Best Time to Buy and Sell Stock III | [cpp](./cpp/123.cpp) | Hard | 二维滚动数组，状态+序列型 |
 | :star: | 128. Longest Consecutive Sequence | [cpp](./cpp/128.cpp) | Hard | DP, std::set |
-| | **Word Break** |  |  |  |
+| | 132. Palindrome Partitioning II | [cpp](./cpp/132.cpp) | Hard |  |
 | | 139. Word Break | [cpp](./cpp/139.cpp) | Medium |  |
 | | 140. Word Break II | [cpp](./cpp/140.cpp) | Hard |  |
 | | 152. Maximum Product Subarray | [cpp](./cpp/152.cpp) | Medium |  |
 | | 174. Dungeon Game | [cpp](./cpp/174.cpp) | Hard |  |
-| | 264. Ugly Number II | [cpp](./cpp/264.cpp) | Medium |  |
-| | **Paint House I II** |  |  |  |
+|  | 188. Best Time to Buy and Sell Stock IV | [cpp](./cpp/188.cpp) | Hard | 二维滚动数组，状态+序列型， 122 & 123 |
+| | 198. House Robber | [cpp](./cpp/198.cpp) | Medium | 序列型 + 状态型 |
+| | 213. House Robber II | [cpp](./cpp/213.cpp) | Medium | 序列型 + 状态型 |
+| | 221. Maximal Square | [cpp](./cpp/221.cpp) | Medium |  |
 | | 256. Paint House | [cpp](./cpp/256.cpp) | Easy |  |
+| | 264. Ugly Number II | [cpp](./cpp/264.cpp) | Medium |  |
 | | 265. Paint House II | [cpp](./cpp/265.cpp) | Hard | **TOREINFORCE** |
 | | 276. Paint Fence | [cpp](./cpp/276.cpp) | Easy |  |
-| | 300. Longest Increasing Subsequence | [cpp](./cpp/300.cpp) | Medium |  |
-| | 494. Target Sum | [cpp](./cpp/494.cpp) | Medium |  |
-| | **滚动数组** |  |  |  |
-| | **一维滚动数组** |  |  |  |
-| :star::star: | 70. Climbing Stairs | [cpp](./cpp/070.cpp) | Easy |  |
-| | **二维滚动数组** |  |  |  |
-| | *Maximal Square I II* |  |  |  |
-| | 221. Maximal Square | [cpp](./cpp/221.cpp) | Medium |  |
-| | Lintcode 631. Maximal Square II (todo) | [cpp](../lintcode/cpp/631.cpp) | Medium | |
-| | **序列型** |  |  |  |
-| | *Best Time to Buy and Sell Stock I II III IV* |  |  |  |
-| :star::star: | 121. Best Time to Buy and Sell Stock  | [cpp](./cpp/121.cpp) | Easy | 一维，有状态+序列型 |
-| :star::star: | 122. Best Time to Buy and Sell Stock II | [cpp](./cpp/122.cpp) | Easy | 不是DP，而是Greedy。出于对照，放在这里。 |
-|  | 123. Best Time to Buy and Sell Stock III | [cpp](./cpp/123.cpp) | Hard | 二维滚动数组，状态+序列型 |
-|  | 188. Best Time to Buy and Sell Stock IV | [cpp](./cpp/188.cpp) | Hard | 二维滚动数组，状态+序列型， 122 & 123 |
-| | *House Robber I II III* |  |  |  |
-| | 198. House Robber | [cpp](../leetcode/cpp/198.cpp) | Medium | 序列型 + 状态型 |
-| | 213. House Robber II | [cpp](../leetcode/cpp/213.cpp) | Medium | 序列型 + 状态型 |
-| | 337. House Robber III | [cpp](../leetcode/cpp/337.cpp) | Medium | DFS |
-| | **坐标型** |  |  |  |
-| :star::star: | 62. Unique Paths | [cpp](./cpp/062.cpp) | Easy | 二维滚动数组 |
-| |  63. Unique Paths II | [cpp](../leetcode/cpp063.cpp) | Easy | 二维滚动数组 |
-| |  64. Minimum Path Sum | [cpp](../leetcode/cpp64.cpp) | Easy | 二维滚动数组 |
-| | **划分型** |  |  |  |
-| | 132. Palindrome Partitioning II | [cpp](./cpp/132.cpp) | Hard |  |
 | | 279. Perfect Squares | [cpp](./cpp/279.cpp) | Medium |  |
-| | Lintcode 437. Copy Books | [cpp](../lintcode/cpp/437.cpp) | Hard |  |
-| | **博弈型** |  |  |  |
-| | Lintcode 394. Coins in a Line | [cpp](./cpp/394.cpp) | Medium | 记忆化搜索 |
-| | Lintcode 395. Coins in a Line II | [cpp](./cpp/395.cpp) | Medium | 记忆化搜索 |
-| | Lintcode 396. Coins in a Line III | [cpp](./cpp/396.cpp) | Hard | 记忆化搜索 |
-| | **区间型** |  |  |  |
-| | Lintcode 476. Stone Game | [cpp](./cpp/476.cpp) | Medium |  |
-| | Lintcode 168. Burst Ballons | [cpp](../leetcode/cpp/312.cpp) | Hard |  |
-| | Lintcode 430. Scramble String | [cpp](../leetcode/cpp/087.cpp) | Hard |  |
-| | **匹配型** | [cpp](./cpp/87.cpp) |  |  |
-| | Lintcode 77. Longest Common Subsequence | [cpp](./cpp/077.cpp) | Medium |  |
-| :camel: | 72. Edit Distance | [cpp](./cpp/072.cpp) | Hard |  |
-| | Lintcode 623. K Edit Distance | [cpp](./cpp/623.cpp) | Hard |  |
-| | Lintcode 118. Distinct Subsequences | [cpp](../leetcode/cpp/115.cpp) | Medium | |
-| | Linttcode 29. Interleaving String | [cpp](../leetcode/cpp/097.cpp) | Medium | |
-| | **背包型** |  |  | **TODO** |
-| | *BackPack I II III IV V VI VII VIII IX* ||||
-| | LintCode 92. BackPack I | [cpp](../lintcode/cpp/092.cpp) | Medium | 两个版本都要熟练。需要review。 |
-| | LintCode 125. Backpack II | [cpp](../lintcode/cpp/125.cpp) | Medium | 基本款，要绝对熟练。需要review。 |
-| | LintCode 440. Backpack III | [cpp](../lintcode/cpp/440.cpp) | Medium |  |
-| | LintCode 562. Backpack IV | [cpp](../lintcode/cpp/562.cpp) | Medium |  |
-| | <span style="color:purple">LintCode 563. Backpack V</span> | [cpp](../lintcode/cpp/563.cpp) | Medium | 需要review |
-| | LintCode 564. Backpack VI / Combination Sum IV  | [cpp](../lintcode/cpp/564.cpp) | Medium |  |
-| | LintCode 798. Backpack VII | [cpp](../lintcode/cpp/798.cpp) | Medium |  |
-| | LintCode 799. Backpack VIII | [cpp](../lintcode/cpp/799.cpp) | Medium |  |
-| | LintCode 800. Backpack IX | [cpp](../lintcode/cpp/800.cpp) | Medium |  |
-| | LintCode 89. k Sum | [cpp](./cpp/089.cpp) | Hard |  |
-| | LintCode 91. Minimum Adjustment Cost | [cpp](./cpp/091.cpp) | Medium |  |
+| | 300. Longest Increasing Subsequence | [cpp](./cpp/300.cpp) | Medium |  |
 | | 322. Coin Change | [cpp](./cpp/322.cpp) | Medium |  |
-| | **记忆化搜索** |  |  |  |
-| | 300. Longest Increasing Subsequence | [cpp](../leetcode/cpp/300.cpp) | Medium | LIS |
-| | Lintcode 398. Longest Increasing Continuous subsequence II | [cpp](./cpp/398.cpp) | Hard |  |
+| | 337. House Robber III | [cpp](./cpp/337.cpp) | Medium | DFS |
+| | 494. Target Sum | [cpp](./cpp/494.cpp) | Medium |  |
 
 ### Greedy
 | Proficiency | Title | Solution | Difficulty | Note |
