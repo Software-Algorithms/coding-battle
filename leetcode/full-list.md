@@ -1,4 +1,4 @@
-## Algorithm
+## Full List of Algorithm Problems
 
 |  #  | Title | Solution | Difficulty | Note | Proficiency |
 |-----|------ | -------- | ---------- | ---- | ------------|
