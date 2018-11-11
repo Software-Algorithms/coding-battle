@@ -5,7 +5,7 @@ lintcode battle
 
 ### Array & Sort
 
-|  Title          |  Solution       | Difficulty    | Note     | 
+|  Title          |  Solution       | Difficulty    | Note     |
 | --------------- | --------------- | ------------- | -------- |
 | **Subarray Sum** |  |  |  |
 | Lintcode 138. Subarray Sum | [cpp](./cpp/138.cpp) | Easy | Hash Table |
@@ -34,7 +34,7 @@ lintcode battle
 
 
 ### Two Pointers
-|  Title          |  Solution       | Difficulty    | Note     | 
+|  Title          |  Solution       | Difficulty    | Note     |
 | --------------- | --------------- | ------------- | -------- |
 | **Sliding Window** |  |  |  |
 | Lintcode 406. Minimum Size Subarray Sum | [cpp](../leetcode/cpp/209.cpp) | Medium | leetcode |
@@ -50,7 +50,7 @@ lintcode battle
 
 ### Union Find
 
-|  Title          |  Solution       | Difficulty    | Note     | 
+|  Title          |  Solution       | Difficulty    | Note     |
 | --------------- | --------------- | ------------- | -------- |
 | Lintcode 589. Connecting Graph | [cpp](./cpp/589.cpp) | Medium | design, union find implementation |
 | Lintcode 590. Connecting Graph II | [cpp](./cpp/590.cpp) | Medium | design, union find implementation |
@@ -67,7 +67,7 @@ lintcode battle
 
 ## Trie (字典树)
 
-|  Title          |  Solution       | Difficulty    | Note     | 
+|  Title          |  Solution       | Difficulty    | Note     |
 | --------------- | --------------- | ------------- | -------- |
 | Lintcode 442. Implement Trie (Prefix Tree) | [cpp](../leetcode/cpp/208.cpp) | Medium | leetcode |
 | Lintcode 473. Add and Search Word - Data structure design | [cpp](../leetcode/cpp/211.cpp) | Medium | leetcode |
@@ -77,7 +77,7 @@ lintcode battle
 
 ### Heap
 
-|  Title          |  Solution       | Difficulty    | Note     | 
+|  Title          |  Solution       | Difficulty    | Note     |
 | --------------- | --------------- | ------------- | -------- |
 | Lintcode 363. Trapping Rain Water | [cpp](../leetcode/cpp/042.cpp) | Medium | Two Pointers, no heap but prepare for II, leetcode, ***TODO: stack solution*** |
 | Lintcode 364. Trapping Rain Water II | [cpp](../leetcode/cpp/407.cpp) | Hard | leetcode |
@@ -92,7 +92,7 @@ lintcode battle
 
 ### Stack
 
-|  Title          |  Solution       | Difficulty    | Note     | 
+|  Title          |  Solution       | Difficulty    | Note     |
 | --------------- | --------------- | ------------- | -------- |
 | Lintcode 12. Min Stack | [cpp](../leetcode/cpp/155.cpp) | Medium | leetcode easy |
 | Lintcode 40. Implement Queue by Two Stacks | [cpp](../leetcode/cpp/232.cpp) | Medium | leetcode easy, ***TODO*** |
@@ -106,7 +106,7 @@ lintcode battle
 
 ### Binary Search
 
-|  Title          |  Solution       | Difficulty    | Note     | 
+|  Title          |  Solution       | Difficulty    | Note     |
 | --------------- | --------------- | ------------- | -------- |
 | Lintcode 75. Find Peak Element | [cpp](./162.cpp) | Medium | leetcode |
 | Lintcode 390. Find Peak Element II | [cpp](./390.cpp) | Hard | ***TODO*** |
@@ -122,13 +122,13 @@ lintcode battle
 
 ### Deque
 
-|  Title          |  Solution       | Difficulty    | Note     | 
+|  Title          |  Solution       | Difficulty    | Note     |
 | --------------- | --------------- | ------------- | -------- |
 | Lintcode 362. Sliding Window Maximum | [cpp](./cpp/362.cpp) | Super | leetcode, one for all, ***TODO*** |
 
 
 ### BFS
-|  Title          |  Solution       | Difficulty    | Note     | 
+|  Title          |  Solution       | Difficulty    | Note     |
 | --------------- | --------------- | ------------- | -------- |
 | **BFS in Binary Tree** |  |  |  |
 | Lintcode 69. Binary Tree Level Order Traversal | [cpp](../leetcode/cpp/102.cpp) | Easy | BFS --> DFS, leetcode easy |
@@ -157,7 +157,7 @@ lintcode battle
 
 
 ### DFS (...)
-|  Title          |  Solution       | Difficulty    | Note     | 
+|  Title          |  Solution       | Difficulty    | Note     |
 | --------------- | --------------- | ------------- | -------- |
 | Lintcode 17. Subsets |  | Medium |  |
 | Lintcode 135. Combination Sum |  | Medium |  |
@@ -180,72 +180,68 @@ lintcode battle
 
 ### DP
 
-|  Title          |  Solution       | Difficulty    | Note     | 
-| --------------- | --------------- | ------------- | -------- |
-| **滚动数组** |  |  |  |
-| *一维滚动数组* |  |  |  |
-| Lintcode 392. House Robber | [cpp](../leetcode/cpp/198.cpp) | Medium | leetcode |
-| Lintcode 213. House Robber II | [cpp](../leetcode/cpp/213.cpp) | Medium | leetcode |
-| Lintcode 337. House Robber III (todo) | [cpp](../leetcode/cpp/337.cpp) | Medium | leetcode |
-| Lintcode 111. Climbing Stairs | [cpp](../leetcode/cpp/070.cpp) | Easy | leetcode |
-| *二维滚动数组DP* |  |  |  |
-| Lintocde 436. Maximal Square | [cpp](../leetcode/cpp221) | Medium | leetcode |
-| * Lintcode 631. Maximal Square II (todo) | [cpp](../leetcode/cpp/x.cpp) | Medium | leetcode |
-| Lintcode 114. Unique Paths | [cpp](./cpp/062.cpp) | Easy | leetcode |
-| Lintcode 63. Unique Paths II | [cpp](../leetcode/cpp063.cpp) | Easy | leetcode |
-| Lintcode 110. Minimum Path Sum | [cpp](../leetcode/cpp64.cpp) | Easy | leetcode |
-| Lintcode 119. Edit Distance | [cpp](../leetcode/cpp072.cpp) | Medium | leetcode hard |
-| **记忆化搜索** |  |  |  |
-| Lintcode 76. Longest Increasing Subsequence | [cpp](../leetcode/cpp/300.cpp) | Medium | leetcode, LIS, TODO |
-| Lintcode 398. Longest Increasing Continuous subsequence II | [cpp](./cpp/398.cpp) | Hard |  |
-| **博弈类DP** |  |  |  |
-| Lintcode 394. Coins in a Line | [cpp](./cpp/394.cpp) | Medium | 博弈类DP |
-| Lintcode 395. Coins in a Line II | [cpp](./cpp/395.cpp) | Medium | 博弈类DP |
-| Lintcode 396. Coins in a Line III | [cpp](./cpp/396.cpp) | Hard | 博弈类DP |
-| **区间型 DP** |  |  |  |
-| Lintcode 476. Stone Game | [cpp](./cpp/476.cpp) | Medium |  | 
-| Lintcode 168. Burst Ballons | [cpp](../leetcode/cpp/312.cpp) | Hard |  | 
-| Lintcode 430. Scramble String | [cpp](../leetcode/cpp/087.cpp) | Hard |  | 
-| **匹配类动规** | [cpp](./cpp/87.cpp) |  |  | 
-| Lintcode 77. Longest Common Subsequence | [cpp](./cpp/077.cpp) | Medium |  | 
-| Lintcode 119. Edit Distance | [cpp](../leetcode/cpp/087.cpp) | Medium | leetcode | 
-| Lintcode 623. K Edit Distance | [cpp](./cpp/623.cpp) | Hard |  | 
-| Lintcode 118. Distinct Subsequences | [cpp](../leetcode/cpp/115.cpp) | Medium | leetcode | 
-| Linttcode 29. Interleaving String | [cpp](../leetcode/cpp/097.cpp) | Medium | leetcode | 
-| **Backpack DP** |  |  |  |
-| Lintcode 92. BackPack I | [cpp](./cpp/092.cpp) | Medium |  | 
-| Lintcode 125. Backpack II | [cpp](./cpp/125.cpp) | Medium |  |
-| Lintcode 562. Backpack IV | [cpp](./cpp/562.cpp) | Medium |  |
-| Lintcode 89. k Sum | [cpp](./cpp/089.cpp) | Hard |  | 
-| Lintcode 91. Minimum Adjustment Cost | [cpp](./cpp/091.cpp) | Medium |  | 
+| Proficiency |  Title          |  Solution       | Difficulty    | Note     |
+|-------------| --------------- | --------------- | ------------- | -------- |
+| | **滚动数组** |  |  |  |
+| | *一维滚动数组* |  |  |  |
+| :camel::camel::camel: | Lintcode 392. House Robber | [cpp](../leetcode/cpp/198.cpp) | Medium | leetcode |
+| :camel::camel::camel: | Lintcode 213. House Robber II | [cpp](../leetcode/cpp/213.cpp) | Medium | leetcode |
+| :camel::camel::camel: | Lintcode 337. House Robber III (todo) | [cpp](../leetcode/cpp/337.cpp) | Medium | leetcode |
+| :camel::camel::camel: | Lintcode 111. Climbing Stairs | [cpp](../leetcode/cpp/070.cpp) | Easy | leetcode |
+| | *二维滚动数组DP* |  |  |  |
+| :camel::camel::camel: | Lintocde 436. Maximal Square | [cpp](../leetcode/cpp221) | Medium | leetcode |
+| :camel::camel::camel: | * Lintcode 631. Maximal Square II (todo) | [cpp](../leetcode/cpp/x.cpp) | Medium | leetcode |
+| :camel::camel::camel: | Lintcode 114. Unique Paths | [cpp](./cpp/062.cpp) | Easy | leetcode |
+| :camel::camel::camel: | Lintcode 63. Unique Paths II | [cpp](../leetcode/cpp063.cpp) | Easy | leetcode |
+| :camel::camel::camel: | Lintcode 110. Minimum Path Sum | [cpp](../leetcode/cpp64.cpp) | Easy | leetcode |
+| :camel::camel::camel: | Lintcode 119. Edit Distance | [cpp](../leetcode/cpp072.cpp) | Medium | leetcode hard |
+| | **记忆化搜索** |  |  |  |
+| :camel::camel::camel: | Lintcode 76. Longest Increasing Subsequence | [cpp](../leetcode/cpp/300.cpp) | Medium | leetcode, LIS, TODO |
+| :camel::camel::camel: | Lintcode 398. Longest Increasing Continuous subsequence II | [cpp](./cpp/398.cpp) | Hard |  |
+| | **博弈类DP** |  |  |  |
+| :camel::camel::camel: | Lintcode 394. Coins in a Line | [cpp](./cpp/394.cpp) | Medium | 博弈类DP |
+| :camel::camel::camel: | Lintcode 395. Coins in a Line II | [cpp](./cpp/395.cpp) | Medium | 博弈类DP |
+| :camel::camel::camel: | Lintcode 396. Coins in a Line III | [cpp](./cpp/396.cpp) | Hard | 博弈类DP |
+| | **区间型 DP** |  |  |  |
+| :camel::camel::camel: | Lintcode 476. Stone Game | [cpp](./cpp/476.cpp) | Medium |  |
+| :camel::camel::camel: | Lintcode 168. Burst Ballons | [cpp](../leetcode/cpp/312.cpp) | Hard |  |
+| :camel::camel::camel: | Lintcode 430. Scramble String | [cpp](../leetcode/cpp/087.cpp) | Hard |  |
+| | **匹配类动规** | [cpp](./cpp/87.cpp) |  |  |
+| :camel::camel::camel: | Lintcode 77. Longest Common Subsequence | [cpp](./cpp/077.cpp) | Medium |  |
+| :camel::camel::camel: | Lintcode 119. Edit Distance | [cpp](../leetcode/cpp/087.cpp) | Medium | leetcode |
+| :camel::camel::camel: | Lintcode 623. K Edit Distance | [cpp](./cpp/623.cpp) | Hard |  |
+| :camel::camel::camel: | Lintcode 118. Distinct Subsequences | [cpp](../leetcode/cpp/115.cpp) | Medium | leetcode |
+| :camel::camel::camel: | Linttcode 29. Interleaving String | [cpp](../leetcode/cpp/097.cpp) | Medium | leetcode |
+| | **Backpack DP** |  |  |  |
+| :camel::camel::camel: | Lintcode 92. BackPack I | [cpp](./cpp/092.cpp) | Medium |  |
+| :camel::camel::camel: | Lintcode 125. Backpack II | [cpp](./cpp/125.cpp) | Medium |  |
+| :camel::camel::camel: | Lintcode 562. Backpack IV | [cpp](./cpp/562.cpp) | Medium |  |
+| :camel::camel::camel: | Lintcode 89. k Sum | [cpp](./cpp/089.cpp) | Hard |  |
+| :camel::camel::camel: | Lintcode 91. Minimum Adjustment Cost | [cpp](./cpp/091.cpp) | Medium |  |
 
 
 ### Segment Tree (线段树) / Interval Tree (间隔树)
 
-|  Title          |  Solution       | Difficulty    | Note     | 
+|  Title          |  Solution       | Difficulty    | Note     |
 | --------------- | --------------- | ------------- | -------- |
-| Lintcode 201. Segment Tree Build | [cpp](./cpp/201.cpp) | Medium |  | 
-| Lintcode 439. Segment Tree Build II | [cpp](./cpp/439.cpp) | Medium |  | 
-| Lintcode 202. Segment Tree Query | [cpp](./cpp/202.cpp) | Medium |  | 
-| Lintcode 247. Segment Tree Query II | [cpp](./cpp/247.cpp) | Medium |  | 
+| Lintcode 201. Segment Tree Build | [cpp](./cpp/201.cpp) | Medium |  |
+| Lintcode 439. Segment Tree Build II | [cpp](./cpp/439.cpp) | Medium |  |
+| Lintcode 202. Segment Tree Query | [cpp](./cpp/202.cpp) | Medium |  |
+| Lintcode 247. Segment Tree Query II | [cpp](./cpp/247.cpp) | Medium |  |
 | **Optional** |  |  |  |
-| Lintcoe 840. Range Sum Query - Mutable | [cpp](../leetcode/307.cpp) | Medium | leetcode | 
-| Lintcoe 817. Range Sum Query 2D - Mutable | [cpp](../leetcode/308.cpp) | Medium | leetcode | 
-| Lintcode 131. The Skyline Problem | [cpp](../leetcode/218.cpp) | Super | leetcode hard | 
+| Lintcoe 840. Range Sum Query - Mutable | [cpp](../leetcode/307.cpp) | Medium | leetcode |
+| Lintcoe 817. Range Sum Query 2D - Mutable | [cpp](../leetcode/308.cpp) | Medium | leetcode |
+| Lintcode 131. The Skyline Problem | [cpp](../leetcode/218.cpp) | Super | leetcode hard |
 
 
 ### Special Topic
 
-|  Title          |  Solution       | Difficulty    | Note     | 
+|  Title          |  Solution       | Difficulty    | Note     |
 | --------------- | --------------- | ------------- | -------- |
-| * KMP |  |  | | 
+| * KMP |  |  | |
 | Lintcode 13. Implement strStr() |  | Easy | Not necessary to use KMP |
 | *  Iterator Problem |  |  |  |
 | Lintcode 22. Flatten List |  | Easy |  |
 | Lintcode 528. Flatten Nested List Iterator |  | Medium |  |
 | Lintcode 601. Flatten 2D Vector |  | Medium |  |
 | Lintcode 86. Binary Search Tree Iterator |  | Hard |  |
-
-
-
-
