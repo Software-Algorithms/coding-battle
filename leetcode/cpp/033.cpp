@@ -1,5 +1,17 @@
-/*
- * Binary Search
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    Binary Search.
+ *
+ * Complexity:
+ *    Time: O(?)
  *
  */
 class Solution {
@@ -24,13 +36,6 @@ public:
                 }
             }
         }
-        return -1;         
+        return -1;
     }
 };
-
-
-/*****
-小结（Conclusion）：
-画图，分情况讨论。
-*****/
-

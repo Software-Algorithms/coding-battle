@@ -1,14 +1,27 @@
-/*
- * Two Pointers
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    - Two Pointers.
+ *    - Avoid repeatation.
+ *
+ * Complexity:
+ *    Time: O(n)
  *
  */
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         vector<vector<int>> res;
-        
+
         sort(nums.begin(), nums.end());
-        
+
         for(int i = 0; i < nums.size(); i++) {
             if(nums[i] > 0) break;
             if(i > 0 && nums[i-1] == nums[i]) continue;
@@ -31,12 +44,7 @@ public:
                 }
             }
         }
-        
-        return res;        
+
+        return res;
     }
 };
-
-
-/*****
-Tricky的地方是解决重复的录入。
-*****/

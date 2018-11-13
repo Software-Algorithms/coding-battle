@@ -1,5 +1,17 @@
-/*
- * backtracking
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    String, Array
+ *
+ * Idea:
+ *    - Backtracking
+ *
+ * Complexity:
+ *    Time: O(?)
  *
  */
 class Solution {
@@ -10,7 +22,7 @@ public:
         backtrackingFunc(sols, sol, n, n);
         return sols;
     }
-    
+
     void backtrackingFunc(vector<string>& sols, string sol, int lefts, int rights) {
         if(lefts == 0 && rights == 0) {
             sols.push_back(sol);
@@ -24,4 +36,3 @@ public:
         }
     }
 };
-

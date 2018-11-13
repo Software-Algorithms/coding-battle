@@ -1,10 +1,17 @@
 /**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Linked List
+ *
+ * Idea:
+ *
+ * Complexity:
+ *    Time: O(k)
+ *
  */
 class Solution {
 public:
@@ -16,7 +23,7 @@ public:
             i++;
         }
         if(i < k) return head;
-        
+
         ListNode* cur = head->next;
         head->next = reverseKGroup(p, k);
         while(--i) {
@@ -25,7 +32,7 @@ public:
             head = cur;
             cur = p;
         }
-        
+
         return head;
     }
 };

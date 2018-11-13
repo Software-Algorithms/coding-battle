@@ -1,12 +1,24 @@
-/*
- * string, math
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/12/2018
+ *
+ * Data structure:
+ *    String
+ *
+ * Idea:
+ *    - Math.
+ *
+ * Complexity:
+ *    Time: O(n^2)
  *
  */
 class Solution {
 public:
     string multiply(string num1, string num2) {
         string sum(num1.size() + num2.size(), '0');
-        
+
         for (int i = num1.size() - 1; 0 <= i; --i) {
             int carry = 0;
             for (int j = num2.size() - 1; 0 <= j; --j) {
@@ -16,11 +28,10 @@ public:
             }
             sum[i] += carry;
         }
-        
+
         int i = 0;
         while(sum[i] == '0') i++;
         if(i >= sum.size()) return "0";
-        return sum.substr(i);        
+        return sum.substr(i);
     }
 };
-

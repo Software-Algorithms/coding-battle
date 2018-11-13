@@ -1,8 +1,23 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *
+ * Idea:
+ *    - Two Pointers.
+ *
+ * Complexity:
+ *    Time: O(?)
+ *
+ */
 class Solution {
 public:
     vector<vector<int>> fourSum(vector<int>& nums, int target) {
-        vector<vector<int>> res;      
-        sort(nums.begin(), nums.end());    
+        vector<vector<int>> res;
+        sort(nums.begin(), nums.end());
         int n = nums.size();
         for(int i = 0; i < n-3; i++) {
             if(i>0 && nums[i-1] == nums[i]) continue;
@@ -26,7 +41,7 @@ public:
                 }
             }
         }
-        
+
         return res;
     }
 };

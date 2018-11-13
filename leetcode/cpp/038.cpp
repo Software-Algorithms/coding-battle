@@ -1,5 +1,20 @@
-/*
- * DP
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    String, Array
+ *
+ * Idea:
+ *    - DP
+ *    - 可以用recursion，也可以直接iteration。下次实现下后者。
+ *    - 参考（Reference）:
+ *      http://bangbingsyb.blogspot.com/2014/11/leetcode-count-and-say.html
+ *
+ * Complexity:
+ *    Time: O(?)
  *
  */
 class Solution {
@@ -23,12 +38,3 @@ public:
         return res;
     }
 };
-
-/*****
-思路（Idea）:
-DP
-可以用recursion，也可以直接iteration。下次实现下后者。
-
-参考（Reference）:
-洗刷刷：http://bangbingsyb.blogspot.com/2014/11/leetcode-count-and-say.html
-*****/

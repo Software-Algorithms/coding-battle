@@ -1,9 +1,27 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    - Math.
+ *    - Overflow issue.
+ *    - Use prune to optimize.
+ *
+ * Complexity:
+ *    Time: O(lgn)
+ *
+ */
 class Solution {
 public:
     double myPow(double x, int n) {
         if(n == 0) return 1;
         if(n < 0) {
-            if(n == INT_MIN) return (1/x)*myPow(x, n+1); // -2147483648 ==> -2147483647
+            if(n == INT_MIN) return (1/x)*myPow(x, n+1); // -2147483648 -> -2147483647
             x = 1/x;
             n = -n;
         }

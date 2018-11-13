@@ -1,3 +1,19 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    String
+ *
+ * Idea:
+ *    - Two Pointers.
+ *
+ * Complexity:
+ *    Time: O(n)
+ *
+ */
 class Solution {
 public:
     int strStr(string haystack, string needle) {
@@ -11,7 +27,7 @@ public:
             j = 0;
             i++;
         }
-        
+
         return -1;
     }
 };

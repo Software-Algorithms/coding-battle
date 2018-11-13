@@ -1,5 +1,16 @@
-/*
- * Linked List
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Linked List
+ *
+ * Idea:
+ *
+ * Complexity:
+ *    Time: O(?)
  *
  */
 class Solution {
@@ -15,11 +26,11 @@ public:
         }
         return lists[0];
     }
-    
+
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
         if(!l1) return l2;
         if(!l2) return l1;
-        
+
         ListNode* dummy = new ListNode(0);
         ListNode* p = dummy;
         while(l1 && l2) {
@@ -32,21 +43,9 @@ public:
             }
             p = p->next;
         }
-        
+
         if(l1) p->next = l1;
         if(l2) p->next = l2;
         return dummy->next;
     }
 };
-
-
-
-
-/*
- * Listked List, Heap
- * recommended! 
- */
-
-
-
-

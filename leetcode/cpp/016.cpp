@@ -1,3 +1,19 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    - Two Pointers.
+ *
+ * Complexity:
+ *    Time: O(nlgn) ?
+ *
+ */
 class Solution {
 public:
     int threeSumClosest(vector<int>& nums, int target) {
@@ -19,9 +35,9 @@ public:
                 }
         		else {
                     r--;
-                }        		
+                }
         	}
         }
-        return ret;          
+        return ret;
     }
 };

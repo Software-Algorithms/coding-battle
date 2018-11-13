@@ -1,5 +1,17 @@
-/*
- * String
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/10/2018
+ *
+ * Data structure:
+ *    String
+ *
+ * Idea:
+ *    - Two Pointers.
+ *
+ * Complexity:
+ *    Time: O(n)
  *
  */
 class Solution {
@@ -22,12 +34,6 @@ public:
                 start = j;
             }
         }
-        return s.substr(start, maxlen);        
+        return s.substr(start, maxlen);
     }
 };
-
-
-/*****
-注意可以运用剪枝除去不必要运算。
-*****/
-

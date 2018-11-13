@@ -1,8 +1,23 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Hash Table
+ *
+ * Idea:
+ *
+ * Complexity:
+ *    Time: O(n)
+ *
+ */
 class Solution {
 public:
     int romanToInt(string s) {
         if (s.empty()) return 0;
-        
+
         int roman[24] = {};
         roman['I' - 'A'] = 1;
         roman['V' - 'A'] = 5;
@@ -11,18 +26,18 @@ public:
         roman['C' - 'A'] = 100;
         roman['D' - 'A'] = 500;
         roman['M' - 'A'] = 1000;
-        
+
         int sum = 0;
         int right = roman[s.front() - 'A']; // right digit compared to the current digit
         for (int i = 1; i < s.size(); ++i) {
             int curr = right;
             right = roman[s[i] - 'A'];
-            if (right > curr) 
+            if (right > curr)
                 sum -= curr;
-            else 
+            else
                 sum += curr;
         }
-        
-        return sum + right;         
+
+        return sum + right;
     }
 };

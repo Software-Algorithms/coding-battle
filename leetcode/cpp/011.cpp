@@ -1,5 +1,17 @@
-/*
- * Two Pointers
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    - Two Pointers.
+ *
+ * Complexity:
+ *    Time: O(n)
  *
  */
 class Solution {
@@ -19,8 +31,3 @@ public:
         return water;
     }
 };
-
-
-/*****
-
-*****/

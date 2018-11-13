@@ -1,3 +1,19 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/12/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    - DFS.
+ *
+ * Complexity:
+ *    Time: O(?)
+ *
+ */
 class Solution {
 public:
     vector<vector<int>> permute(vector<int>& nums) {
@@ -8,13 +24,13 @@ public:
         findPermutations(nums, used, per, allPer);
         return allPer;
     }
-    
+
     void findPermutations(vector<int> &nums, vector<bool> &used, vector<int> &per, vector<vector<int>> &allPer) {
         if(per.size() == nums.size()) {
             allPer.push_back(per);
             return;
         }
-        
+
         for(int i = 0; i < nums.size(); i++) {
             if(used[i]) continue;
             used[i] = true;
@@ -22,6 +38,6 @@ public:
             findPermutations(nums, used, per, allPer);
             used[i] = false;
             per.pop_back();
-        }        
+        }
     }
 };

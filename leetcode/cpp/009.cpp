@@ -1,3 +1,19 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/10/2018
+ *
+ * Data structure:
+ *
+ * Idea:
+ *    - Quite intuitive.
+ *    - Construct left and right, and compare.
+ *
+ * Complexity:
+ *    Time: O(n)
+ *
+ */
 class Solution {
 public:
     bool isPalindrome(int x) {
@@ -7,6 +23,6 @@ public:
             sum = sum*10 + x%10;
             x = x/10;
         }
-        return x == sum || x == sum/10;        
+        return x == sum || x == sum/10;
     }
 };

@@ -1,3 +1,19 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    - DFS.
+ *
+ * Complexity:
+ *    Time: O(?)
+ *
+ */
 class Solution {
 public:
     vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
@@ -7,7 +23,7 @@ public:
         dfs(candidates, target, 0, sol, sols);
         return sols;
     }
-    
+
     void dfs(vector<int>& candidates, int target, int start, vector<int>& sol, vector<vector<int>>& sols) {
         if(target == 0) {
             sols.push_back(sol);

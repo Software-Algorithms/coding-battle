@@ -1,3 +1,18 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    String, Array
+ *
+ * Idea:
+ *
+ * Complexity:
+ *    Time: O(?)
+ *
+ */
 class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
@@ -13,7 +28,7 @@ public:
                 }
             }
         }
- 
+
         //check each column
         for(int i = 0; i < 9; i++) {
             nums = {0,0,0,0,0,0,0,0,0,0};
@@ -25,7 +40,7 @@ public:
                 }
             }
         }
- 
+
         // check each sub-box
         for(int i = 0; i < 9; i++) {
             int irow = i/3*3;
@@ -41,6 +56,6 @@ public:
                 }
             }
         }
-        return true;        
+        return true;
     }
 };

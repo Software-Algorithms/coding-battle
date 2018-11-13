@@ -1,5 +1,21 @@
-/*
- * Solution 1:
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/10/2018
+ *
+ * Data structure:
+ *
+ * Idea:
+ *    - Subproblem: Find Kth element in an array
+ *    - 如何实现找到第K个元素？
+ *      首先我们需要让数组1的长度小于或等于数组2的长度，那么我们只需判断如果数组1的长度大于数
+ *      组2的长度的话，交换两个数组即可。然后我们要判断小的数组是否为空，为空的话，直接在另一
+ *      个数组找第K个即可。还有一种情况是当K = 1时，表示我们要找第一个元素，只要比较两个数组
+ *      的第一个元素，返回较小的那个即可。
+ *
+ * Complexity:
+ *    Time: O(?)
  *
  */
 class Solution {
@@ -12,7 +28,7 @@ public:
             return (findKth(nums1, nums2, 0, 0, n/2) + findKth(nums1, nums2, 0, 0, n/2+1)) / 2;
         }
     }
-    
+
     double findKth(vector<int>& nums1, vector<int>& nums2, int st1, int st2, int k) {
         if(nums1.size() - st1 > nums2.size() -st2) return findKth(nums2, nums1, st2, st1, k);
         if(nums1.size() == st1) return nums2[st2+k-1];
@@ -22,16 +38,21 @@ public:
         else return findKth(nums1, nums2, st1, pb, k+st2-pb);
     }
 };
-// Conclusion:
-// 如何实现找到第K个元素 - 首先我们需要让数组1的长度小于或等于数组2的长度，那么我们只需判断如果数组1的长度
-// 大于数组2的长度的话，交换两个数组即可。然后我们要判断小的数组是否为空，为空的话，直接在另一个数组找第K个
-// 即可。还有一种情况是当K = 1时，表示我们要找第一个元素，只要比较两个数组的第一个元素，返回较小的那个即可。
 
 
-
-/*
- * Solution 2:
- * Binary Search
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/10/2018
+ *
+ * Data structure:
+ *
+ * Idea:
+ *    - Binary Search: Version 1.
+ *
+ * Complexity:
+ *    Time: O(?)
  *
  */
 class Solution {
@@ -56,19 +77,38 @@ public:
     }
 };
 
-/*
- * Solution 2, version 2:
+
+/**
+ * Code description
  *
- * Binary Search
+ * Author: xpharry
+ * Date: 11/10/2018
+ *
+ * Data structure:
+ *
+ * Idea:
+ *    - Binary Search: Version 2.
+ *    - When computin partitionY, we use "(m+n+1)/2" instead of "(m+n)/2"
+ *      because we intend to make the first half bigger than the second half
+ *      when the combined length is odd.
+ *
+ * Complexity:
+ *    Time: O(?)
+ *
+ * Reference:
+ *    - https://youtu.be/LPFhl65R7ww
+ *    - https://github.com/mission-peace/interview/blob/master/src/com/interview/binarysearch/MedianOfTwoSortedArrayOfDifferentLength.java
+ *
  */
 class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
-        //if input1 length is greater than switch them so that input1 is smaller than input2.
+        // if input1 length is greater than switch them so that input1 is
+        // smaller than input2.
         if (nums1.size() > nums2.size()) {
             return findMedianSortedArrays(nums2, nums1);
         }
-        
+
         int m = nums1.size();
         int n = nums2.size();
 
@@ -78,8 +118,10 @@ public:
             int partitionX = (low + high)/2;
             int partitionY = (m + n + 1)/2 - partitionX;
 
-            //if partitionX is 0 it means nothing is there on left side. Use -INF for maxLeftX
-            //if partitionX is length of input then there is nothing on right side. Use +INF for minRightX
+            // if partitionX is 0 it means nothing is there on left side.
+            // Use -INF for maxLeftX
+            // if partitionX is length of input then there is nothing on right
+            // side. Use +INF for minRightX
             int maxLeftX = (partitionX == 0) ? INT_MIN : nums1[partitionX - 1];
             int minRightX = (partitionX == m) ? INT_MAX : nums1[partitionX];
 
@@ -87,9 +129,10 @@ public:
             int minRightY = (partitionY == n) ? INT_MAX : nums2[partitionY];
 
             if (maxLeftX <= minRightY && maxLeftY <= minRightX) {
-                //We have partitioned array at correct place
-                // Now get max of left elements and min of right elements to get the median in case of even length combined array size
-                // or get max of left for odd length combined array size.
+                // We have partitioned array at correct place
+                // Now get max of left elements and min of right elements to get
+                // the median in case of even length combined array size get max
+                // of left for odd length combined array size.
                 if ((m + n) % 2 == 0) {
                     return ((double)max(maxLeftX, maxLeftY) + min(minRightX, minRightY))/2;
                 } else {
@@ -100,12 +143,6 @@ public:
             } else { //we are too far on left side for partitionX. Go on right side.
                 low = partitionX + 1;
             }
-        }        
+        }
     }
 };
-// Reference:
-// https://youtu.be/LPFhl65R7ww
-// https://github.com/mission-peace/interview/blob/master/src/com/interview/binarysearch/MedianOfTwoSortedArrayOfDifferentLength.java
-// Conclusion:
-// When computin partitionY, we use "(m+n+1)/2" instead of "(m+n)/2" because we intend to make the first half
-// bigger than the second half when the combined length is odd.

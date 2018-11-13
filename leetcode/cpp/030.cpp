@@ -1,3 +1,18 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    String, Array
+ *
+ * Idea:
+ *
+ * Complexity:
+ *    Time: O(?)
+ *
+ */
 class Solution {
 public:
     vector<int> findSubstring(string s, vector<string>& words) {
@@ -15,11 +30,11 @@ public:
                     seen[word]++;
                     if (seen[word] > counts[word])
                         break;
-                } 
+                }
                 else break;
             }
             if (j == num) indexes.push_back(i);
         }
-        return indexes;        
+        return indexes;
     }
 };

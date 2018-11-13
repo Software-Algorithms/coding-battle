@@ -1,9 +1,19 @@
-/*
- * Linked List, Math
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/10/2018
+ *
+ * Data structure:
+ *    Linked List
+ *
+ * Idea:
+ *    - Very intuitive.
+ *
+ * Complexity:
+ *    Time: O(n)
  *
  */
-
-// version 1:
 class Solution {
 public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
@@ -24,11 +34,27 @@ public:
             sum = sum/10;
         }
         if(sum == 1) p->next = new ListNode(1);
-        return head->next;  
+        return head->next;
     }
 };
 
-// version 2:
+
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/10/2018
+ *
+ * Data structure:
+ *    Linked List
+ *
+ * Idea:
+ *    - Same idea.
+ *
+ * Complexity:
+ *    Time: O(n)
+ *
+ */
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
@@ -47,4 +73,3 @@ public:
         return prehead->next;
     }
 };
-

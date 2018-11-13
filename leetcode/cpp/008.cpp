@@ -1,3 +1,23 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/10/2018
+ *
+ * Data structure:
+ *    String
+ *
+ * Idea:
+ *    - Math.
+ *    - Deal with prefix spaces;
+ *    - Reserve the sign;
+ *    - Convert each digit;
+ *    - Check the overflow problem.
+ *
+ * Complexity:
+ *    Time: O(n)
+ *
+ */
 class Solution {
 public:
     int myAtoi(string str) {
@@ -17,6 +37,6 @@ public:
             res = res*10 + (str[i] - '0');
             i++;
         }
-        return res*sign;        
+        return res*sign;
     }
 };

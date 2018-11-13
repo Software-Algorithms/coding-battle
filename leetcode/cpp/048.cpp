@@ -1,3 +1,19 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    - 2D Array / Matrix.
+ *
+ * Complexity:
+ *    Time: O(n^2)
+ *
+ */
 class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
@@ -17,6 +33,6 @@ public:
                 matrix[i][j] = matrix[j][i];
                 matrix[j][i] = temp;
             }
-        }         
+        }
     }
 };

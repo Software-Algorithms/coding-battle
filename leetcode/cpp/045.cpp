@@ -1,3 +1,20 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/12/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    - DP.
+ *    - Jump Game I & II.
+ *
+ * Complexity:
+ *    Time: O(n)
+ *
+ */
 class Solution {
 public:
     int jump(vector<int>& nums) {

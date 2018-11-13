@@ -1,5 +1,16 @@
-/*
- * Linked List
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Linked List
+ *
+ * Idea:
+ *
+ * Complexity:
+ *    Time: O(n)
  *
  */
 class Solution {
@@ -22,4 +33,3 @@ public:
         return dummy->next;
     }
 };
-

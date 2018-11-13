@@ -1,10 +1,17 @@
 /**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Linked List
+ *
+ * Idea:
+ *
+ * Complexity:
+ *    Time: O(?)
+ *
  */
 class Solution {
 public:
@@ -20,6 +27,6 @@ public:
             pre = head;
             head = pre->next;
         }
-        return dummy->next;        
+        return dummy->next;
     }
 };

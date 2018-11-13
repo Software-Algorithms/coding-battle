@@ -1,9 +1,20 @@
-/*
- * Two Pointers
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/10/2018
+ *
+ * Data structure:
+ *    Two Pointers
+ *
+ * Idea:
+ *    - Sliding window: Version 1.
+ *    - Template coding.
+ *
+ * Complexity:
+ *    Time: O(n)
  *
  */
-
-// version 1:
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
@@ -24,15 +35,32 @@ public:
     }
 };
 
-// version 2:
+
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/10/2018
+ *
+ * Data structure:
+ *    Two Pointers
+ *
+ * Idea:
+ *    - Sliding window: Version 2.
+ *    - Template coding.
+ *
+ * Complexity:
+ *    Time: O(n)
+ *
+ */
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
         int max_len = 0;
         int i = 0, j = 0;
-        
+
         unordered_map<char, int> m;
-        
+
         while(i <= j && j < s.size()) {
             if(!m.count(s[j])) {
                 m[s[j++]] = 1;
@@ -41,13 +69,7 @@ public:
             }
             max_len = max(max_len, j-i);
         }
-        
+
         return max_len;
     }
 };
-
-// Conclusion:
-//
-
-
-

@@ -1,57 +1,63 @@
 ## Full List of Algorithm Problems
 
+- Proficiency
+  - :star:: Can solve with hints.
+  - :star::star:: Can solve intuitively.
+  - :star::star::star:: Can solve and explain to others.
+  - :camel:: Cannot fully understand even with hints.
+
 |  #  | Title | Solution | Difficulty | Note | Proficiency |
 |-----|------ | -------- | ---------- | ---- | ------------|
-|  1  | Two Sum | [cpp](./cpp/001-TwoSum.cpp) | Easy |  |  |
-|  2  | Add Two Numbers | [cpp](./cpp/002-AddTwoNumbers.cpp) | Medium |  |  |
-|  3  | Longest Substring Without Repeating Characters | [cpp](./cpp/003-LongestSubstringWithoutRepeatingCharacters.cpp) | Medium |  |  |
-|  4  | Median of Two Sorted Arrays | [cpp](./cpp/004-MedianOfTwoSortedArrays.cpp) | Hard |  |  |
-|  5  | Longest Palindromic Substring | [cpp](./cpp/005-LongestPalindromicSubstring.cpp) |  Medium |  |  |
-|  6  | ZigZag Conversion | [cpp](./cpp/006-ZigZagConversion.cpp) |  Medium |  |  |
-|  7  | Reverse Integer | [cpp](./cpp/007-ReverseInteger.cpp) |  Easy |  |  |
-|  8  | String to Integer (atoi) | [cpp](./cpp/008-StringToInteger.cpp) |  Medium |  |  |
-|  9  | Palindrome Number | [cpp](./cpp/009-PalindromeNumber.cpp) |  Easy |  |  |
-|  10  | Regular Expression Matching | [cpp](./cpp/010-RegularExpressionMatching.cpp) |  Hard |  |  |
-|  11  | Container With Most Water | [cpp](./cpp/011-ContainerWithMostWater.cpp) |  Medium |  |  |
-|  12  | Integer to Roman | [cpp](./cpp/012-IntegerToRoman.cpp) |  Medium |  |  |
-|  13  | Roman to Integer | [cpp](./cpp/013-RomanToInteger.cpp) |  Easy |  |  |
-|  14  | Longest Common Prefix | [cpp](./cpp/014-LongestCommonPrefix.cpp) |  Easy |  |  |
-|  15  | 3Sum | [cpp](./cpp/015-3Sum.cpp) |  Medium |  |  |
-|  16  | 3Sum Closest | [cpp](./cpp/016-3SumClosest.cpp) |  Medium |  |  |
-|  17  | Letter Combinations of a Phone Number | [cpp](./cpp/017-LetterCombinationsOfAPhoneNumber.cpp) |  Medium |  |  |
-|  18  | 4Sum | [cpp](./cpp/018-4Sum.cpp) |  Medium |  |  |
-|  19  | Remove Nth Node From End of List | [cpp](./cpp/019-RemoveNthNodeFromEndOfList.cpp) |  Medium |  |  |
-|  20  | Valid Parentheses | [cpp](./cpp/020-ValidParentheses.cpp) |  Easy |  |  |
-|  21  | Merge Two Sorted Lists | [cpp](./cpp/021-MergeTwoSortedLists.cpp) |  Easy |  |  |
-|  22  | Generate Parentheses | [cpp](./cpp/022-GenerateParentheses.cpp) |  Medium |  |  |
-|  23  | Merge k Sorted Lists | [cpp](./cpp/023-MergeKSortedLists.cpp) |  Hard |  |  |
-|  24  | Swap Nodes in Pairs | [cpp](./cpp/024-SwapNodesInPairs.cpp) |  Medium |  |  |
-|  25  | Reverse Nodes in k-Group | [cpp](./cpp/025-ReverseNodesInKGroups.cpp) |  Hard |  |  |
-|  26  | Remove Duplicates from Sorted Array | [cpp](./cpp/026-RemoveDuplicatesFromSortedArray.cpp) |  Easy |  |  |
-|  27  | Remove Element | [cpp](./cpp/027-RemoveElement.cpp) |  Easy |  |  |
-|  28  | Implement strStr() | [cpp](./cpp/028-ImplementstrStr.cpp) |  Easy |  |  |
-|  29  | Divide Two Integers | [cpp](./cpp/029-DivideTwoIntegers.cpp) |  Medium |  |  |
-|  30  | Substring with Concatenation of All Words | [cpp](./cpp/030-SubstringWithConcatenationofAllWords.cpp) |  Hard |  |  |
-|  31  | Next Permutation | [cpp](./cpp/031-NextPermutation.cpp) |  Medium |  |  |
-|  32  | Longest Valid Parentheses | [cpp](./cpp/032-LongestValidParentheses.cpp) |  Hard |  |  |
-|  33  | Search in Rotated Sorted Array | [cpp](./cpp/033-SearchInRoatedSortedArray.cpp) |  Medium |  |  |
-|  34  | Search for a Range | [cpp](./cpp/034-SearchForARange.cpp) |  Medium |  |  |
-|  35  | Search Insert Position | [cpp](./cpp/035-SearchInsertPosition.cpp) |  Easy |  |  |
-|  36  | Valid Sudoku | [cpp](./cpp/036-ValidSudoku.cpp) |  Medium |  |  |
-|  37  | Sudoku Solver | [cpp](./cpp/037-SudokuSolver.cpp) |  Hard |  |  |
-|  38  | Count and Say | [cpp](./cpp/038-CountAndSay.cpp) |  Easy |  |  |
-|  39  | Combination Sum | [cpp](./cpp/039-CombinationSum.cpp) |  Medium |  |  |
-|  40  | Combination Sum II | [cpp](./cpp/040-CombinationSumII.cpp) |  Medium |  |  |
-|  41  | First Missing Positive | [cpp](./cpp/041-FirstMissingPositive.cpp) |  Hard |  |  |
-|  42  | Trapping Rain Water | [cpp](./cpp/042-TrappingRainWater.cpp) |  Hard |  |  |
-|  43  | Multiply Strings | [cpp](./cpp/043-MultiplyStrings.cpp) |  Medium |  |  |
-|  44  | Wildcard Matching | [cpp](./cpp/044-WildcardMatching.cpp) |  Hard |  |  |
-|  45  | Jump Game II | [cpp](./cpp/045-JumpGameII.cpp) |  Hard |  |  |
-|  46  | Permutations | [cpp](./cpp/046-Permutations.cpp) |  Medium |  |  |
-|  47  | Permutations II | [cpp](./cpp/047-PermutationsII.cpp) |  Medium |  |  |
-|  48  | Rotate Image | [cpp](./cpp/048-RotateImage.cpp) |  Medium |  |  |
-|  49  | Group Anagrams | [cpp](./cpp/049-GroupAnagrams.cpp) |  Medium |  |  |
-|  50  | Pow(x, n) | [cpp](./cpp/050-Pow.cpp) |  Medium |  |  |
+|  1  | Two Sum | [cpp](./cpp/001.cpp) | Easy | :heart: | :star::star::star: |
+|  2  | Add Two Numbers | [cpp](./cpp/002.cpp) | Medium |  | :star::star::star: |
+|  3  | Longest Substring Without Repeating Characters | [cpp](./cpp/003.cpp) | Medium | :heart: | :star::star: |
+|  4  | Median of Two Sorted Arrays | [cpp](./cpp/004.cpp) | Hard | :pensive: | :star: |
+|  5  | Longest Palindromic Substring | [cpp](./cpp/005.cpp) |  Medium |  | :star::star: |
+|  6  | ZigZag Conversion | [cpp](./cpp/006.cpp) |  Medium |  | :star::star::star: |
+|  7  | Reverse Integer | [cpp](./cpp/007.cpp) |  Easy |  | :star::star::star: |
+|  8  | String to Integer (atoi) | [cpp](./cpp/008.cpp) |  Medium |  | :star::star::star: |
+|  9  | Palindrome Number | [cpp](./cpp/009.cpp) |  Easy | :-1: | :star::star::star: |
+|  10  | Regular Expression Matching | [cpp](./cpp/010.cpp) |  Hard | :pensive: | :star: |
+|  11  | Container With Most Water | [cpp](./cpp/011.cpp) |  Medium | :heart: | :star::star::star: |
+|  12  | Integer to Roman | [cpp](./cpp/012.cpp) |  Medium | :-1: | :star: |
+|  13  | Roman to Integer | [cpp](./cpp/013.cpp) |  Easy | :-1: | :star: |
+|  14  | Longest Common Prefix | [cpp](./cpp/014.cpp) |  Easy |  | :star::star::star: |
+|  15  | 3Sum | [cpp](./cpp/015.cpp) |  Medium |  | :star::star::star: |
+|  16  | 3Sum Closest | [cpp](./cpp/016.cpp) |  Medium |  | :star::star::star: |
+|  17  | Letter Combinations of a Phone Number | [cpp](./cpp/017.cpp) |  Medium | :heart: | :star: |
+|  18  | 4Sum | [cpp](./cpp/018.cpp) |  Medium |  | :star::star::star: |
+|  19  | Remove Nth Node From End of List | [cpp](./cpp/019.cpp) |  Medium |  | :star::star::star: |
+|  20  | Valid Parentheses | [cpp](./cpp/020.cpp) |  Easy | :heart: | :star: |
+|  21  | Merge Two Sorted Lists | [cpp](./cpp/021.cpp) |  Easy |  | :star::star::star: |
+|  22  | Generate Parentheses | [cpp](./cpp/022.cpp) |  Medium | :heart: | :star: |
+|  23  | Merge k Sorted Lists | [cpp](./cpp/023.cpp) |  Hard |  | :star::star::star: |
+|  24  | Swap Nodes in Pairs | [cpp](./cpp/024.cpp) |  Medium |  | :star::star::star: |
+|  25  | Reverse Nodes in k-Group | [cpp](./cpp/025.cpp) |  Hard |  | :star::star: |
+|  26  | Remove Duplicates from Sorted Array | [cpp](./cpp/026.cpp) |  Easy |  | :star::star: |
+|  27  | Remove Element | [cpp](./cpp/027.cpp) |  Easy |  | :star::star: |
+|  28  | Implement strStr() | [cpp](./cpp/028.cpp) |  Easy |  | :star: |
+|  29  | Divide Two Integers | [cpp](./cpp/029.cpp) |  Medium | :pensive: | :star: |
+|  30  | Substring with Concatenation of All Words | [cpp](./cpp/030.cpp) |  Hard | :pensive: | :camel: |
+|  31  | Next Permutation | [cpp](./cpp/031.cpp) |  Medium | :-1: | :camel: |
+|  32  | Longest Valid Parentheses | [cpp](./cpp/032.cpp) |  Hard |  | :camel: |
+|  33  | Search in Rotated Sorted Array | [cpp](./cpp/033.cpp) |  Medium | :heart: | :star: |
+|  34  | Search for a Range | [cpp](./cpp/034.cpp) |  Medium |  | :star: |
+|  35  | Search Insert Position | [cpp](./cpp/035.cpp) |  Easy |  | :star::star::star: |
+|  36  | Valid Sudoku | [cpp](./cpp/036.cpp) |  Medium | :-1: | :star: |
+|  37  | Sudoku Solver | [cpp](./cpp/037.cpp) |  Hard | :-1: | :star: |
+|  38  | Count and Say | [cpp](./cpp/038.cpp) |  Easy | :heart: | :star: |
+|  39  | Combination Sum | [cpp](./cpp/039.cpp) |  Medium | :heart: | :star::star: |
+|  40  | Combination Sum II | [cpp](./cpp/040.cpp) |  Medium | :heart: | :star::star: |
+|  41  | First Missing Positive | [cpp](./cpp/041.cpp) |  Hard | :heart: | :star::star: |
+|  42  | Trapping Rain Water | [cpp](./cpp/042.cpp) |  Hard | :heart: | :star: |
+|  43  | Multiply Strings | [cpp](./cpp/043.cpp) |  Medium |  | :star: |
+|  44  | Wildcard Matching | [cpp](./cpp/044.cpp) |  Hard | :heart: | :star: |
+|  45  | Jump Game II | [cpp](./cpp/045.cpp) |  Hard |  | :star: |
+|  46  | Permutations | [cpp](./cpp/046.cpp) |  Medium |  | :star: |
+|  47  | Permutations II | [cpp](./cpp/047.cpp) |  Medium |  | :star: |
+|  48  | Rotate Image | [cpp](./cpp/048.cpp) |  Medium | :-1: | :star: |
+|  49  | Group Anagrams | [cpp](./cpp/049.cpp) |  Medium | :heart: | :star: |
+|  50  | Pow(x, n) | [cpp](./cpp/050.cpp) |  Medium |  | :star: |
 |  51  | N-Queens | [cpp](./cpp/051-NQueens.cpp) |  Hard |  |  |
 |  52  | N-Queens II | [cpp](./cpp/052-NQueensII.cpp) |  Hard |  |  |
 |  53  | Maximum Subarray | [cpp](./cpp/053-MaximumSubarray.cpp) |  Easy |  |  |

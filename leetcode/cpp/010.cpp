@@ -1,11 +1,26 @@
 /**
- * DP
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    String
+ *
+ * Idea:
+ *    - Devide and conquer.
+ *    - Recursion.
+ *    - 不用递归的话，还可以用DP的方法。参考 cnblogs.com/grandyang。
+ *
+ * Complexity:
+ *    Time: O(n)
+ *
  */
 class Solution {
 public:
     bool isMatch(string s, string p) {
         if(p == "") return s == "";
-        
+
         // cases are between p[1] is '*' or not
         if(p[1] != '*') { // string beyond index still can be visited legally, no worry
             if(s[0] == p[0] || (s[0] != '\0' && p[0] == '.')) {

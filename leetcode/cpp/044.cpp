@@ -1,5 +1,18 @@
 /**
- * DP
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/12/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    - DP.
+ *
+ * Complexity:
+ *    Time: O(?)
+ *
  */
 class Solution {
 public:
@@ -25,7 +38,22 @@ public:
 
 
 /**
- * ?
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/12/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    - Two Pointers.
+ *      - 'star' for the last position of '*' in 'p';
+ *      - 'match' for the position to compare.
+ *
+ * Complexity:
+ *    Time: O(n)
+ *
  */
 class Solution {
 public:
@@ -56,13 +84,13 @@ public:
                 j = star + 1;
                 continue;
             }
-            
+
             return false;
         }
-        
+
         //check for remaining characters in pattern
         while(p[j] == '*') j++;
-        
+
         return j >= n2;
     }
 };
