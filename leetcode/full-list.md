@@ -58,56 +58,56 @@
 |  48  | Rotate Image | [cpp](./cpp/048.cpp) |  Medium | :-1: | :star: |
 |  49  | Group Anagrams | [cpp](./cpp/049.cpp) |  Medium | :heart: | :star: |
 |  50  | Pow(x, n) | [cpp](./cpp/050.cpp) |  Medium |  | :star: |
-|  51  | N-Queens | [cpp](./cpp/051-NQueens.cpp) |  Hard |  |  |
-|  52  | N-Queens II | [cpp](./cpp/052-NQueensII.cpp) |  Hard |  |  |
-|  53  | Maximum Subarray | [cpp](./cpp/053-MaximumSubarray.cpp) |  Easy |  |  |
-|  54  | Spiral Matrix | [cpp](./cpp/054-SpiralMatrix.cpp) |  Medium |  |  |
-|  55  | Jump Game | [cpp](./cpp/055-JumpGame.cpp) |  Medium |  |  |
-|  56  | Merge Intervals | [cpp](./cpp/056-MergeIntervals.cpp) |  Medium |  |  |
-|  57  | Insert Interval | [cpp](./cpp/057-InsertInterval.cpp) |  Hard |  |  |
-|  58  | Length of Last Word | [cpp](./cpp/058-LengthOfLastWord.cpp) |  Easy |  |  |
-|  59  | Spiral Matrix II | [cpp](./cpp/059-SpiralMatrixII.cpp) |  Medium |  |  |
-|  60  | Permutation Sequence | [cpp](./cpp/060-PermutationSequence.cpp) |  Medium |  |  |
-|  61  | Rotate List | [cpp](./cpp/061-RotateList.cpp) |  Medium |  |  |
-|  62  | Unique Paths | [cpp](./cpp/062-UniquePaths.cpp) |  Medium |  |  |
-|  63  | Unique Paths II | [cpp](./cpp/063-UniquePathsII.cpp) |  Medium |  |  |
-|  64  | Minimum Path Sum | [cpp](./cpp/064-MinimumPathSum.cpp) |  Medium |  |  |
-|  65  | Valid Number | [cpp](./cpp/065-ValidNumber.cpp) |  Hard |  |  |
-|  66  | Plus One | [cpp](./cpp/066-PlusOne.cpp) |  Easy |  |  |
-|  67  | Add Binary | [cpp](./cpp/067-AddBinary.cpp) |  Easy |  |  |
-|  68  | Text Justification | [cpp](./cpp/068-TextJustification.cpp) |  Hard |  |  |
-|  69  | Sqrt(x) | [cpp](./cpp/069-Sqrt.cpp) |  Easy |  |  |
-|  70  | Climbing Stairs | [cpp](./cpp/070-ClimbingStairs.cpp) |  Easy |  |  |
-|  71  | Simplify Path | [cpp](./cpp/071-SimplifyPath.cpp) |  Medium |  |  |
-|  72  | Edit Distance | [cpp](./cpp/072-EditDistance.cpp) |  Hard |  |  |
-|  73  | Set Matrix Zeroes | [cpp](./cpp/073-SetMatrixZeros.cpp) |  Medium |  |  |
-|  74  | Search a 2D Matrix | [cpp](./cpp/074-Searcha2DMatrix.cpp) |  Medium |  |  |
-|  75  | Sort Colors | [cpp](./cpp/075-SortColors.cpp) |  Medium |  |  |
-|  76  | Minimum Window Substring | [cpp](./cpp/076-MinimumWindowSubstring.cpp) |  Hard |  |  |
-|  77  | Combinations | [cpp](./cpp/077-Combinations.cpp) |  Medium |  |  |
-|  78  | Subsets | [cpp](./cpp/078-Subsets.cpp) |  Medium |  |  |
-|  79  | Word Search | [cpp](./cpp/079-WordSearch.cpp) |  Medium |  |  |
-|  80  | Remove Duplicates from Sorted Array II | [cpp](./cpp/080-RemoveDuplicatesFromSortedArrayII.cpp) |  Medium |  |  |
-|  81  | Search in Rotated Sorted Array II | [cpp](./cpp/081-SearchInRotatedSortedArrayII.cpp) |  Medium |  |  |
-|  82  | Remove Duplicates from Sorted List II | [cpp](./cpp/082-RemoveDuplicatesFromSortedListII.cpp) |  Medium |  |  |
-|  83  | Remove Duplicates from Sorted List | [cpp](./cpp/083-RemoveDuplicatesFromSortedList.cpp) |  Easy |  |  |
-|  84  | Largest Rectangle in Histogram | [cpp](./cpp/084-LargestRectangleInHistogram.cpp) |  Hard |  |  |
-|  85  | Maximal Rectangle | [cpp](./cpp/085-MaximalRectangle.cpp) |  Hard |  |  |
-|  86  | Partition List | [cpp](./cpp/086-PartitionList.cpp) |  Medium |  |  |
-|  87  | Scramble String | [cpp](./cpp/087-ScrambleString.cpp) |  Hard |  |  |
-|  88  | Merge Sorted Array | [cpp](./cpp/088-MergeSortedArray.cpp) |  Easy |  |  |
-|  89  | Gray Code | [cpp](./cpp/089-GrayCode.cpp) |  Medium |  |  |
-|  90  | Subsets II | [cpp](./cpp/090-SubsetsII.cpp) |  Medium |  |  |
-|  91  | Decode Ways | [cpp](./cpp/091-DecodeWays.cpp) |  Medium |  |  |
-|  92  | Reverse Linked List II | [cpp](./cpp/092-ReverseLinkedListII.cpp) |  Medium |  |  |
-|  93  | Restore IP Addresses | [cpp](./cpp/093-RestoreIPAddresses.cpp) |  Medium |  |  |
-|  94  | Binary Tree Inorder Traversal | [cpp](./cpp/094-BinaryTreeInorderTravesal.cpp) |  Medium |  |  |
-|  95  | Unique Binary Search Trees II | [cpp](./cpp/095-UniqueBInarySearchTreesII.cpp) |  Medium |  |  |
-|  96  | Unique Binary Search Trees | [cpp](./cpp/096-UniqueBinarySearchTrees.cpp) |  Medium |  |  |
-|  97  | Interleaving String | [cpp](./cpp/097-INterleavingString.cpp) |  Hard |  |  |
-|  98  | Validate Binary Search Tree | [cpp](./cpp/098-ValidateBinarySearchTree.cpp) |  Medium |  |  |
-|  99  | Recover Binary Search Tree | [cpp](./cpp/099-RecoverBinarySearchTree.cpp) |  Hard |  |  |
-|  100  | Same Tree | [cpp](./cpp/100-SameTree.cpp) |  Easy |  |  |
+|  51  | N-Queens | [cpp](./cpp/051.cpp) |  Hard |  |  |
+|  52  | N-Queens II | [cpp](./cpp/052.cpp) |  Hard |  |  |
+|  53  | Maximum Subarray | [cpp](./cpp/053.cpp) |  Easy |  |  |
+|  54  | Spiral Matrix | [cpp](./cpp/054.cpp) |  Medium |  |  |
+|  55  | Jump Game | [cpp](./cpp/055.cpp) |  Medium |  |  |
+|  56  | Merge Intervals | [cpp](./cpp/056.cpp) |  Medium |  |  |
+|  57  | Insert Interval | [cpp](./cpp/057.cpp) |  Hard |  |  |
+|  58  | Length of Last Word | [cpp](./cpp/058.cpp) |  Easy |  |  |
+|  59  | Spiral Matrix II | [cpp](./cpp/059.cpp) |  Medium |  |  |
+|  60  | Permutation Sequence | [cpp](./cpp/060.cpp) |  Medium |  |  |
+|  61  | Rotate List | [cpp](./cpp/061.cpp) |  Medium |  |  |
+|  62  | Unique Paths | [cpp](./cpp/062.cpp) |  Medium |  |  |
+|  63  | Unique Paths II | [cpp](./cpp/063.cpp) |  Medium |  |  |
+|  64  | Minimum Path Sum | [cpp](./cpp/064.cpp) |  Medium |  |  |
+|  65  | Valid Number | [cpp](./cpp/065.cpp) |  Hard |  |  |
+|  66  | Plus One | [cpp](./cpp/066.cpp) |  Easy |  |  |
+|  67  | Add Binary | [cpp](./cpp/067.cpp) |  Easy |  |  |
+|  68  | Text Justification | [cpp](./cpp/068.cpp) |  Hard |  |  |
+|  69  | Sqrt(x) | [cpp](./cpp/069.cpp) |  Easy |  |  |
+|  70  | Climbing Stairs | [cpp](./cpp/070.cpp) |  Easy |  |  |
+|  71  | Simplify Path | [cpp](./cpp/071.cpp) |  Medium |  |  |
+|  72  | Edit Distance | [cpp](./cpp/072.cpp) |  Hard |  |  |
+|  73  | Set Matrix Zeroes | [cpp](./cpp/073.cpp) |  Medium |  |  |
+|  74  | Search a 2D Matrix | [cpp](./cpp/074.cpp) |  Medium |  |  |
+|  75  | Sort Colors | [cpp](./cpp/075.cpp) |  Medium |  |  |
+|  76  | Minimum Window Substring | [cpp](./cpp/076.cpp) |  Hard |  |  |
+|  77  | Combinations | [cpp](./cpp/077.cpp) |  Medium |  |  |
+|  78  | Subsets | [cpp](./cpp/078.cpp) |  Medium |  |  |
+|  79  | Word Search | [cpp](./cpp/079.cpp) |  Medium |  |  |
+|  80  | Remove Duplicates from Sorted Array II | [cpp](./cpp/080.cpp) |  Medium |  |  |
+|  81  | Search in Rotated Sorted Array II | [cpp](./cpp/081.cpp) |  Medium |  |  |
+|  82  | Remove Duplicates from Sorted List II | [cpp](./cpp/082.cpp) |  Medium |  |  |
+|  83  | Remove Duplicates from Sorted List | [cpp](./cpp/083.cpp) |  Easy |  |  |
+|  84  | Largest Rectangle in Histogram | [cpp](./cpp/084.cpp) |  Hard |  |  |
+|  85  | Maximal Rectangle | [cpp](./cpp/085.cpp) |  Hard |  |  |
+|  86  | Partition List | [cpp](./cpp/086.cpp) |  Medium |  |  |
+|  87  | Scramble String | [cpp](./cpp/087.cpp) |  Hard |  |  |
+|  88  | Merge Sorted Array | [cpp](./cpp/088.cpp) |  Easy |  |  |
+|  89  | Gray Code | [cpp](./cpp/089.cpp) |  Medium |  |  |
+|  90  | Subsets II | [cpp](./cpp/090.cpp) |  Medium |  |  |
+|  91  | Decode Ways | [cpp](./cpp/091.cpp) |  Medium |  |  |
+|  92  | Reverse Linked List II | [cpp](./cpp/092.cpp) |  Medium |  |  |
+|  93  | Restore IP Addresses | [cpp](./cpp/093.cpp) |  Medium |  |  |
+|  94  | Binary Tree Inorder Traversal | [cpp](./cpp/094.cpp) |  Medium |  |  |
+|  95  | Unique Binary Search Trees II | [cpp](./cpp/095.cpp) |  Medium |  |  |
+|  96  | Unique Binary Search Trees | [cpp](./cpp/096.cpp) |  Medium |  |  |
+|  97  | Interleaving String | [cpp](./cpp/097.cpp) |  Hard |  |  |
+|  98  | Validate Binary Search Tree | [cpp](./cpp/098.cpp) |  Medium |  |  |
+|  99  | Recover Binary Search Tree | [cpp](./cpp/099.cpp) |  Hard |  |  |
+|  100  | Same Tree | [cpp](./cpp/100.cpp) |  Easy |  |  |
 |  101  | Symmetric Tree | [cpp](./cpp/101-SymmetricTree.cpp) |  Easy |  |  |
 |  102  | Binary Tree Level Order Traversal | [cpp](./cpp/102-BinaryTreeLevelOrderTraversal.cpp) |  Medium |  |  |
 |  103  | Binary Tree Zigzag Level Order Traversal | [cpp](./cpp/103-BinaryTreeZigzagLevelOrderTraversal.cpp) |  Medium |  |  |
