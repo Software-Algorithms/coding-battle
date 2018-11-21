@@ -3,8 +3,6 @@
 ## Algorithms
 
 * [Bit Manipulation](#bit-manipulation)
-* [Array](#array)
-* [String](#string)
 * [Linked List](linked-list)
 * [Stack](#stack)
 * [Queue](#queue)
@@ -48,118 +46,6 @@
 |  | 318. Maximum Product of Word Lengths | [cpp](./cpp/318.cpp) | Medium |  |
 |  | 338. Counting Bits | [cpp](./cpp/338.cpp) | Medium |  |
 |  | 389. Find the Difference | [cpp](./cpp/389.cpp) | Easy |  |
-
-### Array
-:watch:: Pass the challenge with the time limit.
-    - Easy: 10 min
-    - Medium : 20 min
-    - Hard: 30 min
-
-| Title | Solution | Difficulty | Note | Proficiency |
-| ----- | -------- | ---------- | ---- | ----------- |
-| :star::star: | 1. Two Sum | [cpp](./cpp/001.cpp) | Easy |  |
-| :camel: | 4. Median of Two Sorted Arrays | [cpp](./cpp/004.cpp) | Hard |  |
-| :camel: | 11. Container With Most Water | [cpp](./cpp/011.cpp) | Medium |  |
-| :star: | 15. 3Sum | [cpp](./cpp/015.cpp) | Medium |  |
-|  16  | 3Sum Closest | [cpp](./cpp/016-3SumClosest.cpp) | Medium |  |
-|  18  | 4Sum | [cpp](./cpp/018-4Sum.cpp) | Medium |  |
-|  26  | Remove Duplicates from Sorted Array | [cpp](./cpp/026-RemoveDuplicatesFromSortedArray.cpp) | Easy |  |
-|  27  | Remove Element | [cpp](./cpp/027-RemoveElement.cpp) | Easy |  |
-| :camel: | 31. Next Permutation | [cpp](./cpp/031.cpp) | Medium |  |
-| :star: | 33. Search in Rotated Sorted Array | [cpp](./cpp/033.cpp) | Medium |  |
-|  34  | Search for a Range | [cpp](./cpp/034-SearchForARange.cpp) | Medium |  |
-|  35  | Search Insert Position | [cpp](./cpp/035-SearchInsertPosition.cpp) | Easy |  |
-| :star::star: | 39. Combination Sum | [cpp](./cpp/039.cpp) | Medium | backtracking模板题 |
-|  40  | Combination Sum II | [cpp](./cpp/040-CombinationSumII.cpp) | Medium |  |
-| :star::star: | 41. First Missing Positive | [cpp](./cpp/041.cpp) | Hard |  |
-|  42  | Trapping Rain Water | [cpp](./cpp/042-TrappingRainWater.cpp) | Hard |  |
-|  45  | Jump Game II | [cpp](./cpp/045-JumpGameII.cpp) | Hard |  |
-|  48  | Rotate Image | [cpp](./cpp/048-RotateImage.cpp) | Medium |  |
-| :star: | 53. Maximum Subarray | [cpp](./cpp/053.cpp) | Easy | Kadane's Algorithm |
-| :star: | 54. Spiral Matrix | [cpp](./cpp/054.cpp) | Medium |  |
-| :star: | 55. Jump Game | [cpp](./cpp/055.cpp) | Medium |  |
-| :star: | 56. Merge Intervals | [cpp](./cpp/056.cpp) | Medium |  |
-|  57  | Insert Interval | [cpp](./cpp/057-InsertInterval.cpp) | Hard |  |
-|  59  | Spiral Matrix II | [cpp](./cpp/059-SpiralMatrixII.cpp) | Medium |  |
-| :star::star: | 62. Unique Paths | [cpp](./cpp/062.cpp) | Medium | 坐标型DP |
-|  63  | Unique Paths II | [cpp](./cpp/063-UniquePathsII.cpp) | Medium |  |
-|  64  | Minimum Path Sum | [cpp](./cpp/064-MinimumPathSum.cpp) | Medium |  |
-|  66  | Plus One | [cpp](./cpp/066-PlusOne.cpp) | Easy |  |
-|  73  | Set Matrix Zeroes | [cpp](./cpp/073-SetMatrixZeros.cpp) | Medium |  |
-|  74  | Search a 2D Matrix | [cpp](./cpp/074-Searcha2DMatrix.cpp) | Medium |  |
-|  75  | Sort Colors | [cpp](./cpp/075-SortColors.cpp) | Medium |  |
-|  78  | Subsets | [cpp](./cpp/078-Subsets.cpp) | Medium |  |
-|  79  | Word Search | [cpp](./cpp/079-WordSearch.cpp) | Medium |  |
-|  80  | Remove Duplicates from Sorted Array II | [cpp](./cpp/080-RemoveDuplicatesFromSortedArrayII.cpp) | Medium |  |
-|  81  | Search in Rotated Sorted Array II | [cpp](./cpp/081-SearchInRotatedSortedArrayII.cpp) | Medium |  |
-| :camel: | 84. Largest Rectangle in Histogram | [cpp](./cpp/084.cpp) | Hard |  |
-|  85  | Maximal Rectangle | [cpp](./cpp/085-MaximalRectangle.cpp) | Hard |  |
-| :star::star: | 88. Merge Sorted Array | [cpp](./cpp/088.cpp) | Easy |  |
-|  90  | Subsets II | [cpp](./cpp/090-SubsetsII.cpp) | Medium |  |
-| :camel: | 105. Construct Binary Tree from Preorder and Inorder Traversal | [cpp](./cpp/105.cpp) | Medium |  |
-|  106  | Construct Binary Tree from Inorder and Postorder Traversal | [cpp](./cpp/106-ConstructBinaryTreefromInorderandPostorderTraversa.cpp) | Medium |  |
-|  118  | Pascal's Triangle | [cpp](./cpp/118-PascalsTriangle.cpp) | Easy |  |
-|  119  | Pascal's Triangle II | [cpp](./cpp/119-PascalsTriangleII.cpp) | Easy |  |
-|  120  | Triangle | [cpp](./cpp/120-Triangle.cpp) | Medium |  |
-| :star::star: | 121. Best Time to Buy and Sell Stock | [cpp](./cpp/121.cpp) | Easy | DP |
-| :star::star: | 122. Best Time to Buy and Sell Stock II | [cpp](./cpp/122.cpp) | Easy |  |
-|  123  | Best Time to Buy and Sell Stock III | [cpp](./cpp/123.cpp) | Hard |  |
-|  126  | Word Ladder II | [cpp](./cpp/126-WordLadderII.cpp) | Hard |  |
-| :star: | 128. Longest Consecutive Sequence | [cpp](./cpp/128.cpp) | Hard | DP, std::set |
-|  152  | Maximum Product Subarray | [cpp](./cpp/152.cpp) | Medium |  |
-|  153  | Find Minimum in Rotated Sorted Array | [cpp](./cpp/153.cpp) | Medium |  |
-|  162  | Find Peak Element | [cpp](./cpp/162.cpp) | Medium |  |
-|  163  | Missing Ranges | [cpp](./cpp/163.cpp) | Medium |  |
-|  167  | Two Sum II - Input array is sorted | [cpp](./cpp/167.cpp) | Easy |  |
-|  169  | Majority Element | [cpp](./cpp/169.cpp) | Easy |  |
-|  189  | Rotate Array | [cpp](./cpp/189.cpp) | Easy |  |
-
-### String
-:watch:: Pass the challenge with the time limit.
-    - Easy: 10 min
-    - Medium : 20 min
-    - Hard: 30 min
-
-| Title | Solution | Difficulty | Note | Proficiency |
-| ----- | -------- | ---------- | ---- | ----------- |
-| :star::star: | 3. Longest Substring Without Repeating Characters :thumbsup: | [cpp](./cpp/003.cpp) | Medium | Two Pointers / Sliding Window + Hash Table, 套路题 |
-| :star: | 5. Longest Palindromic Substring | [cpp](./cpp/005.cpp) | Medium |  |
-|  6  | ZigZag Conversion | [cpp](./cpp/006-ZigZagConversion.cpp) | Medium |  |
-|  8  | String to Integer (atoi) | [cpp](./cpp/008-StringToInteger.cpp) | Medium |  |
-|  10  | Regular Expression Matching | [cpp](./cpp/010-RegularExpressionMatching.cpp) | Hard |  |
-|  12  | Integer to Roman | [cpp](./cpp/012-IntegerToRoman.cpp) | Medium |  |
-|  13  | Roman to Integer | [cpp](./cpp/013-RomanToInteger.cpp) | Easy |  |
-| :star: | 14. Longest Common Prefix | [cpp](./cpp/014.cpp) | Easy |  |
-| :star: | 17. Letter Combinations of a Phone Number :thumbsup: | [cpp](./cpp/017.cpp) | Medium | backtracking模板题 |
-| :star: | 20. Valid Parentheses | [cpp](./cpp/020.cpp) | Easy | string + stack |
-| :camel: | 22. Generate Parentheses | [cpp](./cpp/022.cpp) | Medium |  |
-|  28  | Implement strStr() | [cpp](./cpp/028-ImplementstrStr.cpp) | Easy |  |
-|  30  | Substring with Concatenation of All Words | [cpp](./cpp/030-SubstringWithConcatenationofAllWords.cpp) | Hard |  |
-|  32  | Longest Valid Parentheses | [cpp](./cpp/032-LongestValidParentheses.cpp) | Hard |  |
-| :star: | 38. Count and Say | [cpp](./cpp/038.cpp) | Easy | DP |
-| :camel: | 43. Multiply Strings | [cpp](./cpp/043.cpp) | Medium |  |
-|  44  | Wildcard Matching | [cpp](./cpp/044-WildcardMatching.cpp) | Hard |  |
-| :star::star: | 49. Group Anagrams | [cpp](./cpp/049.cpp) | Medium | Hash Table |
-|  58  | Length of Last Word | [cpp](./cpp/058-LengthOfLastWord.cpp) | Easy |  |
-|  65  | Valid Number | [cpp](./cpp/065-ValidNumber.cpp) | Hard |  |
-|  67  | Add Binary | [cpp](./cpp/067-AddBinary.cpp) | Easy |  |
-|  68  | Text Justification | [cpp](./cpp/068-TextJustification.cpp) | Hard |  |
-|  71  | Simplify Path | [cpp](./cpp/071-SimplifyPath.cpp) | Medium |  |
-| :camel: | 72. Edit Distance | [cpp](./cpp/072.cpp) | Hard | 匹配型DP |
-| :star: | 76. Minimum Window Substring | [cpp](./cpp/076.cpp) | Hard | Two Pointers / Sliding Window + Hash Table, 套路题 |
-|  87  | Scramble String | [cpp](./cpp/087-ScrambleString.cpp) | Hard |  |
-| :camel: | 91. Decode Ways | [cpp](./cpp/091.cpp) | Medium | DP |
-|  93  | Restore IP Addresses | [cpp](./cpp/093-RestoreIPAddresses.cpp) | Medium |  |
-|  97  | Interleaving String | [cpp](./cpp/097-INterleavingString.cpp) | Hard |  |
-|  115  | Distinct Subsequences | [cpp](./cpp/115-DistinctSubsequences.cpp) | Hard |  |
-|  125  | Valid Palindrome | [cpp](./cpp/125-ValidPalindrome.cpp) | Easy |  |
-|  126  | Word Ladder II | [cpp](./cpp/126-WordLadderII.cpp) | Hard |  |
-| 151 |  |  |  |  |  |  |  |
-| 157 |  |  |  |  |  |  |  |
-| 158 |  |  |  |  |  |  |  |
-| 161 |  |  |  |  |  |  |  |
-| 165 |  |  |  |  |  |  |  |
-| 186 |  |  |  |  |  |  |  |
 
 ### Linked List
 :watch:: Pass the challenge with the time limit.
@@ -426,15 +312,6 @@
 |  259  | 3Sum Smaller | [cpp](./cpp/259.cpp) | Medium |  |
 |  283  | Move Zeroes | [cpp](./cpp/283.cpp) | Easy |  |
 |  287  | Find the Duplicate Number | [cpp](./cpp/287.cpp) | Medium |  |
-
-### Recursion
-:watch:: Pass the challenge with the time limit.
-    - Easy: 10 min
-    - Medium : 20 min
-    - Hard: 30 min
-
-| Title | Solution | Difficulty | Note | Proficiency |
-| ----- | -------- | ---------- | ---- | ----------- |
 
 ### Binary Search
 :watch:: Pass the challenge with the time limit.
