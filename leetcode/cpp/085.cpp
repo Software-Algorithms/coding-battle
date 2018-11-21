@@ -1,5 +1,21 @@
-/*
- * Stack
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Array, Stack
+ *
+ * Idea:
+ *    - DP.
+ *    - 用到 Largest Rectangle in Histogram 直方图中最大的矩形 中的思想。
+ *
+ * Complexity:
+ *    Time: O(lgn)
+ *
+ * Reference:
+ *    - Grandyang: http://www.cnblogs.com/grandyang/p/4322667.html
  *
  */
 class Solution {
@@ -24,13 +40,3 @@ public:
         return res;
     }
 };
-
-// Conclusion:
-// 用到 Largest Rectangle in Histogram 直方图中最大的矩形 中的思想。
-//
-// Reference:
-// Grandyang: http://www.cnblogs.com/grandyang/p/4322667.html
-
-
-
-

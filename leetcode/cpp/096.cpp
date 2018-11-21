@@ -1,3 +1,21 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Array, Stack
+ *
+ * Idea:
+ *    - DP.
+ *    - version 2: Geeksforgeeks
+ *    - 基本思路与version 1一致，执行稍有区别，品味下两种风格。
+ *
+ * Complexity:
+ *    O()
+ *
+ */
 class Solution {
 public:
     int numTrees(int n) {
@@ -9,6 +27,6 @@ public:
                 dp[i] += dp[j] * dp[i - j - 1];
             }
         }
-        return dp[n];       
+        return dp[n];
     }
 };

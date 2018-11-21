@@ -1,11 +1,20 @@
 /**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Array, Stack
+ *
+ * Idea:
+ *    - DP.
+ *    - version 2: Geeksforgeeks
+ *    - 基本思路与version 1一致，执行稍有区别，品味下两种风格。
+ *
+ * Complexity:
+ *    O()
+ *
  */
 class Solution {
 private:
@@ -16,7 +25,7 @@ private:
         newroot->right = clone(root->right);
         return newroot;
     }
-    
+
 public:
     vector<TreeNode*> generateTrees(int n) {
         if(n == 0) return vector<TreeNode*>(0);

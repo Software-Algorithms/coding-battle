@@ -1,5 +1,20 @@
-/*
- * DP
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    - 序列型 DP
+ *    - Initialization: 第一行和第一列都只有1种走法；
+ *    - Transition:	从左边和上边过来
+ *            	    dp[i][j] = dp[i-1][j] + dp[i][j-1]
+ *
+ * Complexity:
+ *    Time: O(lgn)
  *
  */
 class Solution {
@@ -14,14 +29,3 @@ public:
         return dp[m-1][n-1];
     }
 };
-
-/*****
-Conclusion:
-Typical DP.
-
-Idea:
-Initialization: 第一行和第一列都只有1种走法；
-Transition:	从左边和上边过来
-           	dp[i][j] = dp[i-1][j] + dp[i][j-1]
-*****/
-

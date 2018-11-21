@@ -1,5 +1,17 @@
-/*
- * DP
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 11/11/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    - 序列型 DP
+ *
+ * Complexity:
+ *    Time: O(lgn)
  *
  */
 class Solution {
@@ -15,10 +27,3 @@ public:
         return dp[n];
     }
 };
-
-// Conclusion:
-//
-
-
-
-
