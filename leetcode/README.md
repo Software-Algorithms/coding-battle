@@ -562,7 +562,7 @@
 | 291. Word Pattern II | [cpp](./cpp/291.cpp) | Hard |  |  |
 | 294. Flip Game II | [cpp](./cpp/294.cpp) | Medium |  | . |
 
-### Dynamic Programming :yellow_heart:
+### Dynamic Programming
 :watch:: Pass the challenge with the time limit.
     - Easy: 10 min
     - Medium : 20 min
