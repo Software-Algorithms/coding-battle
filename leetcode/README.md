@@ -2,29 +2,29 @@
 
 ## Algorithms
 
-* [Bit Manipulation](https://github.com/xpharry/Leetcode#bit-manipulation)
-* [Array](https://github.com/xpharry/Leetcode#array)
-* [String](https://github.com/xpharry/Leetcode#string)
-* [Linked List](https://github.com/xpharry/Leetcode#linked-list)
-* [Stack](https://github.com/xpharry/Leetcode#stack)
-* [Queue](https://github.com/xpharry/Leetcode#queue)
-* [Heap](https://github.com/xpharry/Leetcode#heap)
-* [Tree](https://github.com/xpharry/Leetcode#tree)
-* [Hash Table](https://github.com/xpharry/Leetcode#hash-table)
-* [Math](https://github.com/xpharry/Leetcode#math)
-* [Two Pointers](https://github.com/xpharry/Leetcode#two-pointers)
-* [Sort](https://github.com/xpharry/Leetcode#sort)
-* [Recursion](https://github.com/xpharry/Leetcode#recursion)
-* [Binary Search](https://github.com/xpharry/Leetcode#binary-search)
-* [Binary Search Tree](https://github.com/xpharry/Leetcode#binary-search-tree)
-* [Breadth-First Search](https://github.com/xpharry/Leetcode#breadth-first-search)
-* [Depth-First Search](https://github.com/xpharry/Leetcode#depth-first-search)
-* [Backtracking](https://github.com/xpharry/Leetcode#backtracking)
+* [Bit Manipulation](#bit-manipulation)
+* [Array](#array)
+* [String](#string)
+* [Linked List](linked-list)
+* [Stack](#stack)
+* [Queue](#queue)
+* [Heap](#heap)
+* [Tree](#tree)
+* [Hash Table](#hash-table)
+* [Math](#math)
+* [Two Pointers](#two-pointers)
+* [Sort](#sort)
+* [Recursion](#recursion)
+* [Binary Search](#binary-search)
+* [Binary Search Tree](#binary-search-tree)
+* [Breadth-First Search](#breadth-first-search)
+* [Depth-First Search](#depth-first-search)
+* [Backtracking](#backtracking)
 * [Dynamic Programming](#dynamic-programming)
-* [Greedy](https://github.com/xpharry/Leetcode#greedy)
-* [Graph](https://github.com/xpharry/Leetcode#graph)
-* [Geometry](https://github.com/xpharry/Leetcode#geometry)
-* [Design](https://github.com/xpharry/Leetcode#design)
+* [Greedy](#greedy)
+* [Graph](#graph)
+* [Geometry](#geometry)
+* [Design](#design)
 
 ### Bit Manipulation
 :watch:: Pass the challenge with the time limit.
@@ -225,7 +225,7 @@
 | Title | Solution | Difficulty | Note | Proficiency |
 | ----- | -------- | ---------- | ---- | ----------- |
 
-### Heap :yellow_heart:
+### Heap
 :watch:: Pass the challenge with the time limit.
     - Easy: 10 min
     - Medium : 20 min
@@ -287,7 +287,7 @@
 |  297  | Serialize and Deserialize Binary Tree | [cpp](./cpp/297.cpp) | Hard |  |
 |  298  | Binary Tree Longest Consecutive Sequence | [cpp](./cpp/298.cpp) | Medium |  |
 
-### Hash Table :yellow_heart:
+### Hash Table
 :watch:: Pass the challenge with the time limit.
     - Easy: 10 min
     - Medium : 20 min
@@ -427,7 +427,7 @@
 |  283  | Move Zeroes | [cpp](./cpp/283.cpp) | Easy |  |
 |  287  | Find the Duplicate Number | [cpp](./cpp/287.cpp) | Medium |  |
 
-### Recursion :-1:
+### Recursion
 :watch:: Pass the challenge with the time limit.
     - Easy: 10 min
     - Medium : 20 min
@@ -468,7 +468,7 @@
 | Title | Solution | Difficulty | Note | Proficiency |
 | ----- | -------- | ---------- | ---- | ----------- |
 
-### Breadth-First Search :yellow_heart:
+### Breadth-First Search
 :watch:: Pass the challenge with the time limit.
     - Easy: 10 min
     - Medium : 20 min
@@ -491,7 +491,7 @@
 | 261. Graph Valid Tree | [cpp](./cpp/261.cpp) | Medium |  |  |
 | 279. Perfect Squares | [cpp](./cpp/279.cpp) | Medium |  | . |
 
-### Depth-First Search :yellow_heart:
+### Depth-First Search
 :watch:: Pass the challenge with the time limit.
     - Easy: 10 min
     - Medium : 20 min
@@ -526,7 +526,7 @@
 |  257. Binary Tree Paths | [cpp](./cpp/257.cpp) | Easy |  |  |
 |  261. Graph Valid Tree | [cpp](./cpp/261.cpp) | Medium |  |  |
 
-### Backtracking :yellow_heart:
+### Backtracking
 :watch:: Pass the challenge with the time limit.
     - Easy: 10 min
     - Medium : 20 min
