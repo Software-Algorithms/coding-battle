@@ -445,10 +445,11 @@
     - Medium : 20 min
     - Hard: 30 min
 
-- 序列型动态规划： 53, 62, 63, 64, 70
-    - 一维滚动数组： 70
+- 序列型动态规划： 53, 62, 63, 64, 70, 91
+    - 一维滚动数组： 70, 91
     - 二维滚动数组： 62, 63, 64
 - 匹配类动态规划： 10, 44, 72
+- 二叉树+动态规划： 95, 96
 - 不好归类： ~~53~~
 
 | Title | Solution | Difficulty | Note | Proficiency |
@@ -464,9 +465,9 @@
 | 72. Edit Distance | [cpp](./cpp/072.cpp) | Hard |  |  |
 | 85. Maximal Rectangle | [cpp](./cpp/085.cpp) | Hard |  |  |
 | 87. Scramble String | [cpp](./cpp/087.cpp) | Hard |  |  |
-| 91. Decode Ways | [cpp](./cpp/091.cpp) | Medium |  |  |
-| 95. Unique Binary Search Trees II | [cpp](./cpp/095.cpp) | Medium |  |  |
-| 96. Unique Binary Search Trees | [cpp](./cpp/096.cpp) | Medium |  |  |
+| 91. Decode Ways | [cpp](./cpp/091.cpp) | Medium | 一维滚动数组 | :star::star::watch: |
+| 95. Unique Binary Search Trees II | [cpp](./cpp/095.cpp) | Medium | Recursive和Non-recursive两种实现 | :camel: |
+| 96. Unique Binary Search Trees | [cpp](./cpp/096.cpp) | Medium | 这转移方程如何想到的？Catalan Number卡塔兰数 | :star: |
 | 97. Interleaving String | [cpp](./cpp/097.cpp) | Hard |  |  |
 | 115. Distinct Subsequences | [cpp](./cpp/115.cpp) | Hard |  |  |
 | 120. Triangle | [cpp](./cpp/120.cpp) | Medium |  |  |

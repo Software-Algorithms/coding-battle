@@ -80,3 +80,48 @@ public:
         return count[n];
     }
 };
+
+// Nov 25 practiced as in version 2.
+class Solution {
+public:
+    int numDecodings(string s) {
+        /*****
+         1. one digit: 1-9
+         2. two digits:
+             a. 10-19
+             b. 20-26
+
+         Considering the current digit:
+            0: one way
+            1: two ways
+            2: depends on the following digit within 0-6 or not
+
+         DP:
+           state: dp[i] means the number of decoding ways of a substring s[0-i]
+           transition:
+                if(s[i] within 1-9) dp[i] += dp[i-1];
+                if(s[i-1] == 1 or s[i-1] == 2 and s[i] < 7) dp[i] += dp[i-2];
+           inialization
+
+        *****/
+
+        // state
+        int n = s.size();
+        vector<int> dp(n+1, 0);
+
+        // corner case
+        if(s[0] == '0') return 0;
+
+        // inialization
+        dp[0] = 1;
+        dp[1] = 1;
+
+        // transition
+        for(int i = 2; i < n+1; i++) {
+            if(s[i-1] >= '1' && s[i-1] <= '9') dp[i] += dp[i-1];
+            if(s[i-2] == '1' || (s[i-2] == '2' && s[i-1] < '7')) dp[i] += dp[i-2];
+        }
+
+        return dp[n];
+    }
+};
