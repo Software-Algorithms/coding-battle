@@ -1,78 +1,29 @@
 # [LeetCode](https://leetcode.com/problemset/algorithms/) ![Language](https://img.shields.io/badge/language-Python%20%2F%20C++%2011-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 
-## Algorithms
+## Data Structures
 
-* [Bit Manipulation](#bit-manipulation)
-* [Linked List](linked-list)
 * [Stack](#stack)
 * [Queue](#queue)
 * [Heap](#heap)
-* [Tree](#tree)
 * [Hash Table](#hash-table)
-* [Math](#math)
-* [Two Pointers](#two-pointers)
-* [Sort](#sort)
-* [Recursion](#recursion)
+* [Linked List](#linked-list)
+* [Tree](#tree)
+* [Graph](#graph)
+
+## Algorithms
+
 * [Binary Search](#binary-search)
-* [Binary Search Tree](#binary-search-tree)
+* [Bit Manipulation](#bit-manipulation)
+* [Two Pointers](#two-pointers)
 * [Breadth-First Search](#breadth-first-search)
 * [Depth-First Search](#depth-first-search)
 * [Backtracking](#backtracking)
 * [Dynamic Programming](#dynamic-programming)
+* [Sort](#sort)
 * [Greedy](#greedy)
-* [Graph](#graph)
-* [Geometry](#geometry)
 * [Design](#design)
-
-### Bit Manipulation
-:watch:: Pass the challenge with the time limit.
-    - Easy: 10 min
-    - Medium : 20 min
-    - Hard: 30 min
-
-| Title | Solution | Difficulty | Note | Proficiency |
-| ----- | -------- | ---------- | ---- | ----------- |
-|  | 78. Subsets | [cpp](./cpp/078.cpp) | Medium |  |
-|  | 136. Single Number | [cpp](./cpp/136.cpp) | Easy |  |
-|  | 137. Single Number II | [cpp](./cpp/137.cpp) | Medium |  |
-|  | 169. Majority Element | [cpp](./cpp/169.cpp) | Easy |  |
-|  | 187. Repeated DNA Sequences | [cpp](./cpp/187.cpp) | Medium |  |
-|  | 190. Reverse Bits | [cpp](./cpp/190.cpp) | Easy |  |
-|  | 191. Number of 1 Bits | [cpp](./cpp/191.cpp) | Easy |  |
-|  | 201. Bitwise AND of Numbers Range | [cpp](./cpp/201.cpp) | Medium |  |
-|  | 231. Power of Two | [cpp](./cpp/231.cpp) | Easy |  |
-|  | 260. Single Number III | [cpp](./cpp/260.cpp) | Medium |  |
-|  | 268. Missing Number | [cpp](./cpp/268.cpp) | Easy |  |
-|  | 318. Maximum Product of Word Lengths | [cpp](./cpp/318.cpp) | Medium |  |
-|  | 338. Counting Bits | [cpp](./cpp/338.cpp) | Medium |  |
-|  | 389. Find the Difference | [cpp](./cpp/389.cpp) | Easy |  |
-
-### Linked List
-:watch:: Pass the challenge with the time limit.
-    - Easy: 10 min
-    - Medium : 20 min
-    - Hard: 30 min
-
-| Title | Solution | Difficulty | Note | Proficiency |
-| ----- | -------- | ---------- | ---- | ----------- |
-| :star: | 2. Add Two Numbers | [cpp](./cpp/002.cpp) | Medium |  |
-| :star: | 19. Remove Nth Node From End of List | [cpp](./cpp/019.cpp) | Medium | Two Pointers / Sliding Window |
-| :star::star: | 21. Merge Two Sorted Lists | [cpp](./cpp/021.cpp) | Easy |  |
-| :camel: | 23. Merge k Sorted Lists | [cpp](./cpp/023.cpp) | Hard | max heap |
-|  24. Swap Nodes in Pairs | [cpp](./cpp/024-SwapNodesInPairs.cpp) | Medium |  |
-|  25. Reverse Nodes in k-Group | [cpp](./cpp/025-ReverseNodesInKGroups.cpp) | Hard |  |
-|  61. Rotate List | [cpp](./cpp/061-RotateList.cpp) | Medium |  |
-|  82. Remove Duplicates from Sorted List II | [cpp](./cpp/082-RemoveDuplicatesFromSortedListII.cpp) | Medium |  |
-|  83. Remove Duplicates from Sorted List | [cpp](./cpp/083-RemoveDuplicatesFromSortedList.cpp) | Easy |  |
-|  86. Partition List | [cpp](./cpp/086-PartitionList.cpp) | Medium |  |
-|  92. Reverse Linked List II | [cpp](./cpp/092-ReverseLinkedListII.cpp) | Medium |  |
-|  109. Convert Sorted List to Binary Search Tree | [cpp](./cpp/109-ConvertSortedListtoBinarySearchTree.cpp) | Medium |  |
-|  138. Copy List with Random Pointer  | [cpp](./cpp/138-CopyListwithRandomPointer.cpp) | Medium |  |
-| :star: | 141. Linked List Cycle | [cpp](./cpp/141.cpp) | Easy |  |
-| :star: | 142. Linked List Cycle II | [cpp](./cpp/142.cpp) | Medium |  |
-|  143. Reorder List  | [cpp](./cpp/143-ReorderList.cpp) | Medium |  |
-|  147. Insertion Sort List | [cpp](./cpp/147-InsertionSortList.cpp) | Medium |  |
-|  160. Intersection of Two Linked Lists | [cpp](./cpp/160.cpp) | Easy |  |
+* [Geometry](#geometry)
+* [Math](#math)
 
 ### Stack
 :watch:: Pass the challenge with the time limit.
@@ -122,6 +73,72 @@
 | :camel: | 23. Merge k Sorted Lists | [cpp](./cpp/023.cpp) | Hard | max heap |
 |  264  | Ugly Number II | [cpp](./cpp/264.cpp) | Medium |  |
 | :star: | 295. Find Median from Data Stream | [cpp](./cpp/295.cpp) | Hard | min/max heap |
+
+### Hash Table
+:watch:: Pass the challenge with the time limit.
+    - Easy: 10 min
+    - Medium : 20 min
+    - Hard: 30 min
+
+| Title | Solution | Difficulty | Note | Proficiency |
+| ----- | -------- | ---------- | ---- | ----------- |
+| :star::star: | 1. Two Sum | [cpp](./cpp/001.cpp) | Easy |  |
+| :star::star: | 3. Longest Substring Without Repeating Characters | [cpp](./cpp/003.cpp) | Medium | Two Pointers / Sliding Window + Hash Table, 套路题 |
+|  18  | 4Sum | [cpp](./cpp/018-4Sum.cpp) | Medium |  |
+|  30  | Substring with Concatenation of All Words | [cpp](./cpp/030-SubstringWithConcatenationofAllWords.cpp) | Hard |  |
+|  36  | Valid Sudoku | [cpp](./cpp/036-ValidSudoku.cpp) | Medium |  |
+|  37  | Sudoku Solver | [cpp](./cpp/037-SudokuSolver.cpp) | Hard |  |
+| :star: | 49. Group Anagrams | [cpp](./cpp/049.cpp) | Medium | Hash Table |
+| :star: | 76. Minimum Window Substring | [cpp](./cpp/076.cpp) | Hard | Two Pointers / Sliding Window + Hash Table, 套路题 |
+|  85  | Maximal Rectangle | [cpp](./cpp/085-MaximalRectangle.cpp) | Hard |  |
+|  94  | Binary Tree Inorder Traversal | [cpp](./cpp/094-BinaryTreeInorderTravesal.cpp) | Medium |  |
+|  136  | Single Number | [cpp](./cpp/136-SingleNumber.cpp) | Easy |  |
+|  149  | Max Points on a Line | [cpp](./cpp/149-MaxPointsonaLine.cpp) | Hard |  |
+| :star: | 159. Longest Substring with At Most Two Distinct Characters | [cpp](./cpp/159.cpp) | Hard | Two Pointers / Sliding Window + Hash Table, 套路题 |
+|  166  | Fraction to Recurring Decimal | [cpp](./cpp/166.cpp) | Medium |  |
+|  170  | Two Sum III - Data structure design | [cpp](./cpp/170.cpp) | Easy |  |
+|  187  | Repeated DNA Sequences | [cpp](./cpp/187.cpp) | Medium |  |
+|  202  | Happy Number | [cpp](./cpp/202.cpp) | Easy |  |
+|  204  | Count Primes | [cpp](./cpp/204.cpp) | Easy |  |
+|  205  | Isomorphic Strings | [cpp](./cpp/205.cpp) | Easy |  |
+|  217  | Contains Duplicate | [cpp](./cpp/217.cpp) | Easy |  |
+|  219  | Contains Duplicate II | [cpp](./cpp/219.cpp) | Easy |  |
+|  242  | Valid Anagram | [cpp](./cpp/242.cpp) | Easy |  |
+|  244  | Shortest Word Distance II | [cpp](./cpp/244.cpp) | Medium |  |
+|  246  | Strobogrammatic Number | [cpp](./cpp/246.cpp) | Easy |  |
+|  249  | Group Shifted Strings | [cpp](./cpp/249.cpp) | Medium |  |
+|  266  | Palindrome Permutation | [cpp](./cpp/266.cpp) | Easy |  |
+|  274  | H-Index | [cpp](./cpp/274.cpp) | Medium |  |
+|  288  | Unique Word Abbreviation | [cpp](./cpp/288.cpp) | Medium |  |
+|  290  | Word Pattern | [cpp](./cpp/290.cpp) | Easy |  |
+|  299  | Bulls and Cows | [cpp](./cpp/299.cpp) | Medium |  |
+
+### Linked List
+:watch:: Pass the challenge with the time limit.
+    - Easy: 10 min
+    - Medium : 20 min
+    - Hard: 30 min
+
+| Title | Solution | Difficulty | Note | Proficiency |
+| ----- | -------- | ---------- | ---- | ----------- |
+| :star: | 2. Add Two Numbers | [cpp](./cpp/002.cpp) | Medium |  |
+| :star: | 19. Remove Nth Node From End of List | [cpp](./cpp/019.cpp) | Medium | Two Pointers / Sliding Window |
+| :star::star: | 21. Merge Two Sorted Lists | [cpp](./cpp/021.cpp) | Easy |  |
+| :camel: | 23. Merge k Sorted Lists | [cpp](./cpp/023.cpp) | Hard | max heap |
+|  24. Swap Nodes in Pairs | [cpp](./cpp/024-SwapNodesInPairs.cpp) | Medium |  |
+|  25. Reverse Nodes in k-Group | [cpp](./cpp/025-ReverseNodesInKGroups.cpp) | Hard |  |
+|  61. Rotate List | [cpp](./cpp/061-RotateList.cpp) | Medium |  |
+|  82. Remove Duplicates from Sorted List II | [cpp](./cpp/082-RemoveDuplicatesFromSortedListII.cpp) | Medium |  |
+|  83. Remove Duplicates from Sorted List | [cpp](./cpp/083-RemoveDuplicatesFromSortedList.cpp) | Easy |  |
+|  86. Partition List | [cpp](./cpp/086-PartitionList.cpp) | Medium |  |
+|  92. Reverse Linked List II | [cpp](./cpp/092-ReverseLinkedListII.cpp) | Medium |  |
+|  109. Convert Sorted List to Binary Search Tree | [cpp](./cpp/109-ConvertSortedListtoBinarySearchTree.cpp) | Medium |  |
+|  138. Copy List with Random Pointer  | [cpp](./cpp/138-CopyListwithRandomPointer.cpp) | Medium |  |
+| :star: | 141. Linked List Cycle | [cpp](./cpp/141.cpp) | Easy |  |
+| :star: | 142. Linked List Cycle II | [cpp](./cpp/142.cpp) | Medium |  |
+|  143. Reorder List  | [cpp](./cpp/143-ReorderList.cpp) | Medium |  |
+|  147. Insertion Sort List | [cpp](./cpp/147-InsertionSortList.cpp) | Medium |  |
+|  160. Intersection of Two Linked Lists | [cpp](./cpp/160.cpp) | Easy |  |
 
 ### Tree
 :watch:: Pass the challenge with the time limit.
@@ -173,7 +190,7 @@
 |  297  | Serialize and Deserialize Binary Tree | [cpp](./cpp/297.cpp) | Hard |  |
 |  298  | Binary Tree Longest Consecutive Sequence | [cpp](./cpp/298.cpp) | Medium |  |
 
-### Hash Table
+### Graph
 :watch:: Pass the challenge with the time limit.
     - Easy: 10 min
     - Medium : 20 min
@@ -181,38 +198,13 @@
 
 | Title | Solution | Difficulty | Note | Proficiency |
 | ----- | -------- | ---------- | ---- | ----------- |
-| :star::star: | 1. Two Sum | [cpp](./cpp/001.cpp) | Easy |  |
-| :star::star: | 3. Longest Substring Without Repeating Characters | [cpp](./cpp/003.cpp) | Medium | Two Pointers / Sliding Window + Hash Table, 套路题 |
-|  18  | 4Sum | [cpp](./cpp/018-4Sum.cpp) | Medium |  |
-|  30  | Substring with Concatenation of All Words | [cpp](./cpp/030-SubstringWithConcatenationofAllWords.cpp) | Hard |  |
-|  36  | Valid Sudoku | [cpp](./cpp/036-ValidSudoku.cpp) | Medium |  |
-|  37  | Sudoku Solver | [cpp](./cpp/037-SudokuSolver.cpp) | Hard |  |
-| :star: | 49. Group Anagrams | [cpp](./cpp/049.cpp) | Medium | Hash Table |
-| :star: | 76. Minimum Window Substring | [cpp](./cpp/076.cpp) | Hard | Two Pointers / Sliding Window + Hash Table, 套路题 |
-|  85  | Maximal Rectangle | [cpp](./cpp/085-MaximalRectangle.cpp) | Hard |  |
-|  94  | Binary Tree Inorder Traversal | [cpp](./cpp/094-BinaryTreeInorderTravesal.cpp) | Medium |  |
-|  136  | Single Number | [cpp](./cpp/136-SingleNumber.cpp) | Easy |  |
-|  149  | Max Points on a Line | [cpp](./cpp/149-MaxPointsonaLine.cpp) | Hard |  |
-| :star: | 159. Longest Substring with At Most Two Distinct Characters | [cpp](./cpp/159.cpp) | Hard | Two Pointers / Sliding Window + Hash Table, 套路题 |
-|  166  | Fraction to Recurring Decimal | [cpp](./cpp/166.cpp) | Medium |  |
-|  170  | Two Sum III - Data structure design | [cpp](./cpp/170.cpp) | Easy |  |
-|  187  | Repeated DNA Sequences | [cpp](./cpp/187.cpp) | Medium |  |
-|  202  | Happy Number | [cpp](./cpp/202.cpp) | Easy |  |
-|  204  | Count Primes | [cpp](./cpp/204.cpp) | Easy |  |
-|  205  | Isomorphic Strings | [cpp](./cpp/205.cpp) | Easy |  |
-|  217  | Contains Duplicate | [cpp](./cpp/217.cpp) | Easy |  |
-|  219  | Contains Duplicate II | [cpp](./cpp/219.cpp) | Easy |  |
-|  242  | Valid Anagram | [cpp](./cpp/242.cpp) | Easy |  |
-|  244  | Shortest Word Distance II | [cpp](./cpp/244.cpp) | Medium |  |
-|  246  | Strobogrammatic Number | [cpp](./cpp/246.cpp) | Easy |  |
-|  249  | Group Shifted Strings | [cpp](./cpp/249.cpp) | Medium |  |
-|  266  | Palindrome Permutation | [cpp](./cpp/266.cpp) | Easy |  |
-|  274  | H-Index | [cpp](./cpp/274.cpp) | Medium |  |
-|  288  | Unique Word Abbreviation | [cpp](./cpp/288.cpp) | Medium |  |
-|  290  | Word Pattern | [cpp](./cpp/290.cpp) | Easy |  |
-|  299  | Bulls and Cows | [cpp](./cpp/299.cpp) | Medium |  |
+|  133  | Clone Graph | [cpp](./cpp/133-CloneGraph.cpp) | Medium |  |
+|  207  | Course Schedule | [cpp](./cpp/207.cpp) | Medium |  |
+|  210  | Course Schedule II | [cpp](./cpp/210.cpp) | Medium |  |
+|  261  | Graph Valid Tree | [cpp](./cpp/261.cpp) | Medium |  |
+|  269  | Alien Dictionary | [cpp](./cpp/269.cpp) | Hard |  |
 
-### Math
+### Binary Search
 :watch:: Pass the challenge with the time limit.
     - Easy: 10 min
     - Medium : 20 min
@@ -220,43 +212,22 @@
 
 | Title | Solution | Difficulty | Note | Proficiency |
 | ----- | -------- | ---------- | ---- | ----------- |
-| :star: | 2. Add Two Numbers | [cpp](./cpp/002.cpp) | Medium |  |
-|  7  | Reverse Integer | [cpp](./cpp/007-ReverseInteger.cpp) | Easy |  |
-|  8  | String to Integer (atoi) | [cpp](./cpp/008-StringToInteger.cpp) | Medium |  |
-|  9  | Palindrome Number | [cpp](./cpp/009-PalindromeNumber.cpp) | Easy |  |
-|  12  | Integer to Roman | [cpp](./cpp/012-IntegerToRoman.cpp) | Medium |  |
-|  13  | Roman to Integer | [cpp](./cpp/013-RomanToInteger.cpp) | Easy |  |
+| :camel: | 4. Median of Two Sorted Arrays | [cpp](./cpp/004.cpp) | Hard |  |
 | :star: | 29. Divide Two Integers | [cpp](./cpp/029.cpp) | Medium |  |
-| :camel: | 43. Multiply Strings | [cpp](./cpp/043.cpp) | Medium |  |
+| :star: | 33. Search in Rotated Sorted Array | [cpp](./cpp/033.cpp) | Medium |  |
+|  34  | Search for a Range | [cpp](./cpp/034-SearchForARange.cpp) | Medium |  |
+|  35  | Search Insert Position | [cpp](./cpp/035-SearchInsertPosition.cpp) | Easy |  |
 |  50  | Pow(x, n) | [cpp](./cpp/050-Pow.cpp) | Medium |  |
-|  60  | Permutation Sequence | [cpp](./cpp/060-PermutationSequence.cpp) | Medium |  |
-|  65  | Valid Number | [cpp](./cpp/065-ValidNumber.cpp) | Hard |  |
-|  66  | Plus One | [cpp](./cpp/066-PlusOne.cpp) | Easy |  |
-|  67  | Add Binary | [cpp](./cpp/067-AddBinary.cpp) | Easy |  |
 |  69  | Sqrt(x) | [cpp](./cpp/069-Sqrt.cpp) | Easy |  |
-|  149  | Max Points on a Line | [cpp](./cpp/149-MaxPointsonaLine.cpp) | Hard |  |
-|  166  | Fraction to Recurring Decimal | [cpp](./cpp/166.cpp) | Medium |  |
-|  168  | Excel Sheet Column Title | [cpp](./cpp/168.cpp) | Easy |  |
-|  171  | Excel Sheet Column Number  | [cpp](./cpp/171.cpp) | Easy |  |
-|  172  | Factorial Trailing Zeroes  | [cpp](./cpp/172.cpp) | Easy |  |
-|  202  | Happy Number | [cpp](./cpp/202.cpp) | Easy |  |
-|  204  | Count Primes | [cpp](./cpp/204.cpp) | Easy |  |
-|  223  | Rectangle Area | [cpp](./cpp/223.cpp) | Medium |  |
-|  224  | Basic Calculator | [cpp](./cpp/224.cpp) | Hard |  |
-|  231  | Power of Two | [cpp](./cpp/231.cpp) | Easy |  |
-|  233  | Number of Digit One | [cpp](./cpp/233.cpp) | Hard |  |
-|  246  | Strobogrammatic Number | [cpp](./cpp/246.cpp) | Easy |  |
-|  247  | Strobogrammatic Number II | [cpp](./cpp/247.cpp) | Medium |  |
-|  248  | Strobogrammatic Number III | [cpp](./cpp/248.cpp) | Hard |  |
-|  258  | Add Digits | [cpp](./cpp/258.cpp) | Easy |  |
-|  263  | Ugly Number | [cpp](./cpp/263.cpp) | Easy |  |
-|  264  | Ugly Number II | [cpp](./cpp/264.cpp) | Medium |  |
-|  268  | Missing Number | [cpp](./cpp/268.cpp) | Easy |  |
-|  273  | Integer to English Words | [cpp](./cpp/273.cpp) | Hard |  |
-|  279  | Perfect Squares | [cpp](./cpp/279.cpp) | Medium |  |
-|  296  | Best Meeting Point | [cpp](./cpp/296.cpp) | Hard |  |
+|  74  | Search a 2D Matrix | [cpp](./cpp/074-Searcha2DMatrix.cpp) | Medium |  |
+|  81  | Search in Rotated Sorted Array II | [cpp](./cpp/081-SearchInRotatedSortedArrayII.cpp) | Medium |  |
+|  153  | Find Minimum in Rotated Sorted Array | [cpp](./cpp/153.cpp) | Medium |  |
+|  154  | Find Minimum in Rotated Sorted Array II | [cpp](./cpp/154.cpp) | Hard |  |
+|  162  | Find Peak Element | [cpp](./cpp/162.cpp) | Medium |  |
+|  167  | Two Sum II - Input array is sorted | [cpp](./cpp/167.cpp) | Easy |  |
+|  174  | Dungeon Game | [cpp](./cpp/174.cpp) | Hard |  |
 
-### Sort
+### Bit Manipulation
 :watch:: Pass the challenge with the time limit.
     - Easy: 10 min
     - Medium : 20 min
@@ -264,19 +235,20 @@
 
 | Title | Solution | Difficulty | Note | Proficiency |
 | ----- | -------- | ---------- | ---- | ----------- |
-| :star: | 56. Merge Intervals | [cpp](./cpp/056.cpp) | Medium |  |
-|  57  | Insert Interval | [cpp](./cpp/057-InsertInterval.cpp) | Hard |  |
-|  75  | Sort Colors | [cpp](./cpp/075-SortColors.cpp) | Medium |  |
-|  147  | Insertion Sort List | [cpp](./cpp/147-InsertionSortList.cpp) | Medium |  |
-|  148  | Sort List | [cpp](./cpp/148-SortList.cpp) | Medium |  |
-|  164  | Maximum Gap | [cpp](./cpp/164.cpp) | Hard |  |
-|  179  | Largest Number | [cpp](./cpp/179.cpp) | Medium |  |
-|  242  | Valid Anagram | [cpp](./cpp/242.cpp) | Medium |  |
-|  252  | Meeting Rooms | [cpp](./cpp/252.cpp) | Medium |  |
-|  253  | Meeting Rooms II | [cpp](./cpp/253.cpp) | Medium |  |
-|  274  | H-Index | [cpp](./cpp/274.cpp) | Medium |  |
-|  280  | Wiggle Sort | [cpp](./cpp/280.cpp) | Medium |  |
-|  296  | Best Meeting Point | [cpp](./cpp/296.cpp) | Medium |  |
+|  | 78. Subsets | [cpp](./cpp/078.cpp) | Medium |  |
+|  | 136. Single Number | [cpp](./cpp/136.cpp) | Easy |  |
+|  | 137. Single Number II | [cpp](./cpp/137.cpp) | Medium |  |
+|  | 169. Majority Element | [cpp](./cpp/169.cpp) | Easy |  |
+|  | 187. Repeated DNA Sequences | [cpp](./cpp/187.cpp) | Medium |  |
+|  | 190. Reverse Bits | [cpp](./cpp/190.cpp) | Easy |  |
+|  | 191. Number of 1 Bits | [cpp](./cpp/191.cpp) | Easy |  |
+|  | 201. Bitwise AND of Numbers Range | [cpp](./cpp/201.cpp) | Medium |  |
+|  | 231. Power of Two | [cpp](./cpp/231.cpp) | Easy |  |
+|  | 260. Single Number III | [cpp](./cpp/260.cpp) | Medium |  |
+|  | 268. Missing Number | [cpp](./cpp/268.cpp) | Easy |  |
+|  | 318. Maximum Product of Word Lengths | [cpp](./cpp/318.cpp) | Medium |  |
+|  | 338. Counting Bits | [cpp](./cpp/338.cpp) | Medium |  |
+|  | 389. Find the Difference | [cpp](./cpp/389.cpp) | Easy |  |
 
 ### Two Pointers
 :watch:: Pass the challenge with the time limit.
@@ -312,38 +284,6 @@
 |  259  | 3Sum Smaller | [cpp](./cpp/259.cpp) | Medium |  |
 |  283  | Move Zeroes | [cpp](./cpp/283.cpp) | Easy |  |
 |  287  | Find the Duplicate Number | [cpp](./cpp/287.cpp) | Medium |  |
-
-### Binary Search
-:watch:: Pass the challenge with the time limit.
-    - Easy: 10 min
-    - Medium : 20 min
-    - Hard: 30 min
-
-| Title | Solution | Difficulty | Note | Proficiency |
-| ----- | -------- | ---------- | ---- | ----------- |
-| :camel: | 4. Median of Two Sorted Arrays | [cpp](./cpp/004.cpp) | Hard |  |
-| :star: | 29. Divide Two Integers | [cpp](./cpp/029.cpp) | Medium |  |
-| :star: | 33. Search in Rotated Sorted Array | [cpp](./cpp/033.cpp) | Medium |  |
-|  34  | Search for a Range | [cpp](./cpp/034-SearchForARange.cpp) | Medium |  |
-|  35  | Search Insert Position | [cpp](./cpp/035-SearchInsertPosition.cpp) | Easy |  |
-|  50  | Pow(x, n) | [cpp](./cpp/050-Pow.cpp) | Medium |  |
-|  69  | Sqrt(x) | [cpp](./cpp/069-Sqrt.cpp) | Easy |  |
-|  74  | Search a 2D Matrix | [cpp](./cpp/074-Searcha2DMatrix.cpp) | Medium |  |
-|  81  | Search in Rotated Sorted Array II | [cpp](./cpp/081-SearchInRotatedSortedArrayII.cpp) | Medium |  |
-|  153  | Find Minimum in Rotated Sorted Array | [cpp](./cpp/153.cpp) | Medium |  |
-|  154  | Find Minimum in Rotated Sorted Array II | [cpp](./cpp/154.cpp) | Hard |  |
-|  162  | Find Peak Element | [cpp](./cpp/162.cpp) | Medium |  |
-|  167  | Two Sum II - Input array is sorted | [cpp](./cpp/167.cpp) | Easy |  |
-|  174  | Dungeon Game | [cpp](./cpp/174.cpp) | Hard |  |
-
-### Binary Search Tree
-:watch:: Pass the challenge with the time limit.
-    - Easy: 10 min
-    - Medium : 20 min
-    - Hard: 30 min
-
-| Title | Solution | Difficulty | Note | Proficiency |
-| ----- | -------- | ---------- | ---- | ----------- |
 
 ### Breadth-First Search
 :watch:: Pass the challenge with the time limit.
@@ -401,7 +341,7 @@
 |  207. Course Schedule | [cpp](./cpp/207.cpp) | Medium |  |  |
 |  210. Course Schedule II | [cpp](./cpp/210.cpp) | Medium |  |  |
 |  257. Binary Tree Paths | [cpp](./cpp/257.cpp) | Easy |  |  |
-|  261. Graph Valid Tree | [cpp](./cpp/261.cpp) | Medium |  |  |
+|  261. Graph Valid Tree | [cpp](./cpp/261.cpp) | Medium |  | . |
 
 ### Backtracking
 :watch:: Pass the challenge with the time limit.
@@ -493,6 +433,28 @@
 | 337. House Robber III | [cpp](./cpp/337.cpp) | Medium | DFS |  |
 | 494. Target Sum | [cpp](./cpp/494.cpp) | Medium |  | . |
 
+### Sort
+:watch:: Pass the challenge with the time limit.
+    - Easy: 10 min
+    - Medium : 20 min
+    - Hard: 30 min
+
+| Title | Solution | Difficulty | Note | Proficiency |
+| ----- | -------- | ---------- | ---- | ----------- |
+| :star: | 56. Merge Intervals | [cpp](./cpp/056.cpp) | Medium |  |
+|  57  | Insert Interval | [cpp](./cpp/057-InsertInterval.cpp) | Hard |  |
+|  75  | Sort Colors | [cpp](./cpp/075-SortColors.cpp) | Medium |  |
+|  147  | Insertion Sort List | [cpp](./cpp/147-InsertionSortList.cpp) | Medium |  |
+|  148  | Sort List | [cpp](./cpp/148-SortList.cpp) | Medium |  |
+|  164  | Maximum Gap | [cpp](./cpp/164.cpp) | Hard |  |
+|  179  | Largest Number | [cpp](./cpp/179.cpp) | Medium |  |
+|  242  | Valid Anagram | [cpp](./cpp/242.cpp) | Medium |  |
+|  252  | Meeting Rooms | [cpp](./cpp/252.cpp) | Medium |  |
+|  253  | Meeting Rooms II | [cpp](./cpp/253.cpp) | Medium |  |
+|  274  | H-Index | [cpp](./cpp/274.cpp) | Medium |  |
+|  280  | Wiggle Sort | [cpp](./cpp/280.cpp) | Medium |  |
+|  296  | Best Meeting Point | [cpp](./cpp/296.cpp) | Medium |  |
+
 ### Greedy
 :watch:: Pass the challenge with the time limit.
     - Easy: 10 min
@@ -507,29 +469,6 @@
 | :star::star: | 122. Best Time to Buy and Sell Stock II | [cpp](./cpp/122.cpp) | Easy |  |
 |  134. Gas Station | [cpp](./cpp/134-GasStation.cpp) | Medium |  |
 |  135. Candy | [cpp](./cpp/135-Candy.cpp) | Hard |  |
-
-### Graph
-:watch:: Pass the challenge with the time limit.
-    - Easy: 10 min
-    - Medium : 20 min
-    - Hard: 30 min
-
-| Title | Solution | Difficulty | Note | Proficiency |
-| ----- | -------- | ---------- | ---- | ----------- |
-|  133  | Clone Graph | [cpp](./cpp/133-CloneGraph.cpp) | Medium |  |
-|  207  | Course Schedule | [cpp](./cpp/207.cpp) | Medium |  |
-|  210  | Course Schedule II | [cpp](./cpp/210.cpp) | Medium |  |
-|  261  | Graph Valid Tree | [cpp](./cpp/261.cpp) | Medium |  |
-|  269  | Alien Dictionary | [cpp](./cpp/269.cpp) | Hard |  |
-
-### Geometry
-:watch:: Pass the challenge with the time limit.
-    - Easy: 10 min
-    - Medium : 20 min
-    - Hard: 30 min
-
-| Title | Solution | Difficulty | Note | Proficiency |
-| ----- | -------- | ---------- | ---- | ----------- |
 
 ### Design
 :watch:: Pass the challenge with the time limit.
@@ -554,3 +493,56 @@
 |  288  | Unique Word Abbreviation | [cpp](./cpp/288.cpp) | Medium |  |
 | :star: | 295. Find Median from Data Stream | [cpp](./cpp/295.cpp) | Hard | min/max heap |
 |  297  | Serialize and Deserialize Binary Tree | [cpp](./cpp/297.cpp) | Hard |  |
+
+### Geometry
+:watch:: Pass the challenge with the time limit.
+    - Easy: 10 min
+    - Medium : 20 min
+    - Hard: 30 min
+
+| Title | Solution | Difficulty | Note | Proficiency |
+| ----- | -------- | ---------- | ---- | ----------- |
+
+### Math
+:watch:: Pass the challenge with the time limit.
+    - Easy: 10 min
+    - Medium : 20 min
+    - Hard: 30 min
+
+| Title | Solution | Difficulty | Note | Proficiency |
+| ----- | -------- | ---------- | ---- | ----------- |
+| :star: | 2. Add Two Numbers | [cpp](./cpp/002.cpp) | Medium |  |
+|  7  | Reverse Integer | [cpp](./cpp/007-ReverseInteger.cpp) | Easy |  |
+|  8  | String to Integer (atoi) | [cpp](./cpp/008-StringToInteger.cpp) | Medium |  |
+|  9  | Palindrome Number | [cpp](./cpp/009-PalindromeNumber.cpp) | Easy |  |
+|  12  | Integer to Roman | [cpp](./cpp/012-IntegerToRoman.cpp) | Medium |  |
+|  13  | Roman to Integer | [cpp](./cpp/013-RomanToInteger.cpp) | Easy |  |
+| :star: | 29. Divide Two Integers | [cpp](./cpp/029.cpp) | Medium |  |
+| :camel: | 43. Multiply Strings | [cpp](./cpp/043.cpp) | Medium |  |
+|  50  | Pow(x, n) | [cpp](./cpp/050-Pow.cpp) | Medium |  |
+|  60  | Permutation Sequence | [cpp](./cpp/060-PermutationSequence.cpp) | Medium |  |
+|  65  | Valid Number | [cpp](./cpp/065-ValidNumber.cpp) | Hard |  |
+|  66  | Plus One | [cpp](./cpp/066-PlusOne.cpp) | Easy |  |
+|  67  | Add Binary | [cpp](./cpp/067-AddBinary.cpp) | Easy |  |
+|  69  | Sqrt(x) | [cpp](./cpp/069-Sqrt.cpp) | Easy |  |
+|  149  | Max Points on a Line | [cpp](./cpp/149-MaxPointsonaLine.cpp) | Hard |  |
+|  166  | Fraction to Recurring Decimal | [cpp](./cpp/166.cpp) | Medium |  |
+|  168  | Excel Sheet Column Title | [cpp](./cpp/168.cpp) | Easy |  |
+|  171  | Excel Sheet Column Number  | [cpp](./cpp/171.cpp) | Easy |  |
+|  172  | Factorial Trailing Zeroes  | [cpp](./cpp/172.cpp) | Easy |  |
+|  202  | Happy Number | [cpp](./cpp/202.cpp) | Easy |  |
+|  204  | Count Primes | [cpp](./cpp/204.cpp) | Easy |  |
+|  223  | Rectangle Area | [cpp](./cpp/223.cpp) | Medium |  |
+|  224  | Basic Calculator | [cpp](./cpp/224.cpp) | Hard |  |
+|  231  | Power of Two | [cpp](./cpp/231.cpp) | Easy |  |
+|  233  | Number of Digit One | [cpp](./cpp/233.cpp) | Hard |  |
+|  246  | Strobogrammatic Number | [cpp](./cpp/246.cpp) | Easy |  |
+|  247  | Strobogrammatic Number II | [cpp](./cpp/247.cpp) | Medium |  |
+|  248  | Strobogrammatic Number III | [cpp](./cpp/248.cpp) | Hard |  |
+|  258  | Add Digits | [cpp](./cpp/258.cpp) | Easy |  |
+|  263  | Ugly Number | [cpp](./cpp/263.cpp) | Easy |  |
+|  264  | Ugly Number II | [cpp](./cpp/264.cpp) | Medium |  |
+|  268  | Missing Number | [cpp](./cpp/268.cpp) | Easy |  |
+|  273  | Integer to English Words | [cpp](./cpp/273.cpp) | Hard |  |
+|  279  | Perfect Squares | [cpp](./cpp/279.cpp) | Medium |  |
+|  296  | Best Meeting Point | [cpp](./cpp/296.cpp) | Hard |  |
