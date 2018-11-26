@@ -402,8 +402,8 @@
 | 63. Unique Paths II | [cpp](./cpp063.cpp) | Easy | 二维滚动数组 | :star::star::star::watch:|
 | 64. Minimum Path Sum | [cpp](./cpp/064.cpp) | Medium | 二维滚动数组 | :star::star::star::watch: |
 | 70. Climbing Stairs | [cpp](./cpp/070.cpp) | Easy | 一维滚动数组 | :star::star::star::watch: |
-| 72. Edit Distance | [cpp](./cpp/072.cpp) | Hard |  |  |
-| 85. Maximal Rectangle | [cpp](./cpp/085.cpp) | Hard |  |  |
+| 72. Edit Distance | [cpp](./cpp/072.cpp) | Hard | Almost bug free with time limit. | :star::star: |
+| 85. Maximal Rectangle | [cpp](./cpp/085.cpp) | Hard |  | :pensive: |
 | 87. Scramble String | [cpp](./cpp/087.cpp) | Hard |  |  |
 | 91. Decode Ways | [cpp](./cpp/091.cpp) | Medium | 一维滚动数组 | :star::star::watch: |
 | 95. Unique Binary Search Trees II | [cpp](./cpp/095.cpp) | Medium | Recursive和Non-recursive两种实现 | :camel: |
