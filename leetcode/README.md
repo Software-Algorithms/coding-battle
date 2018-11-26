@@ -447,7 +447,7 @@
 | 148. Sort List | [cpp](./cpp/148.cpp) | Medium |  |  |
 | 164. Maximum Gap | [cpp](./cpp/164.cpp) | Hard |  |  |
 | 179. Largest Number | [cpp](./cpp/179.cpp) | Medium |  |  |
-| 242. Valid Anagram | [cpp](./cpp/242.cpp) | Medium |  |  |  |
+| 242. Valid Anagram | [cpp](./cpp/242.cpp) | Medium |  |  |
 | 252. Meeting Rooms | [cpp](./cpp/252.cpp) | Medium |  |  |
 | 253. Meeting Rooms II | [cpp](./cpp/253.cpp) | Medium |  |  |
 | 274. H-Index | [cpp](./cpp/274.cpp) | Medium |  |  |
@@ -462,12 +462,12 @@
 
 | Title | Solution | Difficulty | Note | Proficiency |
 | ----- | -------- | ---------- | ---- | ----------- |
-| 44. Wildcard Matching | [cpp](./cpp/044-WildcardMatching.cpp) | Hard |  |  |
-| 45. Jump Game II | [cpp](./cpp/045-JumpGameII.cpp) | Hard |  |  |
-| 55. Jump Game | [cpp](./cpp/055-JumpGame.cpp) | Medium |  |  |
+| 44. Wildcard Matching | [cpp](./cpp/044.cpp) | Hard |  |  |
+| 45. Jump Game II | [cpp](./cpp/045.cpp) | Hard |  |  |
+| 55. Jump Game | [cpp](./cpp/055.cpp) | Medium |  |  |
 | 122. Best Time to Buy and Sell Stock II | [cpp](./cpp/122.cpp) | Easy |  | :star::star: |
-| 134. Gas Station | [cpp](./cpp/134-GasStation.cpp) | Medium |  |  |
-| 135. Candy | [cpp](./cpp/135-Candy.cpp) | Hard |  |  |
+| 134. Gas Station | [cpp](./cpp/134.cpp) | Medium |  |  |
+| 135. Candy | [cpp](./cpp/135.cpp) | Hard |  |  |
 
 ### Design
 :watch:: Pass the challenge with the time limit.
@@ -477,7 +477,7 @@
 
 | Title | Solution | Difficulty | Note | Proficiency |
 | ----- | -------- | ---------- | ---- | ----------- |
-| 146. LRU Cache | [cpp](./cpp/146-LRUCache.cpp) | Hard |  |  |
+| 146. LRU Cache | [cpp](./cpp/146.cpp) | Hard |  |  |
 | 155. Min Stack | [cpp](./cpp/155.cpp) | Easy |  |  |
 | 170. Two Sum III - Data structure design | [cpp](./cpp/170.cpp) | Easy |  |  |
 | 173. Binary Search Tree Iterator | [cpp](./cpp/173.cpp) | Medium |  |  |
