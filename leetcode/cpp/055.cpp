@@ -1,7 +1,26 @@
-/*
- * DP
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 12/3/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Issue:
+ *    line10 and line11的顺序让我一开始稍微弄混了。
+ *
+ * Idea:
+ *    - Backtracking.
+ *
+ * Complexity:
+ *    Time: T(n) = n*T(n-1) + O(n^2) ~ O(n!)
+ *    Space: O(n)
+ *
+ * Take-away:
  *
  */
+
 class Solution {
 public:
     bool canJump(vector<int>& nums) {
@@ -13,10 +32,3 @@ public:
         return true;
     }
 };
-
-
-/*****
-Conclusion:
-line10 and line11的顺序让我一开始稍微弄混了。
-*****/
-

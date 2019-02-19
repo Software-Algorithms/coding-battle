@@ -1,7 +1,22 @@
-/*
- * Array
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 12/3/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *
+ * Complexity:
+ *    Time:
+ *    Space:
+ *
+ * Take-away:
  *
  */
+
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
@@ -23,7 +38,6 @@ public:
             for (int row = d; row >= u; row--) spiral[k++] = matrix[row][l];
             if (++l > r) break;
         }
-        return spiral;        
+        return spiral;
     }
 };
-

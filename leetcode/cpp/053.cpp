@@ -30,29 +30,31 @@
  *      https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
  *    - Maximum Subarray Problem (Kadane's algorithm):
  *      http://www.techiedelight.com/maximum-subarray-problem-kadanes-algorithm/
+ *
  */
- class Solution {
- public:
-     int maxSubArray(vector<int>& nums) {
-         // the sub array has two cases:
-         // one is ending with the current element
-         // the other is not
-         // we find a way to cover the both cases,
-         // we will find the optimize solution or here the max value
 
-         // we thus use two variable to record the max vulues
-         // maxEndingHere: the max subarray sum value ending here
-         // maxSoFar: the max subarray sum cosidering both
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        // the sub array has two cases:
+        // one is ending with the current element
+        // the other is not
+        // we find a way to cover the both cases,
+        // we will find the optimize solution or here the max value
 
-         if(nums.empty()) return 0;
+        // we thus use two variable to record the max vulues
+        // maxEndingHere: the max subarray sum value ending here
+        // maxSoFar: the max subarray sum cosidering both
 
-         int maxEndingHere = nums[0], maxSoFar = nums[0];
+        if(nums.empty()) return 0;
 
-         for(int i = 1; i < nums.size(); i++) {
-             maxEndingHere = max(maxEndingHere + nums[i], nums[i]);
-             maxSoFar = max(maxSoFar, maxEndingHere);
-         }
+        int maxEndingHere = nums[0], maxSoFar = nums[0];
 
-         return maxSoFar;
-     }
- };
+        for(int i = 1; i < nums.size(); i++) {
+            maxEndingHere = max(maxEndingHere + nums[i], nums[i]);
+            maxSoFar = max(maxSoFar, maxEndingHere);
+        }
+
+        return maxSoFar;
+    }
+};

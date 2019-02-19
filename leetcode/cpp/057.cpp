@@ -1,17 +1,24 @@
-/*
- * Sort
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 12/3/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    - Sort.
+ *
+ * Complexity:
+ *    Time: T(n) = n*T(n-1) + O(n^2) ~ O(n!)
+ *    Space: O(n)
+ *
+ * Take-away:
+ *    - string initialization: string = str(n, '.') which is similar to vector
  *
  */
 
-/**
- * Definition for an interval.
- * struct Interval {
- *     int start;
- *     int end;
- *     Interval() : start(0), end(0) {}
- *     Interval(int s, int e) : start(s), end(e) {}
- * };
- */
 class Solution {
 public:
     vector<Interval> insert(vector<Interval>& intervals, Interval newInterval) {

@@ -1,3 +1,24 @@
+/**
+ * Code description
+ *
+ * Author: xpharry
+ * Date: 12/3/2018
+ *
+ * Data structure:
+ *    Array
+ *
+ * Idea:
+ *    - Backtracking.
+ *
+ * Complexity:
+ *    Time: T(n) = n*T(n-1) + O(n^2) ~ O(n!)
+ *    Space: O(n)
+ *
+ * Take-away:
+ *    - string initialization: string = str(n, '.') which is similar to vector
+ *
+ */
+
 class Solution {
 public:
     int lengthOfLastWord(string s) {

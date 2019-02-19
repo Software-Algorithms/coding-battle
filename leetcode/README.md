@@ -35,7 +35,7 @@
 | ----- | -------- | ---------- | ---- | ----------- |
 | 20. Valid Parentheses | [cpp](./cpp/020.cpp) | Easy | string + stack :+1: | :star: |
 | 42. Trapping Rain Water | [cpp](./cpp/042.cpp) | Hard |  |  |
-| 71. Simplify Path | [cpp](./cpp/071.cpp) | Medium |  |  |
+| 71. Simplify Path | [cpp](./cpp/071.cpp) | Medium | stack + two pointers | :star::star: |
 | 84. Largest Rectangle in Histogram | [cpp](./cpp/084.cpp) | Hard |  | :camel: |
 | 85. Maximal Rectangle | [cpp](./cpp/085.cpp) | Hard |  |  |
 | 94. Binary Tree Inorder Traversal | [cpp](./cpp/094.cpp) | Medium | recursion & iteration | :star: |
